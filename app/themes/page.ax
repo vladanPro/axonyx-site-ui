@@ -1,0 +1,38 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page Themes() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Themes">
+          <Copy slot="eyebrow">Foundry visual language</Copy>
+          <Copy tone="lead">
+            Themes should change the material, lighting, border language, and
+            mood without changing application structure. The first family is
+            bronze, silver, and gold.
+          </Copy>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <SectionCard title="Silver">
+            <Badge tone="success">Default</Badge>
+            <Copy>Clean, neutral, docs-ready, and best for framework/product surfaces.</Copy>
+          </SectionCard>
+          <SectionCard title="Bronze">
+            <Badge tone="warning">Warm metal</Badge>
+            <Copy>Forged, warmer, industrial, CMS/admin-ready, and less blue-tech.</Copy>
+          </SectionCard>
+          <SectionCard title="Gold">
+            <Badge tone="info">Premium accent</Badge>
+            <Copy>High contrast, showcase-ready, and useful for key product moments.</Copy>
+          </SectionCard>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

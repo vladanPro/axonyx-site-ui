@@ -1,0 +1,52 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page Components() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Components">
+          <Copy slot="eyebrow">Foundry primitives</Copy>
+          <Copy tone="lead">
+            The component catalog starts with the pieces needed to build real
+            sites and dashboards: actions, surfaces, inputs, overlays, layout,
+            navigation, feedback, and data display.
+          </Copy>
+          <Button href="/blocks" variant="primary">See blocks</Button>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <SectionCard title="Actions">
+            <Badge tone="success">V0</Badge>
+            <Copy>`Button`, `ButtonGroup`, `IconButton`, `MachineSwitch`, and command surfaces.</Copy>
+          </SectionCard>
+          <SectionCard title="Surfaces">
+            <Badge tone="success">V0</Badge>
+            <Copy>`Card`, `Surface`, `Alert`, `Toast`, `Tooltip`, `Popover`, and forged borders.</Copy>
+          </SectionCard>
+          <SectionCard title="Forms">
+            <Badge tone="warning">Next pass</Badge>
+            <Copy>`Field`, `Select`, `Radio`, `Choice`, `Slider`, validation states, and auth forms.</Copy>
+          </SectionCard>
+          <SectionCard title="Navigation">
+            <Badge tone="info">Registry target</Badge>
+            <Copy>`Header`, `Navbar`, `Sidebar`, `Breadcrumbs`, `Tabs`, `Menu`, and responsive drawer nav.</Copy>
+          </SectionCard>
+          <SectionCard title="Data display">
+            <Badge tone="info">Registry target</Badge>
+            <Copy>`Table`, `List`, `Stat`, `Progress`, `Timeline`, `Rating`, `StatusLamp`, and CMS rows.</Copy>
+          </SectionCard>
+          <SectionCard title="Overlays">
+            <Badge tone="info">Registry target</Badge>
+            <Copy>`Dialog`, `Modal`, `Drawer`, `DropdownMenu`, and toast stack behavior owned by Axonyx UI.</Copy>
+          </SectionCard>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

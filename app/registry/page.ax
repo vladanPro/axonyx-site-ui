@@ -1,0 +1,42 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page Registry() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Registry model">
+          <Copy slot="eyebrow">Installable UI pieces</Copy>
+          <Copy tone="lead">
+            Axonyx UI should expose a registry that can install native `.ax`
+            components, React adapter examples, CSS/JS assets, and blocks from
+            the same Foundry contract.
+          </Copy>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <SectionCard title="Cargo native">
+            <Badge tone="success">Axonyx</Badge>
+            <pre class="docs-code">{"cargo ax add button\ncargo ax add block docs-01\ncargo ax add theme silver"}</pre>
+            <Copy>
+              Native apps get `.ax` files, Foundry CSS, behavior JS, and future
+              WASM hooks through Cargo-first packages.
+            </Copy>
+          </SectionCard>
+          <SectionCard title="NPM adapter">
+            <Badge tone="info">React</Badge>
+            <pre class="docs-code">{"npm install @axonyx/ui @axonyx/react\nimport { Button } from \"@axonyx/react\""}</pre>
+            <Copy>
+              React projects consume the same token and component contract while
+              Axonyx keeps the native implementation as the source of truth.
+            </Copy>
+          </SectionCard>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

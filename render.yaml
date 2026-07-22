@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: axonyx-site-ui
+    runtime: rust
+    plan: free
+    buildCommand: cargo install cargo-axonyx --version 0.1.88 --force && cargo ax upgrade && cargo ax build --clean
+    startCommand: cargo ax run start --host 0.0.0.0 --port $PORT
+    healthCheckPath: /__axonyx/health

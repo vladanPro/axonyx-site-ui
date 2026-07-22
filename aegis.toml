@@ -1,0 +1,26 @@
+base_url = "http://127.0.0.1:3000"
+check_links = true
+
+[[fast]]
+name = "ui home"
+goto = "/"
+expect_text = "Foundry components for Axonyx and React"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "components catalog"
+goto = "/components"
+expect_text = "Foundry primitives"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "blocks catalog"
+goto = "/blocks"
+expect_text = "Responsive app sections"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "registry model"
+goto = "/registry"
+expect_text = "Installable UI pieces"
+expect_not = ["Internal Server Error", "Application error"]

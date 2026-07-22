@@ -1,0 +1,62 @@
+# axonyx-site-ui
+
+Future public showcase for Axonyx UI and the Foundry registry.
+
+This site is authored in Axonyx and should eventually live at `ui.axonyx.dev`.
+It is separate from:
+
+- `axonyx-site`: the main Rust-first framework site.
+- `axonyx-web`: the React adapter site at `react.axonyx.dev`.
+- `axonyx-ui`: the source package for Foundry CSS, JS helpers, and native `.ax` components.
+- `axonyx-react`: the React adapter package.
+
+## Purpose
+
+Axonyx UI should follow the best part of the shadcn model: open components,
+installable blocks, clear previews, and code that teams can own.
+
+The Axonyx version is Cargo-first:
+
+```bash
+cargo ax add button
+cargo ax add block dashboard-01
+cargo ax add theme silver
+```
+
+The React adapter mirrors the same Foundry contract:
+
+```bash
+npm install @axonyx/ui @axonyx/react
+```
+
+## Initial routes
+
+- `/` - UI registry homepage.
+- `/components` - Foundry component catalog.
+- `/blocks` - responsive block catalog.
+- `/themes` - bronze, silver, and gold theme direction.
+- `/registry` - Cargo and npm registry model.
+
+## Develop
+
+```bash
+cargo ax run dev
+```
+
+Before sharing or deploying:
+
+```bash
+cargo ax check
+cargo ax doctor
+cargo ax test
+cargo ax build --clean
+```
+
+## V0 scope
+
+Start with a small complete loop:
+
+- Components: `Button`, `Card`, `Field`, `AppShell`, `Sidebar`.
+- Blocks: `marketing-01`, `docs-01`, `dashboard-01`, `login-01`, `cms-admin-01`.
+- Modes: `Axonyx` native and `React` adapter examples on every page.
+- Themes: `silver`, `bronze`, `gold`, then custom theme packages later.

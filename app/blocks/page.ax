@@ -1,0 +1,52 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page Blocks() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Blocks">
+          <Copy slot="eyebrow">Responsive app sections</Copy>
+          <Copy tone="lead">
+            Blocks are the shadcn-style move for Axonyx: install complete page
+            sections, dashboards, docs shells, and CMS admin patterns as real
+            files you can edit.
+          </Copy>
+          <Button href="/registry" variant="primary">Registry model</Button>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <SectionCard title="marketing-01">
+            <Badge tone="success">First wave</Badge>
+            <Copy>Hero, trust strip, feature grid, CTA, and footer for product sites.</Copy>
+          </SectionCard>
+          <SectionCard title="docs-01">
+            <Badge tone="success">First wave</Badge>
+            <Copy>Header, sidebar, content rail, page pager, and responsive docs drawer.</Copy>
+          </SectionCard>
+          <SectionCard title="dashboard-01">
+            <Badge tone="warning">First wave</Badge>
+            <Copy>Sidebar, metrics, table, status cards, activity feed, and toolbar.</Copy>
+          </SectionCard>
+          <SectionCard title="login-01">
+            <Badge tone="info">Next</Badge>
+            <Copy>Auth card, social slots, validation space, and brand panel.</Copy>
+          </SectionCard>
+          <SectionCard title="blog-01">
+            <Badge tone="info">Next</Badge>
+            <Copy>Post index, featured article, tag rail, and content collection routing.</Copy>
+          </SectionCard>
+          <SectionCard title="cms-admin-01">
+            <Badge tone="info">Blockbit target</Badge>
+            <Copy>Collection table, edit panel, preview rail, upload state, and action toolbar.</Copy>
+          </SectionCard>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

@@ -1,0 +1,45 @@
+use "@axonyx/ui"
+import { Header } from "@axonyx/ui/foundry/Header.ax"
+import { Navbar } from "@axonyx/ui/foundry/Navbar.ax"
+import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
+import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
+import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.ax"
+
+page RootLayout() {
+  return ASX {
+    <Head>
+      <Title>Axonyx UI</Title>
+      <Theme storageKey="axonyx-site-ui-theme" default="silver" preflight="true" />
+      <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native and React apps." />
+      <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    </Head>
+
+    <SiteShell max="xl">
+      <Header sticky="top">
+        <Navbar brandHref="/">
+          <span slot="brand">
+            <img src="/brand-mark.svg" alt="" width={32} height={32} />
+            Axonyx UI
+          </span>
+          <TextLink href="/">Home</TextLink>
+          <TextLink href="/components">Components</TextLink>
+          <TextLink href="/blocks">Blocks</TextLink>
+          <TextLink href="/themes">Themes</TextLink>
+          <TextLink href="/registry">Registry</TextLink>
+          <TextLink href="https://axonyx.dev">Axonyx</TextLink>
+          <TextLink href="https://react.axonyx.dev">React</TextLink>
+          <ThemeSwitcher label="Theme" size="sm" surface="raised" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
+        </Navbar>
+      </Header>
+
+      <main>
+        <Slot />
+      </main>
+
+      <footer class="ax-site-footer">
+        <span>Axonyx UI</span>
+        <span>Foundry registry, native Axonyx components, and React adapter parity.</span>
+      </footer>
+    </SiteShell>
+  }
+}
