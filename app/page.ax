@@ -1,10 +1,9 @@
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { FeatureSection } from "@axonyx/ui/foundry/FeatureSection.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
@@ -16,69 +15,110 @@ page Home() {
 
     <Container max="xl">
       <Stack gap="xl">
-        <HeroCard title="Foundry components for Axonyx and React.">
-          <Copy slot="eyebrow">Axonyx UI registry</Copy>
+        <section class="ui-hero">
+          <div>
+            <span class="ui-kicker">Foundry registry V0</span>
+            <h1>Build interfaces from forged parts.</h1>
+            <p class="ui-hero__lead">
+              Axonyx UI is the component and block registry for Axonyx-native
+              apps and the React adapter. Think shadcn-style open code, but
+              Cargo-first, dark-first, and shaped for the Rust web stack.
+            </p>
+            <div class="ui-hero__actions">
+              <Button href="/components/button" variant="primary" surface="forged">Start with Button</Button>
+              <Button href="/blocks/marketing-01" variant="ghost">Preview blocks</Button>
+              <Button href="/registry" variant="ghost">Registry model</Button>
+            </div>
+          </div>
+
+          <div class="ui-preview-panel">
+            <div class="ui-preview-toolbar">
+              <span>ui.axonyx.dev</span>
+              <span>Axonyx | React</span>
+            </div>
+            <div class="ui-code-window">
+              <div class="ui-code-window__bar">
+                <span class="ui-code-window__dot"></span>
+                <span class="ui-code-window__dot"></span>
+                <span class="ui-code-window__dot"></span>
+              </div>
+              <pre>{"use \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button.ax\"\nimport { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\npage Dashboard() {\n  return ASX {\n    <Card title=\"Deploy health\" border=\"forged\">\n      <Button variant=\"primary\" surface=\"forged\">\n        Run production check\n      </Button>\n    </Card>\n  }\n}"}</pre>
+            </div>
+            <div class="ui-command-row">
+              <div class="ui-command">
+                <span>component</span>
+                <code>cargo ax add button</code>
+              </div>
+              <div class="ui-command">
+                <span>block</span>
+                <code>cargo ax add block dashboard-01</code>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ui-section-head">
+          <Badge tone="success">Source of truth</Badge>
+          <h2>One registry, two developer paths.</h2>
           <Copy tone="lead">
-            A dark-first industrial design system shaped like shadcn, but built
-            for the Axonyx stack: native `.ax` components first, React adapter
-            second, blocks and themes as installable product pieces.
+            Native `.ax` components stay canonical. React components mirror the
+            same Foundry contract so teams can adopt Axonyx UI before moving
+            the whole site to Axonyx.
+          </Copy>
+        </section>
+
+        <div class="ui-registry-grid">
+          <a class="ui-registry-card" href="/components/button">
+            <Badge tone="success">V0</Badge>
+            <strong>Button</strong>
+            <span>Primary actions, ghost links, forged surfaces, and call-to-action composition.</span>
+          </a>
+          <a class="ui-registry-card" href="/components/card">
+            <Badge tone="success">V0</Badge>
+            <strong>Card</strong>
+            <span>Foundry surfaces for docs, dashboards, and CMS panels.</span>
+          </a>
+          <a class="ui-registry-card" href="/components/field">
+            <Badge tone="success">V0</Badge>
+            <strong>Field</strong>
+            <span>Form layout with labels, hints, input controls, and validation states.</span>
+          </a>
+          <a class="ui-registry-card" href="/components/app-shell">
+            <Badge tone="info">Layout</Badge>
+            <strong>AppShell</strong>
+            <span>Application frame for docs, admin, dashboard, and Blockbit flows.</span>
+          </a>
+        </div>
+
+        <ContentGrid cols={3} gap="lg">
+          <SectionCard title="marketing-01" border="forged">
+            <Badge tone="success">Block</Badge>
+            <Copy>Hero, proof cards, feature grid, and final call to action.</Copy>
+            <Button href="/blocks/marketing-01" variant="ghost">Open preview</Button>
+          </SectionCard>
+          <SectionCard title="docs-01" border="forged">
+            <Badge tone="success">Block</Badge>
+            <Copy>Sidebar, content rail, install commands, and pager navigation.</Copy>
+            <Button href="/blocks/docs-01" variant="ghost">Open preview</Button>
+          </SectionCard>
+          <SectionCard title="dashboard-01" border="forged">
+            <Badge tone="warning">Block</Badge>
+            <Copy>Metrics, console sidebar, status cards, and future data panels.</Copy>
+            <Button href="/blocks/dashboard-01" variant="ghost">Open preview</Button>
+          </SectionCard>
+        </ContentGrid>
+
+        <Card title="Registry V0 contract" border="forged" surface="inset">
+          <Copy tone="lead">
+            The first milestone is not “all components.” It is one complete,
+            believable loop: install a component, install a block, switch between
+            Axonyx and React examples, and keep the same Foundry theme contract.
           </Copy>
           <ButtonGroup>
             <Button href="/components" variant="primary">Browse components</Button>
-            <Button href="/blocks" variant="ghost">View blocks</Button>
+            <Button href="/themes" variant="ghost">Theme system</Button>
           </ButtonGroup>
-        </HeroCard>
-
-        <ContentGrid cols={3} gap="lg">
-          <SectionCard title="Native source">
-            <Badge tone="success">Cargo-first</Badge>
-            <Copy>
-              Foundry components ship from `axonyx-ui` as Cargo assets and `.ax`
-              primitives that Axonyx apps can import directly.
-            </Copy>
-          </SectionCard>
-          <SectionCard title="React adapter">
-            <Badge tone="info">Next/Vite ready</Badge>
-            <Copy>
-              `@axonyx/react` maps the same visual contract into React components
-              without making React the source of truth.
-            </Copy>
-          </SectionCard>
-          <SectionCard title="Blocks">
-            <Badge tone="warning">App sections</Badge>
-            <Copy>
-              Dashboards, docs shells, marketing pages, login screens, and CMS
-              panels should install as complete responsive building blocks.
-            </Copy>
-          </SectionCard>
-        </ContentGrid>
-
-        <ContentGrid cols={2} gap="lg">
-          <FeatureSection title="The shadcn idea, but forged for Axonyx">
-            <Copy slot="eyebrow">Open code, stable contract</Copy>
-            <Copy>
-              The target is not a closed widget box. Axonyx UI should be readable,
-              copyable, themeable, and easy to override while the framework keeps
-              the Rust runtime, static output, and state bridge underneath.
-            </Copy>
-          </FeatureSection>
-          <FeatureSection title="One design language across Rust and React">
-            <Copy slot="eyebrow">Axonyx | React switch</Copy>
-            <Copy>
-              Every component page should show the native Axonyx version and the
-              React adapter version side by side, so teams can migrate gradually.
-            </Copy>
-          </FeatureSection>
-        </ContentGrid>
-
-        <SectionCard title="Registry V0 plan" border="forged" surface="inset">
-          <Copy tone="lead">
-            Start small and prove the loop: `Button`, `Card`, `Field`,
-            `AppShell`, `Sidebar`, then blocks for marketing, docs, dashboard,
-            login, and CMS admin.
-          </Copy>
-          <pre class="docs-code">{"cargo ax add button\ncargo ax add block dashboard-01\ncargo ax add theme bronze"}</pre>
-        </SectionCard>
+        </Card>
       </Stack>
     </Container>
   }

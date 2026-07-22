@@ -4,50 +4,100 @@ import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page ButtonPage() {
   return ASX {
     <Container max="xl">
       <Stack gap="xl">
-        <HeroCard title="Button">
-          <Copy slot="eyebrow">Components V0</Copy>
-          <Copy tone="lead">The default action primitive for Axonyx apps: links, submits, ghost actions, and forged industrial calls to action.</Copy>
-          <ButtonGroup>
-            <Button href="/components/card" variant="primary">Next: Card</Button>
-            <Button href="/components" variant="ghost">All components</Button>
-          </ButtonGroup>
-        </HeroCard>
-
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
+        <section class="ui-component-hero">
+          <div>
+            <span class="ui-kicker">Component V0</span>
+            <h1>Button</h1>
+            <p class="ui-hero__lead">
+              The default action primitive for Axonyx apps: links, submits,
+              ghost actions, and forged industrial calls to action. This page is
+              the first documentation template for the rest of Axonyx UI.
+            </p>
+            <div class="ui-mode-switch">
+              <Badge tone="success">Axonyx native</Badge>
+              <Badge tone="info">React adapter</Badge>
+              <Badge tone="warning">Foundry CSS</Badge>
+            </div>
+          </div>
+          <div class="ui-preview-stage">
             <ButtonGroup>
-              <Button variant="primary" surface="forged">Primary</Button>
+              <Button variant="primary" surface="forged">Deploy site</Button>
+              <Button variant="secondary">Preview</Button>
+              <Button variant="ghost">Cancel</Button>
+            </ButtonGroup>
+          </div>
+        </section>
+
+        <ContentGrid cols={3} gap="lg">
+          <Card title="Install" border="forged">
+            <div class="ui-install">
+              <Badge tone="success">Cargo</Badge>
+              <pre>{"cargo ax add button"}</pre>
+              <Badge tone="info">React</Badge>
+              <pre>{"npm install @axonyx/ui @axonyx/react"}</pre>
+            </div>
+          </Card>
+          <Card title="Variants">
+            <ButtonGroup>
+              <Button variant="primary">Primary</Button>
               <Button variant="secondary">Secondary</Button>
               <Button variant="ghost">Ghost</Button>
             </ButtonGroup>
           </Card>
-          <Card title="Install">
-            <Badge tone="success">Cargo</Badge>
-            <pre class="docs-code">{"cargo ax add button"}</pre>
-            <Badge tone="info">React</Badge>
-            <pre class="docs-code">{"npm install @axonyx/ui @axonyx/react"}</pre>
+          <Card title="Surfaces">
+            <ButtonGroup>
+              <Button variant="primary" surface="forged">Forged</Button>
+              <Button variant="ghost" border="forged">Bordered</Button>
+            </ButtonGroup>
           </Card>
         </ContentGrid>
 
         <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <pre class="docs-code">{"import { Button } from \"@axonyx/ui/foundry/Button.ax\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
-          </Card>
-          <Card title="React adapter">
-            <pre class="docs-code">{"import { Button } from \"@axonyx/react\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
-          </Card>
+          <div class="ui-code-card">
+            <Badge tone="success">Axonyx</Badge>
+            <pre>{"import { Button } from \"@axonyx/ui/foundry/Button.ax\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
+          </div>
+          <div class="ui-code-card">
+            <Badge tone="info">React adapter</Badge>
+            <pre>{"import { Button } from \"@axonyx/react\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
+          </div>
         </ContentGrid>
 
-        <Card title="API contract" surface="inset">
-          <Copy>`variant`, `size`, `surface`, `border`, and `href` are the first stable Button props.</Copy>
+        <Card title="API contract" surface="inset" border="forged">
+          <div class="ui-api-list">
+            <div class="ui-api-row">
+              <strong>variant</strong>
+              <span>`primary`, `secondary`, `ghost`; controls visual intent.</span>
+            </div>
+            <div class="ui-api-row">
+              <strong>size</strong>
+              <span>Reserved for compact, default, and large action density.</span>
+            </div>
+            <div class="ui-api-row">
+              <strong>surface</strong>
+              <span>`forged` adds the stronger Foundry material treatment.</span>
+            </div>
+            <div class="ui-api-row">
+              <strong>border</strong>
+              <span>Reserved for riveted/forged border language.</span>
+            </div>
+            <div class="ui-api-row">
+              <strong>href</strong>
+              <span>When present, the component renders link-style navigation.</span>
+            </div>
+          </div>
         </Card>
+
+        <ButtonGroup>
+          <Button href="/components/card" variant="primary">Next: Card</Button>
+          <Button href="/components" variant="ghost">All components</Button>
+        </ButtonGroup>
       </Stack>
     </Container>
   }

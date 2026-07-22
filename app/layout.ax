@@ -12,6 +12,7 @@ page RootLayout() {
       <Theme storageKey="axonyx-site-ui-theme" default="silver" preflight="true" />
       <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native and React apps." />
       <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <Link rel="stylesheet" href="/ui-site.css" />
     </Head>
 
     <SiteShell max="xl">
