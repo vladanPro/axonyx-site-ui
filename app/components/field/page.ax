@@ -42,8 +42,8 @@ page FieldPage() {
           <Card title="Axonyx">
             <pre class="docs-code">{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</pre>
           </Card>
-          <Card title="React adapter">
-            <pre class="docs-code">{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</pre>
+          <Card title="Generated HTML shape">
+            <pre class="docs-code">{"<label class=\"ax-field\" for=\"email\">\n  <span class=\"ax-field__label\">Email</span>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</label>"}</pre>
           </Card>
         </ContentGrid>
 

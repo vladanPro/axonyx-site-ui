@@ -21,8 +21,8 @@ page Home() {
             <h1>Build interfaces from forged parts.</h1>
             <p class="ui-hero__lead">
               Axonyx UI is the component and block registry for Axonyx-native
-              apps and the React adapter. Think shadcn-style open code, but
-              Cargo-first, dark-first, and shaped for the Rust web stack.
+              Rust apps. Think shadcn-style open code, but Cargo-first,
+              dark-first, and shaped for the Rust web stack.
             </p>
             <div class="ui-hero__actions">
               <Button href="/components/button" variant="primary" surface="forged">Start with Button</Button>
@@ -34,7 +34,7 @@ page Home() {
           <div class="ui-preview-panel">
             <div class="ui-preview-toolbar">
               <span>ui.axonyx.dev</span>
-              <span>Axonyx | React</span>
+              <span>Axonyx native</span>
             </div>
             <div class="ui-code-window">
               <div class="ui-code-window__bar">
@@ -59,11 +59,11 @@ page Home() {
 
         <section class="ui-section-head">
           <Badge tone="success">Source of truth</Badge>
-          <h2>One registry, two developer paths.</h2>
+          <h2>One registry for native Axonyx apps.</h2>
           <Copy tone="lead">
-            Native `.ax` components stay canonical. React components mirror the
-            same Foundry contract so teams can adopt Axonyx UI before moving
-            the whole site to Axonyx.
+            Native `.ax` components are the canonical Foundry contract. React,
+            Vite, TanStack, and React Router examples live on the sibling React
+            adapter site.
           </Copy>
         </section>
 
@@ -112,7 +112,7 @@ page Home() {
           <Copy tone="lead">
             The first milestone is not “all components.” It is one complete,
             believable loop: install a component, install a block, switch between
-            Axonyx and React examples, and keep the same Foundry theme contract.
+            native Axonyx examples, and keep the same Foundry theme contract.
           </Copy>
           <ButtonGroup>
             <Button href="/components" variant="primary">Browse components</Button>

@@ -35,8 +35,8 @@ page AppShellPage() {
           <Card title="Axonyx">
             <pre class="docs-code">{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.ax\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.ax\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar slot=\"rail\">...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</pre>
           </Card>
-          <Card title="React adapter">
-            <pre class="docs-code">{"import { AppShell, Sidebar, Card } from \"@axonyx/react\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar>...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</pre>
+          <Card title="Generated HTML shape">
+            <pre class="docs-code">{"<div class=\"ax-app-shell\" data-rail=\"left\" data-rail-width=\"md\">\n  <aside class=\"ax-sidebar\">...</aside>\n  <main>...</main>\n</div>"}</pre>
           </Card>
         </ContentGrid>
 

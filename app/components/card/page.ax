@@ -32,8 +32,8 @@ page CardPage() {
           <Card title="Axonyx">
             <pre class="docs-code">{"import { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <Copy>Static output generated.</Copy>\n</Card>"}</pre>
           </Card>
-          <Card title="React adapter">
-            <pre class="docs-code">{"import { Card } from \"@axonyx/react\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <p>Static output generated.</p>\n</Card>"}</pre>
+          <Card title="Generated HTML shape">
+            <pre class="docs-code">{"<article class=\"ax-card\" data-border=\"forged\">\n  <h2 class=\"ax-card__title\">Build status</h2>\n  <p>Static output generated.</p>\n</article>"}</pre>
           </Card>
         </ContentGrid>
 

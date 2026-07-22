@@ -21,7 +21,7 @@ page ButtonPage() {
             </p>
             <div class="ui-mode-switch">
               <Badge tone="success">Axonyx native</Badge>
-              <Badge tone="info">React adapter</Badge>
+              <Badge tone="info">Cargo registry</Badge>
               <Badge tone="warning">Foundry CSS</Badge>
             </div>
           </div>
@@ -39,8 +39,8 @@ page ButtonPage() {
             <div class="ui-install">
               <Badge tone="success">Cargo</Badge>
               <pre>{"cargo ax add button"}</pre>
-              <Badge tone="info">React</Badge>
-              <pre>{"npm install @axonyx/ui @axonyx/react"}</pre>
+              <Badge tone="info">Theme</Badge>
+              <pre>{"cargo ax add theme silver"}</pre>
             </div>
           </Card>
           <Card title="Variants">
@@ -64,8 +64,8 @@ page ButtonPage() {
             <pre>{"import { Button } from \"@axonyx/ui/foundry/Button.ax\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
           </div>
           <div class="ui-code-card">
-            <Badge tone="info">React adapter</Badge>
-            <pre>{"import { Button } from \"@axonyx/react\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
+            <Badge tone="info">Generated HTML shape</Badge>
+            <pre>{"<a class=\"ax-button\" data-variant=\"primary\" data-surface=\"forged\">\n  Deploy site\n</a>"}</pre>
           </div>
         </ContentGrid>
 

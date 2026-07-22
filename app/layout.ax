@@ -10,7 +10,7 @@ page RootLayout() {
     <Head>
       <Title>Axonyx UI</Title>
       <Theme storageKey="axonyx-site-ui-theme" default="silver" preflight="true" />
-      <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native and React apps." />
+      <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps." />
       <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <Link rel="stylesheet" href="/ui-site.css" />
     </Head>
@@ -39,7 +39,7 @@ page RootLayout() {
 
       <footer class="ax-site-footer">
         <span>Axonyx UI</span>
-        <span>Foundry registry, native Axonyx components, and React adapter parity.</span>
+        <span>Foundry registry and native Axonyx components for Rust-first apps.</span>
       </footer>
     </SiteShell>
   }

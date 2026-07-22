@@ -37,8 +37,8 @@ page SidebarPage() {
           <Card title="Axonyx">
             <pre class="docs-code">{"<Sidebar>\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</Sidebar>"}</pre>
           </Card>
-          <Card title="React adapter">
-            <pre class="docs-code">{"<Sidebar>\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</Sidebar>"}</pre>
+          <Card title="Generated HTML shape">
+            <pre class="docs-code">{"<aside class=\"ax-sidebar\">\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</aside>"}</pre>
           </Card>
         </ContentGrid>
       </Stack>

@@ -13,8 +13,8 @@ page Registry() {
           <Copy slot="eyebrow">Installable UI pieces</Copy>
           <Copy tone="lead">
             Axonyx UI should expose a registry that can install native `.ax`
-            components, React adapter examples, CSS/JS assets, and blocks from
-            the same Foundry contract.
+            components, CSS/JS assets, themes, and blocks from the same Foundry
+            contract.
           </Copy>
         </HeroCard>
 
@@ -27,12 +27,12 @@ page Registry() {
               WASM hooks through Cargo-first packages.
             </Copy>
           </SectionCard>
-          <SectionCard title="NPM adapter">
-            <Badge tone="info">React</Badge>
-            <pre class="docs-code">{"npm install @axonyx/ui @axonyx/react\nimport { Button } from \"@axonyx/react\""}</pre>
+          <SectionCard title="React adapter lives next door">
+            <Badge tone="info">Sibling site</Badge>
+            <pre class="docs-code">{"https://react.axonyx.dev"}</pre>
             <Copy>
-              React projects consume the same token and component contract while
-              Axonyx keeps the native implementation as the source of truth.
+              React, Vite, TanStack, and React Router examples belong on the
+              adapter site. This site stays focused on native Axonyx and Cargo.
             </Copy>
           </SectionCard>
         </ContentGrid>
