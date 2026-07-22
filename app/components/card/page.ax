@@ -1,0 +1,47 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page CardPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Card">
+          <Copy slot="eyebrow">Components V0</Copy>
+          <Copy tone="lead">The primary Foundry surface for content groups, dashboard widgets, docs callouts, and product panels.</Copy>
+          <Button href="/components/field" variant="primary">Next: Field</Button>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <Card title="Default">
+            <Copy>Clean surface for readable content.</Copy>
+          </Card>
+          <Card title="Forged" border="forged">
+            <Copy>Industrial border language with stronger material presence.</Copy>
+          </Card>
+          <Card title="Inset" surface="inset">
+            <Copy>Lower visual plane for nested panels and quiet metadata.</Copy>
+          </Card>
+        </ContentGrid>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <pre class="docs-code">{"import { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <Copy>Static output generated.</Copy>\n</Card>"}</pre>
+          </Card>
+          <Card title="React adapter">
+            <pre class="docs-code">{"import { Card } from \"@axonyx/react\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <p>Static output generated.</p>\n</Card>"}</pre>
+          </Card>
+        </ContentGrid>
+
+        <Card title="API contract" surface="inset">
+          <Badge tone="success">V0</Badge>
+          <Copy>`title`, `surface`, `border`, and `recipe` are the first stable Card props.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

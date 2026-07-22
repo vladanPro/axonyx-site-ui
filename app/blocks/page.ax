@@ -24,14 +24,17 @@ page Blocks() {
           <SectionCard title="marketing-01">
             <Badge tone="success">First wave</Badge>
             <Copy>Hero, trust strip, feature grid, CTA, and footer for product sites.</Copy>
+            <Button href="/blocks/marketing-01" variant="ghost">Open block</Button>
           </SectionCard>
           <SectionCard title="docs-01">
             <Badge tone="success">First wave</Badge>
             <Copy>Header, sidebar, content rail, page pager, and responsive docs drawer.</Copy>
+            <Button href="/blocks/docs-01" variant="ghost">Open block</Button>
           </SectionCard>
           <SectionCard title="dashboard-01">
             <Badge tone="warning">First wave</Badge>
             <Copy>Sidebar, metrics, table, status cards, activity feed, and toolbar.</Copy>
+            <Button href="/blocks/dashboard-01" variant="ghost">Open block</Button>
           </SectionCard>
           <SectionCard title="login-01">
             <Badge tone="info">Next</Badge>

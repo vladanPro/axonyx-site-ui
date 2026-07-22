@@ -1,0 +1,57 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Field } from "@axonyx/ui/foundry/Field.ax"
+import { FieldError } from "@axonyx/ui/foundry/FieldError.ax"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Input } from "@axonyx/ui/foundry/Input.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page FieldPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Field">
+          <Copy slot="eyebrow">Components V0</Copy>
+          <Copy tone="lead">A form shell for labels, inputs, hints, and validation states across static forms and future Axonyx actions.</Copy>
+          <Button href="/components/app-shell" variant="primary">Next: AppShell</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Field htmlFor="project-name">
+              <FieldLabel htmlFor="project-name">Project name</FieldLabel>
+              <Input id="project-name" name="project" placeholder="Blockbit CMS" />
+              <FieldHint>Use a short public name.</FieldHint>
+            </Field>
+          </Card>
+          <Card title="Validation state">
+            <Field state="error" htmlFor="email">
+              <FieldLabel htmlFor="email">Email</FieldLabel>
+              <Input id="email" name="email" placeholder="you@company.dev" />
+              <FieldError>Email is required before submitting.</FieldError>
+            </Field>
+          </Card>
+        </ContentGrid>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <pre class="docs-code">{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</pre>
+          </Card>
+          <Card title="React adapter">
+            <pre class="docs-code">{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</pre>
+          </Card>
+        </ContentGrid>
+
+        <Card title="API contract" surface="inset">
+          <Badge tone="success">V0</Badge>
+          <Copy>`state` and `htmlFor` define the first Field shell. Label, Hint, Error, and Input compose inside it.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

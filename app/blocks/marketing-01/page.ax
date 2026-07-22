@@ -1,0 +1,53 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page MarketingBlock() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="marketing-01">
+          <Copy slot="eyebrow">Blocks V0</Copy>
+          <Copy tone="lead">A responsive product landing page section set: hero, proof cards, feature grid, and final call to action.</Copy>
+          <ButtonGroup>
+            <Button href="/blocks/docs-01" variant="primary">Next: docs-01</Button>
+            <Button href="/blocks" variant="ghost">All blocks</Button>
+          </ButtonGroup>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Stack gap="lg">
+            <HeroCard title="Ship a Rust-first site without a JS stack.">
+              <Copy slot="eyebrow">Foundry marketing block</Copy>
+              <Copy tone="lead">Use static output, strong surfaces, and a small number of obvious calls to action.</Copy>
+              <ButtonGroup>
+                <Button variant="primary">Start building</Button>
+                <Button variant="ghost">Read docs</Button>
+              </ButtonGroup>
+            </HeroCard>
+            <ContentGrid cols={3} gap="lg">
+              <SectionCard title="Fast"><Badge tone="success">HTML</Badge><Copy>Static pages and package assets.</Copy></SectionCard>
+              <SectionCard title="Readable"><Badge tone="info">ASX</Badge><Copy>Page files that frontend developers can scan.</Copy></SectionCard>
+              <SectionCard title="Ownable"><Badge tone="warning">Cargo</Badge><Copy>Rust runtime and Axonyx UI components.</Copy></SectionCard>
+            </ContentGrid>
+          </Stack>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Install">
+            <pre class="docs-code">{"cargo ax add block marketing-01"}</pre>
+          </Card>
+          <Card title="Block contract">
+            <Copy>Expected files: `app/page.ax`, optional `public/brand-mark.svg`, and component imports from `@axonyx/ui`.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

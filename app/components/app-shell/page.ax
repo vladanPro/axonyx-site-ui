@@ -1,0 +1,50 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page AppShellPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="AppShell">
+          <Copy slot="eyebrow">Layout V0</Copy>
+          <Copy tone="lead">Application frame for docs, dashboards, CMS tools, and any screen that needs a rail plus a main content plane.</Copy>
+          <Button href="/components/sidebar" variant="primary">Next: Sidebar</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <div class="ax-app-shell">
+            <aside class="ax-sidebar">
+              <strong>Foundry</strong>
+              <a href="/components/button">Button</a>
+              <a href="/components/card">Card</a>
+              <a href="/blocks/dashboard-01">Dashboard</a>
+            </aside>
+            <section class="ax-card">
+              <h3 class="ax-card__title">Main plane</h3>
+              <p>Use this shell for documentation, admin screens, and CMS interfaces.</p>
+            </section>
+          </div>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <pre class="docs-code">{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.ax\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.ax\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar slot=\"rail\">...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</pre>
+          </Card>
+          <Card title="React adapter">
+            <pre class="docs-code">{"import { AppShell, Sidebar, Card } from \"@axonyx/react\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar>...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</pre>
+          </Card>
+        </ContentGrid>
+
+        <Card title="API contract" surface="inset">
+          <Badge tone="success">V0</Badge>
+          <Copy>`rail`, `railWidth`, and `gap` define the first AppShell layout contract.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

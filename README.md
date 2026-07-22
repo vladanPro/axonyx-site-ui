@@ -33,7 +33,15 @@ npm install @axonyx/ui @axonyx/react
 
 - `/` - UI registry homepage.
 - `/components` - Foundry component catalog.
+- `/components/button` - Button V0 page.
+- `/components/card` - Card V0 page.
+- `/components/field` - Field V0 page.
+- `/components/app-shell` - AppShell V0 page.
+- `/components/sidebar` - Sidebar V0 page.
 - `/blocks` - responsive block catalog.
+- `/blocks/marketing-01` - marketing block V0 preview.
+- `/blocks/docs-01` - docs block V0 preview.
+- `/blocks/dashboard-01` - dashboard block V0 preview.
 - `/themes` - bronze, silver, and gold theme direction.
 - `/registry` - Cargo and npm registry model.
 

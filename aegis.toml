@@ -24,3 +24,27 @@ name = "registry model"
 goto = "/registry"
 expect_text = "Installable UI pieces"
 expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "button component"
+goto = "/components/button"
+expect_text = "Components V0"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "app shell component"
+goto = "/components/app-shell"
+expect_text = "Layout V0"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "marketing block"
+goto = "/blocks/marketing-01"
+expect_text = "Blocks V0"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "dashboard block"
+goto = "/blocks/dashboard-01"
+expect_text = "industrial admin dashboard"
+expect_not = ["Internal Server Error", "Application error"]

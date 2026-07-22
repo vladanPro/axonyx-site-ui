@@ -1,0 +1,55 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Sidebar } from "@axonyx/ui/foundry/Sidebar.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Stat } from "@axonyx/ui/foundry/Stat.ax"
+import { StatusLamp } from "@axonyx/ui/foundry/StatusLamp.ax"
+
+page DashboardBlock() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="dashboard-01">
+          <Copy slot="eyebrow">Blocks V0</Copy>
+          <Copy tone="lead">An industrial admin dashboard shell for CMS, deploy, QA, and package registry screens.</Copy>
+          <Button href="/components/app-shell" variant="primary">Open AppShell</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <div class="ax-app-shell">
+            <Sidebar>
+              <strong>Console</strong>
+              <a href="/blocks/dashboard-01">Overview</a>
+              <a href="/components/table">Collections</a>
+              <a href="/registry">Registry</a>
+            </Sidebar>
+            <section>
+              <ContentGrid cols={3} gap="lg">
+                <Stat label="Routes" value="84" />
+                <Stat label="Build" value="413ms" />
+                <Stat label="Packages" value="6" />
+              </ContentGrid>
+              <Card title="System status">
+                <StatusLamp tone="online" label="Runtime online" description="Tokio transport and package assets are ready." />
+                <Copy>Use this block as the base for Blockbit admin surfaces.</Copy>
+              </Card>
+            </section>
+          </div>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Install">
+            <pre class="docs-code">{"cargo ax add block dashboard-01"}</pre>
+          </Card>
+          <Card title="Block contract">
+            <Copy>Expected files: dashboard route, sidebar shell, metrics cards, activity panel, and optional table/data binding later.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

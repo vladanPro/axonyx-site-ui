@@ -21,29 +21,34 @@ page Components() {
         </HeroCard>
 
         <ContentGrid cols={3} gap="lg">
-          <SectionCard title="Actions">
+          <SectionCard title="Button">
             <Badge tone="success">V0</Badge>
-            <Copy>`Button`, `ButtonGroup`, `IconButton`, `MachineSwitch`, and command surfaces.</Copy>
+            <Copy>Primary actions, ghost actions, forged surfaces, and link-like calls to action.</Copy>
+            <Button href="/components/button" variant="ghost">Open Button</Button>
           </SectionCard>
-          <SectionCard title="Surfaces">
+          <SectionCard title="Card">
             <Badge tone="success">V0</Badge>
-            <Copy>`Card`, `Surface`, `Alert`, `Toast`, `Tooltip`, `Popover`, and forged borders.</Copy>
+            <Copy>Foundry surface primitive for content panels, dashboard widgets, and docs blocks.</Copy>
+            <Button href="/components/card" variant="ghost">Open Card</Button>
           </SectionCard>
-          <SectionCard title="Forms">
-            <Badge tone="warning">Next pass</Badge>
-            <Copy>`Field`, `Select`, `Radio`, `Choice`, `Slider`, validation states, and auth forms.</Copy>
+          <SectionCard title="Field">
+            <Badge tone="success">V0</Badge>
+            <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
+            <Button href="/components/field" variant="ghost">Open Field</Button>
           </SectionCard>
-          <SectionCard title="Navigation">
-            <Badge tone="info">Registry target</Badge>
-            <Copy>`Header`, `Navbar`, `Sidebar`, `Breadcrumbs`, `Tabs`, `Menu`, and responsive drawer nav.</Copy>
+          <SectionCard title="AppShell">
+            <Badge tone="success">V0</Badge>
+            <Copy>Application frame for docs, dashboards, admin tools, and CMS layouts.</Copy>
+            <Button href="/components/app-shell" variant="ghost">Open AppShell</Button>
           </SectionCard>
-          <SectionCard title="Data display">
-            <Badge tone="info">Registry target</Badge>
-            <Copy>`Table`, `List`, `Stat`, `Progress`, `Timeline`, `Rating`, `StatusLamp`, and CMS rows.</Copy>
+          <SectionCard title="Sidebar">
+            <Badge tone="success">V0</Badge>
+            <Copy>Navigation rail used by AppShell, docs pages, dashboards, and admin blocks.</Copy>
+            <Button href="/components/sidebar" variant="ghost">Open Sidebar</Button>
           </SectionCard>
-          <SectionCard title="Overlays">
-            <Badge tone="info">Registry target</Badge>
-            <Copy>`Dialog`, `Modal`, `Drawer`, `DropdownMenu`, and toast stack behavior owned by Axonyx UI.</Copy>
+          <SectionCard title="Next wave">
+            <Badge tone="info">After V0</Badge>
+            <Copy>Tabs, Dialog, Drawer, Table, Select, Toast, Tooltip, and StatusLamp come after the proof loop.</Copy>
           </SectionCard>
         </ContentGrid>
       </Stack>

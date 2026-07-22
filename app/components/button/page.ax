@@ -1,0 +1,54 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ButtonPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Button">
+          <Copy slot="eyebrow">Components V0</Copy>
+          <Copy tone="lead">The default action primitive for Axonyx apps: links, submits, ghost actions, and forged industrial calls to action.</Copy>
+          <ButtonGroup>
+            <Button href="/components/card" variant="primary">Next: Card</Button>
+            <Button href="/components" variant="ghost">All components</Button>
+          </ButtonGroup>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <ButtonGroup>
+              <Button variant="primary" surface="forged">Primary</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="ghost">Ghost</Button>
+            </ButtonGroup>
+          </Card>
+          <Card title="Install">
+            <Badge tone="success">Cargo</Badge>
+            <pre class="docs-code">{"cargo ax add button"}</pre>
+            <Badge tone="info">React</Badge>
+            <pre class="docs-code">{"npm install @axonyx/ui @axonyx/react"}</pre>
+          </Card>
+        </ContentGrid>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <pre class="docs-code">{"import { Button } from \"@axonyx/ui/foundry/Button.ax\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
+          </Card>
+          <Card title="React adapter">
+            <pre class="docs-code">{"import { Button } from \"@axonyx/react\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
+          </Card>
+        </ContentGrid>
+
+        <Card title="API contract" surface="inset">
+          <Copy>`variant`, `size`, `surface`, `border`, and `href` are the first stable Button props.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}
