@@ -1,4 +1,6 @@
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
@@ -9,32 +11,102 @@ page Registry() {
   return ASX {
     <Container max="xl">
       <Stack gap="xl">
-        <HeroCard title="Registry model">
-          <Copy slot="eyebrow">Installable UI pieces</Copy>
+        <HeroCard title="Registry V1">
+          <Copy slot="eyebrow">Import-first, copy-customize when needed</Copy>
           <Copy tone="lead">
-            Axonyx UI should expose a registry that can install native `.ax`
-            components, CSS/JS assets, themes, and blocks from the same Foundry
-            contract.
+            Axonyx UI now has a package registry contract: every component and
+            block declares its import path, preview URL, category, status, and
+            future copy command from the same `Axonyx.registry.toml` manifest.
           </Copy>
+          <Button href="/blocks/marketing-01" variant="primary">Preview first block</Button>
         </HeroCard>
 
         <ContentGrid cols={2} gap="lg">
-          <SectionCard title="Cargo native">
-            <Badge tone="success">Axonyx</Badge>
-            <pre class="docs-code">{"cargo ax add button\ncargo ax add block docs-01\ncargo ax add theme silver"}</pre>
+          <SectionCard title="Use from package" border="forged">
+            <Badge tone="success">Recommended</Badge>
+            <pre class="docs-code">{"cargo ax add ui\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</pre>
             <Copy>
-              Native apps get `.ax` files, Foundry CSS, behavior JS, and future
-              WASM hooks through Cargo-first packages.
+              This works like the MUI-style package model: install the UI
+              package once, then import primitives and blocks directly.
             </Copy>
           </SectionCard>
-          <SectionCard title="React adapter lives next door">
-            <Badge tone="info">Sibling site</Badge>
-            <pre class="docs-code">{"https://react.axonyx.dev"}</pre>
+
+          <SectionCard title="Copy when you want ownership" border="forged">
+            <Badge tone="warning">Later V1 CLI</Badge>
+            <pre class="docs-code">{"cargo ax add block marketing-01\ncargo ax add button"}</pre>
             <Copy>
-              React, Vite, TanStack, and React Router examples belong on the
-              adapter site. This site stays focused on native Axonyx and Cargo.
+              Copy mode is the shadcn-style escape hatch. It will place source
+              files in your app so you can reshape the component without waiting
+              for package changes.
             </Copy>
           </SectionCard>
+        </ContentGrid>
+
+        <section class="ui-section-head">
+          <Badge tone="success">Components</Badge>
+          <h2>Foundry primitives</h2>
+          <Copy tone="lead">
+            These entries are the first stable native `.ax` primitives for
+            application layouts, docs, dashboards, and CMS screens.
+          </Copy>
+        </section>
+
+        <div class="ui-registry-grid">
+          <a class="ui-registry-card" href="/components/button">
+            <Badge tone="success">actions</Badge>
+            <strong>Button</strong>
+            <span>@axonyx/ui/foundry/Button</span>
+          </a>
+          <a class="ui-registry-card" href="/components/card">
+            <Badge tone="success">surfaces</Badge>
+            <strong>Card</strong>
+            <span>@axonyx/ui/foundry/Card</span>
+          </a>
+          <a class="ui-registry-card" href="/components/field">
+            <Badge tone="success">forms</Badge>
+            <strong>Field</strong>
+            <span>@axonyx/ui/foundry/Field</span>
+          </a>
+          <a class="ui-registry-card" href="/components/app-shell">
+            <Badge tone="info">layout</Badge>
+            <strong>AppShell</strong>
+            <span>@axonyx/ui/foundry/AppShell</span>
+          </a>
+          <a class="ui-registry-card" href="/components/sidebar">
+            <Badge tone="info">layout</Badge>
+            <strong>Sidebar</strong>
+            <span>@axonyx/ui/foundry/Sidebar</span>
+          </a>
+        </div>
+
+        <section class="ui-section-head">
+          <Badge tone="warning">Blocks</Badge>
+          <h2>Installable page sections</h2>
+          <Copy tone="lead">
+            Blocks prove the larger idea: a programmer can start from complete
+            page sections, then gradually compose or replace parts.
+          </Copy>
+        </section>
+
+        <ContentGrid cols={3} gap="lg">
+          <Card title="Marketing 01" border="forged">
+            <Badge tone="success">marketing</Badge>
+            <Copy>Hero, proof cards, feature grid, and call to action.</Copy>
+            <pre class="docs-code">{"import { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</pre>
+            <Button href="/blocks/marketing-01" variant="ghost">Open preview</Button>
+          </Card>
+          <Card title="Docs 01" border="forged">
+            <Badge tone="success">docs</Badge>
+            <Copy>Documentation shell with sidebar, content rail, and install command space.</Copy>
+            <pre class="docs-code">{"import { Docs01 } from \"@axonyx/ui/blocks/docs-01\""}</pre>
+            <Button href="/blocks/docs-01" variant="ghost">Open preview</Button>
+          </Card>
+          <Card title="Dashboard 01" border="forged">
+            <Badge tone="warning">dashboard</Badge>
+            <Copy>Industrial admin shell for CMS, deploy, QA, and registry screens.</Copy>
+            <pre class="docs-code">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\""}</pre>
+            <Button href="/blocks/dashboard-01" variant="ghost">Open preview</Button>
+          </Card>
         </ContentGrid>
       </Stack>
     </Container>

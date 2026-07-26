@@ -42,7 +42,7 @@ page Home() {
                 <span class="ui-code-window__dot"></span>
                 <span class="ui-code-window__dot"></span>
               </div>
-              <pre>{"use \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button.ax\"\nimport { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\npage Dashboard() {\n  return ASX {\n    <Card title=\"Deploy health\" border=\"forged\">\n      <Button variant=\"primary\" surface=\"forged\">\n        Run production check\n      </Button>\n    </Card>\n  }\n}"}</pre>
+              <pre>{"use \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Card } from \"@axonyx/ui/foundry/Card\"\n\npage Dashboard() {\n  return ASX {\n    <Card title=\"Deploy health\" border=\"forged\">\n      <Button variant=\"primary\" surface=\"forged\">\n        Run production check\n      </Button>\n    </Card>\n  }\n}"}</pre>
             </div>
             <div class="ui-command-row">
               <div class="ui-command">
