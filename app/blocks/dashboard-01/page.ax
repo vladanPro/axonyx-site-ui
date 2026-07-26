@@ -2,7 +2,7 @@ import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Dashboard01 } from "@axonyx/ui/blocks/dashboard-01.ax"
+import { Dashboard01 } from "@axonyx/ui/blocks/dashboard-01"
 import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Sidebar } from "@axonyx/ui/foundry/Sidebar.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
@@ -15,7 +15,7 @@ page DashboardBlock() {
       <Stack gap="xl">
         <HeroCard title="dashboard-01">
           <Copy slot="eyebrow">Blocks V0</Copy>
-          <Copy tone="lead">An industrial admin dashboard shell imported from `@axonyx/ui/blocks/dashboard-01.ax`.</Copy>
+          <Copy tone="lead">An industrial admin dashboard shell imported from `@axonyx/ui/blocks/dashboard-01`.</Copy>
           <Button href="/components/app-shell" variant="primary">Open AppShell</Button>
         </HeroCard>
 
@@ -28,7 +28,7 @@ page DashboardBlock() {
             <pre class="docs-code">{"cargo ax add block dashboard-01"}</pre>
           </Card>
           <Card title="Import">
-            <pre class="docs-code">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01.ax\"\n\n<Dashboard01 />"}</pre>
+            <pre class="docs-code">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\"\n\n<Dashboard01 />"}</pre>
           </Card>
         </ContentGrid>
       </Stack>

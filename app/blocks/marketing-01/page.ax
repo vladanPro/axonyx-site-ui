@@ -4,7 +4,7 @@ import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
-import { Marketing01 } from "@axonyx/ui/blocks/marketing-01.ax"
+import { Marketing01 } from "@axonyx/ui/blocks/marketing-01"
 import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
@@ -14,7 +14,7 @@ page MarketingBlock() {
       <Stack gap="xl">
         <HeroCard title="marketing-01">
           <Copy slot="eyebrow">Blocks V0</Copy>
-          <Copy tone="lead">A responsive product landing page section set imported from `@axonyx/ui/blocks/marketing-01.ax`.</Copy>
+          <Copy tone="lead">A responsive product landing page section set imported from `@axonyx/ui/blocks/marketing-01`.</Copy>
           <ButtonGroup>
             <Button href="/blocks/docs-01" variant="primary">Next: docs-01</Button>
             <Button href="/blocks" variant="ghost">All blocks</Button>
@@ -30,7 +30,7 @@ page MarketingBlock() {
             <pre class="docs-code">{"cargo ax add block marketing-01"}</pre>
           </Card>
           <Card title="Import">
-            <pre class="docs-code">{"import { Marketing01 } from \"@axonyx/ui/blocks/marketing-01.ax\"\n\n<Marketing01 />"}</pre>
+            <pre class="docs-code">{"import { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\"\n\n<Marketing01 />"}</pre>
           </Card>
         </ContentGrid>
       </Stack>
