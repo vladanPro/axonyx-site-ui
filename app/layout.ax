@@ -9,7 +9,7 @@ page RootLayout() {
       <Title>Axonyx UI</Title>
       <Theme storageKey="axonyx-site-ui-theme" default="silver" preflight="true" />
       <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps." />
-      <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <Link rel="icon" href="https://axonyx.dev/brand-mark.svg" type="image/svg+xml" />
       <Link rel="stylesheet" href="/ui-site.css" />
       <Script src="/js/ui-site.js?v=0.0.1" defer="true" />
     </Head>
@@ -17,7 +17,7 @@ page RootLayout() {
     <header class="site-nav">
       <div class="site-header__inner">
         <a class="site-brand" href="/">
-          <img src="/brand-mark.svg?v=20260728" alt="Axonyx UI" class="site-logo" width={80} height={80} />
+          <img src="https://axonyx.dev/brand-mark.svg" alt="Axonyx UI" class="site-logo" width={80} height={80} />
           <span>Axonyx UI</span>
         </a>
         <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
