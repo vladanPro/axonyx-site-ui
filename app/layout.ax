@@ -19,7 +19,7 @@ page RootLayout() {
       <Header sticky="top">
         <Navbar brandHref="/">
           <span slot="brand">
-            <img src="/brand-mark.svg" alt="" width={32} height={32} />
+            <img src="/brand-mark.svg" alt="" width={56} height={56} />
             Axonyx UI
           </span>
           <TextLink href="/">Home</TextLink>
