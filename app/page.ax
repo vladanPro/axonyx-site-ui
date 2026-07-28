@@ -4,6 +4,7 @@ import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
@@ -57,6 +58,29 @@ page Home() {
           </div>
         </section>
 
+        <div class="ui-status-rail">
+          <div>
+            <span>Components V0</span>
+            <strong>5</strong>
+            <small>Button, Card, Field, AppShell, Sidebar</small>
+          </div>
+          <div>
+            <span>Blocks V0</span>
+            <strong>3</strong>
+            <small>marketing-01, docs-01, dashboard-01</small>
+          </div>
+          <div>
+            <span>Install model</span>
+            <strong>Cargo</strong>
+            <small>import first, copy/customize later</small>
+          </div>
+          <div>
+            <span>Theme layer</span>
+            <strong>Foundry</strong>
+            <small>silver, bronze, gold</small>
+          </div>
+        </div>
+
         <section class="ui-section-head">
           <Badge tone="success">Source of truth</Badge>
           <h2>One registry for native Axonyx apps.</h2>
@@ -108,9 +132,32 @@ page Home() {
           </SectionCard>
         </ContentGrid>
 
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Install once, compose everywhere" border="forged">
+            <Copy tone="lead">
+              Axonyx UI should feel familiar to people coming from shadcn or MUI,
+              but the source contract is native `.ax` and Cargo-first.
+            </Copy>
+            <DocsCodeBlock title="Install">
+              {"cargo ax add ui\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\""}
+            </DocsCodeBlock>
+          </Card>
+          <Card title="Two tracks, one visual contract" border="forged">
+            <Copy>
+              This site is for Rust/Axonyx-native usage. The React adapter site
+              will mirror the same Foundry primitives for Next, Vite, TanStack,
+              and React Router users.
+            </Copy>
+            <ButtonGroup>
+              <Button href="https://react.axonyx.dev" variant="ghost">React adapter</Button>
+              <Button href="https://axonyx.dev" variant="ghost">Axonyx framework</Button>
+            </ButtonGroup>
+          </Card>
+        </ContentGrid>
+
         <Card title="Registry V0 contract" border="forged" surface="inset">
           <Copy tone="lead">
-            The first milestone is not “all components.” It is one complete,
+            The first milestone is not "all components." It is one complete,
             believable loop: install a component, install a block, switch between
             native Axonyx examples, and keep the same Foundry theme contract.
           </Copy>

@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -24,7 +25,7 @@ page Registry() {
         <ContentGrid cols={2} gap="lg">
           <SectionCard title="Use from package" border="forged">
             <Badge tone="success">Recommended</Badge>
-            <pre class="docs-code">{"cargo ax add ui\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</pre>
+            <DocsCodeBlock>{"cargo ax add ui\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</DocsCodeBlock>
             <Copy>
               This works like the MUI-style package model: install the UI
               package once, then import primitives and blocks directly.
@@ -33,7 +34,7 @@ page Registry() {
 
           <SectionCard title="Copy when you want ownership" border="forged">
             <Badge tone="warning">Later V1 CLI</Badge>
-            <pre class="docs-code">{"cargo ax add block marketing-01\ncargo ax add button"}</pre>
+            <DocsCodeBlock>{"cargo ax add block marketing-01\ncargo ax add button"}</DocsCodeBlock>
             <Copy>
               Copy mode is the shadcn-style escape hatch. It will place source
               files in your app so you can reshape the component without waiting
@@ -92,19 +93,19 @@ page Registry() {
           <Card title="Marketing 01" border="forged">
             <Badge tone="success">marketing</Badge>
             <Copy>Hero, proof cards, feature grid, and call to action.</Copy>
-            <pre class="docs-code">{"import { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</pre>
+            <DocsCodeBlock>{"import { Marketing01 } from \"@axonyx/ui/blocks/marketing-01\""}</DocsCodeBlock>
             <Button href="/blocks/marketing-01" variant="ghost">Open preview</Button>
           </Card>
           <Card title="Docs 01" border="forged">
             <Badge tone="success">docs</Badge>
             <Copy>Documentation shell with sidebar, content rail, and install command space.</Copy>
-            <pre class="docs-code">{"import { Docs01 } from \"@axonyx/ui/blocks/docs-01\""}</pre>
+            <DocsCodeBlock>{"import { Docs01 } from \"@axonyx/ui/blocks/docs-01\""}</DocsCodeBlock>
             <Button href="/blocks/docs-01" variant="ghost">Open preview</Button>
           </Card>
           <Card title="Dashboard 01" border="forged">
             <Badge tone="warning">dashboard</Badge>
             <Copy>Industrial admin shell for CMS, deploy, QA, and registry screens.</Copy>
-            <pre class="docs-code">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\""}</pre>
+            <DocsCodeBlock>{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\""}</DocsCodeBlock>
             <Button href="/blocks/dashboard-01" variant="ghost">Open preview</Button>
           </Card>
         </ContentGrid>

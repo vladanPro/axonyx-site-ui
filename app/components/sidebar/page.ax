@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -35,10 +36,10 @@ page SidebarPage() {
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <pre class="docs-code">{"<Sidebar>\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</Sidebar>"}</pre>
+            <DocsCodeBlock>{"<Sidebar>\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</Sidebar>"}</DocsCodeBlock>
           </Card>
           <Card title="Generated HTML shape">
-            <pre class="docs-code">{"<aside class=\"ax-sidebar\">\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</aside>"}</pre>
+            <DocsCodeBlock>{"<aside class=\"ax-sidebar\">\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</aside>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
       </Stack>

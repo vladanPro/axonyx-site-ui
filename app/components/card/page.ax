@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -30,10 +31,10 @@ page CardPage() {
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <pre class="docs-code">{"import { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <Copy>Static output generated.</Copy>\n</Card>"}</pre>
+            <DocsCodeBlock>{"import { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <Copy>Static output generated.</Copy>\n</Card>"}</DocsCodeBlock>
           </Card>
           <Card title="Generated HTML shape">
-            <pre class="docs-code">{"<article class=\"ax-card\" data-border=\"forged\">\n  <h2 class=\"ax-card__title\">Build status</h2>\n  <p>Static output generated.</p>\n</article>"}</pre>
+            <DocsCodeBlock>{"<article class=\"ax-card\" data-border=\"forged\">\n  <h2 class=\"ax-card__title\">Build status</h2>\n  <p>Static output generated.</p>\n</article>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 

@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
@@ -23,10 +24,10 @@ page DocsBlock() {
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Install">
-            <pre class="docs-code">{"cargo ax add block docs-01"}</pre>
+            <DocsCodeBlock>{"cargo ax add block docs-01"}</DocsCodeBlock>
           </Card>
           <Card title="Import">
-            <pre class="docs-code">{"import { Docs01 } from \"@axonyx/ui/blocks/docs-01\"\n\n<Docs01 />"}</pre>
+            <DocsCodeBlock>{"import { Docs01 } from \"@axonyx/ui/blocks/docs-01\"\n\n<Docs01 />"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
       </Stack>

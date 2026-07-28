@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -33,10 +34,10 @@ page AppShellPage() {
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <pre class="docs-code">{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.ax\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.ax\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar slot=\"rail\">...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</pre>
+            <DocsCodeBlock>{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.ax\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.ax\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar slot=\"rail\">...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</DocsCodeBlock>
           </Card>
           <Card title="Generated HTML shape">
-            <pre class="docs-code">{"<div class=\"ax-app-shell\" data-rail=\"left\" data-rail-width=\"md\">\n  <aside class=\"ax-sidebar\">...</aside>\n  <main>...</main>\n</div>"}</pre>
+            <DocsCodeBlock>{"<div class=\"ax-app-shell\" data-rail=\"left\" data-rail-width=\"md\">\n  <aside class=\"ax-sidebar\">...</aside>\n  <main>...</main>\n</div>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 

@@ -1,3 +1,4 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -40,10 +41,10 @@ page FieldPage() {
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <pre class="docs-code">{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</pre>
+            <DocsCodeBlock>{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</DocsCodeBlock>
           </Card>
           <Card title="Generated HTML shape">
-            <pre class="docs-code">{"<label class=\"ax-field\" for=\"email\">\n  <span class=\"ax-field__label\">Email</span>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</label>"}</pre>
+            <DocsCodeBlock>{"<label class=\"ax-field\" for=\"email\">\n  <span class=\"ax-field__label\">Email</span>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</label>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 

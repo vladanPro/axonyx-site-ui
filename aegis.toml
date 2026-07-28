@@ -4,43 +4,43 @@ check_links = true
 [[fast]]
 name = "ui home"
 goto = "/"
-expect_text = "Foundry components for Axonyx and React"
+expect_text = "Build interfaces from forged parts"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "components catalog"
 goto = "/components"
-expect_text = "Foundry primitives"
+expect_text = "component catalog starts"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "blocks catalog"
 goto = "/blocks"
-expect_text = "Responsive app sections"
+expect_text = "shadcn-style move"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "registry model"
 goto = "/registry"
-expect_text = "Installable UI pieces"
+expect_text = "Registry V1"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "button component"
 goto = "/components/button"
-expect_text = "Components V0"
+expect_text = "default action primitive"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "app shell component"
 goto = "/components/app-shell"
-expect_text = "Layout V0"
+expect_text = "Application frame for docs"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
 name = "marketing block"
 goto = "/blocks/marketing-01"
-expect_text = "Blocks V0"
+expect_text = "responsive product landing"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
