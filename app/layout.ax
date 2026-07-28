@@ -1,6 +1,4 @@
 use "@axonyx/ui"
-import { Header } from "@axonyx/ui/foundry/Header.ax"
-import { Navbar } from "@axonyx/ui/foundry/Navbar.ax"
 import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
 import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
 import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.ax"
@@ -13,15 +11,22 @@ page RootLayout() {
       <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps." />
       <Link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <Link rel="stylesheet" href="/ui-site.css" />
+      <Script src="/js/ui-site.js?v=0.0.1" defer="true" />
     </Head>
 
-    <SiteShell max="xl">
-      <Header sticky="top">
-        <Navbar brandHref="/">
-          <span slot="brand">
-            <img src="/brand-mark.svg" alt="" width={56} height={56} />
-            Axonyx UI
-          </span>
+    <header class="site-nav">
+      <div class="site-header__inner">
+        <a class="site-brand" href="/">
+          <img src="/brand-mark.svg" alt="Axonyx UI" class="site-logo" />
+          <span>Axonyx UI</span>
+        </a>
+        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+          Menu
+        </button>
+        <nav class="site-nav__links" id="site-nav-links">
           <TextLink href="/">Home</TextLink>
           <TextLink href="/components">Components</TextLink>
           <TextLink href="/blocks">Blocks</TextLink>
@@ -29,9 +34,12 @@ page RootLayout() {
           <TextLink href="/registry">Registry</TextLink>
           <TextLink href="https://axonyx.dev">Axonyx</TextLink>
           <TextLink href="https://react.axonyx.dev">React</TextLink>
-          <ThemeSwitcher label="Theme" size="sm" surface="raised" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
-        </Navbar>
-      </Header>
+        </nav>
+        <ThemeSwitcher label="Theme" size="sm" surface="forged" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
+      </div>
+    </header>
+
+    <SiteShell max="xl">
 
       <main>
         <Slot />
