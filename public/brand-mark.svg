@@ -1,21 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Axonyx X mark">
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Axonyx X icon">
   <defs>
-    <linearGradient id="ax-x-core" x1="22%" x2="78%" y1="12%" y2="88%">
-      <stop offset="0%" stop-color="#f9d36b" />
-      <stop offset="48%" stop-color="#d08b37" />
-      <stop offset="100%" stop-color="#6f3f1f" />
+    <linearGradient id="bronzeA" x1="18" y1="16" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC53D"/>
+      <stop offset="0.52" stop-color="#CF9160"/>
+      <stop offset="1" stop-color="#7A4A2E"/>
     </linearGradient>
-    <linearGradient id="ax-x-edge" x1="18%" x2="82%" y1="8%" y2="92%">
-      <stop offset="0%" stop-color="#f7e6b1" />
-      <stop offset="100%" stop-color="#9a5a2a" />
+    <linearGradient id="bronzeB" x1="46" y1="16" x2="18" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD98A"/>
+      <stop offset="0.5" stop-color="#CF9160"/>
+      <stop offset="1" stop-color="#8A5636"/>
     </linearGradient>
   </defs>
-  <rect x="8" y="8" width="144" height="144" rx="34" fill="#080b10" />
-  <rect x="18" y="18" width="124" height="124" rx="26" fill="#10151d" stroke="#2d2218" stroke-width="3" />
-  <path d="M45 32H72L82 55L92 32H119L96 80L121 128H94L82 104L70 128H43L68 80L45 32Z" fill="url(#ax-x-core)" />
-  <path d="M45 32H72L82 55L92 32H119L96 80L121 128H94L82 104L70 128H43L68 80L45 32Z" fill="none" stroke="url(#ax-x-edge)" stroke-width="5" stroke-linejoin="round" />
-  <circle cx="37" cy="37" r="4" fill="#e2a84d" />
-  <circle cx="123" cy="37" r="4" fill="#e2a84d" />
-  <circle cx="37" cy="123" r="4" fill="#e2a84d" />
-  <circle cx="123" cy="123" r="4" fill="#e2a84d" />
+  <rect width="64" height="64" rx="14" fill="#071019"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#253243" stroke-opacity="0.85"/>
+  <path d="M18 16 L30 16 L46 48 L34 48 Z" fill="url(#bronzeA)"/>
+  <path d="M46 16 L34 16 L18 48 L30 48 Z" fill="url(#bronzeB)"/>
+  <circle cx="32" cy="32" r="4.5" fill="#071019" opacity="0.95"/>
+  <circle cx="32" cy="32" r="2" fill="#FFC53D"/>
 </svg>
