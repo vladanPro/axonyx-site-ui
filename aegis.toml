@@ -68,6 +68,12 @@ expect_text = "Native form composition"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "layout component"
+goto = "/components/layout"
+expect_text = "Foundation primitives"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "list component"
 goto = "/components/list"
 expect_text = "Stacked rows"

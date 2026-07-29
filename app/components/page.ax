@@ -36,6 +36,11 @@ page Components() {
             <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
             <Button href="/components/field" variant="ghost">Open Field</Button>
           </SectionCard>
+          <SectionCard title="Layout">
+            <Badge tone="success">Foundation</Badge>
+            <Copy>Container, Grid, Stack, Flex, Cluster, Box, Surface, Section, and spacing primitives.</Copy>
+            <Button href="/components/layout" variant="ghost">Open Layout</Button>
+          </SectionCard>
           <SectionCard title="Avatar">
             <Badge tone="success">V0</Badge>
             <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>

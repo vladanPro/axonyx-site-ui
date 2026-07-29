@@ -1,0 +1,115 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Bleed } from "@axonyx/ui/foundry/Bleed.ax"
+import { Box } from "@axonyx/ui/foundry/Box.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Center } from "@axonyx/ui/foundry/Center.ax"
+import { Cluster } from "@axonyx/ui/foundry/Cluster.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Divider } from "@axonyx/ui/foundry/Divider.ax"
+import { Flex } from "@axonyx/ui/foundry/Flex.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Inset } from "@axonyx/ui/foundry/Inset.ax"
+import { Section } from "@axonyx/ui/foundry/Section.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+
+page LayoutPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Layout">
+          <Copy tone="eyebrow">Foundation primitives</Copy>
+          <Copy tone="lead">
+            Layout is the spine of Foundry. These primitives define width,
+            rhythm, alignment, responsive grids, surfaces, and spacing before
+            higher-level components enter the page.
+          </Copy>
+          <Button href="/components/avatar" variant="primary">Next: Avatar</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Page composition" border="forged">
+            <Section width="wide">
+              <Stack gap="lg">
+                <Surface eyebrow="Section" title="Content rhythm" variant="forged" padding="lg">
+                  <Copy>Use Section, Surface, and Stack for the basic page rhythm.</Copy>
+                  <Cluster gap="sm">
+                    <Badge tone="success">section</Badge>
+                    <Badge tone="info">surface</Badge>
+                    <Badge tone="warning">stack</Badge>
+                  </Cluster>
+                </Surface>
+                <Grid cols="3" gap="md">
+                  <Box padding="md" surface="inset"><Copy>Grid item</Copy></Box>
+                  <Box padding="md" surface="inset"><Copy>Grid item</Copy></Box>
+                  <Box padding="md" surface="inset"><Copy>Grid item</Copy></Box>
+                </Grid>
+              </Stack>
+            </Section>
+          </Card>
+
+          <Card title="Alignment" border="forged">
+            <Stack gap="lg">
+              <Flex align="center" justify="between" gap="md" wrap="true">
+                <Badge tone="success">Flex</Badge>
+                <Cluster gap="sm">
+                  <Button variant="secondary">Preview</Button>
+                  <Button variant="primary">Publish</Button>
+                </Cluster>
+              </Flex>
+              <Divider />
+              <Center min="8rem">
+                <Box padding="md" surface="inset">
+                  <Copy>Center is for empty states, auth panels, and focused messages.</Copy>
+                </Box>
+              </Center>
+            </Stack>
+          </Card>
+        </ContentGrid>
+
+        <ContentGrid cols={3} gap="lg">
+          <Card title="Container">
+            <Copy>Controls page max width and horizontal padding.</Copy>
+            <DocsCodeBlock>{"<Container max=\"xl\">\n  <Slot />\n</Container>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Grid">
+            <Copy>Creates responsive columns for cards, stats, forms, and dashboards.</Copy>
+            <DocsCodeBlock>{"<Grid cols=\"3\" gap=\"lg\">\n  <Card />\n  <Card />\n  <Card />\n</Grid>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Stack">
+            <Copy>Defines vertical rhythm. Use it before adding one-off margins.</Copy>
+            <DocsCodeBlock>{"<Stack gap=\"xl\">\n  <PageHeader />\n  <ContentGrid />\n</Stack>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Flex and Cluster">
+            <Copy>Flex handles rows; Cluster handles wrapping inline groups.</Copy>
+            <DocsCodeBlock>{"<Flex align=\"center\" justify=\"between\">\n  <Cluster gap=\"sm\">\n    <Button />\n  </Cluster>\n</Flex>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Box and Inset">
+            <Copy>Use Box for small surfaces, Inset for controlled inner spacing.</Copy>
+            <Inset size="lg">
+              <Box padding="md" surface="inset"><Copy>Inset content</Copy></Box>
+            </Inset>
+          </Card>
+          <Card title="Bleed">
+            <Copy>Use Bleed when media or panels need to escape local padding.</Copy>
+            <Bleed padding="md">
+              <Surface title="Bleed surface" variant="inset" padding="lg"><Copy>Useful for hero media and docs examples.</Copy></Surface>
+            </Bleed>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Rule" surface="inset" border="forged">
+          <Copy tone="lead">
+            If a page needs custom CSS only to place components on a grid,
+            the missing capability probably belongs in `axonyx-ui`, not in the
+            site stylesheet.
+          </Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

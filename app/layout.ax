@@ -58,6 +58,7 @@ page RootLayout() {
               <a href="/components/button">Button</a>
               <a href="/components/card">Card</a>
               <a href="/components/field">Field</a>
+              <a href="/components/layout">Layout</a>
               <a href="/components/avatar">Avatar</a>
               <a href="/components/chip">Chip</a>
               <a href="/components/code-block">CodeBlock</a>
