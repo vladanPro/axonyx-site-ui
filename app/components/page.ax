@@ -36,6 +36,26 @@ page Components() {
             <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
             <Button href="/components/field" variant="ghost">Open Field</Button>
           </SectionCard>
+          <SectionCard title="Avatar">
+            <Badge tone="success">V0</Badge>
+            <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>
+            <Button href="/components/avatar" variant="ghost">Open Avatar</Button>
+          </SectionCard>
+          <SectionCard title="Chip">
+            <Badge tone="success">V0</Badge>
+            <Copy>Small metadata pills for filters, tags, package channels, and state labels.</Copy>
+            <Button href="/components/chip" variant="ghost">Open Chip</Button>
+          </SectionCard>
+          <SectionCard title="CodeBlock">
+            <Badge tone="success">V0</Badge>
+            <Copy>Copy-ready code surfaces for install commands, ASX snippets, and generated HTML.</Copy>
+            <Button href="/components/code-block" variant="ghost">Open CodeBlock</Button>
+          </SectionCard>
+          <SectionCard title="Forms">
+            <Badge tone="success">V0</Badge>
+            <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
+            <Button href="/components/forms" variant="ghost">Open Forms</Button>
+          </SectionCard>
           <SectionCard title="AppShell">
             <Badge tone="success">V0</Badge>
             <Copy>Application frame for docs, dashboards, admin tools, and CMS layouts.</Copy>
@@ -55,6 +75,36 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Compact labels for package status, preview state, and metadata.</Copy>
             <Button href="/components/badge" variant="ghost">Open Badge</Button>
+          </SectionCard>
+          <SectionCard title="List">
+            <Badge tone="success">V0</Badge>
+            <Copy>Stacked content rows for nav panels, inboxes, command results, and CMS records.</Copy>
+            <Button href="/components/list" variant="ghost">Open List</Button>
+          </SectionCard>
+          <SectionCard title="MachineSwitch">
+            <Badge tone="success">V0</Badge>
+            <Copy>Industrial two-pad switch for runtime, worker, and infrastructure controls.</Copy>
+            <Button href="/components/machine-switch" variant="ghost">Open MachineSwitch</Button>
+          </SectionCard>
+          <SectionCard title="Pagination">
+            <Badge tone="success">V0</Badge>
+            <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
+            <Button href="/components/pagination" variant="ghost">Open Pagination</Button>
+          </SectionCard>
+          <SectionCard title="Select">
+            <Badge tone="success">V0</Badge>
+            <Copy>Native select styling aligned with Foundry field and theme surfaces.</Copy>
+            <Button href="/components/select" variant="ghost">Open Select</Button>
+          </SectionCard>
+          <SectionCard title="Slider">
+            <Badge tone="success">V0</Badge>
+            <Copy>Range input for intensity, volume, opacity, limits, and dashboard tuning.</Copy>
+            <Button href="/components/slider" variant="ghost">Open Slider</Button>
+          </SectionCard>
+          <SectionCard title="Switch">
+            <Badge tone="success">V0</Badge>
+            <Copy>Compact boolean control for preferences, flags, and settings forms.</Copy>
+            <Button href="/components/switch" variant="ghost">Open Switch</Button>
           </SectionCard>
           <SectionCard title="Tabs">
             <Badge tone="success">V0</Badge>
@@ -81,10 +131,25 @@ page Components() {
             <Copy>Compact command menu for headers, dashboards, and registry actions.</Copy>
             <Button href="/components/dropdown-menu" variant="ghost">Open DropdownMenu</Button>
           </SectionCard>
+          <SectionCard title="Surface">
+            <Badge tone="success">V0</Badge>
+            <Copy>General section surface for themed panels, docs sections, and feature blocks.</Copy>
+            <Button href="/components/surface" variant="ghost">Open Surface</Button>
+          </SectionCard>
           <SectionCard title="StatusLamp">
             <Badge tone="success">V0</Badge>
             <Copy>Industrial status indicator for runtime health and worker state.</Copy>
             <Button href="/components/status-lamp" variant="ghost">Open StatusLamp</Button>
+          </SectionCard>
+          <SectionCard title="Timeline">
+            <Badge tone="success">V0</Badge>
+            <Copy>Chronological activity and stepper primitives for releases, jobs, and guides.</Copy>
+            <Button href="/components/timeline" variant="ghost">Open Timeline</Button>
+          </SectionCard>
+          <SectionCard title="Toolbar">
+            <Badge tone="success">V0</Badge>
+            <Copy>Horizontal action strip for editors, tables, dashboards, and CMS controls.</Copy>
+            <Button href="/components/toolbar" variant="ghost">Open Toolbar</Button>
           </SectionCard>
           <SectionCard title="Progress">
             <Badge tone="success">V0</Badge>

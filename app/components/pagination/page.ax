@@ -1,0 +1,35 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Pagination } from "@axonyx/ui/foundry/Pagination.ax"
+import { PaginationItem } from "@axonyx/ui/foundry/PaginationItem.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page PaginationPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Pagination">
+          <Copy slot="eyebrow">Navigation</Copy>
+          <Copy tone="lead">Page navigation for tables, docs indexes, blog archives, and CMS collections.</Copy>
+          <Button href="/components/select" variant="primary">Next: Select</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Pagination current="2" total="8" previous="?page=1" next="?page=3">
+            <PaginationItem href="?page=1">1</PaginationItem>
+            <PaginationItem href="?page=2" current="true">2</PaginationItem>
+            <PaginationItem href="?page=3">3</PaginationItem>
+          </Pagination>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Pagination current=\"2\" total=\"8\" previous=\"?page=1\" next=\"?page=3\">\n  <PaginationItem current=\"true\">2</PaginationItem>\n</Pagination>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

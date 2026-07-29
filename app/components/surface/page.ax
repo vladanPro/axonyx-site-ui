@@ -1,0 +1,31 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+
+page SurfacePage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Surface">
+          <Copy slot="eyebrow">Layout</Copy>
+          <Copy tone="lead">General section shell for themed panels, docs islands, and feature blocks.</Copy>
+          <Button href="/components/status-lamp" variant="primary">Next: StatusLamp</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Surface eyebrow="Runtime" title="Forged panel" variant="forged" padding="lg"><Copy>Use Surface when the layout needs a clear material boundary.</Copy><Badge tone="success">stable</Badge></Surface>
+          <Surface eyebrow="Docs" title="Inset panel" variant="inset" padding="lg"><Copy>Use inset surfaces for reference notes and dense examples.</Copy></Surface>
+        </ContentGrid>
+
+        <Surface title="Axonyx" padding="lg">
+          <DocsCodeBlock>{"<Surface eyebrow=\"Runtime\" title=\"Forged panel\" variant=\"forged\">\n  <Copy>Use Surface for material boundaries.</Copy>\n</Surface>"}</DocsCodeBlock>
+        </Surface>
+      </Stack>
+    </Container>
+  }
+}

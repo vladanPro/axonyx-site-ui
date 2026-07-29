@@ -50,6 +50,66 @@ expect_text = "Inline status messaging"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "avatar component"
+goto = "/components/avatar"
+expect_text = "Compact identity marker"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "chip component"
+goto = "/components/chip"
+expect_text = "Small labels for filters"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "code block component"
+goto = "/components/code-block"
+expect_text = "Copy-ready code surfaces"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "forms component"
+goto = "/components/forms"
+expect_text = "Native form composition"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "list component"
+goto = "/components/list"
+expect_text = "Stacked rows"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "machine switch component"
+goto = "/components/machine-switch"
+expect_text = "Two-pad forged switch"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "pagination component"
+goto = "/components/pagination"
+expect_text = "Page navigation"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "select component"
+goto = "/components/select"
+expect_text = "Native select control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "slider component"
+goto = "/components/slider"
+expect_text = "Range control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "switch component"
+goto = "/components/switch"
+expect_text = "Compact boolean control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "tabs component"
 goto = "/components/tabs"
 expect_text = "Segment related content"
@@ -77,6 +137,24 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "tooltip component"
 goto = "/components/tooltip"
 expect_text = "Small explanatory layer"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "surface component"
+goto = "/components/surface"
+expect_text = "General section shell"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "timeline component"
+goto = "/components/timeline"
+expect_text = "Timeline and stepper primitives"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "toolbar component"
+goto = "/components/toolbar"
+expect_text = "Horizontal action strip"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

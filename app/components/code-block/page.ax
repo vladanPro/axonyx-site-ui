@@ -1,0 +1,37 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { CodeBlock } from "@axonyx/ui/foundry/CodeBlock.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page CodeBlockPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="CodeBlock">
+          <Copy slot="eyebrow">Documentation</Copy>
+          <Copy tone="lead">Copy-ready code surfaces for CLI commands, ASX snippets, generated HTML, and registry install examples.</Copy>
+          <Button href="/components/forms" variant="primary">Next: Forms</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Command">
+            <CodeBlock title="Install" language="bash" copy="true">cargo ax add button</CodeBlock>
+          </Card>
+          <Card title="ASX">
+            <CodeBlock title="Button.ax" language="ax" copy="true">{"<Button variant=\"primary\">Deploy</Button>"}</CodeBlock>
+          </Card>
+        </ContentGrid>
+
+        <Card title="API contract">
+          <Badge tone="success">V0</Badge>
+          <Copy>`title`, `language`, and `copy` define the header. Children render inside the code body.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

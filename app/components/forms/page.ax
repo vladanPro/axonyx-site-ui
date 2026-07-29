@@ -1,0 +1,61 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Checkbox } from "@axonyx/ui/foundry/Checkbox.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Field } from "@axonyx/ui/foundry/Field.ax"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.ax"
+import { Form } from "@axonyx/ui/foundry/Form.ax"
+import { FormGroup } from "@axonyx/ui/foundry/FormGroup.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Input } from "@axonyx/ui/foundry/Input.ax"
+import { Legend } from "@axonyx/ui/foundry/Legend.ax"
+import { Option } from "@axonyx/ui/foundry/Option.ax"
+import { Select } from "@axonyx/ui/foundry/Select.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Switch } from "@axonyx/ui/foundry/Switch.ax"
+import { Textarea } from "@axonyx/ui/foundry/Textarea.ax"
+
+page FormsPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Forms">
+          <Copy slot="eyebrow">Inputs</Copy>
+          <Copy tone="lead">Native form composition for Axonyx actions: fields, grouped inputs, textarea, select, checkbox, and switch.</Copy>
+          <Button href="/components/alert" variant="primary">Next: Alert</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Form surface="inset" layout="stack">
+            <Fieldset surface="forged">
+              <Legend>Project settings</Legend>
+              <FormGroup cols="2" gap="md">
+                <Field htmlFor="name"><FieldLabel htmlFor="name">Name</FieldLabel><Input id="name" name="name" placeholder="Axonyx Site" /></Field>
+                <Field htmlFor="type"><FieldLabel htmlFor="type">Template</FieldLabel><Select id="type" name="type"><Option value="docs">Docs</Option><Option value="site">Site</Option></Select></Field>
+              </FormGroup>
+              <Field htmlFor="notes"><FieldLabel htmlFor="notes">Notes</FieldLabel><Textarea id="notes" name="notes" placeholder="Launch notes" /></Field>
+              <Checkbox name="public">Publish docs publicly</Checkbox>
+              <Switch name="theme">Enable theme switcher</Switch>
+              <Button variant="primary" surface="forged">Save settings</Button>
+            </Fieldset>
+          </Form>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Form surface=\"inset\">\n  <Field htmlFor=\"name\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" />\n  </Field>\n</Form>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Contract">
+            <Badge tone="success">V0</Badge>
+            <Copy>Forms stay native HTML first. Axonyx actions can attach to the same structure later.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

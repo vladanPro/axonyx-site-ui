@@ -1,0 +1,36 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Toolbar } from "@axonyx/ui/foundry/Toolbar.ax"
+
+page ToolbarPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Toolbar">
+          <Copy slot="eyebrow">Actions</Copy>
+          <Copy tone="lead">Horizontal action strip for editors, table tools, dashboard filters, and CMS controls.</Copy>
+          <Button href="/components/progress" variant="primary">Next: Progress</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Toolbar variant="forged">
+            <ButtonGroup>
+              <Button variant="primary">Publish</Button>
+              <Button variant="secondary">Preview</Button>
+              <Button variant="ghost">Archive</Button>
+            </ButtonGroup>
+          </Toolbar>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Toolbar variant=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n    <Button variant=\"ghost\">Archive</Button>\n  </ButtonGroup>\n</Toolbar>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

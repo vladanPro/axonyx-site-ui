@@ -1,0 +1,36 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Field } from "@axonyx/ui/foundry/Field.ax"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Option } from "@axonyx/ui/foundry/Option.ax"
+import { Select } from "@axonyx/ui/foundry/Select.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page SelectPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Select">
+          <Copy slot="eyebrow">Inputs</Copy>
+          <Copy tone="lead">Native select control with Foundry sizing and forged surface support.</Copy>
+          <Button href="/components/slider" variant="primary">Next: Slider</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Theme">
+            <Field htmlFor="theme"><FieldLabel htmlFor="theme">Theme</FieldLabel><Select id="theme" name="theme" surface="forged"><Option value="silver">Silver</Option><Option value="bronze">Bronze</Option><Option value="gold">Gold</Option></Select><FieldHint>Native select, Foundry styled.</FieldHint></Field>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Select name=\"theme\" surface=\"forged\">\n  <Option value=\"silver\">Silver</Option>\n</Select>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

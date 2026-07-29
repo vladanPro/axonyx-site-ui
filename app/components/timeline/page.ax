@@ -1,0 +1,45 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Step } from "@axonyx/ui/foundry/Step.ax"
+import { Stepper } from "@axonyx/ui/foundry/Stepper.ax"
+import { Timeline } from "@axonyx/ui/foundry/Timeline.ax"
+import { TimelineItem } from "@axonyx/ui/foundry/TimelineItem.ax"
+
+page TimelinePage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Timeline">
+          <Copy slot="eyebrow">Progression</Copy>
+          <Copy tone="lead">Timeline and stepper primitives for releases, worker events, onboarding, and guides.</Copy>
+          <Button href="/components/toolbar" variant="primary">Next: Toolbar</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Timeline">
+            <Timeline>
+              <TimelineItem time="09:10" title="Build started"><Copy>Axonyx Melt started compiling ASX pages.</Copy></TimelineItem>
+              <TimelineItem time="09:11" title="Routes emitted" tone="success"><Copy>Static output and route graph completed.</Copy></TimelineItem>
+            </Timeline>
+          </Card>
+          <Card title="Stepper">
+            <Stepper>
+              <Step index="1" title="Install" description="Add the component from registry." state="complete" />
+              <Step index="2" title="Compose" description="Use it in ASX." state="active" />
+              <Step index="3" title="Deploy" description="Ship static or server output." />
+            </Stepper>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Timeline>\n  <TimelineItem time=\"09:10\" title=\"Build started\">\n    <Copy>Axonyx Melt started compiling ASX pages.</Copy>\n  </TimelineItem>\n</Timeline>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}
