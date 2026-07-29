@@ -8,17 +8,20 @@
   function markActiveNavigation() {
     const current = normalizePath(window.location.pathname);
 
-    document.querySelectorAll(".site-nav__links a").forEach((link) => {
+    document.querySelectorAll(".site-nav__links a, .ui-sidebar-nav a").forEach((link) => {
       const href = link.getAttribute("href");
       if (!href || href.startsWith("http") || href.startsWith("mailto:")) return;
 
       const target = normalizePath(new URL(href, window.location.origin).pathname);
-      const isActive =
-        current === target ||
-        (target === "/components" && current.startsWith("/components")) ||
-        (target === "/blocks" && current.startsWith("/blocks")) ||
-        (target === "/themes" && current.startsWith("/themes")) ||
-        (target === "/registry" && current.startsWith("/registry"));
+      const inSidebar = link.closest(".ui-sidebar-nav");
+      const isActive = inSidebar
+        ? current === target
+        : current === target ||
+          (target === "/components" && current.startsWith("/components")) ||
+          (target === "/blocks" && current.startsWith("/blocks")) ||
+          (target === "/themes" && current.startsWith("/themes")) ||
+          (target === "/registry" && current.startsWith("/registry")) ||
+          (target === "/create" && current.startsWith("/create"));
 
       link.classList.toggle("is-active", isActive);
       if (isActive) link.setAttribute("aria-current", "page");

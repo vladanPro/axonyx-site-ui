@@ -1,4 +1,5 @@
 use "@axonyx/ui"
+import { Sidebar } from "@axonyx/ui/foundry/Sidebar.ax"
 import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
 import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
 import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.ax"
@@ -42,9 +43,56 @@ page RootLayout() {
 
     <SiteShell max="xl">
 
-      <main>
-        <Slot />
-      </main>
+      <div class="ui-docs-shell">
+        <Sidebar>
+          <nav class="ui-sidebar-nav" aria-label="Axonyx UI navigation">
+            <div class="ui-sidebar-group">
+              <strong>Start</strong>
+              <a href="/">Overview</a>
+              <a href="/create">Get Code</a>
+              <a href="/components">All components</a>
+              <a href="/registry">Registry</a>
+              <a href="/themes">Themes</a>
+            </div>
+
+            <div class="ui-sidebar-group">
+              <strong>Components</strong>
+              <a href="/components/button">Button</a>
+              <a href="/components/card">Card</a>
+              <a href="/components/field">Field</a>
+              <a href="/components/alert">Alert</a>
+              <a href="/components/badge">Badge</a>
+              <a href="/components/tabs">Tabs</a>
+              <a href="/components/table">Table</a>
+              <a href="/components/dialog">Dialog</a>
+              <a href="/components/drawer">Drawer</a>
+              <a href="/components/dropdown-menu">DropdownMenu</a>
+              <a href="/components/status-lamp">StatusLamp</a>
+              <a href="/components/progress">Progress</a>
+              <a href="/components/skeleton">Skeleton</a>
+              <a href="/components/toast">Toast</a>
+              <a href="/components/tooltip">Tooltip</a>
+            </div>
+
+            <div class="ui-sidebar-group">
+              <strong>Layout</strong>
+              <a href="/components/app-shell">AppShell</a>
+              <a href="/components/sidebar">Sidebar</a>
+            </div>
+
+            <div class="ui-sidebar-group">
+              <strong>Blocks</strong>
+              <a href="/blocks/marketing-01">marketing-01</a>
+              <a href="/blocks/docs-01">docs-01</a>
+              <a href="/blocks/dashboard-01">dashboard-01</a>
+            </div>
+          </nav>
+        </Sidebar>
+
+        <main class="ui-docs-main">
+          <Slot />
+        </main>
+      </div>
 
       <footer class="ax-site-footer">
         <span>Axonyx UI</span>
