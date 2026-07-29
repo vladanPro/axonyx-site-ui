@@ -38,6 +38,42 @@ expect_text = "Application frame for docs"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "alert component"
+goto = "/components/alert"
+expect_text = "Inline status messaging"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "tabs component"
+goto = "/components/tabs"
+expect_text = "Segment related content"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "table component"
+goto = "/components/table"
+expect_text = "Structured rows"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "drawer component"
+goto = "/components/drawer"
+expect_text = "Side panel for CMS tools"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "toast component"
+goto = "/components/toast"
+expect_text = "Dismissible event messages"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "tooltip component"
+goto = "/components/tooltip"
+expect_text = "Small explanatory layer"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "marketing block"
 goto = "/blocks/marketing-01"
 expect_text = "responsive product landing"

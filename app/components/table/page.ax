@@ -1,0 +1,50 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Table } from "@axonyx/ui/foundry/Table.ax"
+import { TableBody } from "@axonyx/ui/foundry/TableBody.ax"
+import { TableCell } from "@axonyx/ui/foundry/TableCell.ax"
+import { TableHead } from "@axonyx/ui/foundry/TableHead.ax"
+import { TableHeaderCell } from "@axonyx/ui/foundry/TableHeaderCell.ax"
+import { TableRow } from "@axonyx/ui/foundry/TableRow.ax"
+
+page TablePage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Table">
+          <Copy slot="eyebrow">Data display</Copy>
+          <Copy tone="lead">Structured rows for CMS content lists, package metadata, dashboards, and API previews.</Copy>
+          <Button href="/components/dialog" variant="primary">Next: Dialog</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Table density="compact" zebra="true">
+            <TableHead>
+              <TableRow><TableHeaderCell>Package</TableHeaderCell><TableHeaderCell>Status</TableHeaderCell><TableHeaderCell align="right">Version</TableHeaderCell></TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow><TableCell>axonyx-ui</TableCell><TableCell>published</TableCell><TableCell align="right">0.0.x</TableCell></TableRow>
+              <TableRow><TableCell>cargo-axonyx</TableCell><TableCell>published</TableCell><TableCell align="right">0.1.x</TableCell></TableRow>
+            </TableBody>
+          </Table>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Table density=\"compact\" zebra=\"true\">\n  <TableHead>\n    <TableRow><TableHeaderCell>Package</TableHeaderCell></TableRow>\n  </TableHead>\n  <TableBody>\n    <TableRow><TableCell>axonyx-ui</TableCell></TableRow>\n  </TableBody>\n</Table>"}</DocsCodeBlock>
+          </Card>
+          <Card title="API contract">
+            <Badge tone="success">V0</Badge>
+            <Copy>`Table` owns density/zebra. Row and cell primitives keep HTML semantic.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

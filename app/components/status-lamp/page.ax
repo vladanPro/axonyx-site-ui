@@ -1,0 +1,33 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { StatusLamp } from "@axonyx/ui/foundry/StatusLamp.ax"
+
+page StatusLampPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="StatusLamp">
+          <Copy slot="eyebrow">Foundry-specific</Copy>
+          <Copy tone="lead">Industrial status indicator for runtime health, deploy stages, and CMS worker states.</Copy>
+          <Button href="/components/progress" variant="primary">Next: Progress</Button>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <Card title="Online"><StatusLamp tone="online" pulse="true" label="Server" description="Tokio runtime accepting traffic" /></Card>
+          <Card title="Pending"><StatusLamp tone="warning" pulse="true" label="Build" description="Melt graph collecting routes" /></Card>
+          <Card title="Offline"><StatusLamp tone="danger" label="Worker" description="Queue disconnected" /></Card>
+        </ContentGrid>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<StatusLamp tone=\"online\" pulse=\"true\" label=\"Server\" description=\"Tokio runtime accepting traffic\" />"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

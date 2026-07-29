@@ -1,0 +1,41 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Drawer } from "@axonyx/ui/foundry/Drawer.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page DrawerPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Drawer">
+          <Copy slot="eyebrow">Overlay</Copy>
+          <Copy tone="lead">Side panel for CMS tools, navigation, filters, and detail inspectors.</Copy>
+          <Button href="/components/dropdown-menu" variant="primary">Next: DropdownMenu</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview">
+            <Button data-ax-drawer-open="component-drawer" variant="primary">Open drawer</Button>
+          </Card>
+          <Card title="Behavior">
+            <Badge tone="info">Route-scoped JS</Badge>
+            <Copy>Close works through the package drawer runtime: button, backdrop, and Escape.</Copy>
+          </Card>
+        </ContentGrid>
+
+        <Drawer id="component-drawer" title="CMS tools" description="Inspect entries and actions.">
+          <Copy>Use this panel for filters, publish state, and editor utilities.</Copy>
+        </Drawer>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Button data-ax-drawer-open=\"component-drawer\">Open drawer</Button>\n\n<Drawer id=\"component-drawer\" title=\"CMS tools\">\n  <Copy>Use this panel for filters.</Copy>\n</Drawer>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

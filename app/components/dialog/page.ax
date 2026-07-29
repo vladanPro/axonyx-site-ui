@@ -1,0 +1,42 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Dialog } from "@axonyx/ui/foundry/Dialog.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page DialogPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Dialog">
+          <Copy slot="eyebrow">Overlay</Copy>
+          <Copy tone="lead">Modal surface for confirmations, command flows, and destructive CMS operations.</Copy>
+          <Button href="/components/drawer" variant="primary">Next: Drawer</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Trigger">
+            <Button data-ax-dialog-open="component-dialog" variant="primary">Open dialog</Button>
+          </Card>
+          <Card title="Contract">
+            <Badge tone="info">Behavior JS</Badge>
+            <Copy>Dialog behavior is owned by the UI package and loaded when the app uses Axonyx UI.</Copy>
+          </Card>
+        </ContentGrid>
+
+        <Dialog id="component-dialog" title="Ship registry change">
+          <Copy>Review package metadata before publishing the next UI version.</Copy>
+          <Button variant="primary">Confirm</Button>
+        </Dialog>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Button data-ax-dialog-open=\"component-dialog\">Open dialog</Button>\n\n<Dialog id=\"component-dialog\" title=\"Ship registry change\">\n  <Copy>Review package metadata.</Copy>\n</Dialog>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

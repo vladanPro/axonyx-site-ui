@@ -78,6 +78,66 @@ page Registry() {
             <strong>Sidebar</strong>
             <span>@axonyx/ui/foundry/Sidebar</span>
           </a>
+          <a class="ui-registry-card" href="/components/alert">
+            <Badge tone="success">feedback</Badge>
+            <strong>Alert</strong>
+            <span>@axonyx/ui/foundry/Alert</span>
+          </a>
+          <a class="ui-registry-card" href="/components/badge">
+            <Badge tone="success">feedback</Badge>
+            <strong>Badge</strong>
+            <span>@axonyx/ui/foundry/Badge</span>
+          </a>
+          <a class="ui-registry-card" href="/components/tabs">
+            <Badge tone="info">navigation</Badge>
+            <strong>Tabs</strong>
+            <span>@axonyx/ui/foundry/Tabs</span>
+          </a>
+          <a class="ui-registry-card" href="/components/table">
+            <Badge tone="info">data</Badge>
+            <strong>Table</strong>
+            <span>@axonyx/ui/foundry/Table</span>
+          </a>
+          <a class="ui-registry-card" href="/components/dialog">
+            <Badge tone="warning">overlay</Badge>
+            <strong>Dialog</strong>
+            <span>@axonyx/ui/foundry/Dialog</span>
+          </a>
+          <a class="ui-registry-card" href="/components/drawer">
+            <Badge tone="warning">overlay</Badge>
+            <strong>Drawer</strong>
+            <span>@axonyx/ui/foundry/Drawer</span>
+          </a>
+          <a class="ui-registry-card" href="/components/dropdown-menu">
+            <Badge tone="info">navigation</Badge>
+            <strong>DropdownMenu</strong>
+            <span>@axonyx/ui/foundry/DropdownMenu</span>
+          </a>
+          <a class="ui-registry-card" href="/components/status-lamp">
+            <Badge tone="success">foundry</Badge>
+            <strong>StatusLamp</strong>
+            <span>@axonyx/ui/foundry/StatusLamp</span>
+          </a>
+          <a class="ui-registry-card" href="/components/progress">
+            <Badge tone="success">feedback</Badge>
+            <strong>Progress</strong>
+            <span>@axonyx/ui/foundry/Progress</span>
+          </a>
+          <a class="ui-registry-card" href="/components/skeleton">
+            <Badge tone="success">feedback</Badge>
+            <strong>Skeleton</strong>
+            <span>@axonyx/ui/foundry/Skeleton</span>
+          </a>
+          <a class="ui-registry-card" href="/components/toast">
+            <Badge tone="success">feedback</Badge>
+            <strong>Toast</strong>
+            <span>@axonyx/ui/foundry/Toast</span>
+          </a>
+          <a class="ui-registry-card" href="/components/tooltip">
+            <Badge tone="warning">overlay</Badge>
+            <strong>Tooltip</strong>
+            <span>@axonyx/ui/foundry/Tooltip</span>
+          </a>
         </div>
 
         <section class="ui-section-head">

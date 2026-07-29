@@ -1,0 +1,39 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Alert } from "@axonyx/ui/foundry/Alert.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page AlertPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Alert">
+          <Copy slot="eyebrow">Feedback</Copy>
+          <Copy tone="lead">Inline status messaging for validation, deploy health, CMS warnings, and system notices.</Copy>
+          <Button href="/components/badge" variant="primary">Next: Badge</Button>
+        </HeroCard>
+
+        <ContentGrid cols={3} gap="lg">
+          <Alert tone="info" title="Build queued"><Copy>Static pages are waiting for the next Melt run.</Copy></Alert>
+          <Alert tone="success" title="Deploy ready"><Copy>All registry imports resolved correctly.</Copy></Alert>
+          <Alert tone="warning" title="Check theme"><Copy>Custom tokens should keep Foundry contrast rules.</Copy></Alert>
+        </ContentGrid>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"import { Alert } from \"@axonyx/ui/foundry/Alert\"\n\n<Alert tone=\"success\" title=\"Deploy ready\">\n  <Copy>All registry imports resolved correctly.</Copy>\n</Alert>"}</DocsCodeBlock>
+          </Card>
+          <Card title="API contract">
+            <Badge tone="success">V0</Badge>
+            <Copy>`tone` and `title` define the shell. Children render as alert content.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

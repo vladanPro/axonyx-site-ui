@@ -1,0 +1,32 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Progress } from "@axonyx/ui/foundry/Progress.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ProgressPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Progress">
+          <Copy slot="eyebrow">Feedback</Copy>
+          <Copy tone="lead">Progress primitive for upload, build, migration, and background worker states.</Copy>
+          <Button href="/components/skeleton" variant="primary">Next: Skeleton</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Build"><Progress value="72"><span slot="label">Static build</span></Progress></Card>
+          <Card title="Upload"><Progress value="38"><span slot="label">Media upload</span></Progress></Card>
+        </ContentGrid>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Progress value=\"72\">\n  <span slot=\"label\">Static build</span>\n</Progress>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

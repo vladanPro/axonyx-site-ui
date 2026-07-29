@@ -1,0 +1,42 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Tab } from "@axonyx/ui/foundry/Tab.ax"
+import { Tabs } from "@axonyx/ui/foundry/Tabs.ax"
+
+page TabsPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Tabs">
+          <Copy slot="eyebrow">Navigation</Copy>
+          <Copy tone="lead">Segment related content without changing route: docs examples, API sections, and dashboard panels.</Copy>
+          <Button href="/components/table" variant="primary">Next: Table</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Tabs defaultValue="preview">
+            <Tab title="Preview" value="preview"><Copy>Rendered component output.</Copy></Tab>
+            <Tab title="Code" value="code"><Copy>Install and import example.</Copy></Tab>
+            <Tab title="API" value="api"><Copy>Stable props for the primitive.</Copy></Tab>
+          </Tabs>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"import { Tabs } from \"@axonyx/ui/foundry/Tabs\"\nimport { Tab } from \"@axonyx/ui/foundry/Tab\"\n\n<Tabs defaultValue=\"preview\">\n  <Tab title=\"Preview\" value=\"preview\">...</Tab>\n  <Tab title=\"Code\" value=\"code\">...</Tab>\n</Tabs>"}</DocsCodeBlock>
+          </Card>
+          <Card title="API contract">
+            <Badge tone="success">V0</Badge>
+            <Copy>`defaultValue` selects the first tab. `Tab` owns `title`, `value`, and panel children.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

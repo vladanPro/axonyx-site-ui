@@ -1,0 +1,33 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Toast } from "@axonyx/ui/foundry/Toast.ax"
+import { ToastViewport } from "@axonyx/ui/foundry/ToastViewport.ax"
+
+page ToastPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Toast">
+          <Copy slot="eyebrow">Feedback</Copy>
+          <Copy tone="lead">Dismissible event messages for saves, deploys, imports, and background operations.</Copy>
+          <Button href="/components/tooltip" variant="primary">Next: Tooltip</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <ToastViewport>
+            <Toast tone="success" title="Package published"><Copy>axonyx-ui registry metadata is available.</Copy></Toast>
+          </ToastViewport>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ToastViewport>\n  <Toast tone=\"success\" title=\"Package published\">\n    <Copy>Registry metadata is available.</Copy>\n  </Toast>\n</ToastViewport>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

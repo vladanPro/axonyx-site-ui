@@ -1,0 +1,41 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Skeleton } from "@axonyx/ui/foundry/Skeleton.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page SkeletonPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Skeleton">
+          <Copy slot="eyebrow">Feedback</Copy>
+          <Copy tone="lead">Loading placeholders for streamed panels, API-backed tables, and CMS editor surfaces.</Copy>
+          <Button href="/components/toast" variant="primary">Next: Toast</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Stack gap="md">
+            <Skeleton width="100%" height="1.2rem" />
+            <Skeleton width="82%" height="1.2rem" />
+            <Skeleton width="60%" height="1.2rem" />
+          </Stack>
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Skeleton width=\"100%\" height=\"1.2rem\" />\n<Skeleton width=\"82%\" height=\"1.2rem\" />"}</DocsCodeBlock>
+          </Card>
+          <Card title="API contract">
+            <Badge tone="success">V0</Badge>
+            <Copy>`shape`, `width`, and `height` describe the placeholder box.</Copy>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

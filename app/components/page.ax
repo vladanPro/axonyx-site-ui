@@ -46,9 +46,65 @@ page Components() {
             <Copy>Navigation rail used by AppShell, docs pages, dashboards, and admin blocks.</Copy>
             <Button href="/components/sidebar" variant="ghost">Open Sidebar</Button>
           </SectionCard>
-          <SectionCard title="Next wave">
-            <Badge tone="info">After V0</Badge>
-            <Copy>Tabs, Dialog, Drawer, Table, Select, Toast, Tooltip, and StatusLamp come after the proof loop.</Copy>
+          <SectionCard title="Alert">
+            <Badge tone="success">V0</Badge>
+            <Copy>Inline status messaging for validation, deploy state, and system notices.</Copy>
+            <Button href="/components/alert" variant="ghost">Open Alert</Button>
+          </SectionCard>
+          <SectionCard title="Badge">
+            <Badge tone="success">V0</Badge>
+            <Copy>Compact labels for package status, preview state, and metadata.</Copy>
+            <Button href="/components/badge" variant="ghost">Open Badge</Button>
+          </SectionCard>
+          <SectionCard title="Tabs">
+            <Badge tone="success">V0</Badge>
+            <Copy>Segmented panels for previews, code, API notes, and dashboard sections.</Copy>
+            <Button href="/components/tabs" variant="ghost">Open Tabs</Button>
+          </SectionCard>
+          <SectionCard title="Table">
+            <Badge tone="success">V0</Badge>
+            <Copy>Semantic table primitives for content lists, API previews, and package metadata.</Copy>
+            <Button href="/components/table" variant="ghost">Open Table</Button>
+          </SectionCard>
+          <SectionCard title="Dialog">
+            <Badge tone="success">V0</Badge>
+            <Copy>Modal overlay for confirmations, focused tasks, and destructive actions.</Copy>
+            <Button href="/components/dialog" variant="ghost">Open Dialog</Button>
+          </SectionCard>
+          <SectionCard title="Drawer">
+            <Badge tone="success">V0</Badge>
+            <Copy>Side panel for filters, CMS tools, navigation, and detail inspectors.</Copy>
+            <Button href="/components/drawer" variant="ghost">Open Drawer</Button>
+          </SectionCard>
+          <SectionCard title="DropdownMenu">
+            <Badge tone="success">V0</Badge>
+            <Copy>Compact command menu for headers, dashboards, and registry actions.</Copy>
+            <Button href="/components/dropdown-menu" variant="ghost">Open DropdownMenu</Button>
+          </SectionCard>
+          <SectionCard title="StatusLamp">
+            <Badge tone="success">V0</Badge>
+            <Copy>Industrial status indicator for runtime health and worker state.</Copy>
+            <Button href="/components/status-lamp" variant="ghost">Open StatusLamp</Button>
+          </SectionCard>
+          <SectionCard title="Progress">
+            <Badge tone="success">V0</Badge>
+            <Copy>Progress feedback for uploads, builds, migrations, and jobs.</Copy>
+            <Button href="/components/progress" variant="ghost">Open Progress</Button>
+          </SectionCard>
+          <SectionCard title="Skeleton">
+            <Badge tone="success">V0</Badge>
+            <Copy>Loading placeholders for streamed panels and API-backed surfaces.</Copy>
+            <Button href="/components/skeleton" variant="ghost">Open Skeleton</Button>
+          </SectionCard>
+          <SectionCard title="Toast">
+            <Badge tone="success">V0</Badge>
+            <Copy>Dismissible feedback for saves, deploys, imports, and background work.</Copy>
+            <Button href="/components/toast" variant="ghost">Open Toast</Button>
+          </SectionCard>
+          <SectionCard title="Tooltip">
+            <Badge tone="success">V0</Badge>
+            <Copy>Small contextual help for dense controls and dashboard actions.</Copy>
+            <Button href="/components/tooltip" variant="ghost">Open Tooltip</Button>
           </SectionCard>
         </ContentGrid>
       </Stack>
