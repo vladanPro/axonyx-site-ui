@@ -22,14 +22,14 @@ page DropdownMenuPage() {
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
             <DropdownMenu align="end" variant="secondary">
-              <span slot="trigger">Registry actions</span>
-              <DropdownItem href="/registry">Open registry</DropdownItem>
-              <DropdownItem href="/blocks">Preview blocks</DropdownItem>
+              <span slot="trigger">Component actions</span>
               <DropdownItem href="/components">All components</DropdownItem>
+              <DropdownItem href="/blocks">Preview blocks</DropdownItem>
+              <DropdownItem href="/create">Get code</DropdownItem>
             </DropdownMenu>
           </Card>
           <Card title="Axonyx">
-            <DocsCodeBlock>{"<DropdownMenu align=\"end\">\n  <span slot=\"trigger\">Registry actions</span>\n  <DropdownItem href=\"/registry\">Open registry</DropdownItem>\n</DropdownMenu>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<DropdownMenu align=\"end\">\n  <span slot=\"trigger\">Component actions</span>\n  <DropdownItem href=\"/components\">All components</DropdownItem>\n</DropdownMenu>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 

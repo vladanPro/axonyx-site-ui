@@ -20,7 +20,6 @@
           (target === "/components" && current.startsWith("/components")) ||
           (target === "/blocks" && current.startsWith("/blocks")) ||
           (target === "/themes" && current.startsWith("/themes")) ||
-          (target === "/registry" && current.startsWith("/registry")) ||
           (target === "/create" && current.startsWith("/create"));
 
       link.classList.toggle("is-active", isActive);

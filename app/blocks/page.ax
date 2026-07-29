@@ -17,7 +17,7 @@ page Blocks() {
             sections, dashboards, docs shells, and CMS admin patterns as real
             files you can edit.
           </Copy>
-          <Button href="/registry" variant="primary">Registry model</Button>
+          <Button href="/create" variant="primary">Get code</Button>
         </HeroCard>
 
         <ContentGrid cols={3} gap="lg">

@@ -29,7 +29,6 @@ page Home() {
               <Button href="/components/button" variant="primary" surface="forged">Start with Button</Button>
               <Button href="/create" variant="secondary">Get code</Button>
               <Button href="/blocks/marketing-01" variant="ghost">Preview blocks</Button>
-              <Button href="/registry" variant="ghost">Registry model</Button>
             </div>
           </div>
 
@@ -71,7 +70,7 @@ page Home() {
             <small>marketing-01, docs-01, dashboard-01</small>
           </div>
           <div>
-            <span>Install model</span>
+            <span>Install path</span>
             <strong>Cargo</strong>
             <small>import first, copy/customize later</small>
           </div>

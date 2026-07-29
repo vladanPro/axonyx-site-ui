@@ -21,11 +21,11 @@ page SidebarPage() {
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
             <Sidebar>
-              <strong>Registry</strong>
+              <strong>Components</strong>
               <a href="/components">Components</a>
               <a href="/blocks">Blocks</a>
               <a href="/themes">Themes</a>
-              <a href="/registry">Install model</a>
+              <a href="/create">Get code</a>
             </Sidebar>
           </Card>
           <Card title="Usage">

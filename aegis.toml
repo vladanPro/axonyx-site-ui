@@ -20,12 +20,6 @@ expect_text = "shadcn-style move"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
-name = "registry model"
-goto = "/registry"
-expect_text = "Registry V1"
-expect_not = ["Internal Server Error", "Application error"]
-
-[[fast]]
 name = "create flow"
 goto = "/create"
 expect_text = "Choose Axonyx for"

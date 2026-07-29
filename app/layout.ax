@@ -33,7 +33,6 @@ page RootLayout() {
           <TextLink href="/blocks">Blocks</TextLink>
           <TextLink href="/create">Get Code</TextLink>
           <TextLink href="/themes">Themes</TextLink>
-          <TextLink href="/registry">Registry</TextLink>
           <TextLink href="https://axonyx.dev">Axonyx</TextLink>
           <TextLink href="https://react.axonyx.dev">React</TextLink>
         </nav>
@@ -51,7 +50,6 @@ page RootLayout() {
               <a href="/">Overview</a>
               <a href="/create">Get Code</a>
               <a href="/components">All components</a>
-              <a href="/registry">Registry</a>
               <a href="/themes">Themes</a>
             </div>
 
