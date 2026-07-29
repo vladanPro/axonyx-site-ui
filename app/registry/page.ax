@@ -68,6 +68,26 @@ page Registry() {
             <strong>Field</strong>
             <span>@axonyx/ui/foundry/Field</span>
           </a>
+          <a class="ui-registry-card" href="/components/avatar">
+            <Badge tone="success">identity</Badge>
+            <strong>Avatar</strong>
+            <span>@axonyx/ui/foundry/Avatar</span>
+          </a>
+          <a class="ui-registry-card" href="/components/chip">
+            <Badge tone="success">metadata</Badge>
+            <strong>Chip</strong>
+            <span>@axonyx/ui/foundry/Chip</span>
+          </a>
+          <a class="ui-registry-card" href="/components/code-block">
+            <Badge tone="success">docs</Badge>
+            <strong>CodeBlock</strong>
+            <span>@axonyx/ui/foundry/CodeBlock</span>
+          </a>
+          <a class="ui-registry-card" href="/components/forms">
+            <Badge tone="success">forms</Badge>
+            <strong>Forms</strong>
+            <span>Form, Select, Textarea, Checkbox</span>
+          </a>
           <a class="ui-registry-card" href="/components/app-shell">
             <Badge tone="info">layout</Badge>
             <strong>AppShell</strong>
@@ -87,6 +107,36 @@ page Registry() {
             <Badge tone="success">feedback</Badge>
             <strong>Badge</strong>
             <span>@axonyx/ui/foundry/Badge</span>
+          </a>
+          <a class="ui-registry-card" href="/components/list">
+            <Badge tone="info">data</Badge>
+            <strong>List</strong>
+            <span>@axonyx/ui/foundry/List</span>
+          </a>
+          <a class="ui-registry-card" href="/components/machine-switch">
+            <Badge tone="success">foundry</Badge>
+            <strong>MachineSwitch</strong>
+            <span>@axonyx/ui/foundry/MachineSwitch</span>
+          </a>
+          <a class="ui-registry-card" href="/components/pagination">
+            <Badge tone="info">navigation</Badge>
+            <strong>Pagination</strong>
+            <span>@axonyx/ui/foundry/Pagination</span>
+          </a>
+          <a class="ui-registry-card" href="/components/select">
+            <Badge tone="success">forms</Badge>
+            <strong>Select</strong>
+            <span>@axonyx/ui/foundry/Select</span>
+          </a>
+          <a class="ui-registry-card" href="/components/slider">
+            <Badge tone="success">forms</Badge>
+            <strong>Slider</strong>
+            <span>@axonyx/ui/foundry/Slider</span>
+          </a>
+          <a class="ui-registry-card" href="/components/switch">
+            <Badge tone="success">forms</Badge>
+            <strong>Switch</strong>
+            <span>@axonyx/ui/foundry/Switch</span>
           </a>
           <a class="ui-registry-card" href="/components/tabs">
             <Badge tone="info">navigation</Badge>
@@ -113,10 +163,25 @@ page Registry() {
             <strong>DropdownMenu</strong>
             <span>@axonyx/ui/foundry/DropdownMenu</span>
           </a>
+          <a class="ui-registry-card" href="/components/surface">
+            <Badge tone="info">layout</Badge>
+            <strong>Surface</strong>
+            <span>@axonyx/ui/foundry/Surface</span>
+          </a>
           <a class="ui-registry-card" href="/components/status-lamp">
             <Badge tone="success">foundry</Badge>
             <strong>StatusLamp</strong>
             <span>@axonyx/ui/foundry/StatusLamp</span>
+          </a>
+          <a class="ui-registry-card" href="/components/timeline">
+            <Badge tone="info">progression</Badge>
+            <strong>Timeline</strong>
+            <span>Timeline, TimelineItem, Stepper</span>
+          </a>
+          <a class="ui-registry-card" href="/components/toolbar">
+            <Badge tone="info">actions</Badge>
+            <strong>Toolbar</strong>
+            <span>@axonyx/ui/foundry/Toolbar</span>
           </a>
           <a class="ui-registry-card" href="/components/progress">
             <Badge tone="success">feedback</Badge>
