@@ -1,0 +1,42 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Accordion } from "@axonyx/ui/foundry/Accordion.ax"
+import { AccordionItem } from "@axonyx/ui/foundry/AccordionItem.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page AccordionPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Accordion">
+          <Copy tone="eyebrow">Disclosure</Copy>
+          <Copy tone="lead">Expandable content sections for docs, FAQs, filters, and settings groups.</Copy>
+          <Button href="/components/alert" variant="primary">Next: Alert</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Accordion single="true">
+              <AccordionItem title="What is Foundry?" open="true"><Copy>Foundry is the Axonyx visual contract: tokens, components, and small package behavior.</Copy></AccordionItem>
+              <AccordionItem title="Can it be themed?"><Copy>Yes. Themes change tokens while components keep the same structure.</Copy></AccordionItem>
+              <AccordionItem title="Does it need React?"><Copy>No. Native Axonyx components are the source of truth.</Copy></AccordionItem>
+            </Accordion>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Accordion single=\"true\">\n  <AccordionItem title=\"What is Foundry?\" open=\"true\">\n    <Copy>Foundry is the Axonyx visual contract.</Copy>\n  </AccordionItem>\n</Accordion>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Contract" surface="inset" border="forged">
+          <Badge tone="success">V0</Badge>
+          <Copy>`Accordion` owns the group. `AccordionItem` owns `title`, `open`, and content.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

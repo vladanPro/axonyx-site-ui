@@ -1,0 +1,35 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { BreadcrumbCurrent } from "@axonyx/ui/foundry/BreadcrumbCurrent.ax"
+import { BreadcrumbItem } from "@axonyx/ui/foundry/BreadcrumbItem.ax"
+import { Breadcrumbs } from "@axonyx/ui/foundry/Breadcrumbs.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page BreadcrumbsPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Breadcrumbs">
+          <Copy tone="eyebrow">Navigation</Copy>
+          <Copy tone="lead">Hierarchical page trail for docs, component references, CMS records, and nested app sections.</Copy>
+          <Button href="/components/command" variant="primary">Next: Command</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Breadcrumbs>
+            <BreadcrumbItem href="/components">Components</BreadcrumbItem>
+            <BreadcrumbItem href="/components/layout">Layout</BreadcrumbItem>
+            <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>
+          </Breadcrumbs>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Breadcrumbs>\n  <BreadcrumbItem href=\"/components\">Components</BreadcrumbItem>\n  <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>\n</Breadcrumbs>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

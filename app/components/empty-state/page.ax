@@ -1,0 +1,34 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { EmptyState } from "@axonyx/ui/foundry/EmptyState.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page EmptyStatePage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="EmptyState">
+          <Copy tone="eyebrow">Empty and first-run states</Copy>
+          <Copy tone="lead">Focused empty, error, and first-run states with icon, title, description, and action slots.</Copy>
+          <Button href="/components/list" variant="primary">Next: List</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <EmptyState>
+            <span slot="icon">AX</span>
+            <strong slot="title">No components installed yet</strong>
+            Start with Button, Card, and Field, then grow into full app screens.
+            <Button slot="actions" href="/create" variant="primary">Get code</Button>
+          </EmptyState>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<EmptyState>\n  <span slot=\"icon\">AX</span>\n  <strong slot=\"title\">No components installed yet</strong>\n  Start with Button, Card, and Field.\n  <Button slot=\"actions\">Get code</Button>\n</EmptyState>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

@@ -74,9 +74,39 @@ expect_text = "Foundation primitives"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "accordion component"
+goto = "/components/accordion"
+expect_text = "Expandable content sections"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "breadcrumbs component"
+goto = "/components/breadcrumbs"
+expect_text = "Hierarchical page trail"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "command component"
+goto = "/components/command"
+expect_text = "Command surfaces"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "empty state component"
+goto = "/components/empty-state"
+expect_text = "Focused empty"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "list component"
 goto = "/components/list"
 expect_text = "Stacked rows"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "menu component"
+goto = "/components/menu"
+expect_text = "Vertical navigation list"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
@@ -92,9 +122,33 @@ expect_text = "Page navigation"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "popover component"
+goto = "/components/popover"
+expect_text = "Small anchored panel"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "props table component"
+goto = "/components/props-table"
+expect_text = "Reference table primitive"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "rating component"
+goto = "/components/rating"
+expect_text = "Compact rating display"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "select component"
 goto = "/components/select"
 expect_text = "Native select control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "stat component"
+goto = "/components/stat"
+expect_text = "Metric panel"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

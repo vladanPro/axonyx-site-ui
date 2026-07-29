@@ -61,6 +61,11 @@ page Components() {
             <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
             <Button href="/components/forms" variant="ghost">Open Forms</Button>
           </SectionCard>
+          <SectionCard title="Accordion">
+            <Badge tone="success">V0</Badge>
+            <Copy>Expandable content sections for docs, FAQs, filters, and settings groups.</Copy>
+            <Button href="/components/accordion" variant="ghost">Open Accordion</Button>
+          </SectionCard>
           <SectionCard title="AppShell">
             <Badge tone="success">V0</Badge>
             <Copy>Application frame for docs, dashboards, admin tools, and CMS layouts.</Copy>
@@ -81,10 +86,30 @@ page Components() {
             <Copy>Compact labels for package status, preview state, and metadata.</Copy>
             <Button href="/components/badge" variant="ghost">Open Badge</Button>
           </SectionCard>
+          <SectionCard title="Breadcrumbs">
+            <Badge tone="success">V0</Badge>
+            <Copy>Hierarchical page trail for docs, component references, and CMS records.</Copy>
+            <Button href="/components/breadcrumbs" variant="ghost">Open Breadcrumbs</Button>
+          </SectionCard>
+          <SectionCard title="Command">
+            <Badge tone="success">V0</Badge>
+            <Copy>Command surfaces for quick actions, admin tools, and keyboard-driven workflows.</Copy>
+            <Button href="/components/command" variant="ghost">Open Command</Button>
+          </SectionCard>
+          <SectionCard title="EmptyState">
+            <Badge tone="success">V0</Badge>
+            <Copy>Focused empty, error, and first-run states with actions and description slots.</Copy>
+            <Button href="/components/empty-state" variant="ghost">Open EmptyState</Button>
+          </SectionCard>
           <SectionCard title="List">
             <Badge tone="success">V0</Badge>
             <Copy>Stacked content rows for nav panels, inboxes, command results, and CMS records.</Copy>
             <Button href="/components/list" variant="ghost">Open List</Button>
+          </SectionCard>
+          <SectionCard title="Menu">
+            <Badge tone="success">V0</Badge>
+            <Copy>Vertical navigation list for sidebars, settings sections, and dashboard panels.</Copy>
+            <Button href="/components/menu" variant="ghost">Open Menu</Button>
           </SectionCard>
           <SectionCard title="MachineSwitch">
             <Badge tone="success">V0</Badge>
@@ -96,10 +121,30 @@ page Components() {
             <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
             <Button href="/components/pagination" variant="ghost">Open Pagination</Button>
           </SectionCard>
+          <SectionCard title="Popover">
+            <Badge tone="success">V0</Badge>
+            <Copy>Small anchored panel for compact help, quick controls, and contextual metadata.</Copy>
+            <Button href="/components/popover" variant="ghost">Open Popover</Button>
+          </SectionCard>
+          <SectionCard title="PropsTable">
+            <Badge tone="success">V0</Badge>
+            <Copy>Reference table primitive for component props, slots, and API contracts.</Copy>
+            <Button href="/components/props-table" variant="ghost">Open PropsTable</Button>
+          </SectionCard>
+          <SectionCard title="Rating">
+            <Badge tone="success">V0</Badge>
+            <Copy>Compact rating display for reviews, quality signals, and ranking panels.</Copy>
+            <Button href="/components/rating" variant="ghost">Open Rating</Button>
+          </SectionCard>
           <SectionCard title="Select">
             <Badge tone="success">V0</Badge>
             <Copy>Native select styling aligned with Foundry field and theme surfaces.</Copy>
             <Button href="/components/select" variant="ghost">Open Select</Button>
+          </SectionCard>
+          <SectionCard title="Stat">
+            <Badge tone="success">V0</Badge>
+            <Copy>Metric panel for dashboard KPIs, runtime health, and build performance.</Copy>
+            <Button href="/components/stat" variant="ghost">Open Stat</Button>
           </SectionCard>
           <SectionCard title="Slider">
             <Badge tone="success">V0</Badge>
