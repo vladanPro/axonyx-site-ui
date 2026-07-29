@@ -1,0 +1,115 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page CreatePage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Get Code">
+          <Copy slot="eyebrow">One registry, multiple targets</Copy>
+          <Copy tone="lead">
+            Axonyx UI keeps one canonical Foundry contract. Choose Axonyx for
+            native `.ax` apps, or choose a React target when you want the same
+            visual system through the React adapter.
+          </Copy>
+          <a class="ax-button ui-inline-action" data-variant="primary" href="/components">Browse components</a>
+        </HeroCard>
+
+        <section class="ui-create-panel">
+          <div class="ui-create-tabs">
+            <a class="is-active" href="#new-project">New Project</a>
+            <a href="#existing-project">Existing Project</a>
+            <a href="#theme">Theme</a>
+          </div>
+
+          <div class="ui-create-section" id="new-project">
+            <div>
+              <Badge tone="success">Recommended</Badge>
+              <h2>New project</h2>
+              <Copy>Start from a platform template, then add Foundry UI from the same registry.</Copy>
+            </div>
+
+            <ContentGrid cols={3} gap="lg">
+              <Card title="Axonyx" border="forged" recipe="create-option">
+                <Badge tone="success">native</Badge>
+                <Copy>Cargo-first `.ax` app with Foundry components and blocks.</Copy>
+                <DocsCodeBlock>{"create-axonyx my-app --template site\ncd my-app\ncargo ax add ui\ncargo ax run dev"}</DocsCodeBlock>
+              </Card>
+              <Card title="Next.js" recipe="create-option">
+                <Badge tone="info">React adapter</Badge>
+                <Copy>Use Axonyx UI CSS plus `@axonyx/react` component bindings.</Copy>
+                <DocsCodeBlock>{"npx create-next-app@latest my-app\ncd my-app\nnpm install @axonyx/ui @axonyx/react"}</DocsCodeBlock>
+              </Card>
+              <Card title="Vite" recipe="create-option">
+                <Badge tone="info">React adapter</Badge>
+                <Copy>Fast React app target for teams that do not need Next routing.</Copy>
+                <DocsCodeBlock>{"npm create vite@latest my-app -- --template react-ts\ncd my-app\nnpm install @axonyx/ui @axonyx/react"}</DocsCodeBlock>
+              </Card>
+              <Card title="TanStack Start" recipe="create-option">
+                <Badge tone="info">React adapter</Badge>
+                <Copy>Future target for router/data-heavy React apps using the same Foundry primitives.</Copy>
+                <DocsCodeBlock>{"# planned adapter target\nnpm install @axonyx/ui @axonyx/react"}</DocsCodeBlock>
+              </Card>
+              <Card title="React Router" recipe="create-option">
+                <Badge tone="info">React adapter</Badge>
+                <Copy>Route-first React target with the same UI package and theme tokens.</Copy>
+                <DocsCodeBlock>{"# planned adapter target\nnpm install @axonyx/ui @axonyx/react"}</DocsCodeBlock>
+              </Card>
+              <Card title="Astro" recipe="create-option">
+                <Badge tone="warning">later</Badge>
+                <Copy>Static/content target after the Axonyx and React adapter flows are stable.</Copy>
+                <DocsCodeBlock>{"# later\n# use @axonyx/ui CSS and copied HTML contracts"}</DocsCodeBlock>
+              </Card>
+            </ContentGrid>
+          </div>
+
+          <div class="ui-create-section" id="existing-project">
+            <div>
+              <Badge tone="info">Existing project</Badge>
+              <h2>Add to an app</h2>
+              <Copy>Install the UI layer without replacing your application architecture.</Copy>
+            </div>
+
+            <ContentGrid cols={2} gap="lg">
+              <Card title="Axonyx app" border="forged">
+                <DocsCodeBlock>{"cargo ax add ui\ncargo ax add button card field\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Card } from \"@axonyx/ui/foundry/Card\""}</DocsCodeBlock>
+              </Card>
+              <Card title="React app" border="forged">
+                <DocsCodeBlock>{"npm install @axonyx/ui @axonyx/react\n\nimport \"@axonyx/ui/css/index.css\"\nimport { Button, Card } from \"@axonyx/react\""}</DocsCodeBlock>
+              </Card>
+            </ContentGrid>
+          </div>
+
+          <div class="ui-create-section" id="theme">
+            <div>
+              <Badge tone="warning">Foundry themes</Badge>
+              <h2>Theme</h2>
+              <Copy>Foundry ships semantic tokens first. Silver, bronze, and gold are theme presets, not separate components.</Copy>
+            </div>
+
+            <ContentGrid cols={3} gap="lg">
+              <Card title="Silver">
+                <Copy>Default docs, framework, and dashboard theme.</Copy>
+                <DocsCodeBlock>{"<Theme default=\"silver\" storageKey=\"axonyx-theme\" preflight=\"true\" />"}</DocsCodeBlock>
+              </Card>
+              <Card title="Bronze">
+                <Copy>Warmer forged-metal accent direction for product and CMS surfaces.</Copy>
+                <DocsCodeBlock>{"<html data-theme=\"bronze\">"}</DocsCodeBlock>
+              </Card>
+              <Card title="Gold">
+                <Copy>Premium highlight direction for launches, calls to action, and showcase pages.</Copy>
+                <DocsCodeBlock>{"<html data-theme=\"gold\">"}</DocsCodeBlock>
+              </Card>
+            </ContentGrid>
+          </div>
+        </section>
+      </Stack>
+    </Container>
+  }
+}

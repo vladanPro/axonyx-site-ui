@@ -27,6 +27,7 @@ page Home() {
             </p>
             <div class="ui-hero__actions">
               <Button href="/components/button" variant="primary" surface="forged">Start with Button</Button>
+              <Button href="/create" variant="secondary">Get code</Button>
               <Button href="/blocks/marketing-01" variant="ghost">Preview blocks</Button>
               <Button href="/registry" variant="ghost">Registry model</Button>
             </div>
@@ -162,6 +163,7 @@ page Home() {
             native Axonyx examples, and keep the same Foundry theme contract.
           </Copy>
           <ButtonGroup>
+            <Button href="/create" variant="primary">Get code</Button>
             <Button href="/components" variant="primary">Browse components</Button>
             <Button href="/themes" variant="ghost">Theme system</Button>
           </ButtonGroup>

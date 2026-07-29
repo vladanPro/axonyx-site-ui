@@ -26,6 +26,12 @@ expect_text = "Registry V1"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "create flow"
+goto = "/create"
+expect_text = "Choose Axonyx for"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "button component"
 goto = "/components/button"
 expect_text = "default action primitive"
