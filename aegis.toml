@@ -32,6 +32,12 @@ expect_text = "default action primitive"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "button group component"
+goto = "/components/button-group"
+expect_text = "Inline action grouping"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "app shell component"
 goto = "/components/app-shell"
 expect_text = "Application frame for docs"
@@ -65,6 +71,12 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "forms component"
 goto = "/components/forms"
 expect_text = "Native form composition"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "icon button component"
+goto = "/components/icon-button"
+expect_text = "Icon-only action"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
@@ -110,9 +122,21 @@ expect_text = "Vertical navigation list"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "modal component"
+goto = "/components/modal"
+expect_text = "Centered overlay panel"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "machine switch component"
 goto = "/components/machine-switch"
 expect_text = "Two-pad forged switch"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "navbar component"
+goto = "/components/navbar"
+expect_text = "Top-level navigation shell"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
@@ -140,6 +164,12 @@ expect_text = "Compact rating display"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "radio component"
+goto = "/components/radio"
+expect_text = "Native radio option"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "select component"
 goto = "/components/select"
 expect_text = "Native select control"
@@ -149,6 +179,18 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "stat component"
 goto = "/components/stat"
 expect_text = "Metric panel"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "theme switcher component"
+goto = "/components/theme-switcher"
+expect_text = "Foundry theme control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "textarea component"
+goto = "/components/textarea"
+expect_text = "Native multi-line input"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

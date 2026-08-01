@@ -1,0 +1,38 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Legend } from "@axonyx/ui/foundry/Legend.ax"
+import { Radio } from "@axonyx/ui/foundry/Radio.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page RadioPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Radio">
+          <Copy tone="eyebrow">Forms</Copy>
+          <Copy tone="lead">Native radio option for plans, settings, templates, and mutually exclusive choices.</Copy>
+          <Button href="/components/rating" variant="primary">Next: Rating</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Fieldset surface="forged">
+              <Legend>Template</Legend>
+              <Radio name="template" value="site" checked="true">Site</Radio>
+              <Radio name="template" value="docs">Docs</Radio>
+              <Radio name="template" value="blog">Blog</Radio>
+            </Fieldset>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Radio name=\"template\" value=\"site\" checked=\"true\">Site</Radio>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

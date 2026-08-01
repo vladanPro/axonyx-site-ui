@@ -1,0 +1,36 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { IconButton } from "@axonyx/ui/foundry/IconButton.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Toolbar } from "@axonyx/ui/foundry/Toolbar.ax"
+
+page IconButtonPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="IconButton">
+          <Copy tone="eyebrow">Compact actions</Copy>
+          <Copy tone="lead">Icon-only action for toolbars, tables, drawers, and compact dashboard controls.</Copy>
+          <Button href="/components/accordion" variant="primary">Next: Accordion</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Toolbar variant="forged">
+              <IconButton variant="ghost">E</IconButton>
+              <IconButton variant="ghost">C</IconButton>
+              <IconButton variant="primary" surface="forged">D</IconButton>
+            </Toolbar>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<IconButton variant=\"ghost\">E</IconButton>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

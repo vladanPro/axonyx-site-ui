@@ -1,0 +1,35 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Navbar } from "@axonyx/ui/foundry/Navbar.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
+
+page NavbarPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Navbar">
+          <Copy tone="eyebrow">Navigation</Copy>
+          <Copy tone="lead">Top-level navigation shell for product pages, docs, dashboards, and app headers.</Copy>
+          <Button href="/components/pagination" variant="primary">Next: Pagination</Button>
+        </HeroCard>
+
+        <Card title="Preview" border="forged">
+          <Navbar brandHref="/">
+            <strong slot="brand">Axonyx UI</strong>
+            <TextLink href="/components">Components</TextLink>
+            <TextLink href="/blocks">Blocks</TextLink>
+            <TextLink href="/themes">Themes</TextLink>
+          </Navbar>
+        </Card>
+
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Navbar brandHref=\"/\">\n  <strong slot=\"brand\">Axonyx UI</strong>\n  <TextLink href=\"/components\">Components</TextLink>\n</Navbar>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

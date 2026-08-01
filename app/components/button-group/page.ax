@@ -1,0 +1,41 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ButtonGroupPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="ButtonGroup">
+          <Copy tone="eyebrow">Actions</Copy>
+          <Copy tone="lead">Inline action grouping for hero CTAs, toolbars, dialogs, and form actions.</Copy>
+          <Button href="/components/card" variant="primary">Next: Card</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <ButtonGroup>
+              <Button variant="primary" surface="forged">Publish</Button>
+              <Button variant="secondary">Preview</Button>
+              <Button variant="ghost">Cancel</Button>
+            </ButtonGroup>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<ButtonGroup>\n  <Button variant=\"primary\">Publish</Button>\n  <Button variant=\"secondary\">Preview</Button>\n  <Button variant=\"ghost\">Cancel</Button>\n</ButtonGroup>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Contract" surface="inset" border="forged">
+          <Badge tone="success">V0</Badge>
+          <Copy>`ButtonGroup` controls inline spacing. Child buttons keep their own variant and surface.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

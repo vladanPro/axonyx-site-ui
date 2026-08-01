@@ -1,0 +1,31 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.ax"
+
+page ThemeSwitcherPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="ThemeSwitcher">
+          <Copy tone="eyebrow">Themes</Copy>
+          <Copy tone="lead">Foundry theme control for silver, bronze, and gold token presets.</Copy>
+          <Button href="/components/textarea" variant="primary">Next: Textarea</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <ThemeSwitcher label="Theme" size="sm" surface="forged" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<ThemeSwitcher label=\"Theme\" size=\"sm\" surface=\"forged\" storageKey=\"axonyx-site-ui-theme\" />"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

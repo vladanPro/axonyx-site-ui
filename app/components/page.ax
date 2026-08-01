@@ -26,6 +26,11 @@ page Components() {
             <Copy>Primary actions, ghost actions, forged surfaces, and link-like calls to action.</Copy>
             <Button href="/components/button" variant="ghost">Open Button</Button>
           </SectionCard>
+          <SectionCard title="ButtonGroup">
+            <Badge tone="success">V0</Badge>
+            <Copy>Inline action grouping for hero CTAs, toolbars, dialogs, and form actions.</Copy>
+            <Button href="/components/button-group" variant="ghost">Open ButtonGroup</Button>
+          </SectionCard>
           <SectionCard title="Card">
             <Badge tone="success">V0</Badge>
             <Copy>Foundry surface primitive for content panels, dashboard widgets, and docs blocks.</Copy>
@@ -60,6 +65,11 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
             <Button href="/components/forms" variant="ghost">Open Forms</Button>
+          </SectionCard>
+          <SectionCard title="IconButton">
+            <Badge tone="success">V0</Badge>
+            <Copy>Icon-only action for toolbars, tables, drawers, and compact dashboard controls.</Copy>
+            <Button href="/components/icon-button" variant="ghost">Open IconButton</Button>
           </SectionCard>
           <SectionCard title="Accordion">
             <Badge tone="success">V0</Badge>
@@ -111,10 +121,20 @@ page Components() {
             <Copy>Vertical navigation list for sidebars, settings sections, and dashboard panels.</Copy>
             <Button href="/components/menu" variant="ghost">Open Menu</Button>
           </SectionCard>
+          <SectionCard title="Modal">
+            <Badge tone="success">V0</Badge>
+            <Copy>Centered overlay panel for focused forms, confirmations, and setup flows.</Copy>
+            <Button href="/components/modal" variant="ghost">Open Modal</Button>
+          </SectionCard>
           <SectionCard title="MachineSwitch">
             <Badge tone="success">V0</Badge>
             <Copy>Industrial two-pad switch for runtime, worker, and infrastructure controls.</Copy>
             <Button href="/components/machine-switch" variant="ghost">Open MachineSwitch</Button>
+          </SectionCard>
+          <SectionCard title="Navbar">
+            <Badge tone="success">V0</Badge>
+            <Copy>Top-level navigation shell for product pages, docs, dashboards, and app headers.</Copy>
+            <Button href="/components/navbar" variant="ghost">Open Navbar</Button>
           </SectionCard>
           <SectionCard title="Pagination">
             <Badge tone="success">V0</Badge>
@@ -131,6 +151,11 @@ page Components() {
             <Copy>Reference table primitive for component props, slots, and API contracts.</Copy>
             <Button href="/components/props-table" variant="ghost">Open PropsTable</Button>
           </SectionCard>
+          <SectionCard title="Radio">
+            <Badge tone="success">V0</Badge>
+            <Copy>Native radio option for plans, settings, templates, and mutually exclusive choices.</Copy>
+            <Button href="/components/radio" variant="ghost">Open Radio</Button>
+          </SectionCard>
           <SectionCard title="Rating">
             <Badge tone="success">V0</Badge>
             <Copy>Compact rating display for reviews, quality signals, and ranking panels.</Copy>
@@ -145,6 +170,16 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Metric panel for dashboard KPIs, runtime health, and build performance.</Copy>
             <Button href="/components/stat" variant="ghost">Open Stat</Button>
+          </SectionCard>
+          <SectionCard title="ThemeSwitcher">
+            <Badge tone="success">V0</Badge>
+            <Copy>Foundry theme control for silver, bronze, and gold token presets.</Copy>
+            <Button href="/components/theme-switcher" variant="ghost">Open ThemeSwitcher</Button>
+          </SectionCard>
+          <SectionCard title="Textarea">
+            <Badge tone="success">V0</Badge>
+            <Copy>Native multi-line input for content, comments, notes, and CMS fields.</Copy>
+            <Button href="/components/textarea" variant="ghost">Open Textarea</Button>
           </SectionCard>
           <SectionCard title="Slider">
             <Badge tone="success">V0</Badge>
