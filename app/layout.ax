@@ -66,6 +66,10 @@ page RootLayout() {
               <a href="/components/link-button">LinkButton</a>
               <a href="/components/text-link">TextLink</a>
               <a href="/components/layout">Layout</a>
+              <a href="/components/container">Container</a>
+              <a href="/components/grid">Grid</a>
+              <a href="/components/stack">Stack</a>
+              <a href="/components/flex">Flex</a>
               <a href="/components/avatar">Avatar</a>
               <a href="/components/chip">Chip</a>
               <a href="/components/code-block">CodeBlock</a>

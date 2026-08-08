@@ -1,0 +1,39 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page GridPage() {
+  return ASX {
+    <ComponentPage
+      title="Grid"
+      category="Layout primitive"
+      description="Grid composes cards, forms, metrics, and content using fixed columns or intrinsic minimum-width tracks that collapse safely on smaller screens."
+      nextHref="/components/stack"
+      nextLabel="Next: Stack"
+    >
+      <Stack gap="xl">
+        <Card title="Intrinsic responsive grid" border="forged">
+          <Grid min="md" gap="lg">
+            <Card surface="inset"><Badge tone="success">01</Badge><Copy>Route graph</Copy></Card>
+            <Card surface="inset"><Badge tone="info">02</Badge><Copy>State bridge</Copy></Card>
+            <Card surface="inset"><Badge tone="warning">03</Badge><Copy>Production runtime</Copy></Card>
+          </Grid>
+          <DocsCodeBlock>{"<Grid min=\"md\" gap=\"lg\">\n  <Card />\n  <Card />\n  <Card />\n</Grid>"}</DocsCodeBlock>
+        </Card>
+
+        <Card title="Fixed columns">
+          <Grid cols="3" gap="sm" align="center">
+            <Card surface="brushed"><Copy>Build</Copy></Card>
+            <Card surface="brushed"><Copy>Check</Copy></Card>
+            <Card surface="brushed"><Copy>Deploy</Copy></Card>
+          </Grid>
+          <Copy>Fixed column grids become one column at the Foundry mobile breakpoint.</Copy>
+        </Card>
+      </Stack>
+    </ComponentPage>
+  }
+}

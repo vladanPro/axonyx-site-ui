@@ -1,0 +1,43 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page StackPage() {
+  return ASX {
+    <ComponentPage
+      title="Stack"
+      category="Layout primitive"
+      description="Stack owns vertical rhythm so components do not need scattered one-off margins. Its spacing and alignment values come directly from Foundry tokens."
+      nextHref="/components/flex"
+      nextLabel="Next: Flex"
+    >
+      <Grid cols="2" gap="lg">
+        <Card title="Content rhythm" border="forged">
+          <Stack gap="lg">
+            <Badge tone="success">Ready</Badge>
+            <Copy tone="lead">A readable vertical sequence with one declared gap.</Copy>
+            <Copy>Use Stack around headings, fields, card content, and page sections before introducing custom CSS.</Copy>
+            <Button variant="primary" surface="forged">Continue</Button>
+          </Stack>
+        </Card>
+
+        <Card title="Aligned actions">
+          <Stack gap="sm" align="end">
+            <Button variant="ghost">Cancel</Button>
+            <Button variant="secondary">Preview</Button>
+            <Button variant="primary">Publish</Button>
+          </Stack>
+        </Card>
+      </Grid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Stack gap=\"lg\" align=\"stretch\">\n  <PageHeader />\n  <Form />\n  <Actions />\n</Stack>"}</DocsCodeBlock>
+      </Card>
+    </ComponentPage>
+  }
+}

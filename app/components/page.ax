@@ -72,6 +72,26 @@ page Components() {
             <Copy>Container, Grid, Stack, Flex, Cluster, Box, Surface, Section, and spacing primitives.</Copy>
             <Button href="/components/layout" variant="ghost">Open Layout</Button>
           </SectionCard>
+          <SectionCard title="Container">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Responsive page width, horizontal padding, fluid mode, and reusable layout recipes.</Copy>
+            <Button href="/components/container" variant="ghost">Open Container</Button>
+          </SectionCard>
+          <SectionCard title="Grid">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Fixed columns or intrinsic minimum-width tracks for responsive content composition.</Copy>
+            <Button href="/components/grid" variant="ghost">Open Grid</Button>
+          </SectionCard>
+          <SectionCard title="Stack">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Vertical rhythm with semantic spacing and predictable cross-axis alignment.</Copy>
+            <Button href="/components/stack" variant="ghost">Open Stack</Button>
+          </SectionCard>
+          <SectionCard title="Flex">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Directional rows and columns with wrapping, distribution, and mobile collapse.</Copy>
+            <Button href="/components/flex" variant="ghost">Open Flex</Button>
+          </SectionCard>
           <SectionCard title="Avatar">
             <Badge tone="success">V0</Badge>
             <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>
