@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -7,20 +8,19 @@ import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { Field } from "@axonyx/ui/foundry/Field.ax"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Option } from "@axonyx/ui/foundry/Option.ax"
 import { Select } from "@axonyx/ui/foundry/Select.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page SelectPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Select">
-          <Copy slot="eyebrow">Inputs</Copy>
-          <Copy tone="lead">Native select control with Foundry sizing and forged surface support.</Copy>
-          <Button href="/components/slider" variant="primary">Next: Slider</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Select"
+      category="Inputs"
+      description="Native select control with Foundry sizing and forged surface support."
+      nextHref="/components/slider"
+      nextLabel="Next: Slider"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Theme">
@@ -30,7 +30,6 @@ page SelectPage() {
             <DocsCodeBlock>{"<Select name=\"theme\" surface=\"forged\">\n  <Option value=\"silver\">Silver</Option>\n</Select>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

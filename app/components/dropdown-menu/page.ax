@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -6,18 +7,17 @@ import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { DropdownItem } from "@axonyx/ui/foundry/DropdownItem.ax"
 import { DropdownMenu } from "@axonyx/ui/foundry/DropdownMenu.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page DropdownMenuPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="DropdownMenu">
-          <Copy slot="eyebrow">Navigation</Copy>
-          <Copy tone="lead">Compact command and navigation menu for headers, dashboards, and CMS toolbars.</Copy>
-          <Button href="/components/status-lamp" variant="primary">Next: StatusLamp</Button>
-        </HeroCard>
+    <ComponentPage
+      title="DropdownMenu"
+      category="Navigation"
+      description="Compact command and navigation menu for headers, dashboards, and CMS toolbars."
+      nextHref="/components/status-lamp"
+      nextLabel="Next: StatusLamp"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -37,7 +37,6 @@ page DropdownMenuPage() {
           <Badge tone="success">V0</Badge>
           <Copy>`align`, trigger slot, and item links define the first menu contract.</Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

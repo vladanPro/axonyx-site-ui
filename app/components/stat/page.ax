@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Stat } from "@axonyx/ui/foundry/Stat.ax"
 
 page StatPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Stat">
-          <Copy tone="eyebrow">Metrics</Copy>
-          <Copy tone="lead">Metric panel for dashboard KPIs, runtime health, build performance, and CMS analytics.</Copy>
-          <Button href="/components/slider" variant="primary">Next: Slider</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Stat"
+      category="Metrics"
+      description="Metric panel for dashboard KPIs, runtime health, build performance, and CMS analytics."
+      nextHref="/components/slider"
+      nextLabel="Next: Slider"
+    >
 
         <ContentGrid cols={3} gap="lg">
           <Stat tone="success"><span slot="label">Response</span><span slot="value">413ms</span><span slot="delta">-38%</span>Render response after rebuild.</Stat>
@@ -26,7 +26,6 @@ page StatPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<Stat tone=\"success\">\n  <span slot=\"label\">Response</span>\n  <span slot=\"value\">413ms</span>\n  <span slot=\"delta\">-38%</span>\n  Render response after rebuild.\n</Stat>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

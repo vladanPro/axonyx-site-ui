@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Modal } from "@axonyx/ui/foundry/Modal.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page ModalPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Modal">
-          <Copy tone="eyebrow">Overlay</Copy>
-          <Copy tone="lead">Centered overlay panel for focused forms, confirmations, and setup flows.</Copy>
-          <Button href="/components/machine-switch" variant="primary">Next: MachineSwitch</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Modal"
+      category="Overlay"
+      description="Centered overlay panel for focused forms, confirmations, and setup flows."
+      nextHref="/components/machine-switch"
+      nextLabel="Next: MachineSwitch"
+    >
 
         <Card title="Preview" border="forged">
           <Modal title="Publish package" description="Review the release before it becomes public." size="md">
@@ -30,7 +30,6 @@ page ModalPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<Modal title=\"Publish package\" description=\"Review before release\">\n  <Copy>Check metadata before publishing.</Copy>\n</Modal>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

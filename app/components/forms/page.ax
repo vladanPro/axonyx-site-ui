@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -11,7 +12,6 @@ import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
 import { Fieldset } from "@axonyx/ui/foundry/Fieldset.ax"
 import { Form } from "@axonyx/ui/foundry/Form.ax"
 import { FormGroup } from "@axonyx/ui/foundry/FormGroup.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Input } from "@axonyx/ui/foundry/Input.ax"
 import { Legend } from "@axonyx/ui/foundry/Legend.ax"
 import { Option } from "@axonyx/ui/foundry/Option.ax"
@@ -22,13 +22,13 @@ import { Textarea } from "@axonyx/ui/foundry/Textarea.ax"
 
 page FormsPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Forms">
-          <Copy slot="eyebrow">Inputs</Copy>
-          <Copy tone="lead">Native form composition for Axonyx actions: fields, grouped inputs, textarea, select, checkbox, and switch.</Copy>
-          <Button href="/components/alert" variant="primary">Next: Alert</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Forms"
+      category="Inputs"
+      description="Native form composition for Axonyx actions: fields, grouped inputs, textarea, select, checkbox, and switch."
+      nextHref="/components/alert"
+      nextLabel="Next: Alert"
+    >
 
         <Card title="Preview" border="forged">
           <Form surface="inset" layout="stack">
@@ -55,7 +55,6 @@ page FormsPage() {
             <Copy>Forms stay native HTML first. Axonyx actions can attach to the same structure later.</Copy>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

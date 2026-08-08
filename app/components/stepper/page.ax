@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Step } from "@axonyx/ui/foundry/Step.ax"
 import { Stepper } from "@axonyx/ui/foundry/Stepper.ax"
 
 page StepperPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Stepper">
-          <Copy tone="eyebrow">Data display</Copy>
-          <Copy tone="lead">Ordered progress for setup flows, deploy pipelines, onboarding, and CMS publishing.</Copy>
-          <Button href="/components/timeline" variant="primary">Next: Timeline</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Stepper"
+      category="Data display"
+      description="Ordered progress for setup flows, deploy pipelines, onboarding, and CMS publishing."
+      nextHref="/components/timeline"
+      nextLabel="Next: Timeline"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Vertical" border="forged">
@@ -38,7 +38,6 @@ page StepperPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<Stepper>\n  <Step index=\"1\" title=\"Configure\" state=\"complete\" />\n  <Step index=\"2\" title=\"Build\" state=\"active\" />\n  <Step index=\"3\" title=\"Deploy\" />\n</Stepper>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

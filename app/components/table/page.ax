@@ -1,10 +1,10 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Table } from "@axonyx/ui/foundry/Table.ax"
 import { TableBody } from "@axonyx/ui/foundry/TableBody.ax"
@@ -15,13 +15,13 @@ import { TableRow } from "@axonyx/ui/foundry/TableRow.ax"
 
 page TablePage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Table">
-          <Copy slot="eyebrow">Data display</Copy>
-          <Copy tone="lead">Structured rows for CMS content lists, package metadata, dashboards, and API previews.</Copy>
-          <Button href="/components/dialog" variant="primary">Next: Dialog</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Table"
+      category="Data display"
+      description="Structured rows for CMS content lists, package metadata, dashboards, and API previews."
+      nextHref="/components/dialog"
+      nextLabel="Next: Dialog"
+    >
 
         <Card title="Preview" border="forged">
           <Table density="compact" zebra="true">
@@ -44,7 +44,6 @@ page TablePage() {
             <Copy>`Table` owns density/zebra. Row and cell primitives keep HTML semantic.</Copy>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

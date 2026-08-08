@@ -1,27 +1,26 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Slider } from "@axonyx/ui/foundry/Slider.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page SliderPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Slider">
-          <Copy slot="eyebrow">Inputs</Copy>
-          <Copy tone="lead">Range control for intensity, limits, opacity, progress tuning, and dashboard settings.</Copy>
-          <Button href="/components/switch" variant="primary">Next: Switch</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Slider"
+      category="Inputs"
+      description="Range control for intensity, limits, opacity, progress tuning, and dashboard settings."
+      nextHref="/components/switch"
+      nextLabel="Next: Switch"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Runtime intensity"><Slider label="Compiler intensity" name="intensity" min="0" max="100" value="64" /></Card>
           <Card title="Axonyx"><DocsCodeBlock>{"<Slider label=\"Compiler intensity\" min=\"0\" max=\"100\" value=\"64\" />"}</DocsCodeBlock></Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

@@ -1,23 +1,23 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Tab } from "@axonyx/ui/foundry/Tab.ax"
 import { Tabs } from "@axonyx/ui/foundry/Tabs.ax"
 
 page TabsPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Tabs">
-          <Copy slot="eyebrow">Navigation</Copy>
-          <Copy tone="lead">Segment related content without changing route: docs examples, API sections, and dashboard panels.</Copy>
-          <Button href="/components/table" variant="primary">Next: Table</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Tabs"
+      category="Navigation"
+      description="Segment related content without changing route: docs examples, API sections, and dashboard panels."
+      nextHref="/components/table"
+      nextLabel="Next: Table"
+    >
 
         <Card title="Preview" border="forged">
           <Tabs defaultValue="preview">
@@ -36,7 +36,6 @@ page TabsPage() {
             <Copy>`defaultValue` selects the first tab. `Tab` owns `title`, `value`, and panel children.</Copy>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

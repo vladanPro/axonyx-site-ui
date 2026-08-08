@@ -1,20 +1,20 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { LinkButton } from "@axonyx/ui/foundry/LinkButton.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page LinkButtonPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="LinkButton">
-          <Copy tone="eyebrow">Actions</Copy>
-          <Copy tone="lead">Anchor navigation with the visual weight of a Foundry button.</Copy>
-          <LinkButton href="/components/text-link" variant="primary">Next: TextLink</LinkButton>
-        </HeroCard>
+    <ComponentPage
+      title="LinkButton"
+      category="Actions"
+      description="Anchor navigation with the visual weight of a Foundry button."
+      nextHref="/components/text-link"
+      nextLabel="Next: TextLink"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -28,7 +28,6 @@ page LinkButtonPage() {
             <DocsCodeBlock>{"<LinkButton href=\"/create\" variant=\"primary\" surface=\"forged\">\n  Get code\n</LinkButton>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

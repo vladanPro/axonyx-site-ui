@@ -1,0 +1,28 @@
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { ComponentPreview } from "@axonyx/ui/foundry/ComponentPreview.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+
+page ComponentPagePage() {
+  return ASX {
+    <ComponentPage
+      title="ComponentPage"
+      category="Documentation"
+      description="Shared page shell that keeps Foundry component documentation aligned across desktop and mobile layouts."
+      nextHref="/components/component-preview"
+      nextLabel="Next: ComponentPreview"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <ComponentPreview title="Page rhythm" surface="forged">
+            <Copy tone="lead">Title, category, description, navigation, and content spacing now share one package contract.</Copy>
+          </ComponentPreview>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ComponentPage\n  title=\"Button\"\n  category=\"Actions\"\n  description=\"Default Foundry action primitive.\"\n  nextHref=\"/components/card\"\n  nextLabel=\"Next: Card\"\n>\n  <ComponentPreview>...</ComponentPreview>\n</ComponentPage>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}

@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -6,18 +7,17 @@ import { Command } from "@axonyx/ui/foundry/Command.ax"
 import { CommandList } from "@axonyx/ui/foundry/CommandList.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page CommandPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Command">
-          <Copy tone="eyebrow">Command surfaces</Copy>
-          <Copy tone="lead">Command surfaces for quick actions, admin tools, and keyboard-driven workflows.</Copy>
-          <Button href="/components/empty-state" variant="primary">Next: EmptyState</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Command"
+      category="Command surfaces"
+      description="Command surfaces for quick actions, admin tools, and keyboard-driven workflows."
+      nextHref="/components/empty-state"
+      nextLabel="Next: EmptyState"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -35,7 +35,6 @@ page CommandPage() {
             <DocsCodeBlock>{"<Command>\n  <CommandList title=\"Project commands\">\n    <Copy>Run build</Copy>\n    <Button slot=\"actions\">Run command</Button>\n  </CommandList>\n</Command>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

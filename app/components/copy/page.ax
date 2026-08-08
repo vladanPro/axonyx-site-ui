@@ -1,20 +1,20 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page CopyPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Copy">
-          <Copy tone="eyebrow">Typography</Copy>
-          <Copy tone="lead">Readable paragraph primitive for docs, cards, callouts, and product copy.</Copy>
-          <Button href="/components/docs-callout" variant="primary">Next: DocsCallout</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Copy"
+      category="Typography"
+      description="Readable paragraph primitive for docs, cards, callouts, and product copy."
+      nextHref="/components/docs-callout"
+      nextLabel="Next: DocsCallout"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -25,7 +25,6 @@ page CopyPage() {
             <DocsCodeBlock>{"<Copy>\n  Axonyx pages should read clearly without raw paragraph classes.\n</Copy>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

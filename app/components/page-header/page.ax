@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { PageHeader } from "@axonyx/ui/foundry/PageHeader.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page PageHeaderPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="PageHeader">
-          <Copy tone="eyebrow">Page composition</Copy>
-          <Copy tone="lead">Header surface for docs pages, component pages, dashboards, and section intros.</Copy>
-          <Button href="/components/popover" variant="primary">Next: Popover</Button>
-        </HeroCard>
+    <ComponentPage
+      title="PageHeader"
+      category="Page composition"
+      description="Header surface for docs pages, component pages, dashboards, and section intros."
+      nextHref="/components/popover"
+      nextLabel="Next: Popover"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -30,7 +30,6 @@ page PageHeaderPage() {
             <DocsCodeBlock>{"<PageHeader title=\"Build with Foundry\">\n  <Badge slot=\"eyebrow\">Guide</Badge>\n  <Copy>Use a PageHeader for page intros.</Copy>\n  <Button slot=\"actions\">All components</Button>\n</PageHeader>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

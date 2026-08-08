@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Accordion } from "@axonyx/ui/foundry/Accordion.ax"
 import { AccordionItem } from "@axonyx/ui/foundry/AccordionItem.ax"
@@ -6,18 +7,17 @@ import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page AccordionPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Accordion">
-          <Copy tone="eyebrow">Disclosure</Copy>
-          <Copy tone="lead">Expandable content sections for docs, FAQs, filters, and settings groups.</Copy>
-          <Button href="/components/alert" variant="primary">Next: Alert</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Accordion"
+      category="Disclosure"
+      description="Expandable content sections for docs, FAQs, filters, and settings groups."
+      nextHref="/components/alert"
+      nextLabel="Next: Alert"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -36,7 +36,6 @@ page AccordionPage() {
           <Badge tone="success">V0</Badge>
           <Copy>`Accordion` owns the group. `AccordionItem` owns `title`, `open`, and content.</Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

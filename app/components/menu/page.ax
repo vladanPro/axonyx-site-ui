@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Menu } from "@axonyx/ui/foundry/Menu.ax"
 import { MenuItem } from "@axonyx/ui/foundry/MenuItem.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page MenuPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Menu">
-          <Copy tone="eyebrow">Navigation</Copy>
-          <Copy tone="lead">Vertical navigation list for sidebars, settings sections, and dashboard panels.</Copy>
-          <Button href="/components/machine-switch" variant="primary">Next: MachineSwitch</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Menu"
+      category="Navigation"
+      description="Vertical navigation list for sidebars, settings sections, and dashboard panels."
+      nextHref="/components/machine-switch"
+      nextLabel="Next: MachineSwitch"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -31,7 +31,6 @@ page MenuPage() {
             <DocsCodeBlock>{"<Menu ariaLabel=\"Settings menu\">\n  <MenuItem active=\"true\">General</MenuItem>\n  <MenuItem>Forms</MenuItem>\n</Menu>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

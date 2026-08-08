@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Avatar } from "@axonyx/ui/foundry/Avatar.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
@@ -5,18 +6,17 @@ import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page AvatarPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Avatar">
-          <Copy slot="eyebrow">Identity</Copy>
-          <Copy tone="lead">Compact identity marker for users, authors, teams, and dashboard entities.</Copy>
-          <Button href="/components/chip" variant="primary">Next: Chip</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Avatar"
+      category="Identity"
+      description="Compact identity marker for users, authors, teams, and dashboard entities."
+      nextHref="/components/chip"
+      nextLabel="Next: Chip"
+    >
 
         <ContentGrid cols={3} gap="lg">
           <Card title="Sizes"><Avatar>AX</Avatar><Avatar size="lg">UI</Avatar></Card>
@@ -27,7 +27,6 @@ page AvatarPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"import { Avatar } from \"@axonyx/ui/foundry/Avatar\"\n\n<Avatar size=\"lg\">AX</Avatar>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Tooltip } from "@axonyx/ui/foundry/Tooltip.ax"
 
 page TooltipPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Tooltip">
-          <Copy slot="eyebrow">Overlay</Copy>
-          <Copy tone="lead">Small explanatory layer for dense controls, status lamps, and dashboard actions.</Copy>
-          <Button href="/components" variant="primary">Back to components</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Tooltip"
+      category="Overlay"
+      description="Small explanatory layer for dense controls, status lamps, and dashboard actions."
+      nextHref="/components"
+      nextLabel="Back to components"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -33,7 +33,6 @@ page TooltipPage() {
           <Badge tone="success">V0</Badge>
           <Copy>`label` is the default content. A named `content` slot is available for richer tooltip copy.</Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

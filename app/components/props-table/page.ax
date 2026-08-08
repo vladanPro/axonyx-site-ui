@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { PropRow } from "@axonyx/ui/foundry/PropRow.ax"
 import { PropsTable } from "@axonyx/ui/foundry/PropsTable.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page PropsTablePage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="PropsTable">
-          <Copy tone="eyebrow">Reference</Copy>
-          <Copy tone="lead">Reference table primitive for component props, slots, and API contracts.</Copy>
-          <Button href="/components/rating" variant="primary">Next: Rating</Button>
-        </HeroCard>
+    <ComponentPage
+      title="PropsTable"
+      category="Reference"
+      description="Reference table primitive for component props, slots, and API contracts."
+      nextHref="/components/rating"
+      nextLabel="Next: Rating"
+    >
 
         <Card title="Preview" border="forged">
           <PropsTable>
@@ -28,7 +28,6 @@ page PropsTablePage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<PropsTable>\n  <PropRow name=\"variant\" type=\"String\" default=\"primary\" description=\"Visual intent.\" />\n</PropsTable>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Skeleton } from "@axonyx/ui/foundry/Skeleton.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page SkeletonPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Skeleton">
-          <Copy slot="eyebrow">Feedback</Copy>
-          <Copy tone="lead">Loading placeholders for streamed panels, API-backed tables, and CMS editor surfaces.</Copy>
-          <Button href="/components/toast" variant="primary">Next: Toast</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Skeleton"
+      category="Feedback"
+      description="Loading placeholders for streamed panels, API-backed tables, and CMS editor surfaces."
+      nextHref="/components/toast"
+      nextLabel="Next: Toast"
+    >
 
         <Card title="Preview" border="forged">
           <Stack gap="md">
@@ -35,7 +35,6 @@ page SkeletonPage() {
             <Copy>`shape`, `width`, and `height` describe the placeholder box.</Copy>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

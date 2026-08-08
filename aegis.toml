@@ -68,6 +68,12 @@ expect_text = "Copy-ready code surfaces"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "component page component"
+goto = "/components/component-page"
+expect_text = "Shared page shell"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "component preview component"
 goto = "/components/component-preview"
 expect_text = "Preview stage primitive"

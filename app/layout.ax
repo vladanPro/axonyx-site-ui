@@ -67,6 +67,7 @@ page RootLayout() {
               <a href="/components/avatar">Avatar</a>
               <a href="/components/chip">Chip</a>
               <a href="/components/code-block">CodeBlock</a>
+              <a href="/components/component-page">ComponentPage</a>
               <a href="/components/component-preview">ComponentPreview</a>
               <a href="/components/copy">Copy</a>
               <a href="/components/docs-callout">DocsCallout</a>

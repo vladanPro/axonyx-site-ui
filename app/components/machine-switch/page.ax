@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { MachineSwitch } from "@axonyx/ui/foundry/MachineSwitch.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page MachineSwitchPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="MachineSwitch">
-          <Copy slot="eyebrow">Industrial control</Copy>
-          <Copy tone="lead">Two-pad forged switch for runtime features, workers, deploy gates, and CMS automation controls.</Copy>
-          <Button href="/components/pagination" variant="primary">Next: Pagination</Button>
-        </HeroCard>
+    <ComponentPage
+      title="MachineSwitch"
+      category="Industrial control"
+      description="Two-pad forged switch for runtime features, workers, deploy gates, and CMS automation controls."
+      nextHref="/components/pagination"
+      nextLabel="Next: Pagination"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Offline"><MachineSwitch label="Media worker" state="off" stateLabel="Offline" offActive="true" /></Card>
@@ -26,7 +26,6 @@ page MachineSwitchPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<MachineSwitch label=\"Stream runtime\" state=\"on\" stateLabel=\"Online\" onActive=\"true\" />"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

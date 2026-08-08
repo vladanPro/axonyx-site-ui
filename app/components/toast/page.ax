@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Toast } from "@axonyx/ui/foundry/Toast.ax"
 import { ToastViewport } from "@axonyx/ui/foundry/ToastViewport.ax"
 
 page ToastPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Toast">
-          <Copy slot="eyebrow">Feedback</Copy>
-          <Copy tone="lead">Dismissible event messages for saves, deploys, imports, and background operations.</Copy>
-          <Button href="/components/tooltip" variant="primary">Next: Tooltip</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Toast"
+      category="Feedback"
+      description="Dismissible event messages for saves, deploys, imports, and background operations."
+      nextHref="/components/tooltip"
+      nextLabel="Next: Tooltip"
+    >
 
         <Card title="Preview" border="forged">
           <ToastViewport>
@@ -27,7 +27,6 @@ page ToastPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<ToastViewport>\n  <Toast tone=\"success\" title=\"Package published\">\n    <Copy>Registry metadata is available.</Copy>\n  </Toast>\n</ToastViewport>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

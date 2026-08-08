@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page CardPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Card">
-          <Copy slot="eyebrow">Components V0</Copy>
-          <Copy tone="lead">The primary Foundry surface for content groups, dashboard widgets, docs callouts, and product panels.</Copy>
-          <Button href="/components/field" variant="primary">Next: Field</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Card"
+      category="Components V0"
+      description="The primary Foundry surface for content groups, dashboard widgets, docs callouts, and product panels."
+      nextHref="/components/field"
+      nextLabel="Next: Field"
+    >
 
         <ContentGrid cols={3} gap="lg">
           <Card title="Default">
@@ -42,7 +42,6 @@ page CardPage() {
           <Badge tone="success">V0</Badge>
           <Copy>`title`, `surface`, `border`, and `recipe` are the first stable Card props.</Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

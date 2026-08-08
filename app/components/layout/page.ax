@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Bleed } from "@axonyx/ui/foundry/Bleed.ax"
@@ -11,7 +12,6 @@ import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { Divider } from "@axonyx/ui/foundry/Divider.ax"
 import { Flex } from "@axonyx/ui/foundry/Flex.ax"
 import { Grid } from "@axonyx/ui/foundry/Grid.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Inset } from "@axonyx/ui/foundry/Inset.ax"
 import { Section } from "@axonyx/ui/foundry/Section.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
@@ -19,17 +19,13 @@ import { Surface } from "@axonyx/ui/foundry/Surface.ax"
 
 page LayoutPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Layout">
-          <Copy tone="eyebrow">Foundation primitives</Copy>
-          <Copy tone="lead">
-            Layout is the spine of Foundry. These primitives define width,
-            rhythm, alignment, responsive grids, surfaces, and spacing before
-            higher-level components enter the page.
-          </Copy>
-          <Button href="/components/avatar" variant="primary">Next: Avatar</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Layout"
+      category="Foundation primitives"
+      description="Layout is the spine of Foundry. These primitives define width, rhythm, alignment, responsive grids, surfaces, and spacing before higher-level components enter the page."
+      nextHref="/components/avatar"
+      nextLabel="Next: Avatar"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Page composition" border="forged">
@@ -109,7 +105,6 @@ page LayoutPage() {
             site stylesheet.
           </Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

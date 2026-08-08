@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -8,19 +9,18 @@ import { Field } from "@axonyx/ui/foundry/Field.ax"
 import { FieldError } from "@axonyx/ui/foundry/FieldError.ax"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Input } from "@axonyx/ui/foundry/Input.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page FieldPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Field">
-          <Copy slot="eyebrow">Components V0</Copy>
-          <Copy tone="lead">A form shell for labels, inputs, hints, and validation states across static forms and future Axonyx actions.</Copy>
-          <Button href="/components/app-shell" variant="primary">Next: AppShell</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Field"
+      category="Components V0"
+      description="A form shell for labels, inputs, hints, and validation states across static forms and future Axonyx actions."
+      nextHref="/components/app-shell"
+      nextLabel="Next: AppShell"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -52,7 +52,6 @@ page FieldPage() {
           <Badge tone="success">V0</Badge>
           <Copy>`state` and `htmlFor` define the first Field shell. Label, Hint, Error, and Input compose inside it.</Copy>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
@@ -5,18 +6,17 @@ import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { Chip } from "@axonyx/ui/foundry/Chip.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page ChipPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Chip">
-          <Copy slot="eyebrow">Metadata</Copy>
-          <Copy tone="lead">Small labels for filters, tags, release channels, registry state, and dashboard metadata.</Copy>
-          <Button href="/components/code-block" variant="primary">Next: CodeBlock</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Chip"
+      category="Metadata"
+      description="Small labels for filters, tags, release channels, registry state, and dashboard metadata."
+      nextHref="/components/code-block"
+      nextLabel="Next: CodeBlock"
+    >
 
         <ContentGrid cols={3} gap="lg">
           <Card title="Tones"><Chip>default</Chip><Chip tone="success">stable</Chip><Chip tone="warning">preview</Chip></Card>
@@ -27,7 +27,6 @@ page ChipPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<Chip tone=\"success\">stable</Chip>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

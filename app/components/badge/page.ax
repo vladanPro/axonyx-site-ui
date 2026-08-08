@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page BadgePage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Badge">
-          <Copy slot="eyebrow">Feedback</Copy>
-          <Copy tone="lead">Small semantic labels for package state, feature status, registry tags, and dashboard metadata.</Copy>
-          <Button href="/components/tabs" variant="primary">Next: Tabs</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Badge"
+      category="Feedback"
+      description="Small semantic labels for package state, feature status, registry tags, and dashboard metadata."
+      nextHref="/components/tabs"
+      nextLabel="Next: Tabs"
+    >
 
         <ContentGrid cols={4} gap="lg">
           <Card title="Success"><Badge tone="success">Published</Badge></Card>
@@ -27,7 +27,6 @@ page BadgePage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"import { Badge } from \"@axonyx/ui/foundry/Badge\"\n\n<Badge tone=\"success\">Published</Badge>\n<Badge tone=\"warning\">Beta</Badge>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

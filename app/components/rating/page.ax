@@ -1,21 +1,21 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Rating } from "@axonyx/ui/foundry/Rating.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page RatingPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Rating">
-          <Copy tone="eyebrow">Signal</Copy>
-          <Copy tone="lead">Compact rating display for reviews, quality signals, and ranking panels.</Copy>
-          <Button href="/components/select" variant="primary">Next: Select</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Rating"
+      category="Signal"
+      description="Compact rating display for reviews, quality signals, and ranking panels."
+      nextHref="/components/select"
+      nextLabel="Next: Select"
+    >
 
         <ContentGrid cols={3} gap="lg">
           <Card title="Docs quality"><Rating value="5" label="Excellent" /></Card>
@@ -26,7 +26,6 @@ page RatingPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<Rating value=\"5\" label=\"Excellent\" />"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

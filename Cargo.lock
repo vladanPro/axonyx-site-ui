@@ -60,9 +60,9 @@ dependencies = [
 
 [[package]]
 name = "axonyx-ui"
-version = "0.0.56"
+version = "0.0.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee11fcf5d42dc3c2d8f74f776835e3d57a86cfdb40b8b315ceeaab11984ff6d2"
+checksum = "4c146e282384e9c42d24616ca9b55dbc9b62acd694bc075edcbea5846458d0a4"
 
 [[package]]
 name = "axum"

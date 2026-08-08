@@ -1,22 +1,22 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Badge } from "@axonyx/ui/foundry/Badge.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Popover } from "@axonyx/ui/foundry/Popover.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page PopoverPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Popover">
-          <Copy tone="eyebrow">Overlay</Copy>
-          <Copy tone="lead">Small anchored panel for compact help, quick controls, and contextual metadata.</Copy>
-          <Button href="/components/props-table" variant="primary">Next: PropsTable</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Popover"
+      category="Overlay"
+      description="Small anchored panel for compact help, quick controls, and contextual metadata."
+      nextHref="/components/props-table"
+      nextLabel="Next: PropsTable"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -30,7 +30,6 @@ page PopoverPage() {
             <DocsCodeBlock>{"<Popover side=\"bottom\">\n  <span slot=\"trigger\">Runtime info</span>\n  <Copy>Tokio transport is active.</Copy>\n</Popover>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

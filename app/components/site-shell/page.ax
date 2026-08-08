@@ -1,23 +1,23 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { Footer } from "@axonyx/ui/foundry/Footer.ax"
 import { Header } from "@axonyx/ui/foundry/Header.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Main } from "@axonyx/ui/foundry/Main.ax"
 import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page SiteShellPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="SiteShell">
-          <Copy tone="eyebrow">Application frame</Copy>
-          <Copy tone="lead">Outer page shell for site-level width, header/footer rhythm, and app content.</Copy>
-          <Button href="/components/stat" variant="primary">Next: Stat</Button>
-        </HeroCard>
+    <ComponentPage
+      title="SiteShell"
+      category="Application frame"
+      description="Outer page shell for site-level width, header/footer rhythm, and app content."
+      nextHref="/components/stat"
+      nextLabel="Next: Stat"
+    >
 
         <Card title="Preview" border="forged">
           <SiteShell max="lg">
@@ -30,7 +30,6 @@ page SiteShellPage() {
         <Card title="Axonyx">
           <DocsCodeBlock>{"<SiteShell max=\"lg\">\n  <Header sticky=\"true\">Axonyx docs</Header>\n  <Main><Copy>Page content</Copy></Main>\n  <Footer><Copy>Footer content</Copy></Footer>\n</SiteShell>"}</DocsCodeBlock>
         </Card>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

@@ -1,27 +1,26 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
 import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Switch } from "@axonyx/ui/foundry/Switch.ax"
 
 page SwitchPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Switch">
-          <Copy slot="eyebrow">Inputs</Copy>
-          <Copy tone="lead">Compact boolean control for settings, feature flags, and preference forms.</Copy>
-          <Button href="/components/tabs" variant="primary">Next: Tabs</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Switch"
+      category="Inputs"
+      description="Compact boolean control for settings, feature flags, and preference forms."
+      nextHref="/components/tabs"
+      nextLabel="Next: Tabs"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preferences"><Switch name="streaming" checked="true">Enable streaming runtime</Switch><Switch name="drafts">Show draft posts</Switch></Card>
           <Card title="Axonyx"><DocsCodeBlock>{"<Switch name=\"streaming\" checked=\"true\">\n  Enable streaming runtime\n</Switch>"}</DocsCodeBlock></Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

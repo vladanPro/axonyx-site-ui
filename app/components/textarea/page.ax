@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -6,19 +7,18 @@ import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { Field } from "@axonyx/ui/foundry/Field.ax"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 import { Textarea } from "@axonyx/ui/foundry/Textarea.ax"
 
 page TextareaPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Textarea">
-          <Copy tone="eyebrow">Forms</Copy>
-          <Copy tone="lead">Native multi-line input for content, comments, notes, and CMS fields.</Copy>
-          <Button href="/components/slider" variant="primary">Next: Slider</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Textarea"
+      category="Forms"
+      description="Native multi-line input for content, comments, notes, and CMS fields."
+      nextHref="/components/slider"
+      nextLabel="Next: Slider"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -32,7 +32,6 @@ page TextareaPage() {
             <DocsCodeBlock>{"<Textarea id=\"notes\" name=\"notes\" placeholder=\"Describe what changed...\" />"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }

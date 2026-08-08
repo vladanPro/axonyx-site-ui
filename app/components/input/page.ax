@@ -1,3 +1,4 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
 import { Button } from "@axonyx/ui/foundry/Button.ax"
 import { Card } from "@axonyx/ui/foundry/Card.ax"
@@ -6,19 +7,18 @@ import { Copy } from "@axonyx/ui/foundry/Copy.ax"
 import { Field } from "@axonyx/ui/foundry/Field.ax"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
 import { Input } from "@axonyx/ui/foundry/Input.ax"
 import { Stack } from "@axonyx/ui/foundry/Stack.ax"
 
 page InputPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <HeroCard title="Input">
-          <Copy tone="eyebrow">Forms</Copy>
-          <Copy tone="lead">Native text input for search, authentication, settings, and CMS fields.</Copy>
-          <Button href="/components/checkbox" variant="primary">Next: Checkbox</Button>
-        </HeroCard>
+    <ComponentPage
+      title="Input"
+      category="Forms"
+      description="Native text input for search, authentication, settings, and CMS fields."
+      nextHref="/components/checkbox"
+      nextLabel="Next: Checkbox"
+    >
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Preview" border="forged">
@@ -38,7 +38,6 @@ page InputPage() {
             <DocsCodeBlock>{"<Field htmlFor=\"project-name\">\n  <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n  <Input id=\"project-name\" name=\"project_name\" placeholder=\"Axonyx Foundry\" />\n  <FieldHint>Used in generated metadata.</FieldHint>\n</Field>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
-      </Stack>
-    </Container>
+    </ComponentPage>
   }
 }
