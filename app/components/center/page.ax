@@ -1,0 +1,18 @@
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Center } from "@axonyx/ui/foundry/Center.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+
+page CenterPage() {
+  return ASX {
+    <ComponentPage title="Center" category="Layout primitive" description="Center provides two-axis centering for empty states, authentication panels, and focused messages." nextHref="/components/layout" nextLabel="Layout overview">
+      <Surface variant="inset" padding="lg">
+        <Center min="sm"><Stack gap="md" align="center"><strong>No deployments yet</strong><Copy>Create the first release when the project is ready.</Copy><Button variant="primary">Create deployment</Button></Stack></Center>
+      </Surface>
+      <DocsCodeBlock>{"<Center min=\"sm\">\n  <EmptyState />\n</Center>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}

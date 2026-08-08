@@ -1,0 +1,21 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Cluster } from "@axonyx/ui/foundry/Cluster.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+
+page ClusterPage() {
+  return ASX {
+    <ComponentPage title="Cluster" category="Layout primitive" description="Cluster is a wrapping inline composition for actions, badges, filters, and compact controls." nextHref="/components/box" nextLabel="Next: Box">
+      <Surface eyebrow="Preview" title="Release controls" variant="forged" padding="lg">
+        <Cluster gap="sm" align="center" justify="between">
+          <Cluster gap="xs"><Badge tone="success">stable</Badge><Badge tone="info">0.0.68</Badge></Cluster>
+          <Cluster gap="sm"><Button variant="ghost">Changelog</Button><Button variant="primary">Install</Button></Cluster>
+        </Cluster>
+      </Surface>
+      <DocsCodeBlock>{"<Cluster gap=\"sm\" align=\"center\" justify=\"between\">\n  <Status />\n  <Actions />\n</Cluster>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}
