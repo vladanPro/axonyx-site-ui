@@ -60,14 +60,14 @@ page Home() {
 
         <div class="ui-status-rail">
           <div>
-            <span>Components V0</span>
-            <strong>5</strong>
-            <small>Button, Card, Field, AppShell, Sidebar</small>
+            <span>Component catalog</span>
+            <strong>58+</strong>
+            <small>layout, actions, forms, navigation, overlays, and data</small>
           </div>
           <div>
             <span>Blocks V0</span>
-            <strong>3</strong>
-            <small>marketing-01, docs-01, dashboard-01</small>
+            <strong>4</strong>
+            <small>marketing-01, docs-01, dashboard-01, login-01</small>
           </div>
           <div>
             <span>Install path</span>
@@ -129,6 +129,11 @@ page Home() {
             <Badge tone="warning">Block</Badge>
             <Copy>Metrics, console sidebar, status cards, and future data panels.</Copy>
             <Button href="/blocks/dashboard-01" variant="ghost">Open preview</Button>
+          </SectionCard>
+          <SectionCard title="login-01" border="forged">
+            <Badge tone="success">Block</Badge>
+            <Copy>Native sign-in form, system status panel, and secure session boundary.</Copy>
+            <Button href="/blocks/login-01" variant="ghost">Open preview</Button>
           </SectionCard>
         </ContentGrid>
 
