@@ -1,0 +1,19 @@
+import { Box } from "@axonyx/ui/foundry/Box.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { Inset } from "@axonyx/ui/foundry/Inset.ax"
+
+page InsetPage() {
+  return ASX {
+    <ComponentPage title="Inset" category="Layout primitive" description="Inset applies semantic inner spacing without coupling content to a visual surface." nextHref="/components/bleed" nextLabel="Next: Bleed">
+      <Grid cols="3" gap="lg">
+        <Box surface="inset"><Inset size="sm"><Copy>sm inset</Copy></Inset></Box>
+        <Box surface="inset"><Inset size="lg"><Copy>lg inset</Copy></Inset></Box>
+        <Box surface="inset"><Inset size="2xl"><Copy>2xl inset</Copy></Inset></Box>
+      </Grid>
+      <DocsCodeBlock>{"<Inset size=\"lg\">\n  <EditorPanel />\n</Inset>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}

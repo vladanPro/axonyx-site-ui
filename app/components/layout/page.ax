@@ -58,7 +58,7 @@ page LayoutPage() {
                 </Cluster>
               </Flex>
               <Divider />
-              <Center min="8rem">
+              <Center min="sm">
                 <Box padding="md" surface="inset">
                   <Copy>Center is for empty states, auth panels, and focused messages.</Copy>
                 </Box>

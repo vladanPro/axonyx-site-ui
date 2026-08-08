@@ -170,6 +170,42 @@ expect_text = "directional alignment"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "cluster component"
+goto = "/components/cluster"
+expect_text = "wrapping inline composition"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "box component"
+goto = "/components/box"
+expect_text = "material boundary"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "section component"
+goto = "/components/section"
+expect_text = "page-level rhythm"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "inset component"
+goto = "/components/inset"
+expect_text = "inner spacing"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "bleed component"
+goto = "/components/bleed"
+expect_text = "container boundary"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "center component"
+goto = "/components/center"
+expect_text = "two-axis centering"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "accordion component"
 goto = "/components/accordion"
 expect_text = "Expandable content sections"

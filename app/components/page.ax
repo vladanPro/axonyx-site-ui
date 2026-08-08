@@ -92,6 +92,36 @@ page Components() {
             <Copy>Directional rows and columns with wrapping, distribution, and mobile collapse.</Copy>
             <Button href="/components/flex" variant="ghost">Open Flex</Button>
           </SectionCard>
+          <SectionCard title="Cluster">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Wrapping inline composition for actions, badges, filters, and compact controls.</Copy>
+            <Button href="/components/cluster" variant="ghost">Open Cluster</Button>
+          </SectionCard>
+          <SectionCard title="Box">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Low-level spacing and material boundary for custom compositions.</Copy>
+            <Button href="/components/box" variant="ghost">Open Box</Button>
+          </SectionCard>
+          <SectionCard title="Section">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Page section with width, rhythm, alignment, and optional heading content.</Copy>
+            <Button href="/components/section" variant="ghost">Open Section</Button>
+          </SectionCard>
+          <SectionCard title="Inset">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Semantic inner spacing wrapper driven by Foundry tokens.</Copy>
+            <Button href="/components/inset" variant="ghost">Open Inset</Button>
+          </SectionCard>
+          <SectionCard title="Bleed">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Safe gutter escape with an explicit viewport mode for edge-to-edge media.</Copy>
+            <Button href="/components/bleed" variant="ghost">Open Bleed</Button>
+          </SectionCard>
+          <SectionCard title="Center">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Two-axis centering for empty states, auth panels, and focused messages.</Copy>
+            <Button href="/components/center" variant="ghost">Open Center</Button>
+          </SectionCard>
           <SectionCard title="Avatar">
             <Badge tone="success">V0</Badge>
             <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>

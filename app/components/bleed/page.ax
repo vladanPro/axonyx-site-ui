@@ -1,0 +1,16 @@
+import { Bleed } from "@axonyx/ui/foundry/Bleed.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+
+page BleedPage() {
+  return ASX {
+    <ComponentPage title="Bleed" category="Layout primitive" description="Bleed safely escapes a local container boundary, with an explicit viewport mode for site-level banners and media." nextHref="/components/center" nextLabel="Next: Center">
+      <Bleed size="lg">
+        <Surface eyebrow="Gutter bleed" title="Release signal" variant="forged" padding="lg"><Copy>The material escapes local padding without breaking an asymmetric app or docs layout.</Copy></Surface>
+      </Bleed>
+      <DocsCodeBlock>{"<Bleed size=\"lg\">\n  <LocalPanel />\n</Bleed>\n\n<Bleed mode=\"viewport\" padding=\"lg\">\n  <HeroMedia />\n</Bleed>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}

@@ -1,0 +1,19 @@
+import { Box } from "@axonyx/ui/foundry/Box.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page BoxPage() {
+  return ASX {
+    <ComponentPage title="Box" category="Layout primitive" description="Box is a low-level spacing and material boundary for custom compositions that do not need a semantic Card or Surface." nextHref="/components/surface" nextLabel="Next: Surface">
+      <Grid cols="3" gap="lg">
+        <Box padding="lg" surface="brushed"><Stack gap="sm"><strong>Brushed</strong><Copy>Quiet material boundary.</Copy></Stack></Box>
+        <Box padding="lg" surface="inset"><Stack gap="sm"><strong>Inset</strong><Copy>Recessed dense content.</Copy></Stack></Box>
+        <Box padding="lg" surface="forged"><Stack gap="sm"><strong>Forged</strong><Copy>Higher-signal module.</Copy></Stack></Box>
+      </Grid>
+      <DocsCodeBlock>{"<Box padding=\"lg\" surface=\"forged\">\n  <CustomComposition />\n</Box>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}

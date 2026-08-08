@@ -1,0 +1,19 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Section } from "@axonyx/ui/foundry/Section.ax"
+
+page SectionPage() {
+  return ASX {
+    <ComponentPage title="Section" category="Layout primitive" description="Section owns page-level rhythm, content width, alignment, and optional heading content." nextHref="/components/inset" nextLabel="Next: Inset">
+      <Card border="forged">
+        <Section width="lg" spacing="sm" align="center" eyebrow="Foundry" title="One section contract" description="Compose a page without rebuilding heading and spacing rules for every route.">
+          <Badge tone="success">responsive</Badge>
+        </Section>
+      </Card>
+      <DocsCodeBlock>{"<Section width=\"lg\" spacing=\"sm\" align=\"center\"\n  eyebrow=\"Foundry\" title=\"One section contract\"\n  description=\"Reusable page rhythm.\"\n>\n  <Content />\n</Section>"}</DocsCodeBlock>
+    </ComponentPage>
+  }
+}
