@@ -1,0 +1,44 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { Toggle } from "@axonyx/ui/foundry/Toggle.ax"
+import { ToggleGroup } from "@axonyx/ui/foundry/ToggleGroup.ax"
+
+page TogglePage() {
+  return ASX {
+    <ComponentPage
+      title="Toggle"
+      category="Forms"
+      description="Native single- and multiple-selection controls presented as compact Foundry surfaces."
+      nextHref="/components/input-group"
+      nextLabel="Next: InputGroup"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Single selection" border="forged">
+          <Stack gap="md">
+            <Copy>Radio semantics keep one Foundry theme selected without JavaScript.</Copy>
+            <ToggleGroup selection="single" label="Foundry theme">
+              <Toggle type="radio" name="foundry_theme" value="silver">Silver</Toggle>
+              <Toggle type="radio" name="foundry_theme" value="bronze">Bronze</Toggle>
+              <Toggle type="radio" name="foundry_theme" value="gold">Gold</Toggle>
+            </ToggleGroup>
+          </Stack>
+        </Card>
+        <Card title="Multiple selection">
+          <ToggleGroup selection="multiple" label="Build checks">
+            <Toggle name="checks" value="types">Types</Toggle>
+            <Toggle name="checks" value="links">Links</Toggle>
+            <Toggle name="checks" value="a11y">A11y</Toggle>
+          </ToggleGroup>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<ToggleGroup selection=\"single\" label=\"Foundry theme\">\n  <Toggle type=\"radio\" name=\"theme\" value=\"silver\">Silver</Toggle>\n  <Toggle type=\"radio\" name=\"theme\" value=\"bronze\">Bronze</Toggle>\n  <Toggle type=\"radio\" name=\"theme\" value=\"gold\">Gold</Toggle>\n</ToggleGroup>"}</DocsCodeBlock>
+      </Card>
+    </ComponentPage>
+  }
+}

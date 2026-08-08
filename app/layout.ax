@@ -60,6 +60,7 @@ page RootLayout() {
               <a href="/components/card">Card</a>
               <a href="/components/field">Field</a>
               <a href="/components/input">Input</a>
+              <a href="/components/input-group">InputGroup</a>
               <a href="/components/checkbox">Checkbox</a>
               <a href="/components/link-button">LinkButton</a>
               <a href="/components/text-link">TextLink</a>
@@ -108,6 +109,8 @@ page RootLayout() {
               <a href="/components/stepper">Stepper</a>
               <a href="/components/toolbar">Toolbar</a>
               <a href="/components/progress">Progress</a>
+              <a href="/components/spinner">Spinner</a>
+              <a href="/components/toggle">Toggle</a>
               <a href="/components/skeleton">Skeleton</a>
               <a href="/components/toast">Toast</a>
               <a href="/components/tooltip">Tooltip</a>
