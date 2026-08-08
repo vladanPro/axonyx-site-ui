@@ -66,8 +66,8 @@ page Home() {
           </div>
           <div>
             <span>Blocks V0</span>
-            <strong>4</strong>
-            <small>marketing-01, docs-01, dashboard-01, login-01</small>
+            <strong>5</strong>
+            <small>marketing, docs, dashboard, login, and settings</small>
           </div>
           <div>
             <span>Install path</span>
@@ -134,6 +134,11 @@ page Home() {
             <Badge tone="success">Block</Badge>
             <Copy>Native sign-in form, system status panel, and secure session boundary.</Copy>
             <Button href="/blocks/login-01" variant="ghost">Open preview</Button>
+          </SectionCard>
+          <SectionCard title="settings-01" border="forged">
+            <Badge tone="success">Block</Badge>
+            <Copy>Responsive app shell, workspace preferences, and explicit destructive actions.</Copy>
+            <Button href="/blocks/settings-01" variant="ghost">Open preview</Button>
           </SectionCard>
         </ContentGrid>
 

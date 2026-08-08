@@ -125,6 +125,7 @@ page RootLayout() {
               <a href="/blocks/docs-01">docs-01</a>
               <a href="/blocks/dashboard-01">dashboard-01</a>
               <a href="/blocks/login-01">login-01</a>
+              <a href="/blocks/settings-01">settings-01</a>
             </div>
           </nav>
         </Sidebar>
