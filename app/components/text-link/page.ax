@@ -1,0 +1,31 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
+
+page TextLinkPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="TextLink">
+          <Copy tone="eyebrow">Actions</Copy>
+          <Copy tone="lead">Inline navigation for documentation, supporting actions, and content references.</Copy>
+          <Button href="/components/stepper" variant="primary">Next: Stepper</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Copy>Read the <TextLink href="/themes">Foundry theme contract</TextLink> or browse <TextLink href="/blocks">complete blocks</TextLink>.</Copy>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Copy>\n  Read the <TextLink href=\"/themes\">Foundry theme contract</TextLink>.\n</Copy>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

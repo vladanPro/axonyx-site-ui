@@ -1,0 +1,35 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Checkbox } from "@axonyx/ui/foundry/Checkbox.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page CheckboxPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="Checkbox">
+          <Copy tone="eyebrow">Forms</Copy>
+          <Copy tone="lead">Native multi-select control for settings, filters, permissions, and consent.</Copy>
+          <Button href="/components/link-button" variant="primary">Next: LinkButton</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <Stack gap="md">
+              <Checkbox name="deploy_preview">Create a deploy preview</Checkbox>
+              <Checkbox name="run_checks">Run Foundry checks</Checkbox>
+              <Checkbox name="notify_team">Notify the project team</Checkbox>
+            </Stack>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<Checkbox name=\"deploy_preview\">\n  Create a deploy preview\n</Checkbox>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

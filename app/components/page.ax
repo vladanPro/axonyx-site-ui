@@ -41,6 +41,26 @@ page Components() {
             <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
             <Button href="/components/field" variant="ghost">Open Field</Button>
           </SectionCard>
+          <SectionCard title="Input">
+            <Badge tone="success">V0</Badge>
+            <Copy>Native text input for search, authentication, settings, and CMS fields.</Copy>
+            <Button href="/components/input" variant="ghost">Open Input</Button>
+          </SectionCard>
+          <SectionCard title="Checkbox">
+            <Badge tone="success">V0</Badge>
+            <Copy>Native multi-select control for settings, filters, permissions, and consent.</Copy>
+            <Button href="/components/checkbox" variant="ghost">Open Checkbox</Button>
+          </SectionCard>
+          <SectionCard title="LinkButton">
+            <Badge tone="success">V0</Badge>
+            <Copy>Anchor navigation with the visual weight of a Foundry button.</Copy>
+            <Button href="/components/link-button" variant="ghost">Open LinkButton</Button>
+          </SectionCard>
+          <SectionCard title="TextLink">
+            <Badge tone="success">V0</Badge>
+            <Copy>Inline navigation for docs, supporting actions, and content references.</Copy>
+            <Button href="/components/text-link" variant="ghost">Open TextLink</Button>
+          </SectionCard>
           <SectionCard title="Layout">
             <Badge tone="success">Foundation</Badge>
             <Copy>Container, Grid, Stack, Flex, Cluster, Box, Surface, Section, and spacing primitives.</Copy>
@@ -255,6 +275,11 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Chronological activity and stepper primitives for releases, jobs, and guides.</Copy>
             <Button href="/components/timeline" variant="ghost">Open Timeline</Button>
+          </SectionCard>
+          <SectionCard title="Stepper">
+            <Badge tone="success">V0</Badge>
+            <Copy>Ordered progress for setup flows, deploy pipelines, onboarding, and publishing.</Copy>
+            <Button href="/components/stepper" variant="ghost">Open Stepper</Button>
           </SectionCard>
           <SectionCard title="Toolbar">
             <Badge tone="success">V0</Badge>

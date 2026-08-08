@@ -92,6 +92,30 @@ expect_text = "Native form composition"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "input component"
+goto = "/components/input"
+expect_text = "Native text input"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "checkbox component"
+goto = "/components/checkbox"
+expect_text = "Native multi-select control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "link button component"
+goto = "/components/link-button"
+expect_text = "Anchor navigation"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "text link component"
+goto = "/components/text-link"
+expect_text = "Inline navigation"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "icon button component"
 goto = "/components/icon-button"
 expect_text = "Icon-only action"
@@ -275,6 +299,12 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "timeline component"
 goto = "/components/timeline"
 expect_text = "Timeline and stepper primitives"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "stepper component"
+goto = "/components/stepper"
+expect_text = "Ordered progress"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
