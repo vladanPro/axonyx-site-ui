@@ -42,6 +42,11 @@ page Components() {
             <Copy>Native text input for search, authentication, settings, and CMS fields.</Copy>
             <Button href="/components/input" variant="ghost">Open Input</Button>
           </SectionCard>
+          <SectionCard title="InputGroup">
+            <Badge tone="success">V0</Badge>
+            <Copy>Inputs, semantic prefixes, suffixes, and actions inside one control boundary.</Copy>
+            <Button href="/components/input-group" variant="ghost">Open InputGroup</Button>
+          </SectionCard>
           <SectionCard title="Checkbox">
             <Badge tone="success">V0</Badge>
             <Copy>Native multi-select control for settings, filters, permissions, and consent.</Copy>
@@ -291,6 +296,16 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Progress feedback for uploads, builds, migrations, and jobs.</Copy>
             <Button href="/components/progress" variant="ghost">Open Progress</Button>
+          </SectionCard>
+          <SectionCard title="Spinner">
+            <Badge tone="success">V0</Badge>
+            <Copy>Accessible loading status for actions, streams, builds, and background work.</Copy>
+            <Button href="/components/spinner" variant="ghost">Open Spinner</Button>
+          </SectionCard>
+          <SectionCard title="Toggle">
+            <Badge tone="success">V0</Badge>
+            <Copy>Single- and multiple-selection groups built on native radio and checkbox semantics.</Copy>
+            <Button href="/components/toggle" variant="ghost">Open Toggle</Button>
           </SectionCard>
           <SectionCard title="Skeleton">
             <Badge tone="success">V0</Badge>

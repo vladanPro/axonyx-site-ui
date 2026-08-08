@@ -104,6 +104,12 @@ expect_text = "Native text input"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "input group component"
+goto = "/components/input-group"
+expect_text = "One accessible control boundary"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "checkbox component"
 goto = "/components/checkbox"
 expect_text = "Native multi-select control"
@@ -263,6 +269,18 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "switch component"
 goto = "/components/switch"
 expect_text = "Compact boolean control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "spinner component"
+goto = "/components/spinner"
+expect_text = "Accessible loading status"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "toggle component"
+goto = "/components/toggle"
+expect_text = "Native single- and multiple-selection"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

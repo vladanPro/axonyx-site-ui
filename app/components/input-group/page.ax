@@ -1,0 +1,46 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Field } from "@axonyx/ui/foundry/Field.ax"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.ax"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.ax"
+import { Input } from "@axonyx/ui/foundry/Input.ax"
+import { InputAddon } from "@axonyx/ui/foundry/InputAddon.ax"
+import { InputGroup } from "@axonyx/ui/foundry/InputGroup.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page InputGroupPage() {
+  return ASX {
+    <ComponentPage
+      title="InputGroup"
+      category="Forms"
+      description="One accessible control boundary for inputs with URL, command, search, and metadata add-ons."
+      nextHref="/components/forms"
+      nextLabel="Next: Forms"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Project address" border="forged">
+          <Stack gap="lg">
+            <Field htmlFor="project-slug">
+              <FieldLabel htmlFor="project-slug">Project slug</FieldLabel>
+              <InputGroup>
+                <InputAddon side="start">https://</InputAddon>
+                <Input id="project-slug" name="project_slug" placeholder="my-project" />
+                <InputAddon side="end">.axonyx.dev</InputAddon>
+              </InputGroup>
+              <FieldHint>Used for the generated preview URL.</FieldHint>
+            </Field>
+            <InputGroup size="sm">
+              <InputAddon side="start">cargo ax</InputAddon>
+              <Input name="command" value="run dev" />
+            </InputGroup>
+          </Stack>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<InputGroup>\n  <InputAddon side=\"start\">https://</InputAddon>\n  <Input name=\"project_slug\" placeholder=\"my-project\" />\n  <InputAddon side=\"end\">.axonyx.dev</InputAddon>\n</InputGroup>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}

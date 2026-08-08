@@ -1,0 +1,32 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Spinner } from "@axonyx/ui/foundry/Spinner.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page SpinnerPage() {
+  return ASX {
+    <ComponentPage
+      title="Spinner"
+      category="Feedback"
+      description="Accessible loading status for actions, streamed sections, builds, and background work."
+      nextHref="/components/toggle"
+      nextLabel="Next: Toggle"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Sizes" border="forged">
+          <Stack gap="lg">
+            <Copy><Spinner size="sm" label="Small task loading" /> Small task</Copy>
+            <Copy><Spinner size="md" tone="primary" label="Build loading" /> Build running</Copy>
+            <Copy><Spinner size="lg" tone="muted" label="Background task loading" /> Background task</Copy>
+          </Stack>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Spinner size=\"md\" tone=\"primary\" label=\"Build loading\" />"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}
