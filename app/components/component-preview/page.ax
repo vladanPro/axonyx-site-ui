@@ -1,0 +1,38 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPreview } from "@axonyx/ui/foundry/ComponentPreview.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ComponentPreviewPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="ComponentPreview">
+          <Copy tone="eyebrow">Documentation</Copy>
+          <Copy tone="lead">Preview stage primitive for component documentation and visual examples.</Copy>
+          <Button href="/components/copy" variant="primary">Next: Copy</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <ComponentPreview title="Action group" surface="forged">
+              <ButtonGroup>
+                <Button variant="primary">Publish</Button>
+                <Button variant="ghost">Cancel</Button>
+              </ButtonGroup>
+            </ComponentPreview>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<ComponentPreview title=\"Action group\" surface=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n  </ButtonGroup>\n</ComponentPreview>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

@@ -68,6 +68,24 @@ expect_text = "Copy-ready code surfaces"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "component preview component"
+goto = "/components/component-preview"
+expect_text = "Preview stage primitive"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "copy component"
+goto = "/components/copy"
+expect_text = "Readable paragraph primitive"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "docs callout component"
+goto = "/components/docs-callout"
+expect_text = "Documentation callout"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "forms component"
 goto = "/components/forms"
 expect_text = "Native form composition"
@@ -146,6 +164,12 @@ expect_text = "Page navigation"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "page header component"
+goto = "/components/page-header"
+expect_text = "Header surface"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "popover component"
 goto = "/components/popover"
 expect_text = "Small anchored panel"
@@ -173,6 +197,12 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "select component"
 goto = "/components/select"
 expect_text = "Native select control"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "site shell component"
+goto = "/components/site-shell"
+expect_text = "Outer page shell"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

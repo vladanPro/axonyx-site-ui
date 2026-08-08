@@ -1,0 +1,35 @@
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCallout } from "@axonyx/ui/foundry/DocsCallout.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page DocsCalloutPage() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="DocsCallout">
+          <Copy tone="eyebrow">Documentation</Copy>
+          <Copy tone="lead">Documentation callout for notes, warnings, migration hints, and framework guidance.</Copy>
+          <Button href="/components/forms" variant="primary">Next: Forms</Button>
+        </HeroCard>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Preview" border="forged">
+            <DocsCallout title="Use package behavior">
+              <Badge slot="eyebrow" tone="warning">Important</Badge>
+              <Copy>Interactive Foundry components should ship behavior from `@axonyx/ui`, not one-off site scripts.</Copy>
+            </DocsCallout>
+          </Card>
+          <Card title="Axonyx">
+            <DocsCodeBlock>{"<DocsCallout title=\"Use package behavior\">\n  <Badge slot=\"eyebrow\" tone=\"warning\">Important</Badge>\n  <Copy>Interactive behavior belongs in @axonyx/ui.</Copy>\n</DocsCallout>"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+      </Stack>
+    </Container>
+  }
+}

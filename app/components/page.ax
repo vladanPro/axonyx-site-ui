@@ -61,6 +61,21 @@ page Components() {
             <Copy>Copy-ready code surfaces for install commands, ASX snippets, and generated HTML.</Copy>
             <Button href="/components/code-block" variant="ghost">Open CodeBlock</Button>
           </SectionCard>
+          <SectionCard title="ComponentPreview">
+            <Badge tone="success">Docs</Badge>
+            <Copy>Preview stage primitive for component documentation and visual examples.</Copy>
+            <Button href="/components/component-preview" variant="ghost">Open ComponentPreview</Button>
+          </SectionCard>
+          <SectionCard title="Copy">
+            <Badge tone="success">Docs</Badge>
+            <Copy>Readable paragraph primitive for docs, cards, callouts, and product copy.</Copy>
+            <Button href="/components/copy" variant="ghost">Open Copy</Button>
+          </SectionCard>
+          <SectionCard title="DocsCallout">
+            <Badge tone="success">Docs</Badge>
+            <Copy>Documentation callout for notes, warnings, migration hints, and framework guidance.</Copy>
+            <Button href="/components/docs-callout" variant="ghost">Open DocsCallout</Button>
+          </SectionCard>
           <SectionCard title="Forms">
             <Badge tone="success">V0</Badge>
             <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
@@ -141,6 +156,11 @@ page Components() {
             <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
             <Button href="/components/pagination" variant="ghost">Open Pagination</Button>
           </SectionCard>
+          <SectionCard title="PageHeader">
+            <Badge tone="success">Docs</Badge>
+            <Copy>Header surface for docs pages, component pages, dashboards, and section intros.</Copy>
+            <Button href="/components/page-header" variant="ghost">Open PageHeader</Button>
+          </SectionCard>
           <SectionCard title="Popover">
             <Badge tone="success">V0</Badge>
             <Copy>Small anchored panel for compact help, quick controls, and contextual metadata.</Copy>
@@ -165,6 +185,11 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>Native select styling aligned with Foundry field and theme surfaces.</Copy>
             <Button href="/components/select" variant="ghost">Open Select</Button>
+          </SectionCard>
+          <SectionCard title="SiteShell">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Outer page shell for site-level width, header/footer rhythm, and app content.</Copy>
+            <Button href="/components/site-shell" variant="ghost">Open SiteShell</Button>
           </SectionCard>
           <SectionCard title="Stat">
             <Badge tone="success">V0</Badge>
