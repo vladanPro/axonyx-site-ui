@@ -43,7 +43,7 @@ page RootLayout() {
     <SiteShell max="xl">
 
       <div class="ui-docs-shell">
-        <Sidebar>
+        <Sidebar label="Component navigation" collapsible="true">
           <nav class="ui-sidebar-nav" aria-label="Axonyx UI navigation">
             <div class="ui-sidebar-group">
               <strong>Start</strong>
