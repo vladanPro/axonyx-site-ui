@@ -37,8 +37,9 @@ page Blocks() {
             <Button href="/blocks/dashboard-01" variant="ghost">Open block</Button>
           </SectionCard>
           <SectionCard title="login-01">
-            <Badge tone="info">Next</Badge>
-            <Copy>Auth card, social slots, validation space, and brand panel.</Copy>
+            <Badge tone="success">Available</Badge>
+            <Copy>Native sign-in form, session action boundary, status panel, and account links.</Copy>
+            <Button href="/blocks/login-01" variant="ghost">Open block</Button>
           </SectionCard>
           <SectionCard title="blog-01">
             <Badge tone="info">Next</Badge>

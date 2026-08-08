@@ -39,6 +39,7 @@ not on this native Rust showcase.
 - `/blocks/marketing-01` - marketing block V0 preview.
 - `/blocks/docs-01` - docs block V0 preview.
 - `/blocks/dashboard-01` - dashboard block V0 preview.
+- `/blocks/login-01` - authentication block V0 preview.
 - `/themes` - bronze, silver, and gold theme direction.
 - `/registry` - Cargo and npm registry model.
 

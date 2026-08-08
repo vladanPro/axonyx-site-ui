@@ -1,0 +1,45 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Login01 } from "@axonyx/ui/blocks/login-01"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page LoginBlock() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="login-01">
+          <Copy slot="eyebrow">Blocks V0</Copy>
+          <Copy tone="lead">A responsive authentication surface imported from `@axonyx/ui/blocks/login-01`.</Copy>
+          <ButtonGroup>
+            <Button href="/blocks" variant="primary">All blocks</Button>
+            <Button href="/components/forms" variant="ghost">Form primitives</Button>
+          </ButtonGroup>
+        </HeroCard>
+
+        <Card title="Preview from axonyx-ui" border="forged">
+          <Login01 />
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Install">
+            <DocsCodeBlock>{"cargo ax add block login-01"}</DocsCodeBlock>
+          </Card>
+          <Card title="Import">
+            <DocsCodeBlock>{"import { Login01 } from \"@axonyx/ui/blocks/login-01\"\n\n<Login01 action=\"/session\" />"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Native by default" border="forged" surface="inset">
+          <Badge tone="success">Semantic HTML</Badge>
+          <Copy>The block submits a native form, keeps browser autocomplete, and leaves authentication logic in your Axonyx action or server route.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

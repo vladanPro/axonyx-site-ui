@@ -330,3 +330,9 @@ name = "dashboard block"
 goto = "/blocks/dashboard-01"
 expect_text = "industrial admin dashboard"
 expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "login block"
+goto = "/blocks/login-01"
+expect_text = "responsive authentication surface"
+expect_not = ["Internal Server Error", "Application error"]
