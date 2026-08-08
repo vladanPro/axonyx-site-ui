@@ -41,6 +41,11 @@ page Blocks() {
             <Copy>Native sign-in form, session action boundary, status panel, and account links.</Copy>
             <Button href="/blocks/login-01" variant="ghost">Open block</Button>
           </SectionCard>
+          <SectionCard title="settings-01">
+            <Badge tone="success">Available</Badge>
+            <Copy>Responsive application shell, grouped settings forms, preferences, and danger zone.</Copy>
+            <Button href="/blocks/settings-01" variant="ghost">Open block</Button>
+          </SectionCard>
           <SectionCard title="blog-01">
             <Badge tone="info">Next</Badge>
             <Copy>Post index, featured article, tag rail, and content collection routing.</Copy>

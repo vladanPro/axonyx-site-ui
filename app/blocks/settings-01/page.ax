@@ -1,0 +1,45 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
+import { Settings01 } from "@axonyx/ui/blocks/settings-01"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page SettingsBlock() {
+  return ASX {
+    <Container max="xl">
+      <Stack gap="xl">
+        <HeroCard title="settings-01">
+          <Copy slot="eyebrow">Blocks V0</Copy>
+          <Copy tone="lead">A responsive application settings shell imported from `@axonyx/ui/blocks/settings-01`.</Copy>
+          <ButtonGroup>
+            <Button href="/blocks" variant="primary">All blocks</Button>
+            <Button href="/components/app-shell" variant="ghost">AppShell primitive</Button>
+          </ButtonGroup>
+        </HeroCard>
+
+        <Card title="Preview from axonyx-ui" border="forged">
+          <Settings01 />
+        </Card>
+
+        <ContentGrid cols={2} gap="lg">
+          <Card title="Install">
+            <DocsCodeBlock>{"cargo ax add block settings-01"}</DocsCodeBlock>
+          </Card>
+          <Card title="Import">
+            <DocsCodeBlock>{"import { Settings01 } from \"@axonyx/ui/blocks/settings-01\"\n\n<Settings01 action=\"/settings\" />"}</DocsCodeBlock>
+          </Card>
+        </ContentGrid>
+
+        <Card title="Application composition" border="forged" surface="inset">
+          <Badge tone="success">Package owned</Badge>
+          <Copy>The responsive shell, collapsible navigation, grouped fields, preferences, and danger zone are composed entirely from Axonyx UI primitives.</Copy>
+        </Card>
+      </Stack>
+    </Container>
+  }
+}

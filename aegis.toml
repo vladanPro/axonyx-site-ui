@@ -336,3 +336,9 @@ name = "login block"
 goto = "/blocks/login-01"
 expect_text = "responsive authentication surface"
 expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "settings block"
+goto = "/blocks/settings-01"
+expect_text = "responsive application settings shell"
+expect_not = ["Internal Server Error", "Application error"]

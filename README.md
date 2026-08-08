@@ -40,6 +40,7 @@ not on this native Rust showcase.
 - `/blocks/docs-01` - docs block V0 preview.
 - `/blocks/dashboard-01` - dashboard block V0 preview.
 - `/blocks/login-01` - authentication block V0 preview.
+- `/blocks/settings-01` - application settings block V0 preview.
 - `/themes` - bronze, silver, and gold theme direction.
 - `/registry` - Cargo and npm registry model.
 
@@ -63,6 +64,6 @@ cargo ax build --clean
 Start with a small complete loop:
 
 - Components: `Button`, `Card`, `Field`, `AppShell`, `Sidebar`.
-- Blocks: `marketing-01`, `docs-01`, `dashboard-01`, `login-01`, `cms-admin-01`.
+- Blocks: `marketing-01`, `docs-01`, `dashboard-01`, `login-01`, `settings-01`, `cms-admin-01`.
 - Mode: native Axonyx examples on every page.
 - Themes: `silver`, `bronze`, `gold`, then custom theme packages later.
