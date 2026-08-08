@@ -47,6 +47,11 @@ page Components() {
             <Copy>Inputs, semantic prefixes, suffixes, and actions inside one control boundary.</Copy>
             <Button href="/components/input-group" variant="ghost">Open InputGroup</Button>
           </SectionCard>
+          <SectionCard title="Combobox">
+            <Badge tone="success">V0</Badge>
+            <Copy>Browser-native searchable selection for filters, settings, and content forms.</Copy>
+            <Button href="/components/combobox" variant="ghost">Open Combobox</Button>
+          </SectionCard>
           <SectionCard title="Checkbox">
             <Badge tone="success">V0</Badge>
             <Copy>Native multi-select control for settings, filters, permissions, and consent.</Copy>
@@ -177,6 +182,11 @@ page Components() {
             <Copy>Top-level navigation shell for product pages, docs, dashboards, and app headers.</Copy>
             <Button href="/components/navbar" variant="ghost">Open Navbar</Button>
           </SectionCard>
+          <SectionCard title="NavigationMenu">
+            <Badge tone="success">V0</Badge>
+            <Copy>Horizontal or vertical navigation composition with active and accent states.</Copy>
+            <Button href="/components/navigation-menu" variant="ghost">Open NavigationMenu</Button>
+          </SectionCard>
           <SectionCard title="Pagination">
             <Badge tone="success">V0</Badge>
             <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
@@ -257,6 +267,11 @@ page Components() {
             <Copy>Modal overlay for confirmations, focused tasks, and destructive actions.</Copy>
             <Button href="/components/dialog" variant="ghost">Open Dialog</Button>
           </SectionCard>
+          <SectionCard title="AlertDialog">
+            <Badge tone="success">V0</Badge>
+            <Copy>Focused confirmation boundary for consequential and destructive actions.</Copy>
+            <Button href="/components/alert-dialog" variant="ghost">Open AlertDialog</Button>
+          </SectionCard>
           <SectionCard title="Drawer">
             <Badge tone="success">V0</Badge>
             <Copy>Side panel for filters, CMS tools, navigation, and detail inspectors.</Copy>
@@ -271,6 +286,11 @@ page Components() {
             <Badge tone="success">V0</Badge>
             <Copy>General section surface for themed panels, docs sections, and feature blocks.</Copy>
             <Button href="/components/surface" variant="ghost">Open Surface</Button>
+          </SectionCard>
+          <SectionCard title="ScrollArea">
+            <Badge tone="success">V0</Badge>
+            <Copy>Keyboard-focusable overflow region with Foundry scrollbars and optional edge fade.</Copy>
+            <Button href="/components/scroll-area" variant="ghost">Open ScrollArea</Button>
           </SectionCard>
           <SectionCard title="StatusLamp">
             <Badge tone="success">V0</Badge>

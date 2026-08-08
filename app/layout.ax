@@ -61,6 +61,7 @@ page RootLayout() {
               <a href="/components/field">Field</a>
               <a href="/components/input">Input</a>
               <a href="/components/input-group">InputGroup</a>
+              <a href="/components/combobox">Combobox</a>
               <a href="/components/checkbox">Checkbox</a>
               <a href="/components/link-button">LinkButton</a>
               <a href="/components/text-link">TextLink</a>
@@ -85,6 +86,7 @@ page RootLayout() {
               <a href="/components/modal">Modal</a>
               <a href="/components/machine-switch">MachineSwitch</a>
               <a href="/components/navbar">Navbar</a>
+              <a href="/components/navigation-menu">NavigationMenu</a>
               <a href="/components/pagination">Pagination</a>
               <a href="/components/page-header">PageHeader</a>
               <a href="/components/popover">Popover</a>
@@ -101,9 +103,11 @@ page RootLayout() {
               <a href="/components/tabs">Tabs</a>
               <a href="/components/table">Table</a>
               <a href="/components/dialog">Dialog</a>
+              <a href="/components/alert-dialog">AlertDialog</a>
               <a href="/components/drawer">Drawer</a>
               <a href="/components/dropdown-menu">DropdownMenu</a>
               <a href="/components/surface">Surface</a>
+              <a href="/components/scroll-area">ScrollArea</a>
               <a href="/components/status-lamp">StatusLamp</a>
               <a href="/components/timeline">Timeline</a>
               <a href="/components/stepper">Stepper</a>

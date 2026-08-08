@@ -1,0 +1,35 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { NavigationMenu } from "@axonyx/ui/foundry/NavigationMenu.ax"
+import { NavigationMenuLink } from "@axonyx/ui/foundry/NavigationMenuLink.ax"
+import { NavigationMenuList } from "@axonyx/ui/foundry/NavigationMenuList.ax"
+
+page NavigationMenuPage() {
+  return ASX {
+    <ComponentPage
+      title="NavigationMenu"
+      category="Navigation"
+      description="Horizontal or vertical navigation composition with clear active state and an optional accent link."
+      nextHref="/components/pagination"
+      nextLabel="Next: Pagination"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Product navigation" border="forged">
+          <NavigationMenu label="Product sections">
+            <NavigationMenuList>
+              <NavigationMenuLink href="/components" active="true">Components</NavigationMenuLink>
+              <NavigationMenuLink href="/blocks">Blocks</NavigationMenuLink>
+              <NavigationMenuLink href="/themes">Themes</NavigationMenuLink>
+              <NavigationMenuLink href="/create" tone="accent">Get Code</NavigationMenuLink>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<NavigationMenu label=\"Product sections\">\n  <NavigationMenuList>\n    <NavigationMenuLink href=\"/components\" active=\"true\">Components</NavigationMenuLink>\n    <NavigationMenuLink href=\"/blocks\">Blocks</NavigationMenuLink>\n  </NavigationMenuList>\n</NavigationMenu>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}

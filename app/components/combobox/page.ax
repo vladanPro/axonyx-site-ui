@@ -1,0 +1,36 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { Combobox } from "@axonyx/ui/foundry/Combobox.ax"
+import { ComboboxOption } from "@axonyx/ui/foundry/ComboboxOption.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ComboboxPage() {
+  return ASX {
+    <ComponentPage
+      title="Combobox"
+      category="Forms"
+      description="Browser-native searchable selection for filters, settings, content relations, and command inputs."
+      nextHref="/components/forms"
+      nextLabel="Next: Forms"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Project environment" border="forged">
+          <Stack gap="md">
+            <Copy>Start typing to filter the browser-owned option list without a client script.</Copy>
+            <Combobox id="environment" name="environment" listId="environment-options" placeholder="Choose environment" label="Project environment">
+              <ComboboxOption value="Development" label="Local tools and hot reload" />
+              <ComboboxOption value="Preview" label="Review deployment" />
+              <ComboboxOption value="Production" label="Live application" />
+            </Combobox>
+          </Stack>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Combobox listId=\"environments\" label=\"Project environment\">\n  <ComboboxOption value=\"Development\" />\n  <ComboboxOption value=\"Preview\" />\n  <ComboboxOption value=\"Production\" />\n</Combobox>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}
