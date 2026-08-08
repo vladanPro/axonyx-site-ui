@@ -1,0 +1,44 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Button } from "@axonyx/ui/foundry/Button.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Flex } from "@axonyx/ui/foundry/Flex.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page FlexPage() {
+  return ASX {
+    <ComponentPage
+      title="Flex"
+      category="Layout primitive"
+      description="Flex handles directional alignment, distribution, wrapping, and deliberate mobile collapse for toolbars, headers, filters, and action rows."
+      nextHref="/components/layout"
+      nextLabel="Layout overview"
+    >
+      <Stack gap="xl">
+        <Card title="Distributed toolbar" border="forged">
+          <Flex align="center" justify="between" gap="lg" wrap="true">
+            <Stack gap="xs">
+              <Badge tone="success">Production</Badge>
+              <Copy>axonyx-site-ui</Copy>
+            </Stack>
+            <Flex gap="sm" wrap="true">
+              <Button variant="ghost">Logs</Button>
+              <Button variant="secondary">Preview</Button>
+              <Button variant="primary" surface="forged">Deploy</Button>
+            </Flex>
+          </Flex>
+        </Card>
+
+        <Card title="Mobile collapse">
+          <Flex align="center" justify="between" gap="md" collapse="true">
+            <Copy tone="lead">This row becomes a column at the Foundry mobile breakpoint.</Copy>
+            <Button variant="primary">Open project</Button>
+          </Flex>
+          <DocsCodeBlock>{"<Flex align=\"center\" justify=\"between\" collapse=\"true\">\n  <Copy>Responsive content</Copy>\n  <Button>Continue</Button>\n</Flex>"}</DocsCodeBlock>
+        </Card>
+      </Stack>
+    </ComponentPage>
+  }
+}

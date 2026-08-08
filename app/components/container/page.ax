@@ -1,0 +1,41 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { Container } from "@axonyx/ui/foundry/Container.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Grid } from "@axonyx/ui/foundry/Grid.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ContainerPage() {
+  return ASX {
+    <ComponentPage
+      title="Container"
+      category="Layout primitive"
+      description="Container establishes a predictable page boundary with semantic max widths, responsive gutters, fluid mode, and optional layout recipes."
+      nextHref="/components/grid"
+      nextLabel="Next: Grid"
+    >
+      <Stack gap="xl">
+        <Card title="Width boundaries" border="forged">
+          <Stack gap="lg">
+            <Container max="sm"><Card surface="inset"><Badge tone="info">sm</Badge><Copy>Focused reading and form content.</Copy></Card></Container>
+            <Container max="lg"><Card surface="inset"><Badge tone="success">lg</Badge><Copy>Documentation and product content.</Copy></Card></Container>
+            <Container max="xl"><Card surface="inset"><Badge tone="warning">xl</Badge><Copy>Dashboards, catalogs, and application shells.</Copy></Card></Container>
+          </Stack>
+        </Card>
+
+        <Grid cols="2" gap="lg">
+          <Card title="Responsive padding">
+            <Copy>Choose `none`, `sm`, or `lg` when the surrounding shell owns a different gutter rhythm.</Copy>
+            <DocsCodeBlock>{"<Container max=\"lg\" padding=\"sm\">\n  <PageContent />\n</Container>"}</DocsCodeBlock>
+          </Card>
+          <Card title="Fluid composition">
+            <Copy>Fluid mode removes the maximum width while preserving the component contract.</Copy>
+            <DocsCodeBlock>{"<Container fluid=\"true\" recipe=\"app-shell\">\n  <Dashboard />\n</Container>"}</DocsCodeBlock>
+          </Card>
+        </Grid>
+      </Stack>
+    </ComponentPage>
+  }
+}

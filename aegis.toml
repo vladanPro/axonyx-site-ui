@@ -146,6 +146,30 @@ expect_text = "Foundation primitives"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "container component"
+goto = "/components/container"
+expect_text = "predictable page boundary"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "grid component"
+goto = "/components/grid"
+expect_text = "intrinsic minimum-width tracks"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "stack component"
+goto = "/components/stack"
+expect_text = "owns vertical rhythm"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "flex component"
+goto = "/components/flex"
+expect_text = "directional alignment"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "accordion component"
 goto = "/components/accordion"
 expect_text = "Expandable content sections"
