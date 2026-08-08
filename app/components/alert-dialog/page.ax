@@ -1,0 +1,37 @@
+import { AlertDialog } from "@axonyx/ui/foundry/AlertDialog.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+
+page AlertDialogPage() {
+  return ASX {
+    <ComponentPage
+      title="AlertDialog"
+      category="Overlay"
+      description="Focused confirmation boundary for consequential actions that must not close from an accidental backdrop click."
+      nextHref="/components/drawer"
+      nextLabel="Next: Drawer"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Destructive confirmation" border="forged">
+          <Copy>Use an alert dialog only when the user must explicitly confirm or cancel.</Copy>
+          <button class="ax-button" data-variant="primary" type="button" data-ax-dialog-open="delete-project-dialog">Delete project</button>
+        </Card>
+        <Card title="Behavior">
+          <Copy>Escape and Cancel close the dialog, focus stays trapped inside it, and focus returns to the trigger.</Copy>
+        </Card>
+      </ContentGrid>
+
+      <AlertDialog id="delete-project-dialog" title="Delete this project?" description="The project and its preview deployments will be removed.">
+        <Copy>This operation is intentionally difficult to trigger by accident.</Copy>
+        <button slot="action" class="ax-button" data-variant="primary" type="button" data-ax-dialog-close="true">Delete project</button>
+      </AlertDialog>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<button data-ax-dialog-open=\"delete-project\">Delete project</button>\n\n<AlertDialog id=\"delete-project\" title=\"Delete this project?\">\n  <Copy>This cannot be undone.</Copy>\n  <button slot=\"action\" data-ax-dialog-close=\"true\">Confirm</button>\n</AlertDialog>"}</DocsCodeBlock>
+      </Card>
+    </ComponentPage>
+  }
+}

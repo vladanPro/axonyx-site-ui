@@ -110,6 +110,12 @@ expect_text = "One accessible control boundary"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "combobox component"
+goto = "/components/combobox"
+expect_text = "Browser-native searchable selection"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "checkbox component"
 goto = "/components/checkbox"
 expect_text = "Native multi-select control"
@@ -191,6 +197,12 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "navbar component"
 goto = "/components/navbar"
 expect_text = "Top-level navigation shell"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "navigation menu component"
+goto = "/components/navigation-menu"
+expect_text = "Horizontal or vertical navigation"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
@@ -302,6 +314,12 @@ expect_text = "Side panel for CMS tools"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "alert dialog component"
+goto = "/components/alert-dialog"
+expect_text = "Focused confirmation boundary"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "toast component"
 goto = "/components/toast"
 expect_text = "Dismissible event messages"
@@ -317,6 +335,12 @@ expect_not = ["Internal Server Error", "Application error"]
 name = "surface component"
 goto = "/components/surface"
 expect_text = "General section shell"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "scroll area component"
+goto = "/components/scroll-area"
+expect_text = "Keyboard-focusable overflow region"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

@@ -1,0 +1,38 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
+import { Card } from "@axonyx/ui/foundry/Card.ax"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
+import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { ScrollArea } from "@axonyx/ui/foundry/ScrollArea.ax"
+import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+
+page ScrollAreaPage() {
+  return ASX {
+    <ComponentPage
+      title="ScrollArea"
+      category="Layout"
+      description="Keyboard-focusable overflow region with Foundry scrollbars, bounded heights, and optional edge fade."
+      nextHref="/components/status-lamp"
+      nextLabel="Next: StatusLamp"
+    >
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Build activity" border="forged">
+          <ScrollArea height="sm" label="Recent build activity">
+            <Stack gap="md">
+              <Copy>01 - Route graph compiled</Copy>
+              <Copy>02 - Content collections indexed</Copy>
+              <Copy>03 - Foundry assets linked</Copy>
+              <Copy>04 - Server runtime optimized</Copy>
+              <Copy>05 - Static pages emitted</Copy>
+              <Copy>06 - Aegis checks completed</Copy>
+              <Copy>07 - Release artifact forged</Copy>
+            </Stack>
+          </ScrollArea>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ScrollArea height=\"sm\" label=\"Recent build activity\">\n  <Stack gap=\"md\">\n    <Copy>Route graph compiled</Copy>\n    <Copy>Foundry assets linked</Copy>\n  </Stack>\n</ScrollArea>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+    </ComponentPage>
+  }
+}
