@@ -1,12 +1,12 @@
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { Docs01 } from "@axonyx/ui/blocks/docs-01"
-import { HeroCard } from "@axonyx/ui/foundry/HeroCard.ax"
-import { Sidebar } from "@axonyx/ui/foundry/Sidebar.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { HeroCard } from "@axonyx/ui/foundry/HeroCard.asx"
+import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page DocsBlock() {
   return ASX {

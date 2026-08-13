@@ -1,9 +1,9 @@
-import { AlertDialog } from "@axonyx/ui/foundry/AlertDialog.ax"
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
+import { AlertDialog } from "@axonyx/ui/foundry/AlertDialog.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 
 page AlertDialogPage() {
   return ASX {

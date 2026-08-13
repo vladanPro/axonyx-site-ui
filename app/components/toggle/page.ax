@@ -1,11 +1,11 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
-import { Toggle } from "@axonyx/ui/foundry/Toggle.ax"
-import { ToggleGroup } from "@axonyx/ui/foundry/ToggleGroup.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { Toggle } from "@axonyx/ui/foundry/Toggle.asx"
+import { ToggleGroup } from "@axonyx/ui/foundry/ToggleGroup.asx"
 
 page TogglePage() {
   return ASX {

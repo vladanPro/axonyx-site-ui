@@ -1,10 +1,10 @@
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Center } from "@axonyx/ui/foundry/Center.ax"
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
-import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Center } from "@axonyx/ui/foundry/Center.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { Surface } from "@axonyx/ui/foundry/Surface.asx"
 
 page CenterPage() {
   return ASX {

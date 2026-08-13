@@ -1,13 +1,13 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Badge } from "@axonyx/ui/foundry/Badge.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { List } from "@axonyx/ui/foundry/List.ax"
-import { ListItem } from "@axonyx/ui/foundry/ListItem.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { List } from "@axonyx/ui/foundry/List.asx"
+import { ListItem } from "@axonyx/ui/foundry/ListItem.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page ListPage() {
   return ASX {

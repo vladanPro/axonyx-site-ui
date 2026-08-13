@@ -1,13 +1,13 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Footer } from "@axonyx/ui/foundry/Footer.ax"
-import { Header } from "@axonyx/ui/foundry/Header.ax"
-import { Main } from "@axonyx/ui/foundry/Main.ax"
-import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Footer } from "@axonyx/ui/foundry/Footer.asx"
+import { Header } from "@axonyx/ui/foundry/Header.asx"
+import { Main } from "@axonyx/ui/foundry/Main.asx"
+import { SiteShell } from "@axonyx/ui/foundry/SiteShell.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page SiteShellPage() {
   return ASX {

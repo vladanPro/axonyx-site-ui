@@ -1,9 +1,9 @@
-import { Badge } from "@axonyx/ui/foundry/Badge.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Section } from "@axonyx/ui/foundry/Section.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Section } from "@axonyx/ui/foundry/Section.asx"
 
 page SectionPage() {
   return ASX {

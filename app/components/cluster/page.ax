@@ -1,10 +1,10 @@
-import { Badge } from "@axonyx/ui/foundry/Badge.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Cluster } from "@axonyx/ui/foundry/Cluster.ax"
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Cluster } from "@axonyx/ui/foundry/Cluster.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Surface } from "@axonyx/ui/foundry/Surface.asx"
 
 page ClusterPage() {
   return ASX {
