@@ -1,11 +1,11 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
-import { Toolbar } from "@axonyx/ui/foundry/Toolbar.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { Toolbar } from "@axonyx/ui/foundry/Toolbar.asx"
 
 page ToolbarPage() {
   return ASX {

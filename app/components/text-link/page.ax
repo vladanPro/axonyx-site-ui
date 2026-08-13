@@ -1,11 +1,11 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
-import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { TextLink } from "@axonyx/ui/foundry/TextLink.asx"
 
 page TextLinkPage() {
   return ASX {

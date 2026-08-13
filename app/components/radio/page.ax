@@ -1,13 +1,13 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { Fieldset } from "@axonyx/ui/foundry/Fieldset.ax"
-import { Legend } from "@axonyx/ui/foundry/Legend.ax"
-import { Radio } from "@axonyx/ui/foundry/Radio.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
+import { Legend } from "@axonyx/ui/foundry/Legend.asx"
+import { Radio } from "@axonyx/ui/foundry/Radio.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page RadioPage() {
   return ASX {

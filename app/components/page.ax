@@ -1,10 +1,10 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { Badge } from "@axonyx/ui/foundry/Badge.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { SectionCard } from "@axonyx/ui/foundry/SectionCard.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { SectionCard } from "@axonyx/ui/foundry/SectionCard.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page Components() {
   return ASX {

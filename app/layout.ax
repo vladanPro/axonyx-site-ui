@@ -1,8 +1,8 @@
 use "@axonyx/ui"
-import { Sidebar } from "@axonyx/ui/foundry/Sidebar.ax"
-import { SiteShell } from "@axonyx/ui/foundry/SiteShell.ax"
-import { TextLink } from "@axonyx/ui/foundry/TextLink.ax"
-import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.ax"
+import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
+import { SiteShell } from "@axonyx/ui/foundry/SiteShell.asx"
+import { TextLink } from "@axonyx/ui/foundry/TextLink.asx"
+import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.asx"
 
 page RootLayout() {
   return ASX {
