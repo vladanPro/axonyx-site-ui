@@ -1,8 +1,8 @@
-import { Bleed } from "@axonyx/ui/foundry/Bleed.ax"
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Surface } from "@axonyx/ui/foundry/Surface.ax"
+import { Bleed } from "@axonyx/ui/foundry/Bleed.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Surface } from "@axonyx/ui/foundry/Surface.asx"
 
 page BleedPage() {
   return ASX {

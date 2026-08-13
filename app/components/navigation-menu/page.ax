@@ -1,10 +1,10 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.ax"
-import { NavigationMenu } from "@axonyx/ui/foundry/NavigationMenu.ax"
-import { NavigationMenuLink } from "@axonyx/ui/foundry/NavigationMenuLink.ax"
-import { NavigationMenuList } from "@axonyx/ui/foundry/NavigationMenuList.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { NavigationMenu } from "@axonyx/ui/foundry/NavigationMenu.asx"
+import { NavigationMenuLink } from "@axonyx/ui/foundry/NavigationMenuLink.asx"
+import { NavigationMenuList } from "@axonyx/ui/foundry/NavigationMenuList.asx"
 
 page NavigationMenuPage() {
   return ASX {

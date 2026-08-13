@@ -1,11 +1,11 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.ax"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.ax"
-import { Button } from "@axonyx/ui/foundry/Button.ax"
-import { Card } from "@axonyx/ui/foundry/Card.ax"
-import { Copy } from "@axonyx/ui/foundry/Copy.ax"
-import { PropRow } from "@axonyx/ui/foundry/PropRow.ax"
-import { PropsTable } from "@axonyx/ui/foundry/PropsTable.ax"
-import { Stack } from "@axonyx/ui/foundry/Stack.ax"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { PropRow } from "@axonyx/ui/foundry/PropRow.asx"
+import { PropsTable } from "@axonyx/ui/foundry/PropsTable.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page PropsTablePage() {
   return ASX {
