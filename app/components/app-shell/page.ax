@@ -1,50 +1,62 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
-import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { AppShell } from "@axonyx/ui/foundry/AppShell.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
 import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
+import { SidebarHeader } from "@axonyx/ui/foundry/SidebarHeader.asx"
+import { SidebarItem } from "@axonyx/ui/foundry/SidebarItem.asx"
+import { SidebarSection } from "@axonyx/ui/foundry/SidebarSection.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page AppShellPage() {
   return ASX {
     <ComponentPage
       title="AppShell"
-      category="Layout V0"
-      description="Application frame for docs, dashboards, CMS tools, and any screen that needs a rail plus a main content plane."
+      category="Layout"
+      description="Application frame for docs, dashboards, and CMS tools, with responsive navigation beside the main content plane."
       nextHref="/components/sidebar"
       nextLabel="Next: Sidebar"
     >
 
-        <Card title="Preview" border="forged">
-          <div class="ax-app-shell">
-            <aside class="ax-sidebar">
-              <strong>Foundry</strong>
-              <a href="/components/button">Button</a>
-              <a href="/components/card">Card</a>
-              <a href="/blocks/dashboard-01">Dashboard</a>
-            </aside>
-            <section class="ax-card">
-              <h3 class="ax-card__title">Main plane</h3>
-              <p>Use this shell for documentation, admin screens, and CMS interfaces.</p>
-            </section>
+      <Stack gap="xl">
+        <ComponentExample title="Application frame" description="The navigation rail and main plane stack on smaller screens. Resize to try the mobile toggle.">
+          <div slot="preview">
+            <AppShell mode="embedded" railWidth="sm" gap="md">
+              <Sidebar slot="sidebar" label="Navigation" collapsible="true" open="true">
+                <SidebarHeader slot="header"><strong>Foundry</strong></SidebarHeader>
+                <SidebarSection title="Workspace">
+                  <SidebarItem href="/components/app-shell" active="true">Overview</SidebarItem>
+                  <SidebarItem href="/components/sidebar">Sidebar</SidebarItem>
+                  <SidebarItem href="/blocks/dashboard-01">Dashboard</SidebarItem>
+                </SidebarSection>
+              </Sidebar>
+              <section class="ax-layout-main">
+                <Card title="Main plane">
+                  <Copy>Use the same frame for documentation, admin screens, and CMS tools.</Copy>
+                </Card>
+              </section>
+            </AppShell>
           </div>
-        </Card>
+          <DocsCodeBlock slot="code" language="asx">{"<AppShell mode=\"embedded\" railWidth=\"sm\" gap=\"md\">\n  <Sidebar slot=\"sidebar\" label=\"Navigation\" collapsible=\"true\" open=\"true\">\n    <SidebarHeader slot=\"header\"><strong>Foundry</strong></SidebarHeader>\n    <SidebarSection title=\"Workspace\">\n      <SidebarItem href=\"/components/app-shell\" active=\"true\">Overview</SidebarItem>\n      <SidebarItem href=\"/components/sidebar\">Sidebar</SidebarItem>\n      <SidebarItem href=\"/blocks/dashboard-01\">Dashboard</SidebarItem>\n    </SidebarSection>\n  </Sidebar>\n  <section class=\"ax-layout-main\"><Card title=\"Main plane\">...</Card></section>\n</AppShell>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.ax\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.ax\"\n\n<AppShell rail=\"left\" railWidth=\"md\">\n  <Sidebar slot=\"rail\">...</Sidebar>\n  <Card title=\"Main\">...</Card>\n</AppShell>"}</DocsCodeBlock>
-          </Card>
-          <Card title="Generated HTML shape">
-            <DocsCodeBlock>{"<div class=\"ax-app-shell\" data-rail=\"left\" data-rail-width=\"md\">\n  <aside class=\"ax-sidebar\">...</aside>\n  <main>...</main>\n</div>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.72\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
 
-        <Card title="API contract" surface="inset">
-          <Badge tone="success">V0</Badge>
-          <Copy>`rail`, `railWidth`, and `gap` define the first AppShell layout contract.</Copy>
-        </Card>
+        <Box padding="lg" surface="inset">
+          <h2>Layout contract</h2>
+          <Copy>The named sidebar slot supplies the rail, and the default slot supplies the content plane. Rail width accepts small, medium, or large. Gap controls spacing between the planes.</Copy>
+          <Copy>Embedded mode removes the full-viewport minimum height for previews. Omit embedded mode in a full-screen app. A layout without a rail can use rail set to none. A right-hand rail is not supported by this CSS version.</Copy>
+        </Box>
+        <DocsCodeBlock title="Imports" language="asx">{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.asx\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.asx\"\nimport { SidebarHeader } from \"@axonyx/ui/foundry/SidebarHeader.asx\"\nimport { SidebarSection } from \"@axonyx/ui/foundry/SidebarSection.asx\"\nimport { SidebarItem } from \"@axonyx/ui/foundry/SidebarItem.asx\""}</DocsCodeBlock>
+        <DocsCodeBlock title="Generated HTML shape" language="html">{"<div class=\"ax-app-shell\" data-rail=\"left\" data-rail-width=\"sm\" data-gap=\"md\" data-mode=\"embedded\">\n  <aside class=\"ax-layout-sidebar\">...</aside>\n  <section class=\"ax-layout-main\">...</section>\n</div>"}</DocsCodeBlock>
+      </Stack>
     </ComponentPage>
   }
 }
