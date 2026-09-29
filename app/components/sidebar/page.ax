@@ -1,47 +1,64 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
-import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { AppShell } from "@axonyx/ui/foundry/AppShell.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
 import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
+import { SidebarFooter } from "@axonyx/ui/foundry/SidebarFooter.asx"
+import { SidebarHeader } from "@axonyx/ui/foundry/SidebarHeader.asx"
+import { SidebarItem } from "@axonyx/ui/foundry/SidebarItem.asx"
+import { SidebarSection } from "@axonyx/ui/foundry/SidebarSection.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page SidebarPage() {
   return ASX {
     <ComponentPage
       title="Sidebar"
-      category="Layout V0"
-      description="Navigation rail for docs, dashboards, settings, and future Blockbit admin surfaces."
+      category="Layout"
+      description="Compose a navigation rail from header, sections, active links, and footer. The same markup works for docs and dashboard screens."
       nextHref="/blocks/dashboard-01"
       nextLabel="Try dashboard block"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Sidebar>
-              <strong>Components</strong>
-              <a href="/components">Components</a>
-              <a href="/blocks">Blocks</a>
-              <a href="/themes">Themes</a>
-              <a href="/create">Get code</a>
-            </Sidebar>
-          </Card>
-          <Card title="Usage">
-            <Badge tone="success">V0</Badge>
-            <Copy>Sidebar stays simple: clear links, strong grouping, and CSS-owned responsive behavior.</Copy>
-          </Card>
-        </ContentGrid>
+      <Stack gap="xl">
+        <ComponentExample title="Dashboard navigation" description="Resize the page to see the mobile toggle. The rail stays visible on larger screens.">
+          <div slot="preview">
+            <AppShell mode="embedded" railWidth="sm">
+              <Sidebar slot="sidebar" label="Navigation" collapsible="true" open="true">
+                <SidebarHeader slot="header"><strong>Foundry</strong></SidebarHeader>
+                <SidebarSection title="Workspace">
+                  <SidebarItem href="/components/sidebar" active="true">Overview</SidebarItem>
+                  <SidebarItem href="/blocks/dashboard-01" meta="03">Blocks</SidebarItem>
+                  <SidebarItem href="/themes">Themes</SidebarItem>
+                </SidebarSection>
+                <SidebarFooter slot="footer">Axonyx UI</SidebarFooter>
+              </Sidebar>
+              <section class="ax-layout-main">
+                <Card title="Main plane">
+                  <Copy>Build the application frame from package components, not a page-specific Sidebar imitation.</Copy>
+                </Card>
+              </section>
+            </AppShell>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<AppShell mode=\"embedded\" railWidth=\"sm\">\n  <Sidebar slot=\"sidebar\" label=\"Navigation\" collapsible=\"true\" open=\"true\">\n    <SidebarHeader slot=\"header\"><strong>Foundry</strong></SidebarHeader>\n    <SidebarSection title=\"Workspace\">\n      <SidebarItem href=\"/components/sidebar\" active=\"true\">Overview</SidebarItem>\n      <SidebarItem href=\"/blocks/dashboard-01\" meta=\"03\">Blocks</SidebarItem>\n      <SidebarItem href=\"/themes\">Themes</SidebarItem>\n    </SidebarSection>\n    <SidebarFooter slot=\"footer\">Axonyx UI</SidebarFooter>\n  </Sidebar>\n  <section class=\"ax-layout-main\"><Card title=\"Main plane\">...</Card></section>\n</AppShell>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Sidebar>\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</Sidebar>"}</DocsCodeBlock>
-          </Card>
-          <Card title="Generated HTML shape">
-            <DocsCodeBlock>{"<aside class=\"ax-sidebar\">\n  <strong>Docs</strong>\n  <a href=\"/docs\">Overview</a>\n  <a href=\"/docs/getting-started\">Getting started</a>\n</aside>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.72\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Box padding="lg" surface="inset">
+          <h2>Composition contract</h2>
+          <Copy>Import Sidebar, SidebarHeader, SidebarSection, SidebarItem, and SidebarFooter from their matching package files. The header and footer use named slots; sections and links use the default slot.</Copy>
+          <Copy>On mobile, collapsible adds a toggle and open sets its initial state. An active item is highlighted. Desktop icon-only collapse and controlled state are not part of this version.</Copy>
+        </Box>
+        <DocsCodeBlock title="Imports" language="asx">{"import { AppShell } from \"@axonyx/ui/foundry/AppShell.asx\"\nimport { Sidebar } from \"@axonyx/ui/foundry/Sidebar.asx\"\nimport { SidebarHeader } from \"@axonyx/ui/foundry/SidebarHeader.asx\"\nimport { SidebarSection } from \"@axonyx/ui/foundry/SidebarSection.asx\"\nimport { SidebarItem } from \"@axonyx/ui/foundry/SidebarItem.asx\"\nimport { SidebarFooter } from \"@axonyx/ui/foundry/SidebarFooter.asx\""}</DocsCodeBlock>
+        <DocsCodeBlock title="Generated HTML shape" language="html">{"<aside class=\"ax-layout-sidebar\" data-collapsible=\"true\" data-open=\"true\">\n  <header class=\"ax-layout-sidebar__header\">Foundry</header>\n  <div class=\"ax-layout-sidebar__content\">...</div>\n  <footer class=\"ax-layout-sidebar__footer\">Axonyx UI</footer>\n</aside>"}</DocsCodeBlock>
+      </Stack>
     </ComponentPage>
   }
 }
