@@ -1,0 +1,20 @@
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+
+page Installation() {
+  return ASX {
+    <Head><Title>Installation | Axonyx UI</Title></Head>
+    <div class="fd-layout">
+      <article class="fd-article">
+        <div class="fd-breadcrumb"><a href="/docs">Docs</a><span>/</span>Installation</div>
+        <h1>Installation</h1><p class="fd-lead">Bring Foundry into your Axonyx project.</p>
+        <p class="fd-prerequisite">You will need Rust and the Axonyx CLI. <a href="https://axonyx.dev/docs/getting-started">Framework setup ↗</a></p>
+        <section class="fd-step" id="create-project"><span class="fd-number">1</span><div><h2>Create a project</h2><p>Start a new Axonyx project using the site template.</p><div class="fd-code"><div><span>Terminal</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"create-axonyx my-app --yes --template site\ncd my-app"}</code></pre></div></div></section>
+        <section class="fd-step" id="add-foundry"><span class="fd-number">2</span><div><h2>Add Foundry UI</h2><p>Add the Foundry UI package to your project. Start here if you already have an Axonyx app.</p><div class="fd-code"><div><span>Terminal</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>cargo ax add ui</code></pre></div></div></section>
+        <section class="fd-step" id="first-component"><span class="fd-number">3</span><div><h2>Use your first component</h2><p>Import a component and use it in a page.</p><div class="fd-code"><div><span>app/page.asx</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"use \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button.asx\"\n\npage Home() {\n  return ASX {\n    <Button variant=\"primary\">Ship it</Button>\n  }\n}"}</code></pre></div><div class="fd-preview"><span>Preview</span><div><Button variant="primary">Ship it</Button><span class="fd-demo-status" role="status"></span></div></div></div></section>
+        <section class="fd-next" id="next-steps"><a href="/components/button">Explore Button ↗</a><a href="/docs/theming">Next: Theming →</a></section>
+        <p class="fd-copy-status" role="status"></p>
+      </article>
+      <aside class="fd-toc" aria-label="On this page"><span>On this page</span><a href="#create-project">Create a project</a><a href="#add-foundry">Add Foundry UI</a><a href="#first-component">First component</a><a href="#next-steps">Next steps</a></aside>
+    </div>
+  }
+}

@@ -1,6 +1,15 @@
 # axonyx-site-ui
 
-Future public showcase for Axonyx UI and the Foundry registry.
+Public showcase for Axonyx UI and the Foundry registry.
+
+The local Foundry redesign pilot separates the promotional homepage from
+documentation at `/docs`, `/docs/installation`, and `/docs/theming`. The Button
+page is the first component documentation page using the new reading layout.
+
+The reusable finish comes from the published Cargo dependency `axonyx-ui 0.0.73`.
+Run `./scripts/sync-foundry-theme.ps1` after editing site-owned CSS or JavaScript
+to update cache-versioned asset references. No package CSS is copied into public.
+See `design/foundry-pilot/README.md` for design scope and verification evidence.
 
 This site is authored in Axonyx and lives at `ui.axonyx.dev`.
 It is separate from:
@@ -67,3 +76,8 @@ Start with a small complete loop:
 - Blocks: `marketing-01`, `docs-01`, `dashboard-01`, `login-01`, `settings-01`, `cms-admin-01`.
 - Mode: native Axonyx examples on every page.
 - Themes: `silver`, `bronze`, `gold`, then custom theme packages later.
+
+
+Foundry styles now come from the published Cargo dependency `axonyx-ui 0.0.73`.
+There is no local foundation snapshot or compatibility patch.
+`scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.

@@ -43,6 +43,62 @@
   function boot() {
     markActiveNavigation();
     bootSiteNavigation();
+    const site = document.querySelector('.foundry-site');
+    const docsToggle = document.querySelector('.fd-menu-toggle');
+    docsToggle?.addEventListener('click', () => {
+      const open = site.dataset.docsOpen !== 'true';
+      site.dataset.docsOpen = String(open);
+      docsToggle.setAttribute('aria-expanded', String(open));
+    });
+    if (site) {
+      const html = document.documentElement;
+      const styles = ['alloy', 'forge', 'classic'];
+      const palettes = ['bronze', 'silver', 'gold'];
+      let storedStyle;
+      try { storedStyle = localStorage.getItem('axonyx-site-ui-style'); } catch { /* Optional storage. */ }
+      html.dataset.foundryStyle = styles.includes(storedStyle) ? storedStyle : 'classic';
+      const syncAppearance = () => {
+        const palette = palettes.includes(html.dataset.theme) ? html.dataset.theme : 'bronze';
+        const style = styles.includes(html.dataset.foundryStyle) ? html.dataset.foundryStyle : 'classic';
+        site.dataset.foundry = palette;
+        // The specimen cards retain their own palettes while previewing the selected style.
+        site.querySelectorAll('[data-foundry]').forEach(scope => { scope.dataset.foundryStyle = style; });
+        site.dataset.foundryStyle = style;
+        document.querySelectorAll('[data-foundry-style-picker]').forEach(select => { select.value = style; });
+        document.querySelectorAll('[data-foundry-palette-picker]').forEach(select => { select.value = palette; });
+        document.dispatchEvent(new CustomEvent('foundry:appearance', { detail: { style, palette } }));
+      };
+      document.querySelectorAll('[data-foundry-style-picker]').forEach(select => select.addEventListener('change', () => {
+        html.dataset.foundryStyle = select.value;
+        try { localStorage.setItem('axonyx-site-ui-style', select.value); } catch { /* Optional storage. */ }
+      }));
+      document.querySelectorAll('[data-foundry-palette-picker]').forEach(select => select.addEventListener('change', () => {
+        html.dataset.theme = select.value;
+        try { localStorage.setItem('axonyx-site-ui-theme', select.value); } catch { /* Optional storage. */ }
+      }));
+      syncAppearance();
+      new MutationObserver(syncAppearance).observe(html, { attributes: true, attributeFilter: ['data-theme', 'data-foundry-style'] });
+    }
+    document.querySelectorAll('[data-doc-copy]').forEach(button => {
+      button.addEventListener('click', async () => {
+        const code = button.closest('.fd-code').querySelector('pre');
+        const status = document.querySelector('.fd-copy-status');
+        try {
+          await navigator.clipboard.writeText(code.textContent);
+          button.textContent = 'Copied';
+          if (status) status.textContent = 'Code copied.';
+          window.setTimeout(() => { button.textContent = 'Copy'; }, 1800);
+        } catch {
+          const range = document.createRange(); range.selectNodeContents(code);
+          const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+          if (status) status.textContent = 'Code selected. Use your copy shortcut.';
+        }
+      });
+    });
+    document.querySelectorAll('.fd-preview button').forEach(button => button.addEventListener('click', () => {
+      const status = document.querySelector('.fd-demo-status');
+      if (status) status.textContent = `${button.textContent.trim()} clicked. Ready to wire into your app.`;
+    }));
   }
 
   if (document.readyState === "loading") {

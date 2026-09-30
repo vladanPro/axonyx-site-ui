@@ -2,23 +2,22 @@ use "@axonyx/ui"
 import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
 import { SiteShell } from "@axonyx/ui/foundry/SiteShell.asx"
 import { TextLink } from "@axonyx/ui/foundry/TextLink.asx"
-import { ThemeSwitcher } from "@axonyx/ui/foundry/ThemeSwitcher.asx"
 
 page RootLayout() {
   return ASX {
     <Head>
       <Title>Axonyx UI</Title>
-      <Theme storageKey="axonyx-site-ui-theme" default="silver" preflight="true" />
+      <Theme storageKey="axonyx-site-ui-theme" default="bronze" preflight="true" />
       <Meta name="description" content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps." />
       <Link rel="icon" href="https://axonyx.dev/brand-mark.svg" type="image/svg+xml" />
-      <Link rel="stylesheet" href="/ui-site.css" />
-      <Script src="/js/ui-site.js?v=0.0.1" defer="true" />
+      <Link rel="stylesheet" href="/ui-site.css" /><Link rel="stylesheet" href="/foundry-docs.css?v=32cd38655324" />
+      <Script src="/js/ui-site.js?v=732ff5d73d14" defer="true" />
     </Head>
 
-    <header class="site-nav">
+    <div class="foundry-site" data-foundry="bronze" data-foundry-style="classic"><header class="site-nav">
       <div class="site-header__inner">
         <a class="site-brand" href="/">
-          <img src="https://axonyx.dev/brand-mark.svg" alt="Axonyx UI" class="site-logo" width={80} height={80} />
+          <img src="/brand-mark.svg" alt="Axonyx UI" class="site-logo" width={80} height={80} />
           <span>Axonyx UI</span>
         </a>
         <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
@@ -28,7 +27,7 @@ page RootLayout() {
           Menu
         </button>
         <nav class="site-nav__links" id="site-nav-links">
-          <TextLink href="/">Home</TextLink>
+          <TextLink href="/docs/installation">Docs</TextLink>
           <TextLink href="/components">Components</TextLink>
           <TextLink href="/blocks">Blocks</TextLink>
           <TextLink href="/create">Get Code</TextLink>
@@ -36,21 +35,25 @@ page RootLayout() {
           <TextLink href="https://axonyx.dev">Axonyx</TextLink>
           <TextLink href="https://react.axonyx.dev">React</TextLink>
         </nav>
-        <ThemeSwitcher label="Theme" size="sm" surface="forged" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
+        <div class="foundry-appearance ax-appearance" aria-label="Appearance">
+          <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
+          <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
+        </div>
       </div>
     </header>
 
     <SiteShell max="xl">
 
+      <button class="fd-menu-toggle" type="button" aria-expanded="false" aria-controls="ui-docs-navigation">Browse documentation <span aria-hidden="true">↓</span></button>
       <div class="ui-docs-shell">
-        <Sidebar label="Component navigation" collapsible="true">
-          <nav class="ui-sidebar-nav" aria-label="Axonyx UI navigation">
+        <Sidebar label="Component navigation" collapsible="false">
+          <nav class="ui-sidebar-nav" id="ui-docs-navigation" aria-label="Axonyx UI navigation">
             <div class="ui-sidebar-group">
-              <strong>Start</strong>
-              <a href="/">Overview</a>
+              <strong>Getting started</strong>
+              <a href="/docs">Introduction</a><a href="/docs/installation">Installation</a>
               <a href="/create">Get Code</a>
               <a href="/components">All components</a>
-              <a href="/themes">Themes</a>
+              <a href="/docs/theming">Theming</a>
             </div>
 
             <div class="ui-sidebar-group">
@@ -156,6 +159,6 @@ page RootLayout() {
         <span>Axonyx UI</span>
         <span>Foundry registry and native Axonyx components for Rust-first apps.</span>
       </footer>
-    </SiteShell>
+    </SiteShell></div>
   }
 }

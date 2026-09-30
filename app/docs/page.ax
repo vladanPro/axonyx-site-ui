@@ -1,0 +1,6 @@
+page Introduction() {
+  return ASX {
+    <Head><Title>Introduction | Axonyx UI</Title></Head>
+    <article class="fd-article fd-introduction"><div class="fd-breadcrumb">Docs / Introduction</div><h1>Built to be yours.</h1><p class="fd-lead">Foundry is the component system for Axonyx. Compose interfaces from familiar parts, then give them your own character.</p><h2>One system. Three finishes.</h2><p>Bronze, Silver, and Gold share the same component structure. Themes change the colors and surfaces, while your application keeps its behavior.</p><h2>Start with the parts you need.</h2><p>Find controls, forms, navigation, overlays, and layout primitives in the component catalog. Each page includes a preview and an Axonyx example.</p><div class="fd-next"><a href="/components">Browse components ↗</a><a href="/docs/installation">Next: Installation →</a></div><h2>Make it your own.</h2><p>Change global theme tokens for your brand, override a component recipe for a specific visual treatment, or replace a component when its structure must change.</p><p>The homepage workbench previews an experimental Foundry finish. Its downloadable CSS foundation is a separate, optional layer over the published components.</p><a href="/">Open the theme workbench ↗</a></article>
+  }
+}

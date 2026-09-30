@@ -2,9 +2,27 @@ base_url = "http://127.0.0.1:3000"
 check_links = true
 
 [[fast]]
+name = "docs theming"
+goto = "/docs/theming"
+expect_text = "Override just what you need"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "docs introduction"
+goto = "/docs"
+expect_text = "Built to be yours"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "docs installation"
+goto = "/docs/installation"
+expect_text = "Bring Foundry into your Axonyx project"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "ui home"
 goto = "/"
-expect_text = "Build interfaces from forged parts"
+expect_text = "Interfaces, finely forged"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
@@ -28,7 +46,7 @@ expect_not = ["Internal Server Error", "Application error"]
 [[fast]]
 name = "button component"
 goto = "/components/button"
-expect_text = "default action primitive"
+expect_text = "A clear next step"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]

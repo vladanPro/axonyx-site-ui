@@ -1,0 +1,14 @@
+page Theming() {
+  return ASX {
+    <Head><Title>Theming | Axonyx UI</Title></Head>
+    <article class="fd-article fd-introduction"><div class="fd-breadcrumb"><a href="/docs">Docs</a><span>/</span>Theming</div><h1>One system. Your signature.</h1><p class="fd-lead">Start with Bronze, Silver, or Gold. Make a few changes, or create an entirely different identity.</p>
+      <h2>Use the Foundry finish</h2><p>The workbench finish is available as an optional CSS foundation. Load it after your Axonyx UI styles, then wrap your components in a theme container.</p><a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download the foundation ↗</a>
+      <div class="fd-code"><div><span>Page markup</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"<div data-foundry=\"bronze\">\n  <Card title=\"Ready to ship\">\n    <Button variant=\"primary\">Save changes</Button>\n  </Card>\n</div>"}</code></pre></div>
+      <h2>Choose a style and a palette</h2><p>Alloy keeps the clean, restrained finish. Forge adds angular corners, stronger edges, beveled buttons, and inset fields. Classic preserves the original Axonyx UI colors, generous corners, and rich surfaces. All three work with Bronze, Silver, and Gold. Try Style and Palette in the header.</p>
+      <div class="fd-code"><div><span>Independent choices</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"<div data-foundry=\"bronze\" data-foundry-style=\"forge\">\n  <!-- Your Foundry components -->\n</div>"}</code></pre></div><p>The style system is included in axonyx-ui 0.0.73. Native apps load it through use &quot;@axonyx/ui&quot;. Without a style attribute, a container uses Alloy. Nested theme containers choose their own style. Brand overrides load last.</p>
+      <h2>Override just what you need</h2><p>Add a brand class to the container and load your overrides after the foundation. Every component inside shares the same tokens.</p><div class="fd-code"><div><span>brand.css</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"[data-foundry].my-brand {\n  --ax-primary: #6e99e8;\n  --ax-on-primary: #000000;\n  --ax-radius-md: 12px;\n  --ax-radius-lg: 14px;\n}"}</code></pre></div><p>Use <code>class="my-brand"</code> on the theme container. Check text and focus contrast when you change colors.</p>
+      <h2>Go further with recipes</h2><p>Theme tokens set the global identity. A recipe override changes one component's appearance while preserving its structure and behavior.</p><div class="fd-code"><div><span>Component override</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"[data-foundry].my-brand .ax-card {\n  padding: 32px;\n  box-shadow: none;\n}"}</code></pre></div>
+      <div class="fd-next"><a href="/">Try the workbench ↗</a><a href="/components">Explore components →</a></div><p class="fd-copy-status" role="status"></p>
+    </article>
+  }
+}

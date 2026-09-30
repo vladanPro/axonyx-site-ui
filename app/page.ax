@@ -1,183 +1,75 @@
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
 import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
-import { Copy } from "@axonyx/ui/foundry/Copy.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { SectionCard } from "@axonyx/ui/foundry/SectionCard.asx"
-import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Select } from "@axonyx/ui/foundry/Select.asx"
+import { Switch } from "@axonyx/ui/foundry/Switch.asx"
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
 
 page Home() {
   return ASX {
     <Head>
-      <Title>Axonyx UI | Foundry component registry</Title>
+      <Title>Axonyx UI | Interfaces, finely forged</Title>
+      <Link rel="stylesheet" href="/foundry-pilot.css?v=7f5d4faa5e91" />
+      <Script src="/js/foundry-pilot.js?v=fda89b36bd1f" defer="true" />
     </Head>
-
-    <Container max="xl">
-      <Stack gap="xl">
-        <section class="ui-hero">
-          <div>
-            <span class="ui-kicker">Foundry registry V0</span>
-            <h1>Build interfaces from forged parts.</h1>
-            <p class="ui-hero__lead">
-              Axonyx UI is the component and block registry for Axonyx-native
-              Rust apps. Think shadcn-style open code, but Cargo-first,
-              dark-first, and shaped for the Rust web stack.
-            </p>
-            <div class="ui-hero__actions">
-              <Button href="/components/button" variant="primary" surface="forged">Start with Button</Button>
-              <Button href="/create" variant="secondary">Get code</Button>
-              <Button href="/blocks/marketing-01" variant="ghost">Preview blocks</Button>
-            </div>
-          </div>
-
-          <div class="ui-preview-panel">
-            <div class="ui-preview-toolbar">
-              <span>ui.axonyx.dev</span>
-              <span>Axonyx native</span>
-            </div>
-            <div class="ui-code-window">
-              <div class="ui-code-window__bar">
-                <span class="ui-code-window__dot"></span>
-                <span class="ui-code-window__dot"></span>
-                <span class="ui-code-window__dot"></span>
+    <div class="foundry-pilot" data-foundry="bronze" data-foundry-style="classic">
+      <header class="fp-header">
+        <a class="fp-brand" href="/"><img src="/brand-mark.svg" alt="" width={30} height={30} />Axonyx UI</a>
+        <nav aria-label="Foundry navigation"><a href="/docs/installation">Docs</a><a href="/components">Components</a><a href="/blocks">Blocks</a><a href="/themes">Themes</a></nav>
+        <div class="foundry-appearance ax-appearance" aria-label="Appearance">
+          <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
+          <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
+        </div>
+        <a class="fp-cta" href="/create">Get code <span aria-hidden="true">↗</span></a>
+      </header>
+      <div class="fp-content">
+        <section class="fp-intro">
+          <div><h1>Interfaces, finely forged.</h1><p>Open components. Three signature finishes. Make them yours.</p><div class="fp-hero-actions"><a class="ax-button" data-variant="primary" href="/docs/installation">Get started <span aria-hidden="true">↗</span></a><a class="ax-button" href="/components">Browse components</a></div></div>
+          <div class="fp-finish"><div class="fp-themes" role="group" aria-label="Page finish">
+            <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
+            <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
+            <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
+          </div><p>One system. Your signature.</p></div>
+        </section>
+        <section class="fp-workbench" aria-labelledby="workbench-title">
+          <div class="fp-bar"><h2 id="workbench-title">The workbench</h2><span><i class="fp-status-dot"></i>Live preview</span></div>
+          <div class="fp-columns">
+            <form class="fp-form" id="workspace-form">
+              <h2>Workspace settings</h2><p class="fp-muted">Configure your workspace and preferences. These settings help your team stay in sync.</p>
+              <div class="fp-fields">
+                <div class="fp-field"><label for="workspace-name">Workspace name</label><Input id="workspace-name" name="workspace" value="Acme Studio" /></div>
+                <div class="fp-field"><label for="workspace-url">Workspace URL</label><Input id="workspace-url" name="url" value="acme.axonyx.app" /></div>
+                <div class="fp-field"><label for="workspace-role">Default role for new members</label><Select id="workspace-role" name="role"><option value="editor">Editor</option><option value="viewer">Viewer</option><option value="admin">Admin</option></Select></div>
+                <div class="fp-field"><span>Members</span><div class="fp-members"><span>JD</span><span>MK</span><span>AL</span><small>3 members</small></div></div>
               </div>
-              <pre>{"use \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Card } from \"@axonyx/ui/foundry/Card\"\n\npage Dashboard() {\n  return ASX {\n    <Card title=\"Deploy health\" border=\"forged\">\n      <Button variant=\"primary\" surface=\"forged\">\n        Run production check\n      </Button>\n    </Card>\n  }\n}"}</pre>
-            </div>
-            <div class="ui-command-row">
-              <div class="ui-command">
-                <span>component</span>
-                <code>cargo ax add button</code>
+              <div class="fp-notifications"><h3>Notifications</h3><p class="fp-muted">Choose how you and your team stay informed.</p>
+                <div class="fp-notification"><svg class="fp-line-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6" /></svg><div><strong>Build notifications</strong><p>Get notified when builds complete or fail.</p></div><Switch name="builds" checked="true"><span class="fp-sr-only">Build notifications</span></Switch></div>
+                <div class="fp-notification"><svg class="fp-line-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 6 9 7 9-7" /></svg><div><strong>Product updates</strong><p>Occasional updates about new components and features.</p></div><Switch name="updates"><span class="fp-sr-only">Product updates</span></Switch></div>
               </div>
-              <div class="ui-command">
-                <span>block</span>
-                <code>cargo ax add block dashboard-01</code>
+              <div class="fp-form-actions"><Button type="reset" variant="secondary">Discard</Button><span id="workspace-status" role="status"></span><Button type="submit" variant="primary">Save changes</Button></div>
+            </form>
+            <aside class="fp-inspector" aria-label="Theme editor">
+              <h2>Make it yours</h2><p class="fp-muted">Customize the look and feel. Copy the theme to your project.</p>
+              <span class="fp-label">Palette</span><div class="fp-themes" role="group" aria-label="Preview finish">
+                <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
+                <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
+                <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
               </div>
-            </div>
+              <label class="fp-label" for="accent-hex">Accent</label><div class="fp-accent"><input id="accent-picker" type="color" value="#cf9974" aria-label="Accent color" /><input id="accent-hex" type="text" value="#CF9974" maxlength="7" spellcheck="false" aria-describedby="accent-help" /></div>
+              <p class="fp-hint" id="accent-help">Used for buttons, links, focus states, and more.</p>
+              <span class="fp-label">Corner radius</span><div class="fp-radii" role="group" aria-label="Corner radius"><button type="button" data-radius="3" aria-pressed="false">3</button><button type="button" data-radius="8" aria-pressed="true">8</button><button type="button" data-radius="12" aria-pressed="false">12</button><button type="button" data-radius="18" aria-pressed="false">18</button></div>
+              <label class="fp-label" for="theme-css">Theme CSS</label><textarea id="theme-css" readonly="true" spellcheck="false" rows={4}>{"[data-foundry] {\n  --ax-primary: #cf9974;\n  --ax-radius-md: 8px;\n}"}</textarea>
+              <button type="button" class="fp-copy ax-button" id="copy-theme">Copy theme CSS</button><p class="fp-hint fp-copy-status" id="copy-status" role="status"> </p>
+            </aside>
           </div>
         </section>
-
-        <div class="ui-status-rail">
-          <div>
-            <span>Component catalog</span>
-            <strong>58+</strong>
-            <small>layout, actions, forms, navigation, overlays, and data</small>
-          </div>
-          <div>
-            <span>Blocks V0</span>
-            <strong>5</strong>
-            <small>marketing, docs, dashboard, login, and settings</small>
-          </div>
-          <div>
-            <span>Install path</span>
-            <strong>Cargo</strong>
-            <small>import first, copy/customize later</small>
-          </div>
-          <div>
-            <span>Theme layer</span>
-            <strong>Foundry</strong>
-            <small>silver, bronze, gold</small>
-          </div>
-        </div>
-
-        <section class="ui-section-head">
-          <Badge tone="success">Source of truth</Badge>
-          <h2>One registry for native Axonyx apps.</h2>
-          <Copy tone="lead">
-            Native `.ax` components are the canonical Foundry contract. React,
-            Vite, TanStack, and React Router examples live on the sibling React
-            adapter site.
-          </Copy>
-        </section>
-
-        <div class="ui-registry-grid">
-          <a class="ui-registry-card" href="/components/button">
-            <Badge tone="success">V0</Badge>
-            <strong>Button</strong>
-            <span>Primary actions, ghost links, forged surfaces, and call-to-action composition.</span>
-          </a>
-          <a class="ui-registry-card" href="/components/card">
-            <Badge tone="success">V0</Badge>
-            <strong>Card</strong>
-            <span>Foundry surfaces for docs, dashboards, and CMS panels.</span>
-          </a>
-          <a class="ui-registry-card" href="/components/field">
-            <Badge tone="success">V0</Badge>
-            <strong>Field</strong>
-            <span>Form layout with labels, hints, input controls, and validation states.</span>
-          </a>
-          <a class="ui-registry-card" href="/components/app-shell">
-            <Badge tone="info">Layout</Badge>
-            <strong>AppShell</strong>
-            <span>Application frame for docs, admin, dashboard, and Blockbit flows.</span>
-          </a>
-        </div>
-
-        <ContentGrid cols={3} gap="lg">
-          <SectionCard title="marketing-01" border="forged">
-            <Badge tone="success">Block</Badge>
-            <Copy>Hero, proof cards, feature grid, and final call to action.</Copy>
-            <Button href="/blocks/marketing-01" variant="ghost">Open preview</Button>
-          </SectionCard>
-          <SectionCard title="docs-01" border="forged">
-            <Badge tone="success">Block</Badge>
-            <Copy>Sidebar, content rail, install commands, and pager navigation.</Copy>
-            <Button href="/blocks/docs-01" variant="ghost">Open preview</Button>
-          </SectionCard>
-          <SectionCard title="dashboard-01" border="forged">
-            <Badge tone="warning">Block</Badge>
-            <Copy>Metrics, console sidebar, status cards, and future data panels.</Copy>
-            <Button href="/blocks/dashboard-01" variant="ghost">Open preview</Button>
-          </SectionCard>
-          <SectionCard title="login-01" border="forged">
-            <Badge tone="success">Block</Badge>
-            <Copy>Native sign-in form, system status panel, and secure session boundary.</Copy>
-            <Button href="/blocks/login-01" variant="ghost">Open preview</Button>
-          </SectionCard>
-          <SectionCard title="settings-01" border="forged">
-            <Badge tone="success">Block</Badge>
-            <Copy>Responsive app shell, workspace preferences, and explicit destructive actions.</Copy>
-            <Button href="/blocks/settings-01" variant="ghost">Open preview</Button>
-          </SectionCard>
-        </ContentGrid>
-
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Install once, compose everywhere" border="forged">
-            <Copy tone="lead">
-              Axonyx UI should feel familiar to people coming from shadcn or MUI,
-              but the source contract is native `.ax` and Cargo-first.
-            </Copy>
-            <DocsCodeBlock title="Install">
-              {"cargo ax add ui\n\nuse \"@axonyx/ui\"\nimport { Button } from \"@axonyx/ui/foundry/Button\"\nimport { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\""}
-            </DocsCodeBlock>
-          </Card>
-          <Card title="Two tracks, one visual contract" border="forged">
-            <Copy>
-              This site is for Rust/Axonyx-native usage. The React adapter site
-              will mirror the same Foundry primitives for Next, Vite, TanStack,
-              and React Router users.
-            </Copy>
-            <ButtonGroup>
-              <Button href="https://react.axonyx.dev" variant="ghost">React adapter</Button>
-              <Button href="https://axonyx.dev" variant="ghost">Axonyx framework</Button>
-            </ButtonGroup>
-          </Card>
-        </ContentGrid>
-
-        <Card title="Registry V0 contract" border="forged" surface="inset">
-          <Copy tone="lead">
-            The first milestone is not "all components." It is one complete,
-            believable loop: install a component, install a block, switch between
-            native Axonyx examples, and keep the same Foundry theme contract.
-          </Copy>
-          <ButtonGroup>
-            <Button href="/create" variant="primary">Get code</Button>
-            <Button href="/components" variant="primary">Browse components</Button>
-            <Button href="/themes" variant="ghost">Theme system</Button>
-          </ButtonGroup>
-        </Card>
-      </Stack>
-    </Container>
+        <div class="fp-specimens"><a class="ax-button" data-variant="primary" href="/components/button">Button ↗</a><a class="ax-button" href="/components/button">Secondary</a><span class="fp-health"><i class="fp-status-dot"></i>All systems ready</span><Badge>Badge</Badge><div class="fp-search"><Input id="component-search" placeholder="Search components…" /><label class="fp-sr-only" for="component-search">Search components</label><div id="component-results" hidden="true"></div></div></div>
+        <section class="fp-materials"><div class="fp-materials-heading"><h2>The same parts. A different character.</h2><p>Identical components. Distinctly yours.</p></div><div class="fp-material-grid">
+          <div class="fp-material" data-foundry="bronze" data-foundry-style="classic"><div><i class="fp-metal fp-bronze"></i><strong>Bronze</strong><span>Warm. Grounded. Timeless.</span></div><div><a class="ax-button" data-variant="primary" href="/components/button">Button</a><Input id="bronze-sample" placeholder="Enter something…" /><label class="fp-sr-only" for="bronze-sample">Bronze input preview</label></div></div>
+          <div class="fp-material" data-foundry="silver"><div><i class="fp-metal fp-silver"></i><strong>Silver</strong><span>Modern. Clean. Versatile.</span></div><div><a class="ax-button" data-variant="primary" href="/components/button">Button</a><Input id="silver-sample" placeholder="Enter something…" /><label class="fp-sr-only" for="silver-sample">Silver input preview</label></div></div>
+          <div class="fp-material" data-foundry="gold"><div><i class="fp-metal fp-gold"></i><strong>Gold</strong><span>Bold. Refined. Distinctive.</span></div><div><a class="ax-button" data-variant="primary" href="/components/button">Button</a><Input id="gold-sample" placeholder="Enter something…" /><label class="fp-sr-only" for="gold-sample">Gold input preview</label></div></div>
+        </div></section>
+        <footer class="fp-footer"><a class="fp-brand" href="/"><img src="/brand-mark.svg" alt="" width={22} height={22} />Axonyx UI</a><span>Open components for modern builders.</span><a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download theme foundation ↗</a></footer>
+      </div>
+    </div>
   }
 }

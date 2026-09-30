@@ -1,104 +1,20 @@
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
 import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { ButtonGroup } from "@axonyx/ui/foundry/ButtonGroup.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
-import { Copy } from "@axonyx/ui/foundry/Copy.asx"
-import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page ButtonPage() {
   return ASX {
-    <Container max="xl">
-      <Stack gap="xl">
-        <section class="ui-component-hero">
-          <div>
-            <span class="ui-kicker">Component V0</span>
-            <h1>Button</h1>
-            <p class="ui-hero__lead">
-              The default action primitive for Axonyx apps: links, submits,
-              ghost actions, and forged industrial calls to action. This page is
-              the first documentation template for the rest of Axonyx UI.
-            </p>
-            <div class="ui-mode-switch">
-              <Badge tone="success">Axonyx native</Badge>
-              <Badge tone="info">Cargo registry</Badge>
-              <Badge tone="warning">Foundry CSS</Badge>
-            </div>
-          </div>
-          <div class="ui-preview-stage">
-            <ButtonGroup>
-              <Button variant="primary" surface="forged">Deploy site</Button>
-              <Button variant="secondary">Preview</Button>
-              <Button variant="ghost">Cancel</Button>
-            </ButtonGroup>
-          </div>
-        </section>
-
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Install" border="forged">
-            <div class="ui-install">
-              <Badge tone="success">Cargo</Badge>
-              <pre>{"cargo ax add button"}</pre>
-              <Badge tone="info">Theme</Badge>
-              <pre>{"cargo ax add theme silver"}</pre>
-            </div>
-          </Card>
-          <Card title="Variants">
-            <ButtonGroup>
-              <Button variant="primary">Primary</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="ghost">Ghost</Button>
-            </ButtonGroup>
-          </Card>
-          <Card title="Surfaces">
-            <ButtonGroup>
-              <Button variant="primary" surface="forged">Forged</Button>
-              <Button variant="ghost" border="forged">Bordered</Button>
-            </ButtonGroup>
-          </Card>
-        </ContentGrid>
-
-        <ContentGrid cols={2} gap="lg">
-          <div class="ui-code-card">
-            <Badge tone="success">Axonyx</Badge>
-            <pre>{"import { Button } from \"@axonyx/ui/foundry/Button.ax\"\n\n<Button variant=\"primary\" surface=\"forged\">\n  Deploy site\n</Button>"}</pre>
-          </div>
-          <div class="ui-code-card">
-            <Badge tone="info">Generated HTML shape</Badge>
-            <pre>{"<a class=\"ax-button\" data-variant=\"primary\" data-surface=\"forged\">\n  Deploy site\n</a>"}</pre>
-          </div>
-        </ContentGrid>
-
-        <Card title="API contract" surface="inset" border="forged">
-          <div class="ui-api-list">
-            <div class="ui-api-row">
-              <strong>variant</strong>
-              <span>`primary`, `secondary`, `ghost`; controls visual intent.</span>
-            </div>
-            <div class="ui-api-row">
-              <strong>size</strong>
-              <span>Reserved for compact, default, and large action density.</span>
-            </div>
-            <div class="ui-api-row">
-              <strong>surface</strong>
-              <span>`forged` adds the stronger Foundry material treatment.</span>
-            </div>
-            <div class="ui-api-row">
-              <strong>border</strong>
-              <span>Reserved for riveted/forged border language.</span>
-            </div>
-            <div class="ui-api-row">
-              <strong>href</strong>
-              <span>When present, the component renders link-style navigation.</span>
-            </div>
-          </div>
-        </Card>
-
-        <ButtonGroup>
-          <Button href="/components/card" variant="primary">Next: Card</Button>
-          <Button href="/components" variant="ghost">All components</Button>
-        </ButtonGroup>
-      </Stack>
-    </Container>
+    <Head><Title>Button | Axonyx UI</Title></Head>
+    <div class="fd-layout">
+      <article class="fd-article fd-introduction">
+        <div class="fd-breadcrumb"><a href="/components">Components</a><span>/</span>Button</div>
+        <h1>Button</h1><p class="fd-lead">A clear next step. Primary, secondary, and quiet actions, with the same Foundry finish.</p>
+        <div class="fd-preview fd-component-preview"><span>Live preview</span><div><Button variant="primary">Deploy site</Button><Button variant="secondary">Preview</Button><Button variant="ghost">Cancel</Button></div><p class="fd-demo-status" role="status"></p></div>
+        <section id="button-install"><h2>Installation</h2><p>Add the component to your Axonyx project.</p><div class="fd-code"><div><span>Terminal</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>cargo ax add button</code></pre></div></section>
+        <section id="button-usage"><h2>Usage</h2><div class="fd-code"><div><span>Axonyx</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"import { Button } from \"@axonyx/ui/foundry/Button.asx\"\n\n<Button variant=\"primary\">Save changes</Button>"}</code></pre></div></section>
+        <section id="button-sizes"><h2>Sizes</h2><p>Use compact controls in toolbars and larger controls for prominent actions.</p><div class="fd-preview"><span>Small · Default · Large</span><div><Button variant="primary" size="sm">Small</Button><Button variant="primary">Default</Button><Button variant="primary" size="lg">Large</Button></div></div></section>
+        <section id="button-api"><h2>API contract</h2><div class="fd-table-wrap"><table class="fd-table"><thead><tr><th>Prop</th><th>Values</th><th>Purpose</th></tr></thead><tbody><tr><td>variant</td><td>primary, secondary, ghost</td><td>Visual emphasis</td></tr><tr><td>size</td><td>sm, default, lg</td><td>Control density</td></tr><tr><td>type</td><td>button, submit, reset</td><td>Native form behavior</td></tr><tr><td>surface / border</td><td>forged</td><td>Optional material treatment</td></tr></tbody></table></div><p>Use LinkButton or an anchor for navigation. For the new finish, apply a <code>data-foundry</code> container as described in <a href="/docs/theming">Theming</a>.</p></section>
+        <div class="fd-next"><a href="/components">All components</a><a href="/components/card">Next: Card →</a></div><p class="fd-copy-status" role="status"></p>
+      </article>
+      <aside class="fd-toc" aria-label="On this page"><span>On this page</span><a href="#button-install">Installation</a><a href="#button-usage">Usage</a><a href="#button-sizes">Sizes</a><a href="#button-api">API contract</a></aside>
+    </div>
   }
 }
