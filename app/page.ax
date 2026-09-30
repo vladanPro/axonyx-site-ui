@@ -13,7 +13,7 @@ page Home() {
     </Head>
     <div class="foundry-pilot" data-foundry="bronze" data-foundry-style="classic">
       <header class="fp-header">
-        <a class="fp-brand" href="/"><img src="/brand-mark.svg" alt="" width={30} height={30} />Axonyx UI</a>
+        <a class="fp-brand" href="/"><img src="/brand-mark.svg?v=forged-x-1" alt="" width={30} height={30} />Axonyx UI</a>
         <nav aria-label="Foundry navigation"><a href="/docs/installation">Docs</a><a href="/components">Components</a><a href="/blocks">Blocks</a><a href="/themes">Themes</a></nav>
         <div class="foundry-appearance ax-appearance" aria-label="Appearance">
           <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
@@ -68,7 +68,7 @@ page Home() {
           <div class="fp-material" data-foundry="silver"><div><i class="fp-metal fp-silver"></i><strong>Silver</strong><span>Modern. Clean. Versatile.</span></div><div><a class="ax-button" data-variant="primary" href="/components/button">Button</a><Input id="silver-sample" placeholder="Enter something…" /><label class="fp-sr-only" for="silver-sample">Silver input preview</label></div></div>
           <div class="fp-material" data-foundry="gold"><div><i class="fp-metal fp-gold"></i><strong>Gold</strong><span>Bold. Refined. Distinctive.</span></div><div><a class="ax-button" data-variant="primary" href="/components/button">Button</a><Input id="gold-sample" placeholder="Enter something…" /><label class="fp-sr-only" for="gold-sample">Gold input preview</label></div></div>
         </div></section>
-        <footer class="fp-footer"><a class="fp-brand" href="/"><img src="/brand-mark.svg" alt="" width={22} height={22} />Axonyx UI</a><span>Open components for modern builders.</span><a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download theme foundation ↗</a></footer>
+        <footer class="fp-footer"><a class="fp-brand" href="/"><img src="/brand-mark.svg?v=forged-x-1" alt="" width={22} height={22} />Axonyx UI</a><span>Open components for modern builders.</span><a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download theme foundation ↗</a></footer>
       </div>
     </div>
   }
