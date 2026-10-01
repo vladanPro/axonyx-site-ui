@@ -172,7 +172,7 @@ expect_not = ["Internal Server Error", "Application error"]
 [[fast]]
 name = "grid component"
 goto = "/components/grid"
-expect_text = "intrinsic minimum-width tracks"
+expect_text = "Grid contract"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
