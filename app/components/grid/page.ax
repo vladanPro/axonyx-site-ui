@@ -1,5 +1,7 @@
 import { Badge } from "@axonyx/ui/foundry/Badge.asx"
 import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
 import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
@@ -16,22 +18,44 @@ page GridPage() {
       nextLabel="Next: Stack"
     >
       <Stack gap="xl">
-        <Card title="Intrinsic responsive grid" border="forged">
+        <ComponentExample title="Intrinsic responsive grid" description="Tracks wrap when they cannot maintain their minimum width. Resize the viewport to see the cards reflow.">
+          <div slot="preview">
           <Grid min="md" gap="lg">
             <Card surface="inset"><Badge tone="success">01</Badge><Copy>Route graph</Copy></Card>
             <Card surface="inset"><Badge tone="info">02</Badge><Copy>State bridge</Copy></Card>
             <Card surface="inset"><Badge tone="warning">03</Badge><Copy>Production runtime</Copy></Card>
           </Grid>
-          <DocsCodeBlock>{"<Grid min=\"md\" gap=\"lg\">\n  <Card />\n  <Card />\n  <Card />\n</Grid>"}</DocsCodeBlock>
-        </Card>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Grid min=\"md\" gap=\"lg\">\n  <Card surface=\"inset\"><Badge tone=\"success\">01</Badge><Copy>Route graph</Copy></Card>\n  <Card surface=\"inset\"><Badge tone=\"info\">02</Badge><Copy>State bridge</Copy></Card>\n  <Card surface=\"inset\"><Badge tone=\"warning\">03</Badge><Copy>Production runtime</Copy></Card>\n</Grid>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <Card title="Fixed columns">
-          <Grid cols="3" gap="sm" align="center">
+        <ComponentExample title="Fixed columns" description="Set explicit tablet and mobile columns when the content needs a controlled breakpoint instead of intrinsic tracks.">
+          <div slot="preview">
+          <Grid cols="3" colsTablet="2" colsMobile="1" gap="sm" align="center">
             <Card surface="brushed"><Copy>Build</Copy></Card>
             <Card surface="brushed"><Copy>Check</Copy></Card>
             <Card surface="brushed"><Copy>Deploy</Copy></Card>
           </Grid>
-          <Copy>Fixed column grids become one column at the Foundry mobile breakpoint.</Copy>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Grid cols=\"3\" colsTablet=\"2\" colsMobile=\"1\" gap=\"sm\" align=\"center\">\n  <Card surface=\"brushed\"><Copy>Build</Copy></Card>\n  <Card surface=\"brushed\"><Copy>Check</Copy></Card>\n  <Card surface=\"brushed\"><Copy>Deploy</Copy></Card>\n</Grid>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.73\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Card title="Grid contract" surface="inset">
+          <Copy>Import Grid from @axonyx/ui/foundry/Grid.asx. Use min for intrinsic tracks, or cols with optional colsTablet and colsMobile for fixed columns. The min setting takes precedence over fixed columns.</Copy>
+          <DocsCodeBlock title="Import" language="asx">{"import { Grid } from \"@axonyx/ui/foundry/Grid.asx\""}</DocsCodeBlock>
+          <Grid min="md" gap="sm">
+            <Card title="cols" surface="inset"><Copy>String, default 1. Fixed columns on wide screens, from 1 to 6.</Copy></Card>
+            <Card title="colsTablet" surface="inset"><Copy>String, optional. Columns below the tablet breakpoint; otherwise one column.</Copy></Card>
+            <Card title="colsMobile" surface="inset"><Copy>String, optional. Columns below the mobile breakpoint; otherwise one column.</Copy></Card>
+            <Card title="min" surface="inset"><Copy>String, optional. Intrinsic track minimum: sm, md, or lg. Overrides cols.</Copy></Card>
+            <Card title="gap" surface="inset"><Copy>String, default md. Spacing between tracks: xs, sm, md, lg, xl, or 2xl.</Copy></Card>
+            <Card title="align" surface="inset"><Copy>String, optional. Cross-axis item alignment: start, center, or end.</Copy></Card>
+          </Grid>
         </Card>
       </Stack>
     </ComponentPage>
