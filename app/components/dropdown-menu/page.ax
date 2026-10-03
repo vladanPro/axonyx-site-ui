@@ -14,7 +14,7 @@ page DropdownMenuPage() {
     <ComponentPage
       title="DropdownMenu"
       category="Navigation"
-      description="Compact command and navigation menu for headers, dashboards, and CMS toolbars."
+      description="Compact navigation menu for headers, dashboards, and CMS toolbars. Arrow keys move through links; Escape closes and returns focus to the trigger."
       nextHref="/components/status-lamp"
       nextLabel="Next: StatusLamp"
     >
@@ -35,7 +35,7 @@ page DropdownMenuPage() {
 
         <Card title="API contract" surface="inset">
           <Badge tone="success">V0</Badge>
-          <Copy>`align`, trigger slot, and item links define the first menu contract.</Copy>
+          <Copy>Use ArrowDown or ArrowUp on the trigger to open and focus a link. Inside the menu, Arrow keys and Home/End move focus; Tab leaves the menu and Escape restores focus to the trigger.</Copy>
         </Card>
     </ComponentPage>
   }
