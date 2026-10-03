@@ -21,12 +21,12 @@ page CheckboxPage() {
           <Card title="Preview" border="forged">
             <Stack gap="md">
               <Checkbox name="deploy_preview">Create a deploy preview</Checkbox>
-              <Checkbox name="run_checks">Run Foundry checks</Checkbox>
-              <Checkbox name="notify_team">Notify the project team</Checkbox>
+              <Checkbox name="run_checks" checked="true">Run Foundry checks</Checkbox>
+              <Checkbox name="notify_team" disabled="true">Notify the project team (coming soon)</Checkbox>
             </Stack>
           </Card>
           <Card title="Axonyx">
-            <DocsCodeBlock>{"<Checkbox name=\"deploy_preview\">\n  Create a deploy preview\n</Checkbox>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<Checkbox name=\"run_checks\" checked=\"true\">Run Foundry checks</Checkbox>\n<Checkbox name=\"notify_team\" disabled=\"true\">Notify the project team (coming soon)</Checkbox>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
     </ComponentPage>
