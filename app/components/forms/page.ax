@@ -35,20 +35,21 @@ page FormsPage() {
             <Fieldset surface="forged">
               <Legend>Project settings</Legend>
               <FormGroup cols="2" gap="md">
-                <Field htmlFor="name"><FieldLabel htmlFor="name">Name</FieldLabel><Input id="name" name="name" placeholder="Axonyx Site" /></Field>
-                <Field htmlFor="type"><FieldLabel htmlFor="type">Template</FieldLabel><Select id="type" name="type"><Option value="docs">Docs</Option><Option value="site">Site</Option></Select></Field>
+                <Field htmlFor="name"><FieldLabel htmlFor="name">Name</FieldLabel><Input id="name" name="name" placeholder="Axonyx Site" required="true" describedBy="name-hint" /><FieldHint id="name-hint">Required for the project.</FieldHint></Field>
+                <Field htmlFor="type"><FieldLabel htmlFor="type">Template</FieldLabel><Select id="type" name="type" required="true"><Option value="docs">Docs</Option><Option value="site">Site</Option></Select></Field>
               </FormGroup>
-              <Field htmlFor="notes"><FieldLabel htmlFor="notes">Notes</FieldLabel><Textarea id="notes" name="notes" placeholder="Launch notes" /></Field>
+              <Field htmlFor="notes"><FieldLabel htmlFor="notes">Notes</FieldLabel><Textarea id="notes" name="notes" placeholder="Launch notes" disabled="true" /></Field>
+              <Field htmlFor="region"><FieldLabel htmlFor="region">Region</FieldLabel><Select id="region" name="region" disabled="true"><Option value="auto">Assigned automatically</Option></Select></Field>
               <Checkbox name="public">Publish docs publicly</Checkbox>
               <Switch name="theme">Enable theme switcher</Switch>
-              <Button variant="primary" surface="forged">Save settings</Button>
+              <Copy>Preview only. Connect an Axonyx action before submitting settings.</Copy>
             </Fieldset>
           </Form>
         </Card>
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <DocsCodeBlock>{"<Form surface=\"inset\">\n  <Field htmlFor=\"name\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" />\n  </Field>\n</Form>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<Form surface=\"inset\">\n  <Field htmlFor=\"name\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" required=\"true\" describedBy=\"name-hint\" />\n    <FieldHint id=\"name-hint\">Required for the project.</FieldHint>\n  </Field>\n</Form>"}</DocsCodeBlock>
           </Card>
           <Card title="Contract">
             <Badge tone="success">V0</Badge>
