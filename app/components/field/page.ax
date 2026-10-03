@@ -26,25 +26,25 @@ page FieldPage() {
           <Card title="Preview" border="forged">
             <Field htmlFor="project-name">
               <FieldLabel htmlFor="project-name">Project name</FieldLabel>
-              <Input id="project-name" name="project" placeholder="Blockbit CMS" />
-              <FieldHint>Use a short public name.</FieldHint>
+              <Input id="project-name" name="project" placeholder="Blockbit CMS" describedBy="project-name-hint" />
+              <FieldHint id="project-name-hint">Use a short public name.</FieldHint>
             </Field>
           </Card>
           <Card title="Validation state">
             <Field state="error" htmlFor="email">
               <FieldLabel htmlFor="email">Email</FieldLabel>
-              <Input id="email" name="email" placeholder="you@company.dev" />
-              <FieldError>Email is required before submitting.</FieldError>
+              <Input id="email" name="email" type="email" placeholder="you@company.dev" invalid="true" describedBy="email-error" />
+              <FieldError id="email-error">Email is required before submitting.</FieldError>
             </Field>
           </Card>
         </ContentGrid>
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Axonyx">
-            <DocsCodeBlock>{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" />\n  <FieldHint>We only use this for deploy updates.</FieldHint>\n</Field>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" describedBy=\"email-hint\" />\n  <FieldHint id=\"email-hint\">We only use this for deploy updates.</FieldHint>\n</Field>"}</DocsCodeBlock>
           </Card>
           <Card title="Generated HTML shape">
-            <DocsCodeBlock>{"<label class=\"ax-field\" for=\"email\">\n  <span class=\"ax-field__label\">Email</span>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</label>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<div class=\"ax-field\" data-for=\"email\">\n  <label class=\"ax-field-label\" for=\"email\">Email</label>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</div>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 

@@ -32,6 +32,10 @@ page InputPage() {
                 <FieldLabel htmlFor="owner-email">Owner email</FieldLabel>
                 <Input id="owner-email" name="owner_email" type="email" placeholder="team@example.com" size="lg" />
               </Field>
+              <Field htmlFor="build-id">
+                <FieldLabel htmlFor="build-id">Build ID</FieldLabel>
+                <Input id="build-id" name="build_id" value="Assigned after deploy" disabled="true" />
+              </Field>
             </Stack>
           </Card>
           <Card title="Axonyx">
