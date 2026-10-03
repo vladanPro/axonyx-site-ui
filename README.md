@@ -6,7 +6,7 @@ The local Foundry redesign pilot separates the promotional homepage from
 documentation at `/docs`, `/docs/installation`, and `/docs/theming`. The Button
 page is the first component documentation page using the new reading layout.
 
-The reusable finish comes from the published Cargo dependency `axonyx-ui 0.0.73`.
+The reusable finish comes from the published Cargo dependency `axonyx-ui 0.0.75`.
 Run `./scripts/sync-foundry-theme.ps1` after editing site-owned CSS or JavaScript
 to update cache-versioned asset references. No package CSS is copied into public.
 See `design/foundry-pilot/README.md` for design scope and verification evidence.
@@ -55,6 +55,13 @@ not on this native Rust showcase.
 
 ## Develop
 
+This UI release requires `cargo-axonyx 0.6.3` or newer for component
+`return ASX` imports. Update an older CLI before running the checks:
+
+```bash
+cargo install cargo-axonyx --version 0.6.3 --force
+```
+
 ```bash
 cargo ax run dev
 ```
@@ -78,6 +85,6 @@ Start with a small complete loop:
 - Themes: `silver`, `bronze`, `gold`, then custom theme packages later.
 
 
-Foundry styles now come from the published Cargo dependency `axonyx-ui 0.0.73`.
+Foundry styles now come from the published Cargo dependency `axonyx-ui 0.0.75`.
 There is no local foundation snapshot or compatibility patch.
 `scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.
