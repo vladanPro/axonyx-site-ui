@@ -26,10 +26,11 @@ page RadioPage() {
               <Radio name="template" value="site" checked="true">Site</Radio>
               <Radio name="template" value="docs">Docs</Radio>
               <Radio name="template" value="blog">Blog</Radio>
+              <Radio name="template" value="portfolio" disabled="true">Portfolio (coming soon)</Radio>
             </Fieldset>
           </Card>
           <Card title="Axonyx">
-            <DocsCodeBlock>{"<Radio name=\"template\" value=\"site\" checked=\"true\">Site</Radio>"}</DocsCodeBlock>
+            <DocsCodeBlock>{"<Radio name=\"template\" value=\"site\" checked=\"true\">Site</Radio>\n<Radio name=\"template\" value=\"portfolio\" disabled=\"true\">Portfolio (coming soon)</Radio>"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
     </ComponentPage>
