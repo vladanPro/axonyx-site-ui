@@ -59,7 +59,7 @@ This UI release requires `cargo-axonyx 0.6.3` or newer for component
 `return ASX` imports. Update an older CLI before running the checks:
 
 ```bash
-cargo install cargo-axonyx --version 0.6.3 --force
+cargo install cargo-axonyx --version 0.6.3 --locked --force
 ```
 
 ```bash
@@ -74,6 +74,10 @@ cargo ax doctor
 cargo ax test
 cargo ax build --clean
 ```
+
+The existing Render service was configured in the dashboard, so changes to
+`render.yaml` alone do not update its build command. Keep the dashboard build
+command equal to the one in `render.yaml` when changing the CLI version.
 
 ## V0 scope
 
