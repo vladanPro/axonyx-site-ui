@@ -1,9 +1,8 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
 import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
-import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { DropdownItem } from "@axonyx/ui/foundry/DropdownItem.asx"
 import { DropdownMenu } from "@axonyx/ui/foundry/DropdownMenu.asx"
@@ -19,24 +18,31 @@ page DropdownMenuPage() {
       nextLabel="Next: StatusLamp"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
+      <Stack gap="xl">
+        <ComponentExample title="Navigation actions" description="Open the menu with a click or ArrowDown. Follow a link with Enter; use Escape to return to the trigger.">
+          <div slot="preview">
             <DropdownMenu align="end" variant="secondary">
               <span slot="trigger">Component actions</span>
               <DropdownItem href="/components">All components</DropdownItem>
               <DropdownItem href="/blocks">Preview blocks</DropdownItem>
               <DropdownItem href="/create">Get code</DropdownItem>
             </DropdownMenu>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<DropdownMenu align=\"end\">\n  <span slot=\"trigger\">Component actions</span>\n  <DropdownItem href=\"/components\">All components</DropdownItem>\n</DropdownMenu>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<DropdownMenu align=\"end\" variant=\"secondary\">\n  <span slot=\"trigger\">Component actions</span>\n  <DropdownItem href=\"/components\">All components</DropdownItem>\n  <DropdownItem href=\"/blocks\">Preview blocks</DropdownItem>\n  <DropdownItem href=\"/create\">Get code</DropdownItem>\n</DropdownMenu>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <Card title="API contract" surface="inset">
-          <Badge tone="success">V0</Badge>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.77\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Box padding="lg" surface="inset">
+          <h2>Usage contract</h2>
+          <Copy>Set align to start or end to position the menu. The trigger slot supplies button text; DropdownItem renders a normal link and accepts href, tone, and optional icon and meta slots.</Copy>
           <Copy>Use ArrowDown or ArrowUp on the trigger to open and focus a link. Inside the menu, Arrow keys and Home/End move focus; Tab leaves the menu and Escape restores focus to the trigger.</Copy>
-        </Card>
+        </Box>
+        <DocsCodeBlock title="Imports" language="asx">{"import { DropdownMenu } from \"@axonyx/ui/foundry/DropdownMenu.asx\"\nimport { DropdownItem } from \"@axonyx/ui/foundry/DropdownItem.asx\""}</DocsCodeBlock>
+      </Stack>
     </ComponentPage>
   }
 }
