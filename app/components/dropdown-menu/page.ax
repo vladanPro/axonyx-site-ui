@@ -32,13 +32,13 @@ page DropdownMenuPage() {
         </ComponentExample>
 
         <ComponentInstall>
-          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.78\""}</DocsCodeBlock>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
           <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
         </ComponentInstall>
 
         <Box padding="lg" surface="inset">
           <h2>Usage contract</h2>
-          <Copy>Set align to start or end to position the menu. The trigger slot supplies button text; DropdownItem renders a normal link and accepts href, tone, and optional icon and meta slots.</Copy>
+          <Copy>Set align to start or end to choose the preferred menu alignment. The menu adjusts near viewport edges to stay visible. The trigger slot supplies button text; DropdownItem renders a normal link and accepts href, tone, and optional icon and meta slots.</Copy>
           <Copy>Use ArrowDown or ArrowUp on the trigger to open and focus a link. Inside the menu, Arrow keys and Home/End move focus; Tab leaves the menu and Escape restores focus to the trigger.</Copy>
         </Box>
         <DocsCodeBlock title="Imports" language="asx">{"import { DropdownMenu } from \"@axonyx/ui/foundry/DropdownMenu.asx\"\nimport { DropdownItem } from \"@axonyx/ui/foundry/DropdownItem.asx\""}</DocsCodeBlock>
