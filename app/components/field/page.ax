@@ -1,10 +1,10 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
 import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
-import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Field } from "@axonyx/ui/foundry/Field.asx"
 import { FieldError } from "@axonyx/ui/foundry/FieldError.asx"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.asx"
@@ -17,41 +17,41 @@ page FieldPage() {
     <ComponentPage
       title="Field"
       category="Components V0"
-      description="A form shell for labels, inputs, hints, and validation states across static forms and future Axonyx actions."
+      description="A form shell for labels, inputs, hints, and validation states across static forms and Axonyx actions."
       nextHref="/components/app-shell"
       nextLabel="Next: AppShell"
     >
+      <Stack gap="xl">
+        <ComponentExample title="Input and validation" description="Labels and messages stay connected to their input through native IDs and aria-describedby.">
+          <div slot="preview">
+            <ContentGrid cols={2} gap="lg">
+              <Field htmlFor="project-name">
+                <FieldLabel htmlFor="project-name">Project name</FieldLabel>
+                <Input id="project-name" name="project" placeholder="Blockbit CMS" describedBy="project-name-hint" />
+                <FieldHint id="project-name-hint">Use a short public name.</FieldHint>
+              </Field>
+              <Field state="error" htmlFor="email">
+                <FieldLabel htmlFor="email">Email</FieldLabel>
+                <Input id="email" name="email" type="email" placeholder="you@company.dev" invalid="true" describedBy="email-error" />
+                <FieldError id="email-error">Email is required before submitting.</FieldError>
+              </Field>
+            </ContentGrid>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<ContentGrid cols={2} gap=\"lg\">\n  <Field htmlFor=\"project-name\">\n    <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n    <Input id=\"project-name\" name=\"project\" placeholder=\"Blockbit CMS\" describedBy=\"project-name-hint\" />\n    <FieldHint id=\"project-name-hint\">Use a short public name.</FieldHint>\n  </Field>\n  <Field state=\"error\" htmlFor=\"email\">\n    <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n    <Input id=\"email\" name=\"email\" type=\"email\" placeholder=\"you@company.dev\" invalid=\"true\" describedBy=\"email-error\" />\n    <FieldError id=\"email-error\">Email is required before submitting.</FieldError>\n  </Field>\n</ContentGrid>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Field htmlFor="project-name">
-              <FieldLabel htmlFor="project-name">Project name</FieldLabel>
-              <Input id="project-name" name="project" placeholder="Blockbit CMS" describedBy="project-name-hint" />
-              <FieldHint id="project-name-hint">Use a short public name.</FieldHint>
-            </Field>
-          </Card>
-          <Card title="Validation state">
-            <Field state="error" htmlFor="email">
-              <FieldLabel htmlFor="email">Email</FieldLabel>
-              <Input id="email" name="email" type="email" placeholder="you@company.dev" invalid="true" describedBy="email-error" />
-              <FieldError id="email-error">Email is required before submitting.</FieldError>
-            </Field>
-          </Card>
-        </ContentGrid>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.77\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Field htmlFor=\"email\">\n  <FieldLabel htmlFor=\"email\">Email</FieldLabel>\n  <Input id=\"email\" name=\"email\" describedBy=\"email-hint\" />\n  <FieldHint id=\"email-hint\">We only use this for deploy updates.</FieldHint>\n</Field>"}</DocsCodeBlock>
-          </Card>
-          <Card title="Generated HTML shape">
-            <DocsCodeBlock>{"<div class=\"ax-field\" data-for=\"email\">\n  <label class=\"ax-field-label\" for=\"email\">Email</label>\n  <input class=\"ax-input\" id=\"email\" name=\"email\" />\n</div>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
-
-        <Card title="API contract" surface="inset">
-          <Badge tone="success">V0</Badge>
-          <Copy>`state` and `htmlFor` define the first Field shell. Label, Hint, Error, and Input compose inside it.</Copy>
-        </Card>
+        <Box padding="lg" surface="inset">
+          <h2>Composition contract</h2>
+          <Copy>Field accepts state and htmlFor; compose FieldLabel, Input, FieldHint, and FieldError inside it. Match FieldLabel htmlFor to Input id, and match Input describedBy to the hint or error id.</Copy>
+          <Copy>Set invalid on Input when showing an error. Field displays the state; it does not validate or submit a form by itself.</Copy>
+        </Box>
+        <DocsCodeBlock title="Imports" language="asx">{"import { ContentGrid } from \"@axonyx/ui/foundry/ContentGrid.asx\"\nimport { Field } from \"@axonyx/ui/foundry/Field.asx\"\nimport { FieldLabel } from \"@axonyx/ui/foundry/FieldLabel.asx\"\nimport { FieldHint } from \"@axonyx/ui/foundry/FieldHint.asx\"\nimport { FieldError } from \"@axonyx/ui/foundry/FieldError.asx\"\nimport { Input } from \"@axonyx/ui/foundry/Input.asx\""}</DocsCodeBlock>
+      </Stack>
     </ComponentPage>
   }
 }

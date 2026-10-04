@@ -56,6 +56,18 @@ expect_text = "Inline action grouping"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "card component"
+goto = "/components/card"
+expect_text = "Surface treatments"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "field component"
+goto = "/components/field"
+expect_text = "Input and validation"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "app shell component"
 goto = "/components/app-shell"
 expect_text = "Application frame for docs"
