@@ -1,10 +1,11 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
-import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
 import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
 import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page CardPage() {
@@ -16,32 +17,30 @@ page CardPage() {
       nextHref="/components/field"
       nextLabel="Next: Field"
     >
+      <Stack gap="xl">
+        <ComponentExample title="Surface treatments" description="Choose a quiet default, a forged border, or an inset plane without changing the content structure.">
+          <div slot="preview">
+            <ContentGrid cols={3} gap="lg">
+              <Card title="Default"><Copy>Clean surface for readable content.</Copy></Card>
+              <Card title="Forged" border="forged"><Copy>Industrial border language with stronger material presence.</Copy></Card>
+              <Card title="Inset" surface="inset"><Copy>Lower visual plane for nested panels and quiet metadata.</Copy></Card>
+            </ContentGrid>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<ContentGrid cols={3} gap=\"lg\">\n  <Card title=\"Default\"><Copy>Clean surface for readable content.</Copy></Card>\n  <Card title=\"Forged\" border=\"forged\"><Copy>Industrial border language with stronger material presence.</Copy></Card>\n  <Card title=\"Inset\" surface=\"inset\"><Copy>Lower visual plane for nested panels and quiet metadata.</Copy></Card>\n</ContentGrid>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Default">
-            <Copy>Clean surface for readable content.</Copy>
-          </Card>
-          <Card title="Forged" border="forged">
-            <Copy>Industrial border language with stronger material presence.</Copy>
-          </Card>
-          <Card title="Inset" surface="inset">
-            <Copy>Lower visual plane for nested panels and quiet metadata.</Copy>
-          </Card>
-        </ContentGrid>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.77\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"import { Card } from \"@axonyx/ui/foundry/Card.ax\"\n\n<Card title=\"Build status\" border=\"forged\">\n  <Copy>Static output generated.</Copy>\n</Card>"}</DocsCodeBlock>
-          </Card>
-          <Card title="Generated HTML shape">
-            <DocsCodeBlock>{"<article class=\"ax-card\" data-border=\"forged\">\n  <h2 class=\"ax-card__title\">Build status</h2>\n  <p>Static output generated.</p>\n</article>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
-
-        <Card title="API contract" surface="inset">
-          <Badge tone="success">V0</Badge>
-          <Copy>`title`, `surface`, `border`, and `recipe` are the first stable Card props.</Copy>
-        </Card>
+        <Box padding="lg" surface="inset">
+          <h2>Composition contract</h2>
+          <Copy>Set title for the built-in heading, or omit it when the card contains its own heading. Children render in the default slot. surface, border, and recipe select visual treatments without changing the article structure.</Copy>
+        </Box>
+        <DocsCodeBlock title="Imports" language="asx">{"import { Card } from \"@axonyx/ui/foundry/Card.asx\"\nimport { ContentGrid } from \"@axonyx/ui/foundry/ContentGrid.asx\"\nimport { Copy } from \"@axonyx/ui/foundry/Copy.asx\""}</DocsCodeBlock>
+        <DocsCodeBlock title="Generated HTML shape" language="html">{"<article class=\"ax-card\" data-border=\"forged\">\n  <h2 class=\"ax-card__title\">Build status</h2>\n  <p class=\"ax-copy\">Static output generated.</p>\n</article>"}</DocsCodeBlock>
+      </Stack>
     </ComponentPage>
   }
 }
