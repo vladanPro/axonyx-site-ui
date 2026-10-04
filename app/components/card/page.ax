@@ -30,7 +30,7 @@ page CardPage() {
         </ComponentExample>
 
         <ComponentInstall>
-          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.77\""}</DocsCodeBlock>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.78\""}</DocsCodeBlock>
           <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
         </ComponentInstall>
 
