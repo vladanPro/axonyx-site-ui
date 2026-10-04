@@ -62,6 +62,12 @@ expect_text = "Application frame for docs"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "dropdown menu component"
+goto = "/components/dropdown-menu"
+expect_text = "Use ArrowDown or ArrowUp"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "alert component"
 goto = "/components/alert"
 expect_text = "Inline status messaging"
