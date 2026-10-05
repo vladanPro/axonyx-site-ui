@@ -1,0 +1,57 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Field } from "@axonyx/ui/foundry/Field.asx"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
+import { FormGroup } from "@axonyx/ui/foundry/FormGroup.asx"
+import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page FormGroupPage() {
+  return ASX {
+    <ComponentPage title="FormGroup" category="Forms" description="Arrange related fields in one, two, or three columns. Groups collapse to one column below 720px so labels and inputs remain readable on phones." nextHref="/components/fieldset" nextLabel="Next: Fieldset">
+      <Stack gap="xl">
+        <ComponentExample title="Paired fields" description="Use two columns for a title and slug, or any pair of short controls. Resize the viewport to see the group stack.">
+          <div slot="preview">
+            <FormGroup cols="2" gap="lg">
+              <Field htmlFor="group-title">
+                <FieldLabel htmlFor="group-title">Title</FieldLabel>
+                <Input id="group-title" name="title" placeholder="Release notes" />
+              </Field>
+              <Field htmlFor="group-slug">
+                <FieldLabel htmlFor="group-slug">Slug</FieldLabel>
+                <Input id="group-slug" name="slug" placeholder="release-notes" />
+              </Field>
+            </FormGroup>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<FormGroup cols=\"2\" gap=\"lg\">\n  <Field htmlFor=\"group-title\">\n    <FieldLabel htmlFor=\"group-title\">Title</FieldLabel>\n    <Input id=\"group-title\" name=\"title\" placeholder=\"Release notes\" />\n  </Field>\n  <Field htmlFor=\"group-slug\">\n    <FieldLabel htmlFor=\"group-slug\">Slug</FieldLabel>\n    <Input id=\"group-slug\" name=\"slug\" placeholder=\"release-notes\" />\n  </Field>\n</FormGroup>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentExample title="Compact metadata" description="Three columns for short fields. The same responsive rule applies regardless of the chosen gap.">
+          <FormGroup slot="preview" cols="3" gap="sm">
+            <Field htmlFor="group-category"><FieldLabel htmlFor="group-category">Category</FieldLabel><Input id="group-category" name="category" placeholder="News" /></Field>
+            <Field htmlFor="group-author"><FieldLabel htmlFor="group-author">Author</FieldLabel><Input id="group-author" name="author" placeholder="Editorial team" /></Field>
+            <Field htmlFor="group-locale"><FieldLabel htmlFor="group-locale">Locale</FieldLabel><Input id="group-locale" name="locale" placeholder="en" /></Field>
+          </FormGroup>
+          <DocsCodeBlock slot="code" language="asx">{"<FormGroup cols=\"3\" gap=\"sm\">\n  <Field htmlFor=\"category\"><FieldLabel htmlFor=\"category\">Category</FieldLabel><Input id=\"category\" name=\"category\" /></Field>\n  <Field htmlFor=\"author\"><FieldLabel htmlFor=\"author\">Author</FieldLabel><Input id=\"author\" name=\"author\" /></Field>\n  <Field htmlFor=\"locale\"><FieldLabel htmlFor=\"locale\">Locale</FieldLabel><Input id=\"locale\" name=\"locale\" /></Field>\n</FormGroup>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>FormGroup contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { FormGroup } from \"@axonyx/ui/foundry/FormGroup.asx\""}</DocsCodeBlock>
+            <Copy>cols: optional String. Default is one column; 2 and 3 create multi-column groups on wider screens.</Copy>
+            <Copy>gap: optional String. Default or md uses 1rem. sm uses 0.65rem; lg uses 1.35rem.</Copy>
+            <Copy>Slot: related controls, usually Field components. FormGroup renders a div and handles layout. Wrap it in Form for submission and Fieldset with Legend for a named semantic group.</Copy>
+            <a href="/components/form">Try the complete CMS article editor</a>
+          </Stack>
+        </Box>
+      </Stack>
+    </ComponentPage>
+  }
+}

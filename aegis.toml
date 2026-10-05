@@ -134,6 +134,24 @@ expect_text = "Native form composition"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "form component"
+goto = "/components/form"
+expect_text = "CMS article editor"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "form group component"
+goto = "/components/form-group"
+expect_text = "FormGroup contract"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "fieldset component"
+goto = "/components/fieldset"
+expect_text = "Fieldset and Legend contract"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "input component"
 goto = "/components/input"
 expect_text = "Native text input"
