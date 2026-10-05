@@ -82,6 +82,11 @@ page Components() {
             <Copy>Fixed columns or intrinsic minimum-width tracks for responsive content composition.</Copy>
             <Button href="/components/grid" variant="ghost">Open Grid</Button>
           </SectionCard>
+          <SectionCard title="ContentGrid">
+            <Badge tone="success">Layout</Badge>
+            <Copy>A focused Grid recipe for responsive docs cards, content tiles, and dashboard metrics.</Copy>
+            <Button href="/components/content-grid" variant="ghost">Open ContentGrid</Button>
+          </SectionCard>
           <SectionCard title="Stack">
             <Badge tone="success">Layout</Badge>
             <Copy>Vertical rhythm with semantic spacing and predictable cross-axis alignment.</Copy>

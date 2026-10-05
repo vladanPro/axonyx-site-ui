@@ -194,6 +194,12 @@ expect_text = "Grid contract"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "content grid component"
+goto = "/components/content-grid"
+expect_text = "ContentGrid contract"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "stack component"
 goto = "/components/stack"
 expect_text = "owns vertical rhythm"

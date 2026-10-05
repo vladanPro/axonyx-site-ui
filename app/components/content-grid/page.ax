@@ -1,0 +1,60 @@
+import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page ContentGridPage() {
+  return ASX {
+    <ComponentPage
+      title="ContentGrid"
+      category="Layout recipe"
+      description="A small Grid wrapper for repeated cards and content tiles. Choose the column count at each breakpoint without writing layout CSS."
+      nextHref="/components/grid"
+      nextLabel="Next: Grid"
+    >
+      <Stack gap="xl">
+        <ComponentExample title="Docs cards" description="Three columns on wide screens, two on tablets, and one on phones. Resize the viewport to see the same content reflow.">
+          <div slot="preview">
+            <ContentGrid cols="3" colsTablet="2" colsMobile="1" gap="lg">
+              <Card title="Start" surface="inset"><Copy>Install the CLI and create a project.</Copy></Card>
+              <Card title="Build" surface="inset"><Copy>Compose pages from Foundry primitives.</Copy></Card>
+              <Card title="Ship" surface="inset"><Copy>Build and deploy the Rust server.</Copy></Card>
+            </ContentGrid>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<ContentGrid cols=\"3\" colsTablet=\"2\" colsMobile=\"1\" gap=\"lg\">\n  <Card title=\"Start\"><Copy>Install the CLI and create a project.</Copy></Card>\n  <Card title=\"Build\"><Copy>Compose pages from Foundry primitives.</Copy></Card>\n  <Card title=\"Ship\"><Copy>Build and deploy the Rust server.</Copy></Card>\n</ContentGrid>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentExample title="Dashboard metrics" description="Use the same recipe for compact data cards. ContentGrid arranges children; the cards own their content and styling.">
+          <div slot="preview">
+            <ContentGrid cols="2" colsMobile="1" gap="sm">
+              <Card title="Published" surface="brushed"><Badge tone="success">24</Badge></Card>
+              <Card title="Drafts" surface="brushed"><Badge tone="warning">6</Badge></Card>
+            </ContentGrid>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<ContentGrid cols=\"2\" colsMobile=\"1\" gap=\"sm\">\n  <Card title=\"Published\"><Badge tone=\"success\">24</Badge></Card>\n  <Card title=\"Drafts\"><Badge tone=\"warning\">6</Badge></Card>\n</ContentGrid>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Card title="ContentGrid contract" surface="inset">
+          <Copy>ContentGrid renders Grid internally. It accepts cols, colsTablet, colsMobile, and gap; use Grid directly if you need intrinsic min tracks or align. Without a breakpoint-specific column count, Grid falls back to one column at that breakpoint.</Copy>
+          <DocsCodeBlock title="Import" language="asx">{"import { ContentGrid } from \"@axonyx/ui/foundry/ContentGrid.asx\""}</DocsCodeBlock>
+          <ContentGrid cols="2" colsMobile="1" gap="sm">
+            <Card title="cols" surface="inset"><Copy>String, optional. Wide-screen columns from 1 to 6.</Copy></Card>
+            <Card title="colsTablet" surface="inset"><Copy>String, optional. Columns below 900px; otherwise one column.</Copy></Card>
+            <Card title="colsMobile" surface="inset"><Copy>String, optional. Columns below 600px; otherwise one column.</Copy></Card>
+            <Card title="gap" surface="inset"><Copy>String, optional. xs, sm, md, lg, xl, or 2xl.</Copy></Card>
+          </ContentGrid>
+        </Card>
+      </Stack>
+    </ComponentPage>
+  }
+}
