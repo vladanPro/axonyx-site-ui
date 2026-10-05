@@ -1,0 +1,56 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Divider } from "@axonyx/ui/foundry/Divider.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Flex } from "@axonyx/ui/foundry/Flex.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page DividerPage() {
+  return ASX {
+    <ComponentPage title="Divider" category="Layout primitive" description="Separate content sections or groups of toolbar actions with a line that follows the active Foundry palette." nextHref="/components/spacer" nextLabel="Next: Spacer">
+      <Stack gap="xl">
+        <ComponentExample title="Content sections" description="The default line uses the border token. Strong increases contrast; signal uses the palette accent.">
+          <Box slot="preview" padding="md" surface="inset">
+            <Copy>Project details</Copy>
+            <Divider />
+            <Copy>Publishing settings</Copy>
+            <Divider tone="strong" />
+            <Copy>Release checklist</Copy>
+            <Divider tone="signal" />
+            <Copy>Ready to deploy</Copy>
+          </Box>
+          <DocsCodeBlock slot="code" language="asx">{"<Copy>Project details</Copy>\n<Divider />\n<Copy>Publishing settings</Copy>\n<Divider tone=\"strong\" />\n<Copy>Release checklist</Copy>\n<Divider tone=\"signal\" />\n<Copy>Ready to deploy</Copy>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentExample title="Toolbar groups" description="Use vertical orientation in a Flex row to separate related actions. Keep short toolbars compact enough to fit on a phone.">
+          <Flex slot="preview" gap="sm" align="center">
+            <Button variant="ghost">Undo</Button>
+            <Button variant="ghost">Redo</Button>
+            <Divider orientation="vertical" tone="strong" />
+            <Button variant="secondary">Save</Button>
+          </Flex>
+          <DocsCodeBlock slot="code" language="asx">{"<Flex gap=\"sm\" align=\"center\">\n  <Button variant=\"ghost\">Undo</Button>\n  <Button variant=\"ghost\">Redo</Button>\n  <Divider orientation=\"vertical\" tone=\"strong\" />\n  <Button variant=\"secondary\">Save</Button>\n</Flex>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Divider contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { Divider } from \"@axonyx/ui/foundry/Divider.asx\""}</DocsCodeBlock>
+            <Copy>orientation: optional String. The default is a horizontal line; vertical renders a vertical line with a minimum height of 1.5rem.</Copy>
+            <Copy>tone: optional String. The default uses the regular border; strong uses the stronger border; signal uses the current palette accent.</Copy>
+            <Copy>Divider renders an hr element and accepts no content slot. It has its own margins; combine it with Stack deliberately to avoid double spacing.</Copy>
+          </Stack>
+        </Box>
+      </Stack>
+    </ComponentPage>
+  }
+}

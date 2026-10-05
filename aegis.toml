@@ -200,6 +200,18 @@ expect_text = "ContentGrid contract"
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
+name = "divider component"
+goto = "/components/divider"
+expect_text = "Divider contract"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
+name = "spacer component"
+goto = "/components/spacer"
+expect_text = "Spacer contract"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "stack component"
 goto = "/components/stack"
 expect_text = "owns vertical rhythm"

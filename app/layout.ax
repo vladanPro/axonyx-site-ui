@@ -81,6 +81,8 @@ page RootLayout() {
               <a href="/components/inset">Inset</a>
               <a href="/components/bleed">Bleed</a>
               <a href="/components/center">Center</a>
+              <a href="/components/divider">Divider</a>
+              <a href="/components/spacer">Spacer</a>
               <a href="/components/avatar">Avatar</a>
               <a href="/components/chip">Chip</a>
               <a href="/components/code-block">CodeBlock</a>
