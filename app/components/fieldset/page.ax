@@ -39,7 +39,7 @@ page FieldsetPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Fieldset>\n  <Legend>System metadata</Legend>\n  <Field htmlFor=\"revision\">\n    <FieldLabel htmlFor=\"revision\">Revision</FieldLabel>\n    <Input id=\"revision\" name=\"revision\" value=\"Assigned on save\" disabled=\"true\" />\n  </Field>\n</Fieldset>"}</DocsCodeBlock>
         </ComponentExample>
         <ComponentInstall>
-          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.80\""}</DocsCodeBlock>
           <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
         </ComponentInstall>
         <Box padding="lg" surface="inset">
