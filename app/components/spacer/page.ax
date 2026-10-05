@@ -1,0 +1,53 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Grid } from "@axonyx/ui/foundry/Grid.asx"
+import { Spacer } from "@axonyx/ui/foundry/Spacer.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page SpacerPage() {
+  return ASX {
+    <ComponentPage title="Spacer" category="Layout primitive" description="Add one deliberate vertical gap using a Foundry spacing token. Use Stack gap when every item needs the same rhythm." nextHref="/components/stack" nextLabel="Next: Stack">
+      <Stack gap="xl">
+        <ComponentExample title="Compare spacing tokens" description="Each pair of panels is separated only by Spacer. The wrapper Grid controls columns, while Spacer controls the vertical gap inside each column.">
+          <Grid slot="preview" cols="3" colsTablet="2" colsMobile="1" gap="lg">
+            <div>
+              <Box padding="sm" surface="inset"><strong>sm</strong></Box>
+              <Spacer size="sm" />
+              <Box padding="sm" surface="inset">Small gap</Box>
+            </div>
+            <div>
+              <Box padding="sm" surface="inset"><strong>md</strong></Box>
+              <Spacer />
+              <Box padding="sm" surface="inset">Default gap</Box>
+            </div>
+            <div>
+              <Box padding="sm" surface="inset"><strong>2xl</strong></Box>
+              <Spacer size="2xl" />
+              <Box padding="sm" surface="inset">Large gap</Box>
+            </div>
+          </Grid>
+          <DocsCodeBlock slot="code" language="asx">{"<Box padding=\"sm\" surface=\"inset\">First panel</Box>\n<Spacer size=\"lg\" />\n<Box padding=\"sm\" surface=\"inset\">Second panel</Box>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Spacer contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { Spacer } from \"@axonyx/ui/foundry/Spacer.asx\""}</DocsCodeBlock>
+            <Copy>size: String, default md. Supported values are sm, md, lg, xl, and 2xl. Heights come from --ax-space-sm through --ax-space-2xl and follow theme token overrides.</Copy>
+            <Copy>Spacer renders an empty block-level span and accepts no content slot. It creates vertical space; it does not grow to fill a toolbar or provide horizontal spacing.</Copy>
+            <Copy>For repeated vertical spacing use Stack gap. For rows use Flex or Cluster gap. Reserve Spacer for an isolated gap inside ordinary block content.</Copy>
+          </Stack>
+        </Box>
+      </Stack>
+    </ComponentPage>
+  }
+}

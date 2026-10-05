@@ -87,6 +87,16 @@ page Components() {
             <Copy>A focused Grid recipe for responsive docs cards, content tiles, and dashboard metrics.</Copy>
             <Button href="/components/content-grid" variant="ghost">Open ContentGrid</Button>
           </SectionCard>
+          <SectionCard title="Divider">
+            <Badge tone="success">Layout</Badge>
+            <Copy>Horizontal section lines and vertical toolbar separators that follow palette tokens.</Copy>
+            <Button href="/components/divider" variant="ghost">Open Divider</Button>
+          </SectionCard>
+          <SectionCard title="Spacer">
+            <Badge tone="success">Layout</Badge>
+            <Copy>A deliberate vertical gap with token sizes for ordinary block content.</Copy>
+            <Button href="/components/spacer" variant="ghost">Open Spacer</Button>
+          </SectionCard>
           <SectionCard title="Stack">
             <Badge tone="success">Layout</Badge>
             <Copy>Vertical rhythm with semantic spacing and predictable cross-axis alignment.</Copy>
