@@ -177,6 +177,21 @@ page Components() {
             <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
             <Button href="/components/forms" variant="ghost">Open Forms</Button>
           </SectionCard>
+          <SectionCard title="Form">
+            <Badge tone="success">Forms</Badge>
+            <Copy>Native validation, reset, and submission through a complete CMS article editor example.</Copy>
+            <Button href="/components/form" variant="ghost">Open Form</Button>
+          </SectionCard>
+          <SectionCard title="FormGroup">
+            <Badge tone="success">Forms</Badge>
+            <Copy>One, two, or three responsive columns for related form fields.</Copy>
+            <Button href="/components/form-group" variant="ghost">Open FormGroup</Button>
+          </SectionCard>
+          <SectionCard title="Fieldset and Legend">
+            <Badge tone="success">Forms</Badge>
+            <Copy>Semantic groups with named legends and standard or forged surfaces.</Copy>
+            <Button href="/components/fieldset" variant="ghost">Open Fieldset</Button>
+          </SectionCard>
           <SectionCard title="IconButton">
             <Badge tone="success">V0</Badge>
             <Copy>Icon-only action for toolbars, tables, drawers, and compact dashboard controls.</Copy>
