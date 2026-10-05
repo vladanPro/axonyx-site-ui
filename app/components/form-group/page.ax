@@ -38,7 +38,7 @@ page FormGroupPage() {
           <DocsCodeBlock slot="code" language="asx">{"<FormGroup cols=\"3\" gap=\"sm\">\n  <Field htmlFor=\"category\"><FieldLabel htmlFor=\"category\">Category</FieldLabel><Input id=\"category\" name=\"category\" /></Field>\n  <Field htmlFor=\"author\"><FieldLabel htmlFor=\"author\">Author</FieldLabel><Input id=\"author\" name=\"author\" /></Field>\n  <Field htmlFor=\"locale\"><FieldLabel htmlFor=\"locale\">Locale</FieldLabel><Input id=\"locale\" name=\"locale\" /></Field>\n</FormGroup>"}</DocsCodeBlock>
         </ComponentExample>
         <ComponentInstall>
-          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.80\""}</DocsCodeBlock>
           <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
         </ComponentInstall>
         <Box padding="lg" surface="inset">
