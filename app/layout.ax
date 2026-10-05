@@ -91,6 +91,9 @@ page RootLayout() {
               <a href="/components/copy">Copy</a>
               <a href="/components/docs-callout">DocsCallout</a>
               <a href="/components/forms">Forms</a>
+              <a href="/components/form">Form</a>
+              <a href="/components/form-group">FormGroup</a>
+              <a href="/components/fieldset">Fieldset and Legend</a>
               <a href="/components/icon-button">IconButton</a>
               <a href="/components/accordion">Accordion</a>
               <a href="/components/alert">Alert</a>

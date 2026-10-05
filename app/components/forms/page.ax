@@ -1,15 +1,17 @@
-import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
-import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
-import { Badge } from "@axonyx/ui/foundry/Badge.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
 import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
 import { Checkbox } from "@axonyx/ui/foundry/Checkbox.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Field } from "@axonyx/ui/foundry/Field.asx"
+import { FieldError } from "@axonyx/ui/foundry/FieldError.asx"
 import { FieldHint } from "@axonyx/ui/foundry/FieldHint.asx"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
 import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
+import { Flex } from "@axonyx/ui/foundry/Flex.asx"
 import { Form } from "@axonyx/ui/foundry/Form.asx"
 import { FormGroup } from "@axonyx/ui/foundry/FormGroup.asx"
 import { Input } from "@axonyx/ui/foundry/Input.asx"
@@ -17,45 +19,65 @@ import { Legend } from "@axonyx/ui/foundry/Legend.asx"
 import { Option } from "@axonyx/ui/foundry/Option.asx"
 import { Select } from "@axonyx/ui/foundry/Select.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
-import { Switch } from "@axonyx/ui/foundry/Switch.asx"
-import { Textarea } from "@axonyx/ui/foundry/Textarea.asx"
 
 page FormsPage() {
   return ASX {
-    <ComponentPage
-      title="Forms"
-      category="Inputs"
-      description="Native form composition for Axonyx actions: fields, grouped inputs, textarea, select, checkbox, and switch."
-      nextHref="/components/alert"
-      nextLabel="Next: Alert"
-    >
+    <ComponentPage title="Forms" category="Forms" description="Native form composition for settings and CMS editors: semantic groups, responsive fields, labels, hints, and validation messages." nextHref="/components/form" nextLabel="Try the CMS editor">
+      <Stack gap="xl">
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <Copy>Start with Form for native submission, add Fieldset and Legend for named groups, then use FormGroup to arrange related Field controls.</Copy>
+            <Flex gap="sm" wrap="true"><a href="/components/form">Form and CMS editor</a><a href="/components/form-group">FormGroup</a><a href="/components/fieldset">Fieldset and Legend</a><a href="/components/field">Field</a></Flex>
+          </Stack>
+        </Box>
 
-        <Card title="Preview" border="forged">
-          <Form surface="inset" layout="stack">
-            <Fieldset surface="forged">
-              <Legend>Project settings</Legend>
-              <FormGroup cols="2" gap="md">
-                <Field htmlFor="name"><FieldLabel htmlFor="name">Name</FieldLabel><Input id="name" name="name" placeholder="Axonyx Site" required="true" describedBy="name-hint" /><FieldHint id="name-hint">Required for the project.</FieldHint></Field>
-                <Field htmlFor="type"><FieldLabel htmlFor="type">Template</FieldLabel><Select id="type" name="type" required="true"><Option value="docs">Docs</Option><Option value="site">Site</Option></Select></Field>
-              </FormGroup>
-              <Field htmlFor="notes"><FieldLabel htmlFor="notes">Notes</FieldLabel><Textarea id="notes" name="notes" placeholder="Launch notes" disabled="true" /></Field>
-              <Field htmlFor="region"><FieldLabel htmlFor="region">Region</FieldLabel><Select id="region" name="region" disabled="true"><Option value="auto">Assigned automatically</Option></Select></Field>
-              <Checkbox name="public">Publish docs publicly</Checkbox>
-              <Switch name="theme">Enable theme switcher</Switch>
-              <Copy>Preview only. Connect an Axonyx action before submitting settings.</Copy>
-            </Fieldset>
-          </Form>
-        </Card>
+        <ComponentExample title="Project settings" description="A required text field, select, and checkbox inside a responsive group. This demo previews settings with a GET request and does not persist changes.">
+          <div slot="preview" id="project-settings">
+            <Form method="get" action="/components/forms#project-settings">
+              <Fieldset surface="forged">
+                <Legend>Project settings</Legend>
+                <FormGroup cols="2" gap="lg">
+                  <Field htmlFor="settings-name">
+                    <FieldLabel htmlFor="settings-name">Project name</FieldLabel>
+                    <Input id="settings-name" name="project_name" placeholder="Axonyx Site" required="true" describedBy="settings-name-hint" />
+                    <FieldHint id="settings-name-hint">Required for the project.</FieldHint>
+                  </Field>
+                  <Field htmlFor="settings-template">
+                    <FieldLabel htmlFor="settings-template">Template</FieldLabel>
+                    <Select id="settings-template" name="template"><Option value="docs">Docs</Option><Option value="site">Site</Option><Option value="blog">Blog</Option></Select>
+                  </Field>
+                </FormGroup>
+                <Checkbox name="public_docs" checked="true">Publish docs publicly</Checkbox>
+                <Flex gap="sm" wrap="true"><Button type="submit" variant="primary">Preview settings</Button><Button type="reset" variant="ghost">Reset</Button></Flex>
+                <Copy>Submitted values appear in the URL. This example resets after navigation.</Copy>
+              </Fieldset>
+            </Form>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/forms#project-settings\">\n  <Fieldset surface=\"forged\">\n    <Legend>Project settings</Legend>\n    <FormGroup cols=\"2\" gap=\"lg\">\n      <Field htmlFor=\"project-name\">\n        <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n        <Input id=\"project-name\" name=\"project_name\" required=\"true\" describedBy=\"project-name-hint\" />\n        <FieldHint id=\"project-name-hint\">Required for the project.</FieldHint>\n      </Field>\n      <Field htmlFor=\"template\">\n        <FieldLabel htmlFor=\"template\">Template</FieldLabel>\n        <Select id=\"template\" name=\"template\"><Option value=\"docs\">Docs</Option><Option value=\"site\">Site</Option></Select>\n      </Field>\n    </FormGroup>\n    <Checkbox name=\"public_docs\" checked=\"true\">Publish docs publicly</Checkbox>\n    <Button type=\"submit\">Preview settings</Button>\n    <Button type=\"reset\">Reset</Button>\n  </Fieldset>\n</Form>"}</DocsCodeBlock>
+        </ComponentExample>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Form surface=\"inset\">\n  <Field htmlFor=\"name\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" required=\"true\" describedBy=\"name-hint\" />\n    <FieldHint id=\"name-hint\">Required for the project.</FieldHint>\n  </Field>\n</Form>"}</DocsCodeBlock>
-          </Card>
-          <Card title="Contract">
-            <Badge tone="success">V0</Badge>
-            <Copy>Forms stay native HTML first. Axonyx actions can attach to the same structure later.</Copy>
-          </Card>
-        </ContentGrid>
+        <ComponentExample title="Server error presentation" description="A static example of an error returned by a save action. The server decides when to show this state; invalid styles and aria-invalid do not perform validation themselves.">
+          <Field slot="preview" state="error" htmlFor="settings-error-slug">
+            <FieldLabel htmlFor="settings-error-slug">Slug</FieldLabel>
+            <Input id="settings-error-slug" name="slug_example" value="release-notes" invalid="true" describedBy="settings-slug-error" />
+            <FieldError id="settings-slug-error">This slug is already used. Choose another one.</FieldError>
+          </Field>
+          <DocsCodeBlock slot="code" language="asx">{"<Field state=\"error\" htmlFor=\"slug\">\n  <FieldLabel htmlFor=\"slug\">Slug</FieldLabel>\n  <Input id=\"slug\" name=\"slug\" value=\"release-notes\" invalid=\"true\" describedBy=\"slug-error\" />\n  <FieldError id=\"slug-error\">This slug is already used. Choose another one.</FieldError>\n</Field>"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Form composition contract</h2>
+            <Copy>Match FieldLabel htmlFor with the control id. Point describedBy to a FieldHint or FieldError id. Put names on controls so the browser includes their values in form data.</Copy>
+            <Copy>Use required="true" for browser required-field validation. Disabled controls do not submit a value; unchecked checkboxes are omitted. Use a server action to normalize and validate the submitted data.</Copy>
+            <Copy>For a real CMS save, use a POST action with server validation and authorization. The GET demos here demonstrate native submission using public sample content.</Copy>
+          </Stack>
+        </Box>
+      </Stack>
     </ComponentPage>
   }
 }

@@ -1,0 +1,100 @@
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Checkbox } from "@axonyx/ui/foundry/Checkbox.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Field } from "@axonyx/ui/foundry/Field.asx"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.asx"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
+import { Flex } from "@axonyx/ui/foundry/Flex.asx"
+import { Form } from "@axonyx/ui/foundry/Form.asx"
+import { FormGroup } from "@axonyx/ui/foundry/FormGroup.asx"
+import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Legend } from "@axonyx/ui/foundry/Legend.asx"
+import { Option } from "@axonyx/ui/foundry/Option.asx"
+import { Select } from "@axonyx/ui/foundry/Select.asx"
+import { Textarea } from "@axonyx/ui/foundry/Textarea.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page FormPage() {
+  return ASX {
+    <ComponentPage title="Form" category="Forms" description="Compose a CMS editor from native controls, semantic fieldsets, and responsive field groups. Form keeps the browser's validation, reset, and submission behavior." nextHref="/components/form-group" nextLabel="Next: FormGroup">
+      <Stack gap="xl">
+        <ComponentExample title="CMS article editor" description="Try submitting empty fields, fill the required title and slug, then preview the submitted values in the URL. Reset restores the initial controls.">
+          <div slot="preview" id="cms-editor">
+            <Form method="get" action="/components/form#cms-editor" surface="forged">
+              <Fieldset>
+                <Legend>Article</Legend>
+                <FormGroup cols="2" gap="lg">
+                  <Field htmlFor="post-title">
+                    <FieldLabel htmlFor="post-title">Title</FieldLabel>
+                    <Input id="post-title" name="title" placeholder="A new release" required="true" describedBy="post-title-hint" />
+                    <FieldHint id="post-title-hint">Required. Give the article a clear title.</FieldHint>
+                  </Field>
+                  <Field htmlFor="post-slug">
+                    <FieldLabel htmlFor="post-slug">Slug</FieldLabel>
+                    <Input id="post-slug" name="slug" placeholder="a-new-release" required="true" describedBy="post-slug-hint" />
+                    <FieldHint id="post-slug-hint">Required. Check format and uniqueness in the server action.</FieldHint>
+                  </Field>
+                </FormGroup>
+                <Field htmlFor="post-summary">
+                  <FieldLabel htmlFor="post-summary">Summary</FieldLabel>
+                  <Textarea id="post-summary" name="summary" placeholder="A short introduction" describedBy="post-summary-hint" />
+                  <FieldHint id="post-summary-hint">Optional. Used in article listings.</FieldHint>
+                </Field>
+              </Fieldset>
+              <Fieldset>
+                <Legend>Publishing</Legend>
+                <FormGroup cols="2" gap="lg">
+                  <Field htmlFor="post-status">
+                    <FieldLabel htmlFor="post-status">Status</FieldLabel>
+                    <Select id="post-status" name="status">
+                      <Option value="draft">Draft</Option>
+                      <Option value="published">Published</Option>
+                    </Select>
+                  </Field>
+                  <Field htmlFor="post-id">
+                    <FieldLabel htmlFor="post-id">Record ID</FieldLabel>
+                    <Input id="post-id" name="post_id" value="Assigned by the server" disabled="true" describedBy="post-id-hint" />
+                    <FieldHint id="post-id-hint">Disabled controls are excluded from submitted form data.</FieldHint>
+                  </Field>
+                </FormGroup>
+                <Checkbox name="include_in_feed" checked="true">Include in the public feed</Checkbox>
+              </Fieldset>
+              <Flex gap="sm" wrap="true">
+                <Button variant="primary" type="submit">Preview submission</Button>
+                <Button variant="ghost" type="reset">Reset fields</Button>
+              </Flex>
+              <Copy>This demo sends a GET request back to this page. Submitted fields appear in the URL; nothing is saved. The editor resets after navigation.</Copy>
+            </Form>
+          </div>
+          <DocsCodeBlock slot="code" title="CMS editor demo" language="asx">{"import { Button } from \"@axonyx/ui/foundry/Button.asx\"\nimport { Checkbox } from \"@axonyx/ui/foundry/Checkbox.asx\"\nimport { Copy } from \"@axonyx/ui/foundry/Copy.asx\"\nimport { Field } from \"@axonyx/ui/foundry/Field.asx\"\nimport { FieldHint } from \"@axonyx/ui/foundry/FieldHint.asx\"\nimport { FieldLabel } from \"@axonyx/ui/foundry/FieldLabel.asx\"\nimport { Fieldset } from \"@axonyx/ui/foundry/Fieldset.asx\"\nimport { Flex } from \"@axonyx/ui/foundry/Flex.asx\"\nimport { Form } from \"@axonyx/ui/foundry/Form.asx\"\nimport { FormGroup } from \"@axonyx/ui/foundry/FormGroup.asx\"\nimport { Input } from \"@axonyx/ui/foundry/Input.asx\"\nimport { Legend } from \"@axonyx/ui/foundry/Legend.asx\"\nimport { Option } from \"@axonyx/ui/foundry/Option.asx\"\nimport { Select } from \"@axonyx/ui/foundry/Select.asx\"\nimport { Textarea } from \"@axonyx/ui/foundry/Textarea.asx\"\n\npage PostEditor() {\n  return ASX {\n    <Form method=\"get\" action=\"/components/form#cms-editor\" surface=\"forged\">\n      <Fieldset>\n        <Legend>Article</Legend>\n        <FormGroup cols=\"2\" gap=\"lg\">\n          <Field htmlFor=\"post-title\">\n            <FieldLabel htmlFor=\"post-title\">Title</FieldLabel>\n            <Input id=\"post-title\" name=\"title\" placeholder=\"A new release\" required=\"true\" describedBy=\"post-title-hint\" />\n            <FieldHint id=\"post-title-hint\">Required. Give the article a clear title.</FieldHint>\n          </Field>\n          <Field htmlFor=\"post-slug\">\n            <FieldLabel htmlFor=\"post-slug\">Slug</FieldLabel>\n            <Input id=\"post-slug\" name=\"slug\" placeholder=\"a-new-release\" required=\"true\" describedBy=\"post-slug-hint\" />\n            <FieldHint id=\"post-slug-hint\">Required. Check format and uniqueness in the server action.</FieldHint>\n          </Field>\n        </FormGroup>\n        <Field htmlFor=\"post-summary\">\n          <FieldLabel htmlFor=\"post-summary\">Summary</FieldLabel>\n          <Textarea id=\"post-summary\" name=\"summary\" placeholder=\"A short introduction\" describedBy=\"post-summary-hint\" />\n          <FieldHint id=\"post-summary-hint\">Optional. Used in article listings.</FieldHint>\n        </Field>\n      </Fieldset>\n      <Fieldset>\n        <Legend>Publishing</Legend>\n        <FormGroup cols=\"2\" gap=\"lg\">\n          <Field htmlFor=\"post-status\">\n            <FieldLabel htmlFor=\"post-status\">Status</FieldLabel>\n            <Select id=\"post-status\" name=\"status\">\n              <Option value=\"draft\">Draft</Option>\n              <Option value=\"published\">Published</Option>\n            </Select>\n          </Field>\n          <Field htmlFor=\"post-id\">\n            <FieldLabel htmlFor=\"post-id\">Record ID</FieldLabel>\n            <Input id=\"post-id\" name=\"post_id\" value=\"Assigned by the server\" disabled=\"true\" describedBy=\"post-id-hint\" />\n            <FieldHint id=\"post-id-hint\">Disabled controls are excluded from submitted form data.</FieldHint>\n          </Field>\n        </FormGroup>\n        <Checkbox name=\"include_in_feed\" checked=\"true\">Include in the public feed</Checkbox>\n      </Fieldset>\n      <Flex gap=\"sm\" wrap=\"true\">\n        <Button variant=\"primary\" type=\"submit\">Preview submission</Button>\n        <Button variant=\"ghost\" type=\"reset\">Reset fields</Button>\n      </Flex>\n      <Copy>This demo sends a GET request back to this page. Submitted fields appear in the URL; nothing is saved. The editor resets after navigation.</Copy>\n    </Form>\n  }\n}"}</DocsCodeBlock>
+        </ComponentExample>
+
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Form contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { Form } from \"@axonyx/ui/foundry/Form.asx\""}</DocsCodeBlock>
+            <Copy>method: String, default post. Set get for public filters or this preview; use post when connecting a mutation to a server action.</Copy>
+            <Copy>action: String, default empty. The target URL for native submission. An empty action submits to the current page.</Copy>
+            <Copy>layout: optional String. Default stacks children vertically. grid creates two columns and collapses below 720px. inline creates a wrapping row.</Copy>
+            <Copy>density: optional String. compact reduces the gap between direct children.</Copy>
+            <Copy>surface: optional String. brushed or forged adds a padded surface; forged uses the stronger border. Omit it when a parent already provides a surface.</Copy>
+            <Copy>Slot: form content. Use Button type="submit" for submission and type="reset" to restore initial values. Button defaults to type="button".</Copy>
+            <Copy>Form renders a form element. Required and type validation are browser features. A real save action must validate inputs, permissions, and database constraints on the server.</Copy>
+            <Flex gap="sm" wrap="true"><a href="/components/form-group">FormGroup</a><a href="/components/fieldset">Fieldset and Legend</a><a href="/components/field">Field and validation messages</a></Flex>
+          </Stack>
+        </Box>
+      </Stack>
+    </ComponentPage>
+  }
+}

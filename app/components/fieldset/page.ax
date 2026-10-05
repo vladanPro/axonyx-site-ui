@@ -1,0 +1,59 @@
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { Checkbox } from "@axonyx/ui/foundry/Checkbox.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Field } from "@axonyx/ui/foundry/Field.asx"
+import { FieldHint } from "@axonyx/ui/foundry/FieldHint.asx"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
+import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Legend } from "@axonyx/ui/foundry/Legend.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page FieldsetPage() {
+  return ASX {
+    <ComponentPage title="Fieldset" category="Forms" description="Give related controls a semantic group and an accessible name with Fieldset and Legend. Choose the default or forged surface independently of the fields inside." nextHref="/components/field" nextLabel="Next: Field">
+      <Stack gap="xl">
+        <ComponentExample title="Publishing preferences" description="Legend labels the whole group. Each checkbox still has its own label and can be toggled using the keyboard.">
+          <div slot="preview">
+            <Fieldset surface="forged">
+              <Legend>Publishing preferences</Legend>
+              <Checkbox name="show_author" checked="true">Show the author</Checkbox>
+              <Checkbox name="allow_comments">Allow comments</Checkbox>
+            </Fieldset>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Fieldset surface=\"forged\">\n  <Legend>Publishing preferences</Legend>\n  <Checkbox name=\"show_author\" checked=\"true\">Show the author</Checkbox>\n  <Checkbox name=\"allow_comments\">Allow comments</Checkbox>\n</Fieldset>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentExample title="System metadata" description="Use the default surface for supporting fields. Disable individual controls when a value is assigned by the server.">
+          <Fieldset slot="preview">
+            <Legend>System metadata</Legend>
+            <Field htmlFor="fieldset-version">
+              <FieldLabel htmlFor="fieldset-version">Revision</FieldLabel>
+              <Input id="fieldset-version" name="revision" value="Assigned on save" disabled="true" describedBy="fieldset-version-hint" />
+              <FieldHint id="fieldset-version-hint">This disabled field is excluded from form submission.</FieldHint>
+            </Field>
+          </Fieldset>
+          <DocsCodeBlock slot="code" language="asx">{"<Fieldset>\n  <Legend>System metadata</Legend>\n  <Field htmlFor=\"revision\">\n    <FieldLabel htmlFor=\"revision\">Revision</FieldLabel>\n    <Input id=\"revision\" name=\"revision\" value=\"Assigned on save\" disabled=\"true\" />\n  </Field>\n</Fieldset>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.79\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Fieldset and Legend contract</h2>
+            <DocsCodeBlock title="Imports" language="asx">{"import { Fieldset } from \"@axonyx/ui/foundry/Fieldset.asx\"\nimport { Legend } from \"@axonyx/ui/foundry/Legend.asx\""}</DocsCodeBlock>
+            <Copy>Fieldset surface: optional String. Default uses the standard border; forged adds a stronger border and accent surface.</Copy>
+            <Copy>Fieldset slot: grouped controls. Place Legend first; it renders the native legend element and takes its label from the default slot.</Copy>
+            <Copy>Legend has no declared props. Fieldset declares surface; set disabled on individual controls to disable them in the current API.</Copy>
+            <Copy>Fieldset renders a fieldset element. It does not submit data itself; place it inside Form when the controls need to be submitted together.</Copy>
+            <a href="/components/form">See Fieldset inside the CMS article editor</a>
+          </Stack>
+        </Box>
+      </Stack>
+    </ComponentPage>
+  }
+}
