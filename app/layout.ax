@@ -71,6 +71,7 @@ page RootLayout() {
               <a href="/components/layout">Layout</a>
               <a href="/components/container">Container</a>
               <a href="/components/grid">Grid</a>
+              <a href="/components/content-grid">ContentGrid</a>
               <a href="/components/stack">Stack</a>
               <a href="/components/flex">Flex</a>
               <a href="/components/cluster">Cluster</a>
