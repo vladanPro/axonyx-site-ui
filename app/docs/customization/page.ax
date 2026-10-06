@@ -6,6 +6,9 @@ import { Button } from "@axonyx/ui/foundry/Button.asx"
 import { Field } from "@axonyx/ui/foundry/Field.asx"
 import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
 import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Select } from "@axonyx/ui/foundry/Select.asx"
+import { Option } from "@axonyx/ui/foundry/Option.asx"
+import { Textarea } from "@axonyx/ui/foundry/Textarea.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
@@ -13,7 +16,7 @@ page Customization() {
   return ASX {
     <ComponentPage title="Customization" category="Foundry" description="Match your design through semantic tokens, component geometry, and per-instance overrides without replacing behavior." nextHref="/docs/theming" nextLabel="Next: Theming">
       <Stack gap="xl">
-        <Copy>Available with cargo-axonyx 0.6.4, axonyx-core 0.6.2, and axonyx-ui 0.0.81. This first contract covers Button, Card, and Field/Input. The first rendered root receives className and style; use a real wrapper for multiple roots.</Copy>
+        <Copy>Available with cargo-axonyx 0.6.4, axonyx-core 0.6.2, and axonyx-ui 0.0.82. This contract covers Button, Card, and Field/Input/Select/Textarea. The first rendered root receives className and style; use a real wrapper for multiple roots.</Copy>
         <ComponentExample title="Figma geometry" description="32px card padding, 20px spacing, 44px controls, and independent corner radii. The native input and button keep their semantics.">
           <Card slot="preview" id="custom-card" className="account-card" title="Account" style="--ax-card-padding: 32px; --ax-card-gap: 20px; --ax-card-radius: 12px">
             <Field id="custom-field" className="account-field" style="--ax-field-gap: 10px; --ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px">
@@ -25,6 +28,24 @@ page Customization() {
           </Card>
           <DocsCodeBlock slot="code" language="asx">{"<Card className=\"account-card\" title=\"Account\" style=\"--ax-card-padding: 32px; --ax-card-gap: 20px; --ax-card-radius: 12px\">\n  <Field style=\"--ax-field-gap: 10px; --ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" />\n  </Field>\n  <Button className=\"save-button\" style=\"--ax-button-min-height: 44px; --ax-button-padding: 0 20px; --ax-button-radius: 6px; --ax-button-font-size: 14px\">Preview button</Button>\n</Card>"}</DocsCodeBlock>
         </ComponentExample>
+        <ComponentExample title="Select and multiline controls" description="Share a 44px form baseline while keeping a 140px Textarea. Native selection, text editing, labels, and disabled options still work.">
+          <Stack slot="preview" gap="md" style="--ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px">
+            <Field>
+              <FieldLabel htmlFor="custom-status">Status</FieldLabel>
+              <Select id="custom-status" name="status" style="--ax-select-padding: 0 36px 0 12px">
+                <Option value="draft">Draft</Option>
+                <Option value="published">Published</Option>
+                <Option value="locked" disabled="true">Locked (unavailable)</Option>
+              </Select>
+            </Field>
+            <Field>
+              <FieldLabel htmlFor="custom-summary">Summary</FieldLabel>
+              <Textarea id="custom-summary" name="summary" placeholder="Write a summary" style="--ax-textarea-min-height: 140px; --ax-textarea-padding: 12px; --ax-textarea-radius: 10px; --ax-textarea-resize: vertical" />
+            </Field>
+          </Stack>
+          <DocsCodeBlock slot="code" language="asx">{"<Stack style=\"--ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px\">\n  <Field>\n    <FieldLabel htmlFor=\"status\">Status</FieldLabel>\n    <Select id=\"status\" name=\"status\" style=\"--ax-select-padding: 0 36px 0 12px\">\n      <Option value=\"draft\">Draft</Option>\n      <Option value=\"published\">Published</Option>\n      <Option value=\"locked\" disabled=\"true\">Locked</Option>\n    </Select>\n  </Field>\n  <Field>\n    <FieldLabel htmlFor=\"summary\">Summary</FieldLabel>\n    <Textarea id=\"summary\" name=\"summary\" style=\"--ax-textarea-min-height: 140px; --ax-textarea-padding: 12px; --ax-textarea-radius: 10px; --ax-textarea-resize: vertical\" />\n  </Field>\n</Stack>"}</DocsCodeBlock>
+        </ComponentExample>
+        <Copy>Select/Textarea-specific tokens require UI 0.0.82. They fall back to shared Input tokens. Leave room for the Select arrow; Textarea min-height is a minimum, and content metrics or user resizing can make it larger.</Copy>
         <Copy>Prefer an application stylesheet loaded after Foundry for reusable recipes. Inline tokens are useful for one instance. Load the exact fonts from your design and verify mobile, focus, errors, and disabled states before calling a page pixel-perfect.</Copy>
         <DocsCodeBlock title="Application CSS" language="css">{".account-card {\n  --ax-card-padding: 32px;\n  --ax-card-gap: 20px;\n  --ax-card-radius: 12px;\n}\n.save-button {\n  --ax-button-min-height: 44px;\n  --ax-button-padding: 0 20px;\n  --ax-button-radius: 6px;\n  --ax-button-font-size: 14px;\n}"}</DocsCodeBlock>
         <Copy>Overrides change presentation, not authorization or application state. Components keep their ax-* classes. Geometry tokens inherit into children; put local tokens on the component that needs them.</Copy>
