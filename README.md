@@ -6,7 +6,9 @@ The local Foundry redesign pilot separates the promotional homepage from
 documentation at `/docs`, `/docs/installation`, and `/docs/theming`. The Button
 page is the first component documentation page using the new reading layout.
 
-The reusable finish comes from the published Cargo dependency `axonyx-ui 0.0.80`.
+The reusable finish comes from the published Cargo dependency `axonyx-ui 0.0.81`.
+Customization at `/docs/customization` requires cargo-axonyx 0.6.4 or newer
+(axonyx-core 0.6.2), for root className/style forwarding.
 Run `./scripts/sync-foundry-theme.ps1` after editing site-owned CSS or JavaScript
 to update cache-versioned asset references. No package CSS is copied into public.
 See `design/foundry-pilot/README.md` for design scope and verification evidence.

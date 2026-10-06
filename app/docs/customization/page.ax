@@ -13,7 +13,7 @@ page Customization() {
   return ASX {
     <ComponentPage title="Customization" category="Foundry" description="Match your design through semantic tokens, component geometry, and per-instance overrides without replacing behavior." nextHref="/docs/theming" nextLabel="Next: Theming">
       <Stack gap="xl">
-        <Copy>This development pilot covers Button, Card, and Field/Input. It requires the upcoming core and UI releases. The first rendered root receives className and style; use a real wrapper for multiple roots.</Copy>
+        <Copy>Available with cargo-axonyx 0.6.4, axonyx-core 0.6.2, and axonyx-ui 0.0.81. This first contract covers Button, Card, and Field/Input. The first rendered root receives className and style; use a real wrapper for multiple roots.</Copy>
         <ComponentExample title="Figma geometry" description="32px card padding, 20px spacing, 44px controls, and independent corner radii. The native input and button keep their semantics.">
           <Card slot="preview" id="custom-card" className="account-card" title="Account" style="--ax-card-padding: 32px; --ax-card-gap: 20px; --ax-card-radius: 12px">
             <Field id="custom-field" className="account-field" style="--ax-field-gap: 10px; --ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px">
