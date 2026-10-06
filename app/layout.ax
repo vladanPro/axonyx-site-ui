@@ -54,6 +54,7 @@ page RootLayout() {
               <a href="/create">Get Code</a>
               <a href="/components">All components</a>
               <a href="/docs/theming">Theming</a>
+              <a href="/docs/customization">Customization</a>
             </div>
 
             <div class="ui-sidebar-group">
