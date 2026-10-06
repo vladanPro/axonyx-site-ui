@@ -1,0 +1,34 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
+import { Card } from "@axonyx/ui/foundry/Card.asx"
+import { Button } from "@axonyx/ui/foundry/Button.asx"
+import { Field } from "@axonyx/ui/foundry/Field.asx"
+import { FieldLabel } from "@axonyx/ui/foundry/FieldLabel.asx"
+import { Input } from "@axonyx/ui/foundry/Input.asx"
+import { Copy } from "@axonyx/ui/foundry/Copy.asx"
+import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+
+page Customization() {
+  return ASX {
+    <ComponentPage title="Customization" category="Foundry" description="Match your design through semantic tokens, component geometry, and per-instance overrides without replacing behavior." nextHref="/docs/theming" nextLabel="Next: Theming">
+      <Stack gap="xl">
+        <Copy>This development pilot covers Button, Card, and Field/Input. It requires the upcoming core and UI releases. The first rendered root receives className and style; use a real wrapper for multiple roots.</Copy>
+        <ComponentExample title="Figma geometry" description="32px card padding, 20px spacing, 44px controls, and independent corner radii. The native input and button keep their semantics.">
+          <Card slot="preview" id="custom-card" className="account-card" title="Account" style="--ax-card-padding: 32px; --ax-card-gap: 20px; --ax-card-radius: 12px">
+            <Field id="custom-field" className="account-field" style="--ax-field-gap: 10px; --ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px">
+              <FieldLabel htmlFor="custom-name">Name</FieldLabel>
+              <Input id="custom-name" name="name" placeholder="Your name" />
+            </Field>
+            <Button id="custom-button" className="save-button" style="--ax-button-min-height: 44px; --ax-button-padding: 0 20px; --ax-button-radius: 6px; --ax-button-font-size: 14px">Preview button</Button>
+            <Copy>This is a styling demonstration, not a save action.</Copy>
+          </Card>
+          <DocsCodeBlock slot="code" language="asx">{"<Card className=\"account-card\" title=\"Account\" style=\"--ax-card-padding: 32px; --ax-card-gap: 20px; --ax-card-radius: 12px\">\n  <Field style=\"--ax-field-gap: 10px; --ax-input-min-height: 44px; --ax-input-padding: 0 12px; --ax-input-radius: 6px\">\n    <FieldLabel htmlFor=\"name\">Name</FieldLabel>\n    <Input id=\"name\" name=\"name\" />\n  </Field>\n  <Button className=\"save-button\" style=\"--ax-button-min-height: 44px; --ax-button-padding: 0 20px; --ax-button-radius: 6px; --ax-button-font-size: 14px\">Preview button</Button>\n</Card>"}</DocsCodeBlock>
+        </ComponentExample>
+        <Copy>Prefer an application stylesheet loaded after Foundry for reusable recipes. Inline tokens are useful for one instance. Load the exact fonts from your design and verify mobile, focus, errors, and disabled states before calling a page pixel-perfect.</Copy>
+        <DocsCodeBlock title="Application CSS" language="css">{".account-card {\n  --ax-card-padding: 32px;\n  --ax-card-gap: 20px;\n  --ax-card-radius: 12px;\n}\n.save-button {\n  --ax-button-min-height: 44px;\n  --ax-button-padding: 0 20px;\n  --ax-button-radius: 6px;\n  --ax-button-font-size: 14px;\n}"}</DocsCodeBlock>
+        <Copy>Overrides change presentation, not authorization or application state. Components keep their ax-* classes. Geometry tokens inherit into children; put local tokens on the component that needs them.</Copy>
+      </Stack>
+    </ComponentPage>
+  }
+}
