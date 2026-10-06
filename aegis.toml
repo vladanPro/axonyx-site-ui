@@ -2,6 +2,12 @@ base_url = "http://127.0.0.1:3000"
 check_links = true
 
 [[fast]]
+name = "docs customization"
+goto = "/docs/customization"
+expect_text = "Figma geometry"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "docs theming"
 goto = "/docs/theming"
 expect_text = "Override just what you need"
