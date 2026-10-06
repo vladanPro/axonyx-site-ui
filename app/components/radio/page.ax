@@ -1,8 +1,11 @@
 import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { Form } from "@axonyx/ui/foundry/Form.asx"
+import { Flex } from "@axonyx/ui/foundry/Flex.asx"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
 import { Legend } from "@axonyx/ui/foundry/Legend.asx"
@@ -19,20 +22,60 @@ page RadioPage() {
       nextLabel="Next: Rating"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Fieldset surface="forged">
-              <Legend>Template</Legend>
-              <Radio name="template" value="site" checked="true">Site</Radio>
-              <Radio name="template" value="docs">Docs</Radio>
-              <Radio name="template" value="blog">Blog</Radio>
-              <Radio name="template" value="portfolio" disabled="true">Portfolio (coming soon)</Radio>
+      <Stack gap="xl">
+        <ComponentExample title="One template per project" description="Share a name to create an exclusive group. Docs is selected initially. Arrow keys skip the disabled option; reset restores Docs.">
+          <div slot="preview" id="radio-settings">
+            <Form method="get" action="/components/radio#radio-settings">
+              <Fieldset surface="forged">
+                <Legend>Template</Legend>
+                <Stack gap="md">
+                  <Radio name="template" value="site" checked="false" disabled="false">Site</Radio>
+                  <Radio name="template" value="docs" checked="true">Docs</Radio>
+                  <Radio name="template" value="portfolio" disabled="true">Portfolio (unavailable)</Radio>
+                  <Radio name="template" value="blog">Blog</Radio>
+                </Stack>
+              </Fieldset>
+              <Flex gap="sm" wrap="true">
+                <Button type="submit" variant="primary">Preview template</Button>
+                <Button type="reset" variant="ghost">Reset template</Button>
+              </Flex>
+              <Copy>This GET preview sends only the selected template value in the URL. Nothing is saved.</Copy>
+            </Form>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/radio#radio-settings\">\n  <Fieldset surface=\"forged\">\n    <Legend>Template</Legend>\n    <Radio name=\"template\" value=\"site\" checked=\"false\" disabled=\"false\">Site</Radio>\n    <Radio name=\"template\" value=\"docs\" checked=\"true\">Docs</Radio>\n    <Radio name=\"template\" value=\"portfolio\" disabled=\"true\">Portfolio (unavailable)</Radio>\n    <Radio name=\"template\" value=\"blog\">Blog</Radio>\n  </Fieldset>\n  <Button type=\"submit\">Preview template</Button>\n  <Button type=\"reset\">Reset template</Button>\n</Form>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentExample title="Independent groups" description="Different names keep unrelated choices separate. Fieldset and Legend give each group an accessible name.">
+          <Stack slot="preview" gap="lg">
+            <Fieldset>
+              <Legend>Density</Legend>
+              <Radio name="density" value="comfortable" checked="true">Comfortable</Radio>
+              <Radio name="density" value="compact">Compact</Radio>
             </Fieldset>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Radio name=\"template\" value=\"site\" checked=\"true\">Site</Radio>\n<Radio name=\"template\" value=\"portfolio\" disabled=\"true\">Portfolio (coming soon)</Radio>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+            <Fieldset>
+              <Legend>Navigation position</Legend>
+              <Radio name="navigation" value="left" checked="true">Left</Radio>
+              <Radio name="navigation" value="top">Top</Radio>
+            </Fieldset>
+          </Stack>
+          <DocsCodeBlock slot="code" language="asx">{"<Fieldset>\n  <Legend>Density</Legend>\n  <Radio name=\"density\" value=\"comfortable\" checked=\"true\">Comfortable</Radio>\n  <Radio name=\"density\" value=\"compact\">Compact</Radio>\n</Fieldset>\n<Fieldset>\n  <Legend>Navigation position</Legend>\n  <Radio name=\"navigation\" value=\"left\" checked=\"true\">Left</Radio>\n  <Radio name=\"navigation\" value=\"top\">Top</Radio>\n</Fieldset>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.80\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Radio contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { Radio } from \"@axonyx/ui/foundry/Radio.asx\""}</DocsCodeBlock>
+            <Copy>name and value: String, default empty. Radios with the same name in the same form are exclusive. Only the checked enabled radio submits its name and value.</Copy>
+            <Copy>checked and disabled: String flags, default empty. Only "true" emits the native attribute; empty and "false" omit it. Set checked on one option per group for a deterministic initial and reset choice.</Copy>
+            <Copy>The content slot supplies a native label. Use Fieldset and Legend for the group. Tab enters the group, Space selects the focused radio, and arrow keys move between enabled choices.</Copy>
+            <Copy>Selection, keyboard navigation, reset, and submission work without JavaScript. The current Radio component does not expose required or invalid props.</Copy>
+            <Copy>Validate values against an allowed list on the server. Disabling an option does not prevent a forged request from submitting that value.</Copy>
+            <a href="/components/checkbox">Use Checkbox for independent choices</a>
+          </Stack>
+        </Box>
+      </Stack>
     </ComponentPage>
   }
 }

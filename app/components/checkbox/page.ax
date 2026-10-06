@@ -1,9 +1,14 @@
 import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
+import { ComponentInstall } from "@axonyx/ui/foundry/ComponentInstall.asx"
+import { Box } from "@axonyx/ui/foundry/Box.asx"
+import { Fieldset } from "@axonyx/ui/foundry/Fieldset.asx"
+import { Legend } from "@axonyx/ui/foundry/Legend.asx"
+import { Form } from "@axonyx/ui/foundry/Form.asx"
+import { Flex } from "@axonyx/ui/foundry/Flex.asx"
 import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { Button } from "@axonyx/ui/foundry/Button.asx"
-import { Card } from "@axonyx/ui/foundry/Card.asx"
 import { Checkbox } from "@axonyx/ui/foundry/Checkbox.asx"
-import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
@@ -13,22 +18,59 @@ page CheckboxPage() {
       title="Checkbox"
       category="Forms"
       description="Native multi-select control for settings, filters, permissions, and consent."
-      nextHref="/components/link-button"
-      nextLabel="Next: LinkButton"
+      nextHref="/components/radio"
+      nextLabel="Next: Radio"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
+      <Stack gap="xl">
+        <ComponentExample title="Independent settings" description="Click a label or focus a checkbox and press Space. Reset restores the initial checked values, even without JavaScript.">
+          <div slot="preview" id="checkbox-settings">
+            <Form method="get" action="/components/checkbox#checkbox-settings">
+              <Fieldset surface="forged">
+                <Legend>Deploy settings</Legend>
+                <Stack gap="md">
+                  <Checkbox name="deploy_preview" checked="false" disabled="false">Create a deploy preview</Checkbox>
+                  <Checkbox name="run_checks" checked="true">Run Foundry checks</Checkbox>
+                  <Checkbox name="notify_team" checked="true" disabled="true">Notify the project team (unavailable)</Checkbox>
+                </Stack>
+              </Fieldset>
+              <Flex gap="sm" wrap="true">
+                <Button type="submit" variant="primary">Preview settings</Button>
+                <Button type="reset" variant="ghost">Reset settings</Button>
+              </Flex>
+              <Copy>Checked enabled controls send name=on. Unchecked and disabled controls are omitted. This GET demo shows only public sample values in the URL; nothing is saved.</Copy>
+            </Form>
+          </div>
+          <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/checkbox#checkbox-settings\">\n  <Fieldset surface=\"forged\">\n    <Legend>Deploy settings</Legend>\n    <Checkbox name=\"deploy_preview\" checked=\"false\" disabled=\"false\">Create a deploy preview</Checkbox>\n    <Checkbox name=\"run_checks\" checked=\"true\">Run Foundry checks</Checkbox>\n    <Checkbox name=\"notify_team\" checked=\"true\" disabled=\"true\">Notify the project team (unavailable)</Checkbox>\n  </Fieldset>\n  <Button type=\"submit\">Preview settings</Button>\n  <Button type=\"reset\">Reset settings</Button>\n</Form>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentExample title="Multiple choices" description="Checkboxes do not form an exclusive group. Use distinct names for independent boolean settings.">
+          <Fieldset slot="preview">
+            <Legend>Visible dashboard panels</Legend>
             <Stack gap="md">
-              <Checkbox name="deploy_preview">Create a deploy preview</Checkbox>
-              <Checkbox name="run_checks" checked="true">Run Foundry checks</Checkbox>
-              <Checkbox name="notify_team" disabled="true">Notify the project team (coming soon)</Checkbox>
+              <Checkbox name="show_activity" checked="true">Activity</Checkbox>
+              <Checkbox name="show_metrics" checked="true">Metrics</Checkbox>
+              <Checkbox name="show_drafts">Drafts</Checkbox>
             </Stack>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Checkbox name=\"run_checks\" checked=\"true\">Run Foundry checks</Checkbox>\n<Checkbox name=\"notify_team\" disabled=\"true\">Notify the project team (coming soon)</Checkbox>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+          </Fieldset>
+          <DocsCodeBlock slot="code" language="asx">{"<Fieldset>\n  <Legend>Visible dashboard panels</Legend>\n  <Stack gap=\"md\">\n    <Checkbox name=\"show_activity\" checked=\"true\">Activity</Checkbox>\n    <Checkbox name=\"show_metrics\" checked=\"true\">Metrics</Checkbox>\n    <Checkbox name=\"show_drafts\">Drafts</Checkbox>\n  </Stack>\n</Fieldset>"}</DocsCodeBlock>
+        </ComponentExample>
+        <ComponentInstall>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.80\""}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </ComponentInstall>
+        <Box padding="lg" surface="inset">
+          <Stack gap="md">
+            <h2>Checkbox contract</h2>
+            <DocsCodeBlock title="Import" language="asx">{"import { Checkbox } from \"@axonyx/ui/foundry/Checkbox.asx\""}</DocsCodeBlock>
+            <Copy>name: String, default empty. Use a non-empty name to include a checked control in a form. The content slot supplies its native label.</Copy>
+            <Copy>checked and disabled: String flags, default empty. Only "true" emits the native attribute; empty and "false" omit it.</Copy>
+            <Copy>checked defines the initial and reset state, not a controlled client binding. The browser owns subsequent toggles; no package JavaScript is needed.</Copy>
+            <Copy>The current component does not expose value, required, invalid, or indeterminate props. Its submitted value is the native default "on". Use a native input when those additional attributes are needed.</Copy>
+            <Copy>Validate permissions and consent on the server. Disabled controls are a UI affordance, not authorization; a caller can forge any request.</Copy>
+            <a href="/components/form">Compose controls in a Form</a>
+          </Stack>
+        </Box>
+      </Stack>
     </ComponentPage>
   }
 }
