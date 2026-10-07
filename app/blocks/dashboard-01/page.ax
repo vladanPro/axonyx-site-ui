@@ -5,24 +5,23 @@ import { ContentGrid } from "@axonyx/ui/foundry/ContentGrid.asx"
 import { Copy } from "@axonyx/ui/foundry/Copy.asx"
 import { Dashboard01 } from "@axonyx/ui/blocks/dashboard-01"
 import { HeroCard } from "@axonyx/ui/foundry/HeroCard.asx"
-import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
-import { Stat } from "@axonyx/ui/foundry/Stat.asx"
-import { StatusLamp } from "@axonyx/ui/foundry/StatusLamp.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample.asx"
 
 page DashboardBlock() {
   return ASX {
     <Container max="xl">
       <Stack gap="xl">
         <HeroCard title="dashboard-01">
-          <Copy slot="eyebrow">Blocks V0</Copy>
-          <Copy tone="lead">An industrial admin dashboard shell imported from `@axonyx/ui/blocks/dashboard-01`.</Copy>
+          <Copy slot="eyebrow">Dashboard composition</Copy>
+          <Copy tone="lead">A responsive Foundry workspace with navigation, sample records, and a native article editor. No database or login is required.</Copy>
           <Button href="/components/app-shell" variant="primary">Open AppShell</Button>
         </HeroCard>
 
-        <Card title="Preview from axonyx-ui" border="forged">
-          <Dashboard01 />
-        </Card>
+        <ComponentExample title="Content workspace" description="Toggle navigation, jump to the editor, edit public sample values, or reset the form. Preview submission reloads this page with those values in the URL; it does not save anything.">
+          <Dashboard01 slot="preview" id="catalog-dashboard" submitAction="/blocks/dashboard-01#catalog-dashboard-editor" />
+          <DocsCodeBlock slot="code" title="Dashboard composition" language="asx">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\"\n\n<Dashboard01\n  id=\"content-workspace\"\n  submitAction=\"/dashboard#content-workspace-editor\"\n/>"}</DocsCodeBlock>
+        </ComponentExample>
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Install">
@@ -32,6 +31,12 @@ page DashboardBlock() {
             <DocsCodeBlock>{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\"\n\n<Dashboard01 />"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
+        <Card title="Block contract">
+          <Copy>id: String, default dashboard-demo. Use a unique ID per instance; navigation targets and label associations derive from it.</Copy>
+          <Copy>submitAction: String, default empty. The native GET preview target; an empty value submits to the current page. Do not use this public demo for secrets or production writes.</Copy>
+          <Copy>Sample counts and table rows are static, not runtime measurements. A real save needs an authorized POST action, validation, error feedback, and data refresh.</Copy>
+          <Copy>Navigation uses native details/summary and remains usable without JavaScript. The table scrolls inside its own focusable region on narrow screens.</Copy>
+        </Card>
       </Stack>
     </Container>
   }

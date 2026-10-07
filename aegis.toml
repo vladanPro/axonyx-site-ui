@@ -508,7 +508,8 @@ expect_not = ["Internal Server Error", "Application error"]
 [[fast]]
 name = "dashboard block"
 goto = "/blocks/dashboard-01"
-expect_text = "industrial admin dashboard"
+expect_text = "responsive Foundry workspace"
+expect_all = ["Content queue", "Article editor", "Preview submission", "Static sample data"]
 expect_not = ["Internal Server Error", "Application error"]
 
 [[fast]]
