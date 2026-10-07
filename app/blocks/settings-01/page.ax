@@ -8,36 +8,45 @@ import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock.asx"
 import { HeroCard } from "@axonyx/ui/foundry/HeroCard.asx"
 import { Settings01 } from "@axonyx/ui/blocks/settings-01"
 import { Stack } from "@axonyx/ui/foundry/Stack.asx"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample"
 
 page SettingsBlock() {
+  state settingsValidation: String = "No accepted request yet."
   return ASX {
     <Container max="xl">
       <Stack gap="xl">
         <HeroCard title="settings-01">
-          <Copy slot="eyebrow">Blocks V0</Copy>
-          <Copy tone="lead">A responsive application settings shell imported from `@axonyx/ui/blocks/settings-01`.</Copy>
+          <Copy slot="eyebrow">Settings composition</Copy>
+          <Copy tone="lead">A responsive Foundry settings form with a real server validation boundary. This public demo never saves data.</Copy>
           <ButtonGroup>
             <Button href="/blocks" variant="primary">All blocks</Button>
             <Button href="/components/app-shell" variant="ghost">AppShell primitive</Button>
           </ButtonGroup>
         </HeroCard>
 
-        <Card title="Preview from axonyx-ui" border="forged">
-          <Settings01 />
-        </Card>
+        <ComponentExample title="Workspace settings" description="Submit valid values to see success. Use admin as the project slug to see a server field error. Required and email constraints also work in the browser.">
+          <Settings01 slot="preview" id="catalog-settings" method="post" action={action ValidateSettings} submitLabel="Validate settings" completeMessage="Request completed. The demo validated your values; nothing was saved." />
+          <DocsCodeBlock slot="code" language="asx">{"import { Settings01 } from \"@axonyx/ui/blocks/settings-01\"\n\n<Settings01\n  id=\"workspace-settings\"\n  method=\"post\"\n  action={action ValidateSettings}\n  submitLabel=\"Validate settings\"\n/>"}</DocsCodeBlock>
+        </ComponentExample>
+        <Copy>{settingsValidation}</Copy>
 
         <ContentGrid cols={2} gap="lg">
           <Card title="Install">
             <DocsCodeBlock>{"cargo ax add block settings-01"}</DocsCodeBlock>
           </Card>
           <Card title="Import">
-            <DocsCodeBlock>{"import { Settings01 } from \"@axonyx/ui/blocks/settings-01\"\n\n<Settings01 action=\"/settings\" />"}</DocsCodeBlock>
+            <DocsCodeBlock>{"import { Settings01 } from \"@axonyx/ui/blocks/settings-01\"\n\n<Settings01 />"}</DocsCodeBlock>
           </Card>
         </ContentGrid>
 
         <Card title="Application composition" border="forged" surface="inset">
           <Badge tone="success">Package owned</Badge>
-          <Copy>The responsive shell, collapsible navigation, grouped fields, preferences, and danger zone are composed entirely from Axonyx UI primitives.</Copy>
+          <Copy>Navigation, grouped controls, error targets and action status UI belong to the package. The route owns validation. No site-specific JavaScript is needed.</Copy>
+          <Copy>The default block performs a GET preview, not a save. This page explicitly connects a POST action that validates public sample values and returns ok(). No database, account or session settings are changed.</Copy>
+          <Copy>Use a unique id per instance. JavaScript enhances pending, error and complete statuses; without JavaScript the native POST follows the server response.</Copy>
+          <Copy>Without JavaScript a rejected request re-renders field errors, but current form values reset to the initial sample values. This demo requires the compiled server; the preview interpreter does not support all validation expressions yet.</Copy>
+          <Copy>Production writes require authentication, authorization, CSRF protection and persistence in your own action. A completed request does not mean data was saved.</Copy>
+          <DocsCodeBlock title="app/blocks/settings-01/actions.ax" language="ax">{"action ValidateSettings(workspace: String, slug: String, email: String, theme: String, timezone: String) {\n  require input.workspace != \"\" else invalid({workspace: \"Workspace name is required.\"})\n  require input.slug != \"\" else invalid({slug: \"Project slug is required.\"})\n  require input.slug != \"admin\" else invalid({slug: \"The demo reserves the slug admin. Choose another slug.\"})\n  require Validate.email(input.email) else invalid({email: \"Enter a valid email address.\"})\n  require input.theme in [\"silver\", \"bronze\", \"gold\"] else invalid({theme: \"Choose a supported palette.\"})\n  require input.timezone in [\"Europe/Belgrade\", \"UTC\", \"America/New_York\"] else invalid({timezone: \"Choose a supported timezone.\"})\n  patch settingsValidation = \"Last accepted request: validated only, no data saved.\"\n  return ok()\n}"}</DocsCodeBlock>
         </Card>
       </Stack>
     </Container>
