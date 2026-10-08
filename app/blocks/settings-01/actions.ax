@@ -1,0 +1,10 @@
+action ValidateSettings(workspace: String, slug: String, email: String, theme: String, timezone: String) {
+  require input.workspace != "" else invalid({workspace: "Workspace name is required."})
+  require input.slug != "" else invalid({slug: "Project slug is required."})
+  require input.slug != "admin" else invalid({slug: "The demo reserves the slug admin. Choose another slug."})
+  require Validate.email(input.email) else invalid({email: "Enter a valid email address."})
+  require input.theme in ["silver", "bronze", "gold"] else invalid({theme: "Choose a supported palette."})
+  require input.timezone in ["Europe/Belgrade", "UTC", "America/New_York"] else invalid({timezone: "Choose a supported timezone."})
+  patch settingsValidation = "Last accepted request: validated only, no data saved."
+  return ok()
+}
