@@ -521,5 +521,6 @@ expect_not = ["Internal Server Error", "Application error"]
 [[fast]]
 name = "settings block"
 goto = "/blocks/settings-01"
-expect_text = "responsive application settings shell"
+expect_text = "real server validation boundary"
+expect_all = ["Workspace settings", "Validate settings", "nothing was saved"]
 expect_not = ["Internal Server Error", "Application error"]

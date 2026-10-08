@@ -61,7 +61,7 @@ This UI release requires `cargo-axonyx 0.6.3` or newer for component
 `return ASX` imports. Update an older CLI before running the checks:
 
 ```bash
-cargo install cargo-axonyx --version 0.6.3 --locked --force
+cargo install cargo-axonyx --version 0.6.4 --locked --force
 ```
 
 ```bash
@@ -74,12 +74,18 @@ Before sharing or deploying:
 cargo ax check
 cargo ax doctor
 cargo ax test
-cargo ax build --clean
+cargo ax build --clean --compiled
 ```
 
 The existing Render service was configured in the dashboard, so changes to
 `render.yaml` alone do not update its build command. Keep the dashboard build
 command equal to the one in `render.yaml` when changing the CLI version.
+The Settings demo uses a generated server validation action and requires compiled
+mode in both build and start commands. Do not deploy it with the preview server.
+
+Build: `cargo install cargo-axonyx --version 0.6.4 --locked --force && cargo ax build --clean --compiled`
+
+Start: `cargo ax run start --compiled --host 0.0.0.0 --port $PORT`
 
 ## V0 scope
 
@@ -91,6 +97,6 @@ Start with a small complete loop:
 - Themes: `silver`, `bronze`, `gold`, then custom theme packages later.
 
 
-Foundry styles now come from the published Cargo dependency `axonyx-ui 0.0.80`.
+Foundry styles come from the Cargo dependency declared in `Cargo.toml`.
 There is no local foundation snapshot or compatibility patch.
 `scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.
