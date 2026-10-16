@@ -16,7 +16,7 @@ page Theming() {
       <div class="fd-code"><div><span>Independent choices</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"<div data-foundry=\"bronze\" data-foundry-style=\"forge\">\n  <!-- Your Foundry components -->\n</div>"}</code></pre></div><p>The style system is included in axonyx-ui 0.0.73. Native apps load it through use &quot;@axonyx/ui&quot;. Without a style attribute, a container uses Alloy. Nested theme containers choose their own style. Brand overrides load last.</p>
       <h2>Override just what you need</h2><p>Add a brand class to the container and load your overrides after the foundation. Every component inside shares the same tokens.</p><div class="fd-code"><div><span>brand.css</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"[data-foundry].my-brand {\n  --ax-primary: #6e99e8;\n  --ax-on-primary: #000000;\n  --ax-radius-md: 12px;\n  --ax-radius-lg: 14px;\n}"}</code></pre></div><p>Use <code>class="my-brand"</code> on the theme container. Check text and focus contrast when you change colors.</p>
       <h2>Go further with recipes</h2><p>Theme tokens set the global identity. A recipe override changes one component's appearance while preserving its structure and behavior.</p><div class="fd-code"><div><span>Component override</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"[data-foundry].my-brand .ax-card {\n  padding: 32px;\n  box-shadow: none;\n}"}</code></pre></div>
-        <div class="fd-next"><a href="/">Try the workbench ↗</a><a href="/components">Explore components →</a></div><p class="fd-copy-status" role="status"></p>
-      </article>
-      }
-      }
+      <div class="fd-next"><a href="/">Try the workbench ↗</a><a href="/components">Explore components →</a></div><p class="fd-copy-status" role="status"></p>
+    </article>
+  }
+}
