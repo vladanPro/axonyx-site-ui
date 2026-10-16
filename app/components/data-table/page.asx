@@ -7,12 +7,29 @@ import { ContentInventory } from "@/components/data-table/ContentInventory"
 
 page DataTablePage() {
   return ASX {
-    <ComponentPage title="DataTable" category="Data display" description="A small, composable data view built on the semantic Table primitives. Search, sort and paginate the records already loaded by your page." nextHref="/components/table" nextLabel="See Table primitives">
+    <ComponentPage
+      title="DataTable"
+      category="Data display"
+      description="A small, composable data view built on the semantic Table primitives. Search, sort and paginate the records already loaded by your page."
+      nextHref="/components/table"
+      nextLabel="See Table primitives"
+    >
       <Stack gap="xl">
         <Copy tone="lead">Development preview. This component is not yet included in a published Cargo or npm release.</Copy>
-        <ComponentExample title="Content inventory" description="Search across title and status, click either heading to sort, then move between pages. No server request is made when these controls change.">
-          <div slot="preview"><ContentInventory /></div>
-          <DocsCodeBlock slot="code" language="asx" title="ContentInventory.asx">{"import { DataTable } from \"@axonyx/ui/foundry/DataTable\"\nimport { Table } from \"@axonyx/ui/foundry/Table\"\nimport { TableHead } from \"@axonyx/ui/foundry/TableHead\"\nimport { TableBody } from \"@axonyx/ui/foundry/TableBody\"\nimport { TableRow } from \"@axonyx/ui/foundry/TableRow\"\nimport { TableHeaderCell } from \"@axonyx/ui/foundry/TableHeaderCell\"\nimport { TableCell } from \"@axonyx/ui/foundry/TableCell\"\n\ncomponent ContentInventory() {\n  return ASX {\n    <DataTable label=\"Content inventory\" pageSize=\"2\" searchLabel=\"Search posts\">\n      <Table>\n        <caption class=\"ax-table__caption\">Five sample posts. Search covers these loaded records only.</caption>\n        <TableHead>\n          <TableRow>\n            <TableHeaderCell sort=\"text\">Title</TableHeaderCell>\n            <TableHeaderCell sort=\"text\">Status</TableHeaderCell>\n          </TableRow>\n        </TableHead>\n        <TableBody>\n          <TableRow><TableCell><a href=\"#alpha\">Alpha</a></TableCell><TableCell>Published</TableCell></TableRow>\n          <TableRow><TableCell>Echo</TableCell><TableCell>Draft</TableCell></TableRow>\n          <TableRow><TableCell>Bravo</TableCell><TableCell>Published</TableCell></TableRow>\n          <TableRow><TableCell>Delta</TableCell><TableCell>Draft</TableCell></TableRow>\n          <TableRow><TableCell>Charlie</TableCell><TableCell>Published</TableCell></TableRow>\n        </TableBody>\n      </Table>\n    </DataTable>\n  }\n}"}</DocsCodeBlock>
+        <ComponentExample
+          title="Content inventory"
+          description="Search across title and status, click either heading to sort, then move between pages. No server request is made when these controls change."
+        >
+          <div slot="preview">
+            <ContentInventory />
+          </div>
+          <DocsCodeBlock
+            slot="code"
+            language="asx"
+            title="ContentInventory.asx"
+          >
+            {"import { DataTable } from \"@axonyx/ui/foundry/DataTable\"\nimport { Table } from \"@axonyx/ui/foundry/Table\"\nimport { TableHead } from \"@axonyx/ui/foundry/TableHead\"\nimport { TableBody } from \"@axonyx/ui/foundry/TableBody\"\nimport { TableRow } from \"@axonyx/ui/foundry/TableRow\"\nimport { TableHeaderCell } from \"@axonyx/ui/foundry/TableHeaderCell\"\nimport { TableCell } from \"@axonyx/ui/foundry/TableCell\"\n\ncomponent ContentInventory() {\n  return ASX {\n    <DataTable\n      label=\"Content inventory\"\n      pageSize=\"2\"\n      searchLabel=\"Search posts\"\n    >\n      <Table>\n        <caption class=\"ax-table__caption\">\n          Five sample posts. Search covers these loaded records only.\n        </caption>\n        <TableHead>\n          <TableRow>\n            <TableHeaderCell sort=\"text\">Title</TableHeaderCell>\n            <TableHeaderCell sort=\"text\">Status</TableHeaderCell>\n          </TableRow>\n        </TableHead>\n        <TableBody>\n          <TableRow>\n            <TableCell>\n              <a href=\"#alpha\">Alpha</a>\n            </TableCell>\n            <TableCell>Published</TableCell>\n          </TableRow>\n          <TableRow>\n            <TableCell>Echo</TableCell>\n            <TableCell>Draft</TableCell>\n          </TableRow>\n          <TableRow>\n            <TableCell>Bravo</TableCell>\n            <TableCell>Published</TableCell>\n          </TableRow>\n          <TableRow>\n            <TableCell>Delta</TableCell>\n            <TableCell>Draft</TableCell>\n          </TableRow>\n          <TableRow>\n            <TableCell>Charlie</TableCell>\n            <TableCell>Published</TableCell>\n          </TableRow>\n        </TableBody>\n      </Table>\n    </DataTable>\n  }\n}"}
+          </DocsCodeBlock>
         </ComponentExample>
         <section id="alpha">
           <h2>One semantic table, optional behavior</h2>

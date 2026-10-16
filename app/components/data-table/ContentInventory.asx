@@ -8,9 +8,15 @@ import { TableCell } from "@axonyx/ui/foundry/TableCell"
 
 component ContentInventory() {
   return ASX {
-    <DataTable label="Content inventory" pageSize="2" searchLabel="Search posts">
+    <DataTable
+      label="Content inventory"
+      pageSize="2"
+      searchLabel="Search posts"
+    >
       <Table>
-        <caption class="ax-table__caption">Five sample posts. Search covers these loaded records only.</caption>
+        <caption class="ax-table__caption">
+          Five sample posts. Search covers these loaded records only.
+        </caption>
         <TableHead>
           <TableRow>
             <TableHeaderCell sort="text">Title</TableHeaderCell>
@@ -18,11 +24,28 @@ component ContentInventory() {
           </TableRow>
         </TableHead>
         <TableBody>
-          <TableRow><TableCell><a href="#alpha">Alpha</a></TableCell><TableCell>Published</TableCell></TableRow>
-          <TableRow><TableCell>Echo</TableCell><TableCell>Draft</TableCell></TableRow>
-          <TableRow><TableCell>Bravo</TableCell><TableCell>Published</TableCell></TableRow>
-          <TableRow><TableCell>Delta</TableCell><TableCell>Draft</TableCell></TableRow>
-          <TableRow><TableCell>Charlie</TableCell><TableCell>Published</TableCell></TableRow>
+          <TableRow>
+            <TableCell>
+              <a href="#alpha">Alpha</a>
+            </TableCell>
+            <TableCell>Published</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Echo</TableCell>
+            <TableCell>Draft</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Bravo</TableCell>
+            <TableCell>Published</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Delta</TableCell>
+            <TableCell>Draft</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Charlie</TableCell>
+            <TableCell>Published</TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </DataTable>
