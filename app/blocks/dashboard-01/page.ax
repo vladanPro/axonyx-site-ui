@@ -18,8 +18,15 @@ page DashboardBlock() {
           <Button href="/components/app-shell" variant="primary">Open AppShell</Button>
         </HeroCard>
 
-        <ComponentExample title="Content workspace" description="Toggle navigation, jump to the editor, edit public sample values, or reset the form. Preview submission reloads this page with those values in the URL; it does not save anything.">
-          <Dashboard01 slot="preview" id="catalog-dashboard" submitAction="/blocks/dashboard-01#catalog-dashboard-editor" />
+        <ComponentExample
+          title="Content workspace"
+          description="Toggle navigation, jump to the editor, edit public sample values, or reset the form. Preview submission reloads this page with those values in the URL; it does not save anything."
+        >
+          <Dashboard01
+            slot="preview"
+            id="catalog-dashboard"
+            submitAction="/blocks/dashboard-01#catalog-dashboard-editor"
+          />
           <DocsCodeBlock slot="code" title="Dashboard composition" language="asx">{"import { Dashboard01 } from \"@axonyx/ui/blocks/dashboard-01\"\n\n<Dashboard01\n  id=\"content-workspace\"\n  submitAction=\"/dashboard#content-workspace-editor\"\n/>"}</DocsCodeBlock>
         </ComponentExample>
 

@@ -17,10 +17,16 @@ page SwitchPage() {
       nextLabel="Next: Tabs"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preferences"><Switch name="streaming" checked="true">Enable streaming runtime</Switch><Switch name="drafts">Show draft posts</Switch><Switch name="notifications" disabled="true">Notifications unavailable</Switch></Card>
-          <Card title="Axonyx"><DocsCodeBlock>{"<Switch name=\"streaming\" checked=\"true\">Enable streaming runtime</Switch>\n<Switch name=\"notifications\" disabled=\"true\">Notifications unavailable</Switch>"}</DocsCodeBlock></Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preferences">
+          <Switch name="streaming" checked="true">Enable streaming runtime</Switch>
+          <Switch name="drafts">Show draft posts</Switch>
+          <Switch name="notifications" disabled="true">Notifications unavailable</Switch>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Switch name=\"streaming\" checked=\"true\">Enable streaming runtime</Switch>\n<Switch name=\"notifications\" disabled=\"true\">Notifications unavailable</Switch>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

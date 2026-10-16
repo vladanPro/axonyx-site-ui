@@ -19,7 +19,10 @@ page DropdownMenuPage() {
     >
 
       <Stack gap="xl">
-        <ComponentExample title="Navigation actions" description="Open the menu with a click or ArrowDown. Follow a link with Enter; use Escape to return to the trigger.">
+        <ComponentExample
+          title="Navigation actions"
+          description="Open the menu with a click or ArrowDown. Follow a link with Enter; use Escape to return to the trigger."
+        >
           <div slot="preview">
             <DropdownMenu align="end" variant="secondary">
               <span slot="trigger">Component actions</span>

@@ -17,16 +17,24 @@ page BadgePage() {
       nextLabel="Next: Tabs"
     >
 
-        <ContentGrid cols={4} gap="lg">
-          <Card title="Success"><Badge tone="success">Published</Badge></Card>
-          <Card title="Info"><Badge tone="info">Preview</Badge></Card>
-          <Card title="Warning"><Badge tone="warning">Beta</Badge></Card>
-          <Card title="Neutral"><Badge>Foundry</Badge></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"import { Badge } from \"@axonyx/ui/foundry/Badge\"\n\n<Badge tone=\"success\">Published</Badge>\n<Badge tone=\"warning\">Beta</Badge>"}</DocsCodeBlock>
+      <ContentGrid cols={4} gap="lg">
+        <Card title="Success">
+          <Badge tone="success">Published</Badge>
         </Card>
+        <Card title="Info">
+          <Badge tone="info">Preview</Badge>
+        </Card>
+        <Card title="Warning">
+          <Badge tone="warning">Beta</Badge>
+        </Card>
+        <Card title="Neutral">
+          <Badge>Foundry</Badge>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"import { Badge } from \"@axonyx/ui/foundry/Badge\"\n\n<Badge tone=\"success\">Published</Badge>\n<Badge tone=\"warning\">Beta</Badge>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

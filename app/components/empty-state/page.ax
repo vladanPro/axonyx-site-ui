@@ -16,18 +16,18 @@ page EmptyStatePage() {
       nextLabel="Next: List"
     >
 
-        <Card title="Preview" border="forged">
-          <EmptyState>
-            <span slot="icon">AX</span>
-            <strong slot="title">No components installed yet</strong>
-            Start with Button, Card, and Field, then grow into full app screens.
-            <Button slot="actions" href="/create" variant="primary">Get code</Button>
-          </EmptyState>
-        </Card>
+      <Card title="Preview" border="forged">
+        <EmptyState>
+          <span slot="icon">AX</span>
+          <strong slot="title">No components installed yet</strong>
+          Start with Button, Card, and Field, then grow into full app screens.
+          <Button slot="actions" href="/create" variant="primary">Get code</Button>
+        </EmptyState>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<EmptyState>\n  <span slot=\"icon\">AX</span>\n  <strong slot=\"title\">No components installed yet</strong>\n  Start with Button, Card, and Field.\n  <Button slot=\"actions\">Get code</Button>\n</EmptyState>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<EmptyState>\n  <span slot=\"icon\">AX</span>\n  <strong slot=\"title\">No components installed yet</strong>\n  Start with Button, Card, and Field.\n  <Button slot=\"actions\">Get code</Button>\n</EmptyState>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

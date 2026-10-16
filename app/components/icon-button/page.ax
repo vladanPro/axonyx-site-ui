@@ -18,18 +18,18 @@ page IconButtonPage() {
       nextLabel="Next: Accordion"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Toolbar variant="forged">
-              <IconButton variant="ghost">E</IconButton>
-              <IconButton variant="ghost">C</IconButton>
-              <IconButton variant="primary" surface="forged">D</IconButton>
-            </Toolbar>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<IconButton variant=\"ghost\">E</IconButton>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Toolbar variant="forged">
+            <IconButton variant="ghost">E</IconButton>
+            <IconButton variant="ghost">C</IconButton>
+            <IconButton variant="primary" surface="forged">D</IconButton>
+          </Toolbar>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<IconButton variant=\"ghost\">E</IconButton>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

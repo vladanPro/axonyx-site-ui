@@ -15,9 +15,18 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page FieldsetPage() {
   return ASX {
-    <ComponentPage title="Fieldset" category="Forms" description="Give related controls a semantic group and an accessible name with Fieldset and Legend. Choose the default or forged surface independently of the fields inside." nextHref="/components/field" nextLabel="Next: Field">
+    <ComponentPage
+      title="Fieldset"
+      category="Forms"
+      description="Give related controls a semantic group and an accessible name with Fieldset and Legend. Choose the default or forged surface independently of the fields inside."
+      nextHref="/components/field"
+      nextLabel="Next: Field"
+    >
       <Stack gap="xl">
-        <ComponentExample title="Publishing preferences" description="Legend labels the whole group. Each checkbox still has its own label and can be toggled using the keyboard.">
+        <ComponentExample
+          title="Publishing preferences"
+          description="Legend labels the whole group. Each checkbox still has its own label and can be toggled using the keyboard."
+        >
           <div slot="preview">
             <Fieldset surface="forged">
               <Legend>Publishing preferences</Legend>
@@ -27,12 +36,21 @@ page FieldsetPage() {
           </div>
           <DocsCodeBlock slot="code" language="asx">{"<Fieldset surface=\"forged\">\n  <Legend>Publishing preferences</Legend>\n  <Checkbox name=\"show_author\" checked=\"true\">Show the author</Checkbox>\n  <Checkbox name=\"allow_comments\">Allow comments</Checkbox>\n</Fieldset>"}</DocsCodeBlock>
         </ComponentExample>
-        <ComponentExample title="System metadata" description="Use the default surface for supporting fields. Disable individual controls when a value is assigned by the server.">
+        <ComponentExample
+          title="System metadata"
+          description="Use the default surface for supporting fields. Disable individual controls when a value is assigned by the server."
+        >
           <Fieldset slot="preview">
             <Legend>System metadata</Legend>
             <Field htmlFor="fieldset-version">
               <FieldLabel htmlFor="fieldset-version">Revision</FieldLabel>
-              <Input id="fieldset-version" name="revision" value="Assigned on save" disabled="true" describedBy="fieldset-version-hint" />
+              <Input
+                id="fieldset-version"
+                name="revision"
+                value="Assigned on save"
+                disabled="true"
+                describedBy="fieldset-version-hint"
+              />
               <FieldHint id="fieldset-version-hint">This disabled field is excluded from form submission.</FieldHint>
             </Field>
           </Fieldset>

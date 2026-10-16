@@ -7,9 +7,22 @@ import { Section } from "@axonyx/ui/foundry/Section.asx"
 
 page SectionPage() {
   return ASX {
-    <ComponentPage title="Section" category="Layout primitive" description="Section owns page-level rhythm, content width, alignment, and optional heading content." nextHref="/components/inset" nextLabel="Next: Inset">
+    <ComponentPage
+      title="Section"
+      category="Layout primitive"
+      description="Section owns page-level rhythm, content width, alignment, and optional heading content."
+      nextHref="/components/inset"
+      nextLabel="Next: Inset"
+    >
       <Card border="forged">
-        <Section width="lg" spacing="sm" align="center" eyebrow="Foundry" title="One section contract" description="Compose a page without rebuilding heading and spacing rules for every route.">
+        <Section
+          width="lg"
+          spacing="sm"
+          align="center"
+          eyebrow="Foundry"
+          title="One section contract"
+          description="Compose a page without rebuilding heading and spacing rules for every route."
+        >
           <Badge tone="success">responsive</Badge>
         </Section>
       </Card>

@@ -23,27 +23,39 @@ page TablePage() {
       nextLabel="Next: Dialog"
     >
 
-        <Card title="Preview" border="forged">
-          <Table density="compact" zebra="true">
-            <TableHead>
-              <TableRow><TableHeaderCell>Package</TableHeaderCell><TableHeaderCell>Status</TableHeaderCell><TableHeaderCell align="right">Version</TableHeaderCell></TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow><TableCell>axonyx-ui</TableCell><TableCell>published</TableCell><TableCell align="right">0.0.x</TableCell></TableRow>
-              <TableRow><TableCell>cargo-axonyx</TableCell><TableCell>published</TableCell><TableCell align="right">0.1.x</TableCell></TableRow>
-            </TableBody>
-          </Table>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Table density="compact" zebra="true">
+          <TableHead>
+            <TableRow>
+              <TableHeaderCell>Package</TableHeaderCell>
+              <TableHeaderCell>Status</TableHeaderCell>
+              <TableHeaderCell align="right">Version</TableHeaderCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>axonyx-ui</TableCell>
+              <TableCell>published</TableCell>
+              <TableCell align="right">0.0.x</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>cargo-axonyx</TableCell>
+              <TableCell>published</TableCell>
+              <TableCell align="right">0.1.x</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Card>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Table density=\"compact\" zebra=\"true\">\n  <TableHead>\n    <TableRow><TableHeaderCell>Package</TableHeaderCell></TableRow>\n  </TableHead>\n  <TableBody>\n    <TableRow><TableCell>axonyx-ui</TableCell></TableRow>\n  </TableBody>\n</Table>"}</DocsCodeBlock>
-          </Card>
-          <Card title="API contract">
-            <Badge tone="success">V0</Badge>
-            <Copy>`Table` owns density/zebra. Row and cell primitives keep HTML semantic.</Copy>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Table density=\"compact\" zebra=\"true\">\n  <TableHead>\n    <TableRow><TableHeaderCell>Package</TableHeaderCell></TableRow>\n  </TableHead>\n  <TableBody>\n    <TableRow><TableCell>axonyx-ui</TableCell></TableRow>\n  </TableBody>\n</Table>"}</DocsCodeBlock>
+        </Card>
+        <Card title="API contract">
+          <Badge tone="success">V0</Badge>
+          <Copy>`Table` owns density/zebra. Row and cell primitives keep HTML semantic.</Copy>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

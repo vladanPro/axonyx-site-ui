@@ -18,17 +18,17 @@ page BreadcrumbsPage() {
       nextLabel="Next: Command"
     >
 
-        <Card title="Preview" border="forged">
-          <Breadcrumbs>
-            <BreadcrumbItem href="/components">Components</BreadcrumbItem>
-            <BreadcrumbItem href="/components/layout">Layout</BreadcrumbItem>
-            <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>
-          </Breadcrumbs>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Breadcrumbs>
+          <BreadcrumbItem href="/components">Components</BreadcrumbItem>
+          <BreadcrumbItem href="/components/layout">Layout</BreadcrumbItem>
+          <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>
+        </Breadcrumbs>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Breadcrumbs>\n  <BreadcrumbItem href=\"/components\">Components</BreadcrumbItem>\n  <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>\n</Breadcrumbs>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Breadcrumbs>\n  <BreadcrumbItem href=\"/components\">Components</BreadcrumbItem>\n  <BreadcrumbCurrent>Breadcrumbs</BreadcrumbCurrent>\n</Breadcrumbs>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

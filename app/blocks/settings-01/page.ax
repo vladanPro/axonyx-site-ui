@@ -24,8 +24,18 @@ page SettingsBlock() {
           </ButtonGroup>
         </HeroCard>
 
-        <ComponentExample title="Workspace settings" description="Submit valid values to see success. Use admin as the project slug to see a server field error. Required and email constraints also work in the browser.">
-          <Settings01 slot="preview" id="catalog-settings" method="post" action={action ValidateSettings} submitLabel="Validate settings" completeMessage="Request completed. The demo validated your values; nothing was saved." />
+        <ComponentExample
+          title="Workspace settings"
+          description="Submit valid values to see success. Use admin as the project slug to see a server field error. Required and email constraints also work in the browser."
+        >
+          <Settings01
+            slot="preview"
+            id="catalog-settings"
+            method="post"
+            action={action ValidateSettings}
+            submitLabel="Validate settings"
+            completeMessage="Request completed. The demo validated your values; nothing was saved."
+          />
           <DocsCodeBlock slot="code" language="asx">{"import { Settings01 } from \"@axonyx/ui/blocks/settings-01\"\n\n<Settings01\n  id=\"workspace-settings\"\n  method=\"post\"\n  action={action ValidateSettings}\n  submitLabel=\"Validate settings\"\n/>"}</DocsCodeBlock>
         </ComponentExample>
         <Copy>{settingsValidation}</Copy>

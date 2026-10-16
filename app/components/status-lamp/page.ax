@@ -18,15 +18,31 @@ page StatusLampPage() {
       nextLabel="Next: Progress"
     >
 
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Online"><StatusLamp tone="online" pulse="true" label="Server" description="Tokio runtime accepting traffic" /></Card>
-          <Card title="Pending"><StatusLamp tone="warning" pulse="true" label="Build" description="Melt graph collecting routes" /></Card>
-          <Card title="Offline"><StatusLamp tone="danger" label="Worker" description="Queue disconnected" /></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<StatusLamp tone=\"online\" pulse=\"true\" label=\"Server\" description=\"Tokio runtime accepting traffic\" />"}</DocsCodeBlock>
+      <ContentGrid cols={3} gap="lg">
+        <Card title="Online">
+          <StatusLamp
+            tone="online"
+            pulse="true"
+            label="Server"
+            description="Tokio runtime accepting traffic"
+          />
         </Card>
+        <Card title="Pending">
+          <StatusLamp
+            tone="warning"
+            pulse="true"
+            label="Build"
+            description="Melt graph collecting routes"
+          />
+        </Card>
+        <Card title="Offline">
+          <StatusLamp tone="danger" label="Worker" description="Queue disconnected" />
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<StatusLamp tone=\"online\" pulse=\"true\" label=\"Server\" description=\"Tokio runtime accepting traffic\" />"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

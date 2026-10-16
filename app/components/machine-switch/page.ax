@@ -18,14 +18,24 @@ page MachineSwitchPage() {
       nextLabel="Next: Pagination"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Offline"><MachineSwitch label="Media worker" state="off" stateLabel="Offline" offActive="true" /></Card>
-          <Card title="Online"><MachineSwitch label="Stream runtime" state="on" stateLabel="Online" onActive="true" pressed="true" /></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<MachineSwitch label=\"Stream runtime\" state=\"on\" stateLabel=\"Online\" onActive=\"true\" />"}</DocsCodeBlock>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Offline">
+          <MachineSwitch label="Media worker" state="off" stateLabel="Offline" offActive="true" />
         </Card>
+        <Card title="Online">
+          <MachineSwitch
+            label="Stream runtime"
+            state="on"
+            stateLabel="Online"
+            onActive="true"
+            pressed="true"
+          />
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<MachineSwitch label=\"Stream runtime\" state=\"on\" stateLabel=\"Online\" onActive=\"true\" />"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

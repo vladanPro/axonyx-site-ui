@@ -17,9 +17,18 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page SelectPage() {
   return ASX {
-    <ComponentPage title="Select" category="Forms" description="Native select control with Foundry sizing, accessible field labels, required validation, and real selected and disabled option flags." nextHref="/components/slider" nextLabel="Next: Slider">
+    <ComponentPage
+      title="Select"
+      category="Forms"
+      description="Native select control with Foundry sizing, accessible field labels, required validation, and real selected and disabled option flags."
+      nextHref="/components/slider"
+      nextLabel="Next: Slider"
+    >
       <Stack gap="xl">
-        <ComponentExample title="Theme choice" description="Use the forged surface for a focused selector. Choosing a value here demonstrates the control; it does not change the site palette.">
+        <ComponentExample
+          title="Theme choice"
+          description="Use the forged surface for a focused selector. Choosing a value here demonstrates the control; it does not change the site palette."
+        >
           <Field slot="preview" htmlFor="theme">
             <FieldLabel htmlFor="theme">Theme</FieldLabel>
             <Select id="theme" name="theme" surface="forged" describedBy="theme-choice-hint">
@@ -32,7 +41,10 @@ page SelectPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Select name=\"theme\" surface=\"forged\">\n  <Option value=\"silver\">Silver</Option>\n  <Option value=\"bronze\">Bronze</Option>\n  <Option value=\"gold\">Gold</Option>\n</Select>"}</DocsCodeBlock>
         </ComponentExample>
 
-        <ComponentExample title="Selection and reset" description="Start from a non-first option, try the arrow keys, and reset after changing the value. Disabled options remain unavailable with JavaScript switched off.">
+        <ComponentExample
+          title="Selection and reset"
+          description="Start from a non-first option, try the arrow keys, and reset after changing the value. Disabled options remain unavailable with JavaScript switched off."
+        >
           <div slot="preview" id="option-form">
             <Form method="get" action="/components/select#option-form">
               <Field htmlFor="publication-status">
@@ -55,12 +67,20 @@ page SelectPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/select#option-form\">\n  <Field htmlFor=\"publication-status\">\n    <FieldLabel htmlFor=\"publication-status\">Publication status</FieldLabel>\n    <Select id=\"publication-status\" name=\"status\" describedBy=\"publication-status-hint\">\n      <Option value=\"draft\" selected=\"false\" disabled=\"false\">Draft</Option>\n      <Option value=\"published\" selected=\"true\">Published</Option>\n      <Option value=\"archived\" disabled=\"true\">Archived (unavailable)</Option>\n      <Option value=\"scheduled\">Scheduled</Option>\n    </Select>\n    <FieldHint id=\"publication-status-hint\">Published is selected initially. Arrow keys skip Archived; reset restores Published.</FieldHint>\n  </Field>\n  <Flex gap=\"sm\" wrap=\"true\">\n    <Button type=\"submit\" variant=\"primary\">Preview selection</Button>\n    <Button type=\"reset\" variant=\"ghost\">Reset selection</Button>\n  </Flex>\n  <Copy>This GET preview returns to the same page with the selected status in the URL. Nothing is saved.</Copy>\n</Form>"}</DocsCodeBlock>
         </ComponentExample>
 
-        <ComponentExample title="Required and disabled controls" description="Use a selected, disabled placeholder for a required choice. A disabled select can show a server-assigned value without submitting it.">
+        <ComponentExample
+          title="Required and disabled controls"
+          description="Use a selected, disabled placeholder for a required choice. A disabled select can show a server-assigned value without submitting it."
+        >
           <div slot="preview" id="required-select-preview">
             <Form method="get" action="/components/select#required-select-preview">
               <Field htmlFor="select-category">
                 <FieldLabel htmlFor="select-category">Category</FieldLabel>
-                <Select id="select-category" name="category" required="true" describedBy="select-category-hint">
+                <Select
+                  id="select-category"
+                  name="category"
+                  required="true"
+                  describedBy="select-category-hint"
+                >
                   <Option value="" selected="true" disabled="true">Choose a category</Option>
                   <Option value="news">News</Option>
                   <Option value="guides">Guides</Option>
@@ -80,10 +100,18 @@ page SelectPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/select#required-select-preview\">\n  <Field htmlFor=\"select-category\">\n    <FieldLabel htmlFor=\"select-category\">Category</FieldLabel>\n    <Select id=\"select-category\" name=\"category\" required=\"true\" describedBy=\"select-category-hint\">\n      <Option value=\"\" selected=\"true\" disabled=\"true\">Choose a category</Option>\n      <Option value=\"news\">News</Option>\n      <Option value=\"guides\">Guides</Option>\n    </Select>\n    <FieldHint id=\"select-category-hint\">Choose a category before submitting. The empty placeholder does not satisfy required validation.</FieldHint>\n  </Field>\n  <Field htmlFor=\"select-locale\">\n    <FieldLabel htmlFor=\"select-locale\">Locale</FieldLabel>\n    <Select id=\"select-locale\" name=\"locale\" disabled=\"true\">\n      <Option value=\"en\">English (assigned by the server)</Option>\n    </Select>\n    <FieldHint>A disabled select is excluded from form submission.</FieldHint>\n  </Field>\n  <Button type=\"submit\" variant=\"primary\">Preview category</Button>\n</Form>"}</DocsCodeBlock>
         </ComponentExample>
 
-        <ComponentExample title="Error presentation" description="An example of a server-rejected value. aria-invalid and the linked message describe the error; validation belongs in the server action.">
+        <ComponentExample
+          title="Error presentation"
+          description="An example of a server-rejected value. aria-invalid and the linked message describe the error; validation belongs in the server action."
+        >
           <Field slot="preview" state="error" htmlFor="select-error-status">
             <FieldLabel htmlFor="select-error-status">Status</FieldLabel>
-            <Select id="select-error-status" name="status_example" invalid="true" describedBy="select-error-message">
+            <Select
+              id="select-error-status"
+              name="status_example"
+              invalid="true"
+              describedBy="select-error-message"
+            >
               <Option value="published">Published</Option>
             </Select>
             <FieldError id="select-error-message">Publishing is unavailable for this record.</FieldError>

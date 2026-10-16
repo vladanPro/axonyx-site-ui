@@ -18,12 +18,21 @@ page CardPage() {
       nextLabel="Next: Field"
     >
       <Stack gap="xl">
-        <ComponentExample title="Surface treatments" description="Choose a quiet default, a forged border, or an inset plane without changing the content structure.">
+        <ComponentExample
+          title="Surface treatments"
+          description="Choose a quiet default, a forged border, or an inset plane without changing the content structure."
+        >
           <div slot="preview">
             <ContentGrid cols={3} gap="lg">
-              <Card title="Default"><Copy>Clean surface for readable content.</Copy></Card>
-              <Card title="Forged" border="forged"><Copy>Industrial border language with stronger material presence.</Copy></Card>
-              <Card title="Inset" surface="inset"><Copy>Lower visual plane for nested panels and quiet metadata.</Copy></Card>
+              <Card title="Default">
+                <Copy>Clean surface for readable content.</Copy>
+              </Card>
+              <Card title="Forged" border="forged">
+                <Copy>Industrial border language with stronger material presence.</Copy>
+              </Card>
+              <Card title="Inset" surface="inset">
+                <Copy>Lower visual plane for nested panels and quiet metadata.</Copy>
+              </Card>
             </ContentGrid>
           </div>
           <DocsCodeBlock slot="code" language="asx">{"<ContentGrid cols={3} gap=\"lg\">\n  <Card title=\"Default\"><Copy>Clean surface for readable content.</Copy></Card>\n  <Card title=\"Forged\" border=\"forged\"><Copy>Industrial border language with stronger material presence.</Copy></Card>\n  <Card title=\"Inset\" surface=\"inset\"><Copy>Lower visual plane for nested panels and quiet metadata.</Copy></Card>\n</ContentGrid>"}</DocsCodeBlock>
