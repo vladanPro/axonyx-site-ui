@@ -22,178 +22,178 @@ page Home() {
         </nav>
         <div class="foundry-appearance ax-appearance" aria-label="Appearance">
           <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
-        <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
-    </div>
-    <a class="fp-cta" href="/create">Get code <span aria-hidden="true">↗</span></a>
-  </header>
-  <div class="fp-content">
-    <section class="fp-intro">
-      <div>
-        <h1>Interfaces, finely forged.</h1>
-        <p>Open components. Three signature finishes. Make them yours.</p>
-        <div class="fp-hero-actions">
-          <a class="ax-button" data-variant="primary" href="/docs/installation">Get started <span aria-hidden="true">↗</span></a>
-          <a class="ax-button" href="/components">Browse components</a>
+          <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
         </div>
-      </div>
-      <div class="fp-finish"><div class="fp-themes" role="group" aria-label="Page finish">
-          <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
-          <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
-          <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
-        </div><p>One system. Your signature.</p></div>
-    </section>
-    <section class="fp-workbench" aria-labelledby="workbench-title">
-      <div class="fp-bar">
-        <h2 id="workbench-title">The workbench</h2>
-        <span><i class="fp-status-dot"></i>Live preview</span>
-      </div>
-      <div class="fp-columns">
-        <form class="fp-form" id="workspace-form">
-          <h2>Workspace settings</h2><p class="fp-muted">Configure your workspace and preferences. These settings help your team stay in sync.</p>
-          <div class="fp-fields">
-            <div class="fp-field">
-              <label for="workspace-name">Workspace name</label>
-              <Input id="workspace-name" name="workspace" value="Acme Studio" />
-            </div>
-            <div class="fp-field">
-              <label for="workspace-url">Workspace URL</label>
-              <Input id="workspace-url" name="url" value="acme.axonyx.app" />
-            </div>
-            <div class="fp-field">
-              <label for="workspace-role">Default role for new members</label>
-              <Select id="workspace-role" name="role">
-                <option value="editor">Editor</option>
-                <option value="viewer">Viewer</option>
-                <option value="admin">Admin</option>
-              </Select>
-            </div>
-            <div class="fp-field">
-              <span>Members</span>
-              <div class="fp-members">
-                <span>JD</span>
-                <span>MK</span>
-                <span>AL</span>
-                <small>3 members</small>
-              </div>
+        <a class="fp-cta" href="/create">Get code <span aria-hidden="true">↗</span></a>
+      </header>
+      <div class="fp-content">
+        <section class="fp-intro">
+          <div>
+            <h1>Interfaces, finely forged.</h1>
+            <p>Open components. Three signature finishes. Make them yours.</p>
+            <div class="fp-hero-actions">
+              <a class="ax-button" data-variant="primary" href="/docs/installation">Get started <span aria-hidden="true">↗</span></a>
+              <a class="ax-button" href="/components">Browse components</a>
             </div>
           </div>
-          <div class="fp-notifications"><h3>Notifications</h3><p class="fp-muted">Choose how you and your team stay informed.</p>
-            <div class="fp-notification">
-              <svg
-                class="fp-line-icon"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6" />
-              </svg>
+          <div class="fp-finish"><div class="fp-themes" role="group" aria-label="Page finish">
+              <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
+              <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
+              <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
+            </div><p>One system. Your signature.</p></div>
+        </section>
+        <section class="fp-workbench" aria-labelledby="workbench-title">
+          <div class="fp-bar">
+            <h2 id="workbench-title">The workbench</h2>
+            <span><i class="fp-status-dot"></i>Live preview</span>
+          </div>
+          <div class="fp-columns">
+            <form class="fp-form" id="workspace-form">
+              <h2>Workspace settings</h2><p class="fp-muted">Configure your workspace and preferences. These settings help your team stay in sync.</p>
+              <div class="fp-fields">
+                <div class="fp-field">
+                  <label for="workspace-name">Workspace name</label>
+                  <Input id="workspace-name" name="workspace" value="Acme Studio" />
+                </div>
+                <div class="fp-field">
+                  <label for="workspace-url">Workspace URL</label>
+                  <Input id="workspace-url" name="url" value="acme.axonyx.app" />
+                </div>
+                <div class="fp-field">
+                  <label for="workspace-role">Default role for new members</label>
+                  <Select id="workspace-role" name="role">
+                    <option value="editor">Editor</option>
+                    <option value="viewer">Viewer</option>
+                    <option value="admin">Admin</option>
+                  </Select>
+                </div>
+                <div class="fp-field">
+                  <span>Members</span>
+                  <div class="fp-members">
+                    <span>JD</span>
+                    <span>MK</span>
+                    <span>AL</span>
+                    <small>3 members</small>
+                  </div>
+                </div>
+              </div>
+              <div class="fp-notifications"><h3>Notifications</h3><p class="fp-muted">Choose how you and your team stay informed.</p>
+                <div class="fp-notification">
+                  <svg
+                    class="fp-line-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6" />
+                  </svg>
+                  <div>
+                    <strong>Build notifications</strong>
+                    <p>Get notified when builds complete or fail.</p>
+                  </div>
+                  <Switch name="builds" checked="true">
+                    <span class="fp-sr-only">Build notifications</span>
+                  </Switch>
+                </div>
+                <div class="fp-notification">
+                  <svg
+                    class="fp-line-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 6 9 7 9-7" />
+                  </svg>
+                  <div>
+                    <strong>Product updates</strong>
+                    <p>Occasional updates about new components and features.</p>
+                  </div>
+                  <Switch name="updates">
+                    <span class="fp-sr-only">Product updates</span>
+                  </Switch>
+                </div>
+              </div>
+              <div class="fp-form-actions">
+                <Button type="reset" variant="secondary">Discard</Button>
+                <span id="workspace-status" role="status"></span>
+                <Button type="submit" variant="primary">Save changes</Button>
+              </div>
+            </form>
+            <aside class="fp-inspector" aria-label="Theme editor">
+              <h2>Make it yours</h2><p class="fp-muted">Customize the look and feel. Copy the theme to your project.</p>
+              <span class="fp-label">Palette</span><div class="fp-themes" role="group" aria-label="Preview finish">
+                <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
+                <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
+                <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
+              </div>
+              <label class="fp-label" for="accent-hex">Accent</label><div class="fp-accent"><input id="accent-picker" type="color" value="#cf9974" aria-label="Accent color" /><input id="accent-hex" type="text" value="#CF9974" maxlength="7" spellcheck="false" aria-describedby="accent-help" /></div>
+              <p class="fp-hint" id="accent-help">Used for buttons, links, focus states, and more.</p>
+              <span class="fp-label">Corner radius</span><div class="fp-radii" role="group" aria-label="Corner radius"><button type="button" data-radius="3" aria-pressed="false">3</button><button type="button" data-radius="8" aria-pressed="true">8</button><button type="button" data-radius="12" aria-pressed="false">12</button><button type="button" data-radius="18" aria-pressed="false">18</button></div>
+              <label class="fp-label" for="theme-css">Theme CSS</label><textarea id="theme-css" readonly="true" spellcheck="false" rows={4}>{"[data-foundry] {\n  --ax-primary: #cf9974;\n  --ax-radius-md: 8px;\n}"}</textarea>
+              <button type="button" class="fp-copy ax-button" id="copy-theme">Copy theme CSS</button><p class="fp-hint fp-copy-status" id="copy-status" role="status"> </p>
+            </aside>
+          </div>
+        </section>
+        <div class="fp-specimens">
+          <a class="ax-button" data-variant="primary" href="/components/button">Button ↗</a>
+          <a class="ax-button" href="/components/button">Secondary</a>
+          <span class="fp-health"><i class="fp-status-dot"></i>All systems ready</span>
+          <Badge>Badge</Badge>
+          <div class="fp-search">
+            <Input id="component-search" placeholder="Search components…" />
+            <label class="fp-sr-only" for="component-search">Search components</label>
+            <div id="component-results" hidden="true"></div>
+          </div>
+        </div>
+        <section class="fp-materials"><div class="fp-materials-heading"><h2>The same parts. A different character.</h2><p>Identical components. Distinctly yours.</p></div><div class="fp-material-grid">
+            <div class="fp-material" data-foundry="bronze" data-foundry-style="classic">
               <div>
-                <strong>Build notifications</strong>
-                <p>Get notified when builds complete or fail.</p>
+                <i class="fp-metal fp-bronze"></i>
+                <strong>Bronze</strong>
+                <span>Warm. Grounded. Timeless.</span>
               </div>
-              <Switch name="builds" checked="true">
-                <span class="fp-sr-only">Build notifications</span>
-              </Switch>
-            </div>
-            <div class="fp-notification">
-              <svg
-                class="fp-line-icon"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 6 9 7 9-7" />
-              </svg>
               <div>
-                <strong>Product updates</strong>
-                <p>Occasional updates about new components and features.</p>
+                <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
+                <Input id="bronze-sample" placeholder="Enter something…" />
+                <label class="fp-sr-only" for="bronze-sample">Bronze input preview</label>
               </div>
-              <Switch name="updates">
-                <span class="fp-sr-only">Product updates</span>
-              </Switch>
             </div>
-          </div>
-          <div class="fp-form-actions">
-            <Button type="reset" variant="secondary">Discard</Button>
-            <span id="workspace-status" role="status"></span>
-            <Button type="submit" variant="primary">Save changes</Button>
-          </div>
-        </form>
-        <aside class="fp-inspector" aria-label="Theme editor">
-          <h2>Make it yours</h2><p class="fp-muted">Customize the look and feel. Copy the theme to your project.</p>
-          <span class="fp-label">Palette</span><div class="fp-themes" role="group" aria-label="Preview finish">
-            <button type="button" data-finish="bronze" aria-pressed="true"><i class="fp-metal fp-bronze"></i>Bronze</button>
-            <button type="button" data-finish="silver" aria-pressed="false"><i class="fp-metal fp-silver"></i>Silver</button>
-            <button type="button" data-finish="gold" aria-pressed="false"><i class="fp-metal fp-gold"></i>Gold</button>
-          </div>
-          <label class="fp-label" for="accent-hex">Accent</label><div class="fp-accent"><input id="accent-picker" type="color" value="#cf9974" aria-label="Accent color" /><input id="accent-hex" type="text" value="#CF9974" maxlength="7" spellcheck="false" aria-describedby="accent-help" /></div>
-          <p class="fp-hint" id="accent-help">Used for buttons, links, focus states, and more.</p>
-          <span class="fp-label">Corner radius</span><div class="fp-radii" role="group" aria-label="Corner radius"><button type="button" data-radius="3" aria-pressed="false">3</button><button type="button" data-radius="8" aria-pressed="true">8</button><button type="button" data-radius="12" aria-pressed="false">12</button><button type="button" data-radius="18" aria-pressed="false">18</button></div>
-          <label class="fp-label" for="theme-css">Theme CSS</label><textarea id="theme-css" readonly="true" spellcheck="false" rows={4}>{"[data-foundry] {\n  --ax-primary: #cf9974;\n  --ax-radius-md: 8px;\n}"}</textarea>
-          <button type="button" class="fp-copy ax-button" id="copy-theme">Copy theme CSS</button><p class="fp-hint fp-copy-status" id="copy-status" role="status"> </p>
-        </aside>
-      </div>
-    </section>
-    <div class="fp-specimens">
-      <a class="ax-button" data-variant="primary" href="/components/button">Button ↗</a>
-      <a class="ax-button" href="/components/button">Secondary</a>
-      <span class="fp-health"><i class="fp-status-dot"></i>All systems ready</span>
-      <Badge>Badge</Badge>
-      <div class="fp-search">
-        <Input id="component-search" placeholder="Search components…" />
-        <label class="fp-sr-only" for="component-search">Search components</label>
-        <div id="component-results" hidden="true"></div>
+            <div class="fp-material" data-foundry="silver">
+              <div>
+                <i class="fp-metal fp-silver"></i>
+                <strong>Silver</strong>
+                <span>Modern. Clean. Versatile.</span>
+              </div>
+              <div>
+                <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
+                <Input id="silver-sample" placeholder="Enter something…" />
+                <label class="fp-sr-only" for="silver-sample">Silver input preview</label>
+              </div>
+            </div>
+            <div class="fp-material" data-foundry="gold">
+              <div>
+                <i class="fp-metal fp-gold"></i>
+                <strong>Gold</strong>
+                <span>Bold. Refined. Distinctive.</span>
+              </div>
+              <div>
+                <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
+                <Input id="gold-sample" placeholder="Enter something…" />
+                <label class="fp-sr-only" for="gold-sample">Gold input preview</label>
+              </div>
+            </div>
+        </div></section>
+        <footer class="fp-footer">
+          <a class="fp-brand" href="/"><img src="/brand-mark.svg?v=forged-x-1" alt="" width={22} height={22} />Axonyx UI</a>
+          <span>Open components for modern builders.</span>
+          <a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download theme foundation ↗</a>
+        </footer>
       </div>
     </div>
-    <section class="fp-materials"><div class="fp-materials-heading"><h2>The same parts. A different character.</h2><p>Identical components. Distinctly yours.</p></div><div class="fp-material-grid">
-        <div class="fp-material" data-foundry="bronze" data-foundry-style="classic">
-          <div>
-            <i class="fp-metal fp-bronze"></i>
-            <strong>Bronze</strong>
-            <span>Warm. Grounded. Timeless.</span>
-          </div>
-          <div>
-            <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
-            <Input id="bronze-sample" placeholder="Enter something…" />
-            <label class="fp-sr-only" for="bronze-sample">Bronze input preview</label>
-          </div>
-        </div>
-        <div class="fp-material" data-foundry="silver">
-          <div>
-            <i class="fp-metal fp-silver"></i>
-            <strong>Silver</strong>
-            <span>Modern. Clean. Versatile.</span>
-          </div>
-          <div>
-            <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
-            <Input id="silver-sample" placeholder="Enter something…" />
-            <label class="fp-sr-only" for="silver-sample">Silver input preview</label>
-          </div>
-        </div>
-        <div class="fp-material" data-foundry="gold">
-          <div>
-            <i class="fp-metal fp-gold"></i>
-            <strong>Gold</strong>
-            <span>Bold. Refined. Distinctive.</span>
-          </div>
-          <div>
-            <a class="ax-button" data-variant="primary" href="/components/button">Button</a>
-            <Input id="gold-sample" placeholder="Enter something…" />
-            <label class="fp-sr-only" for="gold-sample">Gold input preview</label>
-          </div>
-        </div>
-    </div></section>
-    <footer class="fp-footer">
-      <a class="fp-brand" href="/"><img src="/brand-mark.svg?v=forged-x-1" alt="" width={22} height={22} />Axonyx UI</a>
-      <span>Open components for modern builders.</span>
-      <a href="/_ax/pkg/axonyx-ui/foundry.css" download="foundry-theme.css">Download theme foundation ↗</a>
-    </footer>
-  </div>
-</div>
-}
+  }
 }
