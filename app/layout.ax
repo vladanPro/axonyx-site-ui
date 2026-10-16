@@ -123,6 +123,7 @@ page RootLayout() {
               <a href="/components/switch">Switch</a>
               <a href="/components/tabs">Tabs</a>
               <a href="/components/table">Table</a>
+              <a href="/components/data-table">DataTable</a>
               <a href="/components/dialog">Dialog</a>
               <a href="/components/alert-dialog">AlertDialog</a>
               <a href="/components/drawer">Drawer</a>

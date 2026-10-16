@@ -9,4 +9,5 @@ edition = "2021"
 axonyx-runtime = { version = "0.6.0", features = ["axum"] }
 serde_json = "1"
 
-axonyx-ui = "0.0.84"
+# Development preview only; replace with a registry version before production.
+axonyx-ui = { git = "https://github.com/vladanPro/axonyx-ui", rev = "6cafead" }

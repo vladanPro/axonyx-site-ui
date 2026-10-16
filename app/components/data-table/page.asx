@@ -1,0 +1,49 @@
+import { ComponentPage } from "@axonyx/ui/foundry/ComponentPage"
+import { ComponentExample } from "@axonyx/ui/foundry/ComponentExample"
+import { DocsCodeBlock } from "@axonyx/ui/foundry/DocsCodeBlock"
+import { Copy } from "@axonyx/ui/foundry/Copy"
+import { Stack } from "@axonyx/ui/foundry/Stack"
+import { ContentInventory } from "@/components/data-table/ContentInventory"
+
+page DataTablePage() {
+  return ASX {
+    <ComponentPage title="DataTable" category="Data display" description="A small, composable data view built on the semantic Table primitives. Search, sort and paginate the records already loaded by your page." nextHref="/components/table" nextLabel="See Table primitives">
+      <Stack gap="xl">
+        <Copy tone="lead">Development preview. This component is not yet included in a published Cargo or npm release.</Copy>
+        <ComponentExample title="Content inventory" description="Search across title and status, click either heading to sort, then move between pages. No server request is made when these controls change.">
+          <div slot="preview"><ContentInventory /></div>
+          <DocsCodeBlock slot="code" language="asx" title="ContentInventory.asx">{"import { DataTable } from \"@axonyx/ui/foundry/DataTable\"\nimport { Table } from \"@axonyx/ui/foundry/Table\"\nimport { TableHead } from \"@axonyx/ui/foundry/TableHead\"\nimport { TableBody } from \"@axonyx/ui/foundry/TableBody\"\nimport { TableRow } from \"@axonyx/ui/foundry/TableRow\"\nimport { TableHeaderCell } from \"@axonyx/ui/foundry/TableHeaderCell\"\nimport { TableCell } from \"@axonyx/ui/foundry/TableCell\"\n\ncomponent ContentInventory() {\n  return ASX {\n    <DataTable label=\"Content inventory\" pageSize=\"2\" searchLabel=\"Search posts\">\n      <Table>\n        <caption class=\"ax-table__caption\">Five sample posts. Search covers these loaded records only.</caption>\n        <TableHead>\n          <TableRow>\n            <TableHeaderCell sort=\"text\">Title</TableHeaderCell>\n            <TableHeaderCell sort=\"text\">Status</TableHeaderCell>\n          </TableRow>\n        </TableHead>\n        <TableBody>\n          <TableRow><TableCell><a href=\"#alpha\">Alpha</a></TableCell><TableCell>Published</TableCell></TableRow>\n          <TableRow><TableCell>Echo</TableCell><TableCell>Draft</TableCell></TableRow>\n          <TableRow><TableCell>Bravo</TableCell><TableCell>Published</TableCell></TableRow>\n          <TableRow><TableCell>Delta</TableCell><TableCell>Draft</TableCell></TableRow>\n          <TableRow><TableCell>Charlie</TableCell><TableCell>Published</TableCell></TableRow>\n        </TableBody>\n      </Table>\n    </DataTable>\n  }\n}"}</DocsCodeBlock>
+        </ComponentExample>
+        <section id="alpha">
+          <h2>One semantic table, optional behavior</h2>
+          <Copy>Compose one Table with one header row and one body. Keep captions, links, badges and row actions in normal table cells. Existing row elements are preserved when sorting.</Copy>
+          <Copy>Use sort="text" on a plain-text TableHeaderCell to enable natural-text sorting. The sort controls work with Enter and Space, expose aria-sort and reset pagination to the first page.</Copy>
+        </section>
+        <section>
+          <h2>Props</h2>
+          <ul>
+            <li>label: accessible table-region name; defaults to Records.</li>
+            <li>pageSize: positive integer; defaults to 10, including invalid values.</li>
+            <li>searchLabel: visible input label; defaults to Search records.</li>
+            <li>emptyLabel: no-match message; defaults to No matching records.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Without JavaScript</h2>
+          <Copy>Every server-rendered record remains visible. Search and pagination controls are hidden rather than pretending to work. Table overflow stays inside its scrollable wrapper on mobile.</Copy>
+        </section>
+        <section>
+          <h2>Large datasets belong on the server</h2>
+          <Copy>This preview is not a remote database search engine. Pass the complete bounded dataset; do not pass one server-paginated slice and imply that filtering searches the whole database. For larger datasets use loader-backed search, ordering and pagination with the base Table.</Copy>
+          <Copy>Hidden records are still in the HTML. Authorization and sensitive-data filtering must happen on the server. Selection, editable cells, column visibility and virtualization are not included in V0.</Copy>
+        </section>
+        <section>
+          <h2>Development installation</h2>
+          <Copy>This preview uses an immutable source commit. Do not replace a production registry dependency just to try it; use an isolated app. A versioned Cargo install example will replace this after release.</Copy>
+          <DocsCodeBlock title="Cargo.toml - isolated preview only" language="toml">{"[dependencies]\naxonyx-ui = { git = \"https://github.com/vladanPro/axonyx-ui\", rev = \"6cafead\" }"}</DocsCodeBlock>
+          <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
+        </section>
+      </Stack>
+    </ComponentPage>
+  }
+}

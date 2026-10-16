@@ -17,6 +17,11 @@ page Components() {
     >
 
         <ContentGrid cols={3} gap="lg">
+          <SectionCard title="DataTable">
+            <Badge tone="warning">Development preview</Badge>
+            <Copy>Search, sort and paginate a bounded set of loaded records. Semantic tables with a readable no-JS fallback.</Copy>
+            <Button href="/components/data-table" variant="ghost">Open DataTable</Button>
+          </SectionCard>
           <SectionCard title="Button">
             <Badge tone="success">V0</Badge>
             <Copy>Primary actions, ghost actions, forged surfaces, and link-like calls to action.</Copy>

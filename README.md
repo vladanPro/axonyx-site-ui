@@ -100,3 +100,26 @@ Start with a small complete loop:
 Foundry styles come from the Cargo dependency declared in `Cargo.toml`.
 There is no local foundation snapshot or compatibility patch.
 `scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.
+
+## DataTable development preview
+
+The `feature/data-table-catalog-v0` branch pins a reviewed UI Git commit for
+`/components/data-table`. This is a development dependency, not a production
+upgrade. Replace it with the published Cargo version and update the preview's
+installation example before promoting this branch to `main`.
+
+With the existing UI workspace test dependencies installed, run:
+
+```bash
+cargo ax check
+cargo ax build --clean
+cargo ax run dev --host 127.0.0.1 --port 3112
+```
+
+In another terminal, `node scripts/data-table-qa.mjs` checks actual served package
+assets, filtering, pagination, keyboard sorting, sidebar selection, source/example
+parity and no-JS behavior at desktop/mobile sizes. This uses the sibling UI
+workspace's existing Playwright dev dependency, not a deployed Node runtime.
+`AXONYX_UI_BASE_URL` overrides the server address; `AXONYX_UI_QA_PACKAGE` overrides
+the path to that workspace's package.json. Aegis fast coverage remains in
+`aegis.toml` and uses port 3000 through `cargo ax test`.
