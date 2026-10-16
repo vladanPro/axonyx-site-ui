@@ -101,6 +101,27 @@ Foundry styles come from the Cargo dependency declared in `Cargo.toml`.
 There is no local foundation snapshot or compatibility patch.
 `scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.
 
+## Source formatting
+
+VS Code formats Axonyx files on save with the Axonyx extension. Run `cargo ax fmt`
+for project sources and `cargo ax fmt --check` for a read-only CI check. The CI
+workflow currently pins the formatter's source commit; switch that pin to the
+published CLI version once the formatting change is released.
+
+Enable the optional staged-source guard with:
+
+```bash
+git config --local core.hooksPath .githooks
+```
+
+It checks the content staged for commit, not unstaged edits, and never changes
+the index or your files. Format and stage intended changes yourself before
+retrying a rejected commit. Disable with `git config --local --unset core.hooksPath`.
+For an isolated local formatter executable, set
+`git config --local axonyx.formatterPath /absolute/path/to/cargo-ax`.
+Do not format generated output or dependency/vendor folders. Keep one-time
+formatting baselines in their own commits, apart from behavioral changes.
+
 ## DataTable development preview
 
 The `feature/data-table-catalog-v0` branch pins a reviewed UI Git commit for
