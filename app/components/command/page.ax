@@ -19,22 +19,22 @@ page CommandPage() {
       nextLabel="Next: EmptyState"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Command>
-              <CommandList title="Project commands">
-                <Badge slot="eyebrow" tone="success">Axonyx</Badge>
-                <Copy>Run build</Copy>
-                <Copy>Open component catalog</Copy>
-                <Copy>Check deployment health</Copy>
-                <Button slot="actions" variant="primary">Run command</Button>
-              </CommandList>
-            </Command>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Command>\n  <CommandList title=\"Project commands\">\n    <Copy>Run build</Copy>\n    <Button slot=\"actions\">Run command</Button>\n  </CommandList>\n</Command>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Command>
+            <CommandList title="Project commands">
+              <Badge slot="eyebrow" tone="success">Axonyx</Badge>
+              <Copy>Run build</Copy>
+              <Copy>Open component catalog</Copy>
+              <Copy>Check deployment health</Copy>
+              <Button slot="actions" variant="primary">Run command</Button>
+            </CommandList>
+          </Command>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Command>\n  <CommandList title=\"Project commands\">\n    <Copy>Run build</Copy>\n    <Button slot=\"actions\">Run command</Button>\n  </CommandList>\n</Command>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

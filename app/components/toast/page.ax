@@ -18,15 +18,17 @@ page ToastPage() {
       nextLabel="Next: Tooltip"
     >
 
-        <Card title="Preview" border="forged">
-          <ToastViewport>
-            <Toast tone="success" title="Package published"><Copy>axonyx-ui registry metadata is available.</Copy></Toast>
-          </ToastViewport>
-        </Card>
+      <Card title="Preview" border="forged">
+        <ToastViewport>
+          <Toast tone="success" title="Package published">
+            <Copy>axonyx-ui registry metadata is available.</Copy>
+          </Toast>
+        </ToastViewport>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<ToastViewport>\n  <Toast tone=\"success\" title=\"Package published\">\n    <Copy>Registry metadata is available.</Copy>\n  </Toast>\n</ToastViewport>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<ToastViewport>\n  <Toast tone=\"success\" title=\"Package published\">\n    <Copy>Registry metadata is available.</Copy>\n  </Toast>\n</ToastViewport>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

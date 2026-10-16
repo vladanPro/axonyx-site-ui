@@ -18,17 +18,17 @@ page PaginationPage() {
       nextLabel="Next: Select"
     >
 
-        <Card title="Preview" border="forged">
-          <Pagination current="2" total="8" previous="?page=1" next="?page=3">
-            <PaginationItem href="?page=1">1</PaginationItem>
-            <PaginationItem href="?page=2" current="true">2</PaginationItem>
-            <PaginationItem href="?page=3">3</PaginationItem>
-          </Pagination>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Pagination current="2" total="8" previous="?page=1" next="?page=3">
+          <PaginationItem href="?page=1">1</PaginationItem>
+          <PaginationItem href="?page=2" current="true">2</PaginationItem>
+          <PaginationItem href="?page=3">3</PaginationItem>
+        </Pagination>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Pagination current=\"2\" total=\"8\" previous=\"?page=1\" next=\"?page=3\">\n  <PaginationItem current=\"true\">2</PaginationItem>\n</Pagination>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Pagination current=\"2\" total=\"8\" previous=\"?page=1\" next=\"?page=3\">\n  <PaginationItem current=\"true\">2</PaginationItem>\n</Pagination>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

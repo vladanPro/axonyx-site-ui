@@ -18,15 +18,26 @@ page ChipPage() {
       nextLabel="Next: CodeBlock"
     >
 
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Tones"><Chip>default</Chip><Chip tone="success">stable</Chip><Chip tone="warning">preview</Chip></Card>
-          <Card title="Sizes"><Chip size="sm">small</Chip><Chip>default</Chip></Card>
-          <Card title="Filters"><Chip>docs</Chip><Chip>dashboard</Chip><Chip>cms</Chip></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Chip tone=\"success\">stable</Chip>"}</DocsCodeBlock>
+      <ContentGrid cols={3} gap="lg">
+        <Card title="Tones">
+          <Chip>default</Chip>
+          <Chip tone="success">stable</Chip>
+          <Chip tone="warning">preview</Chip>
         </Card>
+        <Card title="Sizes">
+          <Chip size="sm">small</Chip>
+          <Chip>default</Chip>
+        </Card>
+        <Card title="Filters">
+          <Chip>docs</Chip>
+          <Chip>dashboard</Chip>
+          <Chip>cms</Chip>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Chip tone=\"success\">stable</Chip>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

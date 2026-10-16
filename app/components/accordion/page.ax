@@ -19,23 +19,29 @@ page AccordionPage() {
       nextLabel="Next: Alert"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Accordion single="true">
-              <AccordionItem title="What is Foundry?" open="true"><Copy>Foundry is the Axonyx visual contract: tokens, components, and small package behavior.</Copy></AccordionItem>
-              <AccordionItem title="Can it be themed?"><Copy>Yes. Themes change tokens while components keep the same structure.</Copy></AccordionItem>
-              <AccordionItem title="Does it need React?"><Copy>No. Native Axonyx components are the source of truth.</Copy></AccordionItem>
-            </Accordion>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Accordion single=\"true\">\n  <AccordionItem title=\"What is Foundry?\" open=\"true\">\n    <Copy>Foundry is the Axonyx visual contract.</Copy>\n  </AccordionItem>\n</Accordion>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
-
-        <Card title="Contract" surface="inset" border="forged">
-          <Badge tone="success">V0</Badge>
-          <Copy>`Accordion` owns the group. `AccordionItem` owns `title`, `open`, and content.</Copy>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Accordion single="true">
+            <AccordionItem title="What is Foundry?" open="true">
+              <Copy>Foundry is the Axonyx visual contract: tokens, components, and small package behavior.</Copy>
+            </AccordionItem>
+            <AccordionItem title="Can it be themed?">
+              <Copy>Yes. Themes change tokens while components keep the same structure.</Copy>
+            </AccordionItem>
+            <AccordionItem title="Does it need React?">
+              <Copy>No. Native Axonyx components are the source of truth.</Copy>
+            </AccordionItem>
+          </Accordion>
         </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Accordion single=\"true\">\n  <AccordionItem title=\"What is Foundry?\" open=\"true\">\n    <Copy>Foundry is the Axonyx visual contract.</Copy>\n  </AccordionItem>\n</Accordion>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Contract" surface="inset" border="forged">
+        <Badge tone="success">V0</Badge>
+        <Copy>`Accordion` owns the group. `AccordionItem` owns `title`, `open`, and content.</Copy>
+      </Card>
     </ComponentPage>
   }
 }

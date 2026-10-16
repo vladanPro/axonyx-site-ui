@@ -18,18 +18,18 @@ page PageHeaderPage() {
       nextLabel="Next: Popover"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <PageHeader title="Build with Foundry">
-              <Badge slot="eyebrow" tone="success">Guide</Badge>
-              <Copy>Use a PageHeader when the page needs a strong title, short explanation, and actions.</Copy>
-              <Button slot="actions" href="/components" variant="primary">All components</Button>
-            </PageHeader>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<PageHeader title=\"Build with Foundry\">\n  <Badge slot=\"eyebrow\">Guide</Badge>\n  <Copy>Use a PageHeader for page intros.</Copy>\n  <Button slot=\"actions\">All components</Button>\n</PageHeader>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <PageHeader title="Build with Foundry">
+            <Badge slot="eyebrow" tone="success">Guide</Badge>
+            <Copy>Use a PageHeader when the page needs a strong title, short explanation, and actions.</Copy>
+            <Button slot="actions" href="/components" variant="primary">All components</Button>
+          </PageHeader>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<PageHeader title=\"Build with Foundry\">\n  <Badge slot=\"eyebrow\">Guide</Badge>\n  <Copy>Use a PageHeader for page intros.</Copy>\n  <Button slot=\"actions\">All components</Button>\n</PageHeader>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

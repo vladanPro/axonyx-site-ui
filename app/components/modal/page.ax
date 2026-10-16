@@ -17,19 +17,23 @@ page ModalPage() {
       nextLabel="Next: MachineSwitch"
     >
 
-        <Card title="Preview" border="forged">
-          <Modal title="Publish package" description="Review the release before it becomes public." size="md">
-            <Copy>Version, package metadata, and docs examples should be checked before publishing.</Copy>
-            <ButtonGroup>
-              <Button variant="primary">Publish</Button>
-              <Button variant="ghost">Cancel</Button>
-            </ButtonGroup>
-          </Modal>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Modal
+          title="Publish package"
+          description="Review the release before it becomes public."
+          size="md"
+        >
+          <Copy>Version, package metadata, and docs examples should be checked before publishing.</Copy>
+          <ButtonGroup>
+            <Button variant="primary">Publish</Button>
+            <Button variant="ghost">Cancel</Button>
+          </ButtonGroup>
+        </Modal>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Modal title=\"Publish package\" description=\"Review before release\">\n  <Copy>Check metadata before publishing.</Copy>\n</Modal>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Modal title=\"Publish package\" description=\"Review before release\">\n  <Copy>Check metadata before publishing.</Copy>\n</Modal>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

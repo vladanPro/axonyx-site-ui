@@ -16,15 +16,15 @@ page CopyPage() {
       nextLabel="Next: DocsCallout"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Copy>Axonyx pages should read clearly without forcing authors into raw paragraph classes.</Copy>
-            <Copy>Use Copy inside cards, callouts, docs sections, and layout primitives.</Copy>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Copy>\n  Axonyx pages should read clearly without raw paragraph classes.\n</Copy>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Copy>Axonyx pages should read clearly without forcing authors into raw paragraph classes.</Copy>
+          <Copy>Use Copy inside cards, callouts, docs sections, and layout primitives.</Copy>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Copy>\n  Axonyx pages should read clearly without raw paragraph classes.\n</Copy>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

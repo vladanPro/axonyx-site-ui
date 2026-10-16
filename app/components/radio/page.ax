@@ -23,7 +23,10 @@ page RadioPage() {
     >
 
       <Stack gap="xl">
-        <ComponentExample title="One template per project" description="Share a name to create an exclusive group. Docs is selected initially. Arrow keys skip the disabled option; reset restores Docs.">
+        <ComponentExample
+          title="One template per project"
+          description="Share a name to create an exclusive group. Docs is selected initially. Arrow keys skip the disabled option; reset restores Docs."
+        >
           <div slot="preview" id="radio-settings">
             <Form method="get" action="/components/radio#radio-settings">
               <Fieldset surface="forged">
@@ -44,7 +47,10 @@ page RadioPage() {
           </div>
           <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/radio#radio-settings\">\n  <Fieldset surface=\"forged\">\n    <Legend>Template</Legend>\n    <Radio name=\"template\" value=\"site\" checked=\"false\" disabled=\"false\">Site</Radio>\n    <Radio name=\"template\" value=\"docs\" checked=\"true\">Docs</Radio>\n    <Radio name=\"template\" value=\"portfolio\" disabled=\"true\">Portfolio (unavailable)</Radio>\n    <Radio name=\"template\" value=\"blog\">Blog</Radio>\n  </Fieldset>\n  <Button type=\"submit\">Preview template</Button>\n  <Button type=\"reset\">Reset template</Button>\n</Form>"}</DocsCodeBlock>
         </ComponentExample>
-        <ComponentExample title="Independent groups" description="Different names keep unrelated choices separate. Fieldset and Legend give each group an accessible name.">
+        <ComponentExample
+          title="Independent groups"
+          description="Different names keep unrelated choices separate. Fieldset and Legend give each group an accessible name."
+        >
           <Stack slot="preview" gap="lg">
             <Fieldset>
               <Legend>Density</Legend>

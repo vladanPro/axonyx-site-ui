@@ -24,11 +24,16 @@ page SidebarPage() {
     >
 
       <Stack gap="xl">
-        <ComponentExample title="Dashboard navigation" description="Resize the page to see the mobile toggle. The rail stays visible on larger screens.">
+        <ComponentExample
+          title="Dashboard navigation"
+          description="Resize the page to see the mobile toggle. The rail stays visible on larger screens."
+        >
           <div slot="preview">
             <AppShell mode="embedded" railWidth="sm">
               <Sidebar slot="sidebar" label="Navigation" collapsible="true" open="true">
-                <SidebarHeader slot="header"><strong>Foundry</strong></SidebarHeader>
+                <SidebarHeader slot="header">
+                  <strong>Foundry</strong>
+                </SidebarHeader>
                 <SidebarSection title="Workspace">
                   <SidebarItem href="/components/sidebar" active="true">Overview</SidebarItem>
                   <SidebarItem href="/blocks/dashboard-01" meta="03">Blocks</SidebarItem>

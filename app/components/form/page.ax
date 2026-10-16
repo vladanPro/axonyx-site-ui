@@ -22,9 +22,18 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page FormPage() {
   return ASX {
-    <ComponentPage title="Form" category="Forms" description="Compose a CMS editor from native controls, semantic fieldsets, and responsive field groups. Form keeps the browser's validation, reset, and submission behavior." nextHref="/components/form-group" nextLabel="Next: FormGroup">
+    <ComponentPage
+      title="Form"
+      category="Forms"
+      description="Compose a CMS editor from native controls, semantic fieldsets, and responsive field groups. Form keeps the browser's validation, reset, and submission behavior."
+      nextHref="/components/form-group"
+      nextLabel="Next: FormGroup"
+    >
       <Stack gap="xl">
-        <ComponentExample title="CMS article editor" description="Try submitting empty fields, fill the required title and slug, then preview the submitted values in the URL. Reset restores the initial controls.">
+        <ComponentExample
+          title="CMS article editor"
+          description="Try submitting empty fields, fill the required title and slug, then preview the submitted values in the URL. Reset restores the initial controls."
+        >
           <div slot="preview" id="cms-editor">
             <Form method="get" action="/components/form#cms-editor" surface="forged">
               <Fieldset>
@@ -32,18 +41,35 @@ page FormPage() {
                 <FormGroup cols="2" gap="lg">
                   <Field htmlFor="post-title">
                     <FieldLabel htmlFor="post-title">Title</FieldLabel>
-                    <Input id="post-title" name="title" placeholder="A new release" required="true" describedBy="post-title-hint" />
+                    <Input
+                      id="post-title"
+                      name="title"
+                      placeholder="A new release"
+                      required="true"
+                      describedBy="post-title-hint"
+                    />
                     <FieldHint id="post-title-hint">Required. Give the article a clear title.</FieldHint>
                   </Field>
                   <Field htmlFor="post-slug">
                     <FieldLabel htmlFor="post-slug">Slug</FieldLabel>
-                    <Input id="post-slug" name="slug" placeholder="a-new-release" required="true" describedBy="post-slug-hint" />
+                    <Input
+                      id="post-slug"
+                      name="slug"
+                      placeholder="a-new-release"
+                      required="true"
+                      describedBy="post-slug-hint"
+                    />
                     <FieldHint id="post-slug-hint">Required. Check format and uniqueness in the server action.</FieldHint>
                   </Field>
                 </FormGroup>
                 <Field htmlFor="post-summary">
                   <FieldLabel htmlFor="post-summary">Summary</FieldLabel>
-                  <Textarea id="post-summary" name="summary" placeholder="A short introduction" describedBy="post-summary-hint" />
+                  <Textarea
+                    id="post-summary"
+                    name="summary"
+                    placeholder="A short introduction"
+                    describedBy="post-summary-hint"
+                  />
                   <FieldHint id="post-summary-hint">Optional. Used in article listings.</FieldHint>
                 </Field>
               </Fieldset>
@@ -59,7 +85,13 @@ page FormPage() {
                   </Field>
                   <Field htmlFor="post-id">
                     <FieldLabel htmlFor="post-id">Record ID</FieldLabel>
-                    <Input id="post-id" name="post_id" value="Assigned by the server" disabled="true" describedBy="post-id-hint" />
+                    <Input
+                      id="post-id"
+                      name="post_id"
+                      value="Assigned by the server"
+                      disabled="true"
+                      describedBy="post-id-hint"
+                    />
                     <FieldHint id="post-id-hint">Disabled controls are excluded from submitted form data.</FieldHint>
                   </Field>
                 </FormGroup>
@@ -91,7 +123,11 @@ page FormPage() {
             <Copy>surface: optional String. brushed or forged adds a padded surface; forged uses the stronger border. Omit it when a parent already provides a surface.</Copy>
             <Copy>Slot: form content. Use Button type="submit" for submission and type="reset" to restore initial values. Button defaults to type="button".</Copy>
             <Copy>Form renders a form element. Required and type validation are browser features. A real save action must validate inputs, permissions, and database constraints on the server.</Copy>
-            <Flex gap="sm" wrap="true"><a href="/components/form-group">FormGroup</a><a href="/components/fieldset">Fieldset and Legend</a><a href="/components/field">Field and validation messages</a></Flex>
+            <Flex gap="sm" wrap="true">
+              <a href="/components/form-group">FormGroup</a>
+              <a href="/components/fieldset">Fieldset and Legend</a>
+              <a href="/components/field">Field and validation messages</a>
+            </Flex>
           </Stack>
         </Box>
       </Stack>

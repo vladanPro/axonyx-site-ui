@@ -18,23 +18,23 @@ page SkeletonPage() {
       nextLabel="Next: Toast"
     >
 
-        <Card title="Preview" border="forged">
-          <Stack gap="md">
-            <Skeleton width="100%" height="1.2rem" />
-            <Skeleton width="82%" height="1.2rem" />
-            <Skeleton width="60%" height="1.2rem" />
-          </Stack>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Stack gap="md">
+          <Skeleton width="100%" height="1.2rem" />
+          <Skeleton width="82%" height="1.2rem" />
+          <Skeleton width="60%" height="1.2rem" />
+        </Stack>
+      </Card>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Skeleton width=\"100%\" height=\"1.2rem\" />\n<Skeleton width=\"82%\" height=\"1.2rem\" />"}</DocsCodeBlock>
-          </Card>
-          <Card title="API contract">
-            <Badge tone="success">V0</Badge>
-            <Copy>`shape`, `width`, and `height` describe the placeholder box.</Copy>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Skeleton width=\"100%\" height=\"1.2rem\" />\n<Skeleton width=\"82%\" height=\"1.2rem\" />"}</DocsCodeBlock>
+        </Card>
+        <Card title="API contract">
+          <Badge tone="success">V0</Badge>
+          <Copy>`shape`, `width`, and `height` describe the placeholder box.</Copy>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

@@ -17,14 +17,14 @@ page TextLinkPage() {
       nextLabel="Next: Stepper"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Copy>Read the <TextLink href="/themes">Foundry theme contract</TextLink> or browse <TextLink href="/blocks">complete blocks</TextLink>.</Copy>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Copy>\n  Read the <TextLink href=\"/themes\">Foundry theme contract</TextLink>.\n</Copy>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Copy>Read the <TextLink href="/themes">Foundry theme contract</TextLink> or browse <TextLink href="/blocks">complete blocks</TextLink>.</Copy>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Copy>\n  Read the <TextLink href=\"/themes\">Foundry theme contract</TextLink>.\n</Copy>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

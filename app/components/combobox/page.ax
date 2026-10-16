@@ -20,7 +20,13 @@ page ComboboxPage() {
         <Card title="Project environment" border="forged">
           <Stack gap="md">
             <Copy>Start typing to filter the browser-owned option list without a client script.</Copy>
-            <Combobox id="environment" name="environment" listId="environment-options" placeholder="Choose environment" label="Project environment">
+            <Combobox
+              id="environment"
+              name="environment"
+              listId="environment-options"
+              placeholder="Choose environment"
+              label="Project environment"
+            >
               <ComboboxOption value="Development" label="Local tools and hot reload" />
               <ComboboxOption value="Preview" label="Review deployment" />
               <ComboboxOption value="Production" label="Live application" />

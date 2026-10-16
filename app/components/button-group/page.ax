@@ -18,23 +18,23 @@ page ButtonGroupPage() {
       nextLabel="Next: Card"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <ButtonGroup>
-              <Button variant="primary" surface="forged">Publish</Button>
-              <Button variant="secondary">Preview</Button>
-              <Button variant="ghost">Cancel</Button>
-            </ButtonGroup>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<ButtonGroup>\n  <Button variant=\"primary\">Publish</Button>\n  <Button variant=\"secondary\">Preview</Button>\n  <Button variant=\"ghost\">Cancel</Button>\n</ButtonGroup>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
-
-        <Card title="Contract" surface="inset" border="forged">
-          <Badge tone="success">V0</Badge>
-          <Copy>`ButtonGroup` controls inline spacing. Child buttons keep their own variant and surface.</Copy>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <ButtonGroup>
+            <Button variant="primary" surface="forged">Publish</Button>
+            <Button variant="secondary">Preview</Button>
+            <Button variant="ghost">Cancel</Button>
+          </ButtonGroup>
         </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ButtonGroup>\n  <Button variant=\"primary\">Publish</Button>\n  <Button variant=\"secondary\">Preview</Button>\n  <Button variant=\"ghost\">Cancel</Button>\n</ButtonGroup>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Contract" surface="inset" border="forged">
+        <Badge tone="success">V0</Badge>
+        <Copy>`ButtonGroup` controls inline spacing. Child buttons keep their own variant and surface.</Copy>
+      </Card>
     </ComponentPage>
   }
 }

@@ -2,19 +2,101 @@ import { Button } from "@axonyx/ui/foundry/Button.asx"
 
 page ButtonPage() {
   return ASX {
-    <Head><Title>Button | Axonyx UI</Title></Head>
+    <Head>
+      <Title>Button | Axonyx UI</Title>
+    </Head>
     <div class="fd-layout">
       <article class="fd-article fd-introduction">
         <div class="fd-breadcrumb"><a href="/components">Components</a><span>/</span>Button</div>
         <h1>Button</h1><p class="fd-lead">A clear next step. Primary, secondary, and quiet actions, with the same Foundry finish.</p>
-        <div class="fd-preview fd-component-preview"><span>Live preview</span><div><Button variant="primary">Deploy site</Button><Button variant="secondary">Preview</Button><Button variant="ghost">Cancel</Button></div><p class="fd-demo-status" role="status"></p></div>
-        <section id="button-install"><h2>Installation</h2><p>Add the component to your Axonyx project.</p><div class="fd-code"><div><span>Terminal</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>cargo ax add button</code></pre></div></section>
-        <section id="button-usage"><h2>Usage</h2><div class="fd-code"><div><span>Axonyx</span><button type="button" data-doc-copy="true">Copy</button></div><pre><code>{"import { Button } from \"@axonyx/ui/foundry/Button.asx\"\n\n<Button variant=\"primary\">Save changes</Button>"}</code></pre></div></section>
-        <section id="button-sizes"><h2>Sizes</h2><p>Use compact controls in toolbars and larger controls for prominent actions.</p><div class="fd-preview"><span>Small · Default · Large</span><div><Button variant="primary" size="sm">Small</Button><Button variant="primary">Default</Button><Button variant="primary" size="lg">Large</Button></div></div></section>
-        <section id="button-api"><h2>API contract</h2><div class="fd-table-wrap"><table class="fd-table"><thead><tr><th>Prop</th><th>Values</th><th>Purpose</th></tr></thead><tbody><tr><td>variant</td><td>primary, secondary, ghost</td><td>Visual emphasis</td></tr><tr><td>size</td><td>sm, default, lg</td><td>Control density</td></tr><tr><td>type</td><td>button, submit, reset</td><td>Native form behavior</td></tr><tr><td>surface / border</td><td>forged</td><td>Optional material treatment</td></tr></tbody></table></div><p>Use LinkButton or an anchor for navigation. For the new finish, apply a <code>data-foundry</code> container as described in <a href="/docs/theming">Theming</a>.</p></section>
+        <div class="fd-preview fd-component-preview">
+          <span>Live preview</span>
+          <div>
+            <Button variant="primary">Deploy site</Button>
+            <Button variant="secondary">Preview</Button>
+            <Button variant="ghost">Cancel</Button>
+          </div>
+          <p class="fd-demo-status" role="status"></p>
+        </div>
+        <section id="button-install">
+          <h2>Installation</h2>
+          <p>Add the component to your Axonyx project.</p>
+          <div class="fd-code">
+            <div>
+              <span>Terminal</span>
+              <button type="button" data-doc-copy="true">Copy</button>
+            </div>
+            <pre><code>cargo ax add button</code></pre>
+          </div>
+        </section>
+        <section id="button-usage">
+          <h2>Usage</h2>
+          <div class="fd-code">
+            <div>
+              <span>Axonyx</span>
+              <button type="button" data-doc-copy="true">Copy</button>
+            </div>
+            <pre><code>{"import { Button } from \"@axonyx/ui/foundry/Button.asx\"\n\n<Button variant=\"primary\">Save changes</Button>"}</code></pre>
+          </div>
+        </section>
+        <section id="button-sizes">
+          <h2>Sizes</h2>
+          <p>Use compact controls in toolbars and larger controls for prominent actions.</p>
+          <div class="fd-preview">
+            <span>Small · Default · Large</span>
+            <div>
+              <Button variant="primary" size="sm">Small</Button>
+              <Button variant="primary">Default</Button>
+              <Button variant="primary" size="lg">Large</Button>
+            </div>
+          </div>
+        </section>
+        <section id="button-api">
+          <h2>API contract</h2>
+          <div class="fd-table-wrap">
+            <table class="fd-table">
+              <thead>
+                <tr>
+                  <th>Prop</th>
+                  <th>Values</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>variant</td>
+                  <td>primary, secondary, ghost</td>
+                  <td>Visual emphasis</td>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>sm, default, lg</td>
+                  <td>Control density</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>button, submit, reset</td>
+                  <td>Native form behavior</td>
+                </tr>
+                <tr>
+                  <td>surface / border</td>
+                  <td>forged</td>
+                  <td>Optional material treatment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Use LinkButton or an anchor for navigation. For the new finish, apply a <code>data-foundry</code> container as described in <a href="/docs/theming">Theming</a>.</p>
+        </section>
         <div class="fd-next"><a href="/components">All components</a><a href="/components/card">Next: Card →</a></div><p class="fd-copy-status" role="status"></p>
       </article>
-      <aside class="fd-toc" aria-label="On this page"><span>On this page</span><a href="#button-install">Installation</a><a href="#button-usage">Usage</a><a href="#button-sizes">Sizes</a><a href="#button-api">API contract</a></aside>
+      <aside class="fd-toc" aria-label="On this page">
+        <span>On this page</span>
+        <a href="#button-install">Installation</a>
+        <a href="#button-usage">Usage</a>
+        <a href="#button-sizes">Sizes</a>
+        <a href="#button-api">API contract</a>
+      </aside>
     </div>
   }
 }
