@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       # Immutable formatter source until this behavior is released to crates.io.
-      - run: cargo install cargo-axonyx --git https://github.com/vladanPro/axonyx-framework --rev 5369b73 --force
+      - run: cargo install cargo-axonyx --git https://github.com/vladanPro/axonyx-framework --rev 5369b735287e7b3ad602c86de2125210c8ff7d2c --force
       - run: cargo ax fmt --check
       - name: Check staged-source hook safety
         shell: pwsh
