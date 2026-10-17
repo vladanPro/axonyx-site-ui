@@ -17,14 +17,20 @@ page ThemeSwitcherPage() {
       nextLabel="Next: Textarea"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <ThemeSwitcher label="Theme" size="sm" surface="forged" storageKey="axonyx-site-ui-theme" ariaLabel="Choose theme" />
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<ThemeSwitcher label=\"Theme\" size=\"sm\" surface=\"forged\" storageKey=\"axonyx-site-ui-theme\" />"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <ThemeSwitcher
+            label="Theme"
+            size="sm"
+            surface="forged"
+            storageKey="axonyx-site-ui-theme"
+            ariaLabel="Choose theme"
+          />
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ThemeSwitcher label=\"Theme\" size=\"sm\" surface=\"forged\" storageKey=\"axonyx-site-ui-theme\" />"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

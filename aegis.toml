@@ -2,6 +2,12 @@ base_url = "http://127.0.0.1:3000"
 check_links = true
 
 [[fast]]
+name = "DataTable composition"
+goto = "/components/data-table"
+expect_text = "Content inventory"
+expect_not = ["Internal Server Error", "Application error"]
+
+[[fast]]
 name = "docs customization"
 goto = "/docs/customization"
 expect_text = "Figma geometry"

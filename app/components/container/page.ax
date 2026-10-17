@@ -19,9 +19,24 @@ page ContainerPage() {
       <Stack gap="xl">
         <Card title="Width boundaries" border="forged">
           <Stack gap="lg">
-            <Container max="sm"><Card surface="inset"><Badge tone="info">sm</Badge><Copy>Focused reading and form content.</Copy></Card></Container>
-            <Container max="lg"><Card surface="inset"><Badge tone="success">lg</Badge><Copy>Documentation and product content.</Copy></Card></Container>
-            <Container max="xl"><Card surface="inset"><Badge tone="warning">xl</Badge><Copy>Dashboards, catalogs, and application shells.</Copy></Card></Container>
+            <Container max="sm">
+              <Card surface="inset">
+                <Badge tone="info">sm</Badge>
+                <Copy>Focused reading and form content.</Copy>
+              </Card>
+            </Container>
+            <Container max="lg">
+              <Card surface="inset">
+                <Badge tone="success">lg</Badge>
+                <Copy>Documentation and product content.</Copy>
+              </Card>
+            </Container>
+            <Container max="xl">
+              <Card surface="inset">
+                <Badge tone="warning">xl</Badge>
+                <Copy>Dashboards, catalogs, and application shells.</Copy>
+              </Card>
+            </Container>
           </Stack>
         </Card>
 

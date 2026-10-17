@@ -17,15 +17,21 @@ page RatingPage() {
       nextLabel="Next: Select"
     >
 
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Docs quality"><Rating value="5" label="Excellent" /></Card>
-          <Card title="Component maturity"><Rating value="4" label="Ready" /></Card>
-          <Card title="Preview status"><Rating value="3" label="Beta" /></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Rating value=\"5\" label=\"Excellent\" />"}</DocsCodeBlock>
+      <ContentGrid cols={3} gap="lg">
+        <Card title="Docs quality">
+          <Rating value="5" label="Excellent" />
         </Card>
+        <Card title="Component maturity">
+          <Rating value="4" label="Ready" />
+        </Card>
+        <Card title="Preview status">
+          <Rating value="3" label="Beta" />
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Rating value=\"5\" label=\"Excellent\" />"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

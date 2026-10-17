@@ -18,26 +18,36 @@ page StepperPage() {
       nextLabel="Next: Timeline"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Vertical" border="forged">
-            <Stepper>
-              <Step index="1" title="Configure" description="Choose the project and theme." state="complete" />
-              <Step index="2" title="Build" description="Compile ASX and Foundry assets." state="active" />
-              <Step index="3" title="Deploy" description="Ship the production binary." />
-            </Stepper>
-          </Card>
-          <Card title="Horizontal">
-            <Stepper orientation="horizontal">
-              <Step index="1" title="Source" state="complete" />
-              <Step index="2" title="Melt" state="active" />
-              <Step index="3" title="Runtime" />
-            </Stepper>
-          </Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Stepper>\n  <Step index=\"1\" title=\"Configure\" state=\"complete\" />\n  <Step index=\"2\" title=\"Build\" state=\"active\" />\n  <Step index=\"3\" title=\"Deploy\" />\n</Stepper>"}</DocsCodeBlock>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Vertical" border="forged">
+          <Stepper>
+            <Step
+              index="1"
+              title="Configure"
+              description="Choose the project and theme."
+              state="complete"
+            />
+            <Step
+              index="2"
+              title="Build"
+              description="Compile ASX and Foundry assets."
+              state="active"
+            />
+            <Step index="3" title="Deploy" description="Ship the production binary." />
+          </Stepper>
         </Card>
+        <Card title="Horizontal">
+          <Stepper orientation="horizontal">
+            <Step index="1" title="Source" state="complete" />
+            <Step index="2" title="Melt" state="active" />
+            <Step index="3" title="Runtime" />
+          </Stepper>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Stepper>\n  <Step index=\"1\" title=\"Configure\" state=\"complete\" />\n  <Step index=\"2\" title=\"Build\" state=\"active\" />\n  <Step index=\"3\" title=\"Deploy\" />\n</Stepper>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

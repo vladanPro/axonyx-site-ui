@@ -16,413 +16,418 @@ page Components() {
       nextLabel="See blocks"
     >
 
-        <ContentGrid cols={3} gap="lg">
-          <SectionCard title="Button">
-            <Badge tone="success">V0</Badge>
-            <Copy>Primary actions, ghost actions, forged surfaces, and link-like calls to action.</Copy>
-            <Button href="/components/button" variant="ghost">Open Button</Button>
-          </SectionCard>
-          <SectionCard title="ButtonGroup">
-            <Badge tone="success">V0</Badge>
-            <Copy>Inline action grouping for hero CTAs, toolbars, dialogs, and form actions.</Copy>
-            <Button href="/components/button-group" variant="ghost">Open ButtonGroup</Button>
-          </SectionCard>
-          <SectionCard title="Card">
-            <Badge tone="success">V0</Badge>
-            <Copy>Foundry surface primitive for content panels, dashboard widgets, and docs blocks.</Copy>
-            <Button href="/components/card" variant="ghost">Open Card</Button>
-          </SectionCard>
-          <SectionCard title="Field">
-            <Badge tone="success">V0</Badge>
-            <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
-            <Button href="/components/field" variant="ghost">Open Field</Button>
-          </SectionCard>
-          <SectionCard title="Input">
-            <Badge tone="success">V0</Badge>
-            <Copy>Native text input for search, authentication, settings, and CMS fields.</Copy>
-            <Button href="/components/input" variant="ghost">Open Input</Button>
-          </SectionCard>
-          <SectionCard title="InputGroup">
-            <Badge tone="success">V0</Badge>
-            <Copy>Inputs, semantic prefixes, suffixes, and actions inside one control boundary.</Copy>
-            <Button href="/components/input-group" variant="ghost">Open InputGroup</Button>
-          </SectionCard>
-          <SectionCard title="Combobox">
-            <Badge tone="success">V0</Badge>
-            <Copy>Browser-native searchable selection for filters, settings, and content forms.</Copy>
-            <Button href="/components/combobox" variant="ghost">Open Combobox</Button>
-          </SectionCard>
-          <SectionCard title="Checkbox">
-            <Badge tone="success">V0</Badge>
-            <Copy>Native multi-select control for settings, filters, permissions, and consent.</Copy>
-            <Button href="/components/checkbox" variant="ghost">Open Checkbox</Button>
-          </SectionCard>
-          <SectionCard title="LinkButton">
-            <Badge tone="success">V0</Badge>
-            <Copy>Anchor navigation with the visual weight of a Foundry button.</Copy>
-            <Button href="/components/link-button" variant="ghost">Open LinkButton</Button>
-          </SectionCard>
-          <SectionCard title="TextLink">
-            <Badge tone="success">V0</Badge>
-            <Copy>Inline navigation for docs, supporting actions, and content references.</Copy>
-            <Button href="/components/text-link" variant="ghost">Open TextLink</Button>
-          </SectionCard>
-          <SectionCard title="Layout">
-            <Badge tone="success">Foundation</Badge>
-            <Copy>Container, Grid, Stack, Flex, Cluster, Box, Surface, Section, and spacing primitives.</Copy>
-            <Button href="/components/layout" variant="ghost">Open Layout</Button>
-          </SectionCard>
-          <SectionCard title="Container">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Responsive page width, horizontal padding, fluid mode, and reusable layout recipes.</Copy>
-            <Button href="/components/container" variant="ghost">Open Container</Button>
-          </SectionCard>
-          <SectionCard title="Grid">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Fixed columns or intrinsic minimum-width tracks for responsive content composition.</Copy>
-            <Button href="/components/grid" variant="ghost">Open Grid</Button>
-          </SectionCard>
-          <SectionCard title="ContentGrid">
-            <Badge tone="success">Layout</Badge>
-            <Copy>A focused Grid recipe for responsive docs cards, content tiles, and dashboard metrics.</Copy>
-            <Button href="/components/content-grid" variant="ghost">Open ContentGrid</Button>
-          </SectionCard>
-          <SectionCard title="Divider">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Horizontal section lines and vertical toolbar separators that follow palette tokens.</Copy>
-            <Button href="/components/divider" variant="ghost">Open Divider</Button>
-          </SectionCard>
-          <SectionCard title="Spacer">
-            <Badge tone="success">Layout</Badge>
-            <Copy>A deliberate vertical gap with token sizes for ordinary block content.</Copy>
-            <Button href="/components/spacer" variant="ghost">Open Spacer</Button>
-          </SectionCard>
-          <SectionCard title="Stack">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Vertical rhythm with semantic spacing and predictable cross-axis alignment.</Copy>
-            <Button href="/components/stack" variant="ghost">Open Stack</Button>
-          </SectionCard>
-          <SectionCard title="Flex">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Directional rows and columns with wrapping, distribution, and mobile collapse.</Copy>
-            <Button href="/components/flex" variant="ghost">Open Flex</Button>
-          </SectionCard>
-          <SectionCard title="Cluster">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Wrapping inline composition for actions, badges, filters, and compact controls.</Copy>
-            <Button href="/components/cluster" variant="ghost">Open Cluster</Button>
-          </SectionCard>
-          <SectionCard title="Box">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Low-level spacing and material boundary for custom compositions.</Copy>
-            <Button href="/components/box" variant="ghost">Open Box</Button>
-          </SectionCard>
-          <SectionCard title="Section">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Page section with width, rhythm, alignment, and optional heading content.</Copy>
-            <Button href="/components/section" variant="ghost">Open Section</Button>
-          </SectionCard>
-          <SectionCard title="Inset">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Semantic inner spacing wrapper driven by Foundry tokens.</Copy>
-            <Button href="/components/inset" variant="ghost">Open Inset</Button>
-          </SectionCard>
-          <SectionCard title="Bleed">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Safe gutter escape with an explicit viewport mode for edge-to-edge media.</Copy>
-            <Button href="/components/bleed" variant="ghost">Open Bleed</Button>
-          </SectionCard>
-          <SectionCard title="Center">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Two-axis centering for empty states, auth panels, and focused messages.</Copy>
-            <Button href="/components/center" variant="ghost">Open Center</Button>
-          </SectionCard>
-          <SectionCard title="Avatar">
-            <Badge tone="success">V0</Badge>
-            <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>
-            <Button href="/components/avatar" variant="ghost">Open Avatar</Button>
-          </SectionCard>
-          <SectionCard title="Chip">
-            <Badge tone="success">V0</Badge>
-            <Copy>Small metadata pills for filters, tags, package channels, and state labels.</Copy>
-            <Button href="/components/chip" variant="ghost">Open Chip</Button>
-          </SectionCard>
-          <SectionCard title="CodeBlock">
-            <Badge tone="success">V0</Badge>
-            <Copy>Copy-ready code surfaces for install commands, ASX snippets, and generated HTML.</Copy>
-            <Button href="/components/code-block" variant="ghost">Open CodeBlock</Button>
-          </SectionCard>
-          <SectionCard title="ComponentPage">
-            <Badge tone="success">Docs</Badge>
-            <Copy>Shared page shell for consistent component title, description, navigation, and spacing.</Copy>
-            <Button href="/components/component-page" variant="ghost">Open ComponentPage</Button>
-          </SectionCard>
-          <SectionCard title="ComponentPreview">
-            <Badge tone="success">Docs</Badge>
-            <Copy>Preview stage primitive for component documentation and visual examples.</Copy>
-            <Button href="/components/component-preview" variant="ghost">Open ComponentPreview</Button>
-          </SectionCard>
-          <SectionCard title="Copy">
-            <Badge tone="success">Docs</Badge>
-            <Copy>Readable paragraph primitive for docs, cards, callouts, and product copy.</Copy>
-            <Button href="/components/copy" variant="ghost">Open Copy</Button>
-          </SectionCard>
-          <SectionCard title="DocsCallout">
-            <Badge tone="success">Docs</Badge>
-            <Copy>Documentation callout for notes, warnings, migration hints, and framework guidance.</Copy>
-            <Button href="/components/docs-callout" variant="ghost">Open DocsCallout</Button>
-          </SectionCard>
-          <SectionCard title="Forms">
-            <Badge tone="success">V0</Badge>
-            <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
-            <Button href="/components/forms" variant="ghost">Open Forms</Button>
-          </SectionCard>
-          <SectionCard title="Form">
-            <Badge tone="success">Forms</Badge>
-            <Copy>Native validation, reset, and submission through a complete CMS article editor example.</Copy>
-            <Button href="/components/form" variant="ghost">Open Form</Button>
-          </SectionCard>
-          <SectionCard title="FormGroup">
-            <Badge tone="success">Forms</Badge>
-            <Copy>One, two, or three responsive columns for related form fields.</Copy>
-            <Button href="/components/form-group" variant="ghost">Open FormGroup</Button>
-          </SectionCard>
-          <SectionCard title="Fieldset and Legend">
-            <Badge tone="success">Forms</Badge>
-            <Copy>Semantic groups with named legends and standard or forged surfaces.</Copy>
-            <Button href="/components/fieldset" variant="ghost">Open Fieldset</Button>
-          </SectionCard>
-          <SectionCard title="IconButton">
-            <Badge tone="success">V0</Badge>
-            <Copy>Icon-only action for toolbars, tables, drawers, and compact dashboard controls.</Copy>
-            <Button href="/components/icon-button" variant="ghost">Open IconButton</Button>
-          </SectionCard>
-          <SectionCard title="Accordion">
-            <Badge tone="success">V0</Badge>
-            <Copy>Expandable content sections for docs, FAQs, filters, and settings groups.</Copy>
-            <Button href="/components/accordion" variant="ghost">Open Accordion</Button>
-          </SectionCard>
-          <SectionCard title="AppShell">
-            <Badge tone="success">V0</Badge>
-            <Copy>Application frame for docs, dashboards, admin tools, and CMS layouts.</Copy>
-            <Button href="/components/app-shell" variant="ghost">Open AppShell</Button>
-          </SectionCard>
-          <SectionCard title="Sidebar">
-            <Badge tone="success">V0</Badge>
-            <Copy>Navigation rail used by AppShell, docs pages, dashboards, and admin blocks.</Copy>
-            <Button href="/components/sidebar" variant="ghost">Open Sidebar</Button>
-          </SectionCard>
-          <SectionCard title="Alert">
-            <Badge tone="success">V0</Badge>
-            <Copy>Inline status messaging for validation, deploy state, and system notices.</Copy>
-            <Button href="/components/alert" variant="ghost">Open Alert</Button>
-          </SectionCard>
-          <SectionCard title="Badge">
-            <Badge tone="success">V0</Badge>
-            <Copy>Compact labels for package status, preview state, and metadata.</Copy>
-            <Button href="/components/badge" variant="ghost">Open Badge</Button>
-          </SectionCard>
-          <SectionCard title="Breadcrumbs">
-            <Badge tone="success">V0</Badge>
-            <Copy>Hierarchical page trail for docs, component references, and CMS records.</Copy>
-            <Button href="/components/breadcrumbs" variant="ghost">Open Breadcrumbs</Button>
-          </SectionCard>
-          <SectionCard title="Command">
-            <Badge tone="success">V0</Badge>
-            <Copy>Command surfaces for quick actions, admin tools, and keyboard-driven workflows.</Copy>
-            <Button href="/components/command" variant="ghost">Open Command</Button>
-          </SectionCard>
-          <SectionCard title="EmptyState">
-            <Badge tone="success">V0</Badge>
-            <Copy>Focused empty, error, and first-run states with actions and description slots.</Copy>
-            <Button href="/components/empty-state" variant="ghost">Open EmptyState</Button>
-          </SectionCard>
-          <SectionCard title="List">
-            <Badge tone="success">V0</Badge>
-            <Copy>Stacked content rows for nav panels, inboxes, command results, and CMS records.</Copy>
-            <Button href="/components/list" variant="ghost">Open List</Button>
-          </SectionCard>
-          <SectionCard title="Menu">
-            <Badge tone="success">V0</Badge>
-            <Copy>Vertical navigation list for sidebars, settings sections, and dashboard panels.</Copy>
-            <Button href="/components/menu" variant="ghost">Open Menu</Button>
-          </SectionCard>
-          <SectionCard title="Modal">
-            <Badge tone="success">V0</Badge>
-            <Copy>Centered overlay panel for focused forms, confirmations, and setup flows.</Copy>
-            <Button href="/components/modal" variant="ghost">Open Modal</Button>
-          </SectionCard>
-          <SectionCard title="MachineSwitch">
-            <Badge tone="success">V0</Badge>
-            <Copy>Industrial two-pad switch for runtime, worker, and infrastructure controls.</Copy>
-            <Button href="/components/machine-switch" variant="ghost">Open MachineSwitch</Button>
-          </SectionCard>
-          <SectionCard title="Navbar">
-            <Badge tone="success">V0</Badge>
-            <Copy>Top-level navigation shell for product pages, docs, dashboards, and app headers.</Copy>
-            <Button href="/components/navbar" variant="ghost">Open Navbar</Button>
-          </SectionCard>
-          <SectionCard title="NavigationMenu">
-            <Badge tone="success">V0</Badge>
-            <Copy>Horizontal or vertical navigation composition with active and accent states.</Copy>
-            <Button href="/components/navigation-menu" variant="ghost">Open NavigationMenu</Button>
-          </SectionCard>
-          <SectionCard title="Pagination">
-            <Badge tone="success">V0</Badge>
-            <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
-            <Button href="/components/pagination" variant="ghost">Open Pagination</Button>
-          </SectionCard>
-          <SectionCard title="PageHeader">
-            <Badge tone="success">Docs</Badge>
-            <Copy>Header surface for docs pages, component pages, dashboards, and section intros.</Copy>
-            <Button href="/components/page-header" variant="ghost">Open PageHeader</Button>
-          </SectionCard>
-          <SectionCard title="Popover">
-            <Badge tone="success">V0</Badge>
-            <Copy>Small anchored panel for compact help, quick controls, and contextual metadata.</Copy>
-            <Button href="/components/popover" variant="ghost">Open Popover</Button>
-          </SectionCard>
-          <SectionCard title="PropsTable">
-            <Badge tone="success">V0</Badge>
-            <Copy>Reference table primitive for component props, slots, and API contracts.</Copy>
-            <Button href="/components/props-table" variant="ghost">Open PropsTable</Button>
-          </SectionCard>
-          <SectionCard title="Radio">
-            <Badge tone="success">V0</Badge>
-            <Copy>Native radio option for plans, settings, templates, and mutually exclusive choices.</Copy>
-            <Button href="/components/radio" variant="ghost">Open Radio</Button>
-          </SectionCard>
-          <SectionCard title="Rating">
-            <Badge tone="success">V0</Badge>
-            <Copy>Compact rating display for reviews, quality signals, and ranking panels.</Copy>
-            <Button href="/components/rating" variant="ghost">Open Rating</Button>
-          </SectionCard>
-          <SectionCard title="Select">
-            <Badge tone="success">V0</Badge>
-            <Copy>Native select styling aligned with Foundry field and theme surfaces.</Copy>
-            <Button href="/components/select" variant="ghost">Open Select</Button>
-          </SectionCard>
-          <SectionCard title="SiteShell">
-            <Badge tone="success">Layout</Badge>
-            <Copy>Outer page shell for site-level width, header/footer rhythm, and app content.</Copy>
-            <Button href="/components/site-shell" variant="ghost">Open SiteShell</Button>
-          </SectionCard>
-          <SectionCard title="Stat">
-            <Badge tone="success">V0</Badge>
-            <Copy>Metric panel for dashboard KPIs, runtime health, and build performance.</Copy>
-            <Button href="/components/stat" variant="ghost">Open Stat</Button>
-          </SectionCard>
-          <SectionCard title="ThemeSwitcher">
-            <Badge tone="success">V0</Badge>
-            <Copy>Foundry theme control for silver, bronze, and gold token presets.</Copy>
-            <Button href="/components/theme-switcher" variant="ghost">Open ThemeSwitcher</Button>
-          </SectionCard>
-          <SectionCard title="Textarea">
-            <Badge tone="success">V0</Badge>
-            <Copy>Native multi-line input for content, comments, notes, and CMS fields.</Copy>
-            <Button href="/components/textarea" variant="ghost">Open Textarea</Button>
-          </SectionCard>
-          <SectionCard title="Slider">
-            <Badge tone="success">V0</Badge>
-            <Copy>Range input for intensity, volume, opacity, limits, and dashboard tuning.</Copy>
-            <Button href="/components/slider" variant="ghost">Open Slider</Button>
-          </SectionCard>
-          <SectionCard title="Switch">
-            <Badge tone="success">V0</Badge>
-            <Copy>Compact boolean control for preferences, flags, and settings forms.</Copy>
-            <Button href="/components/switch" variant="ghost">Open Switch</Button>
-          </SectionCard>
-          <SectionCard title="Tabs">
-            <Badge tone="success">V0</Badge>
-            <Copy>Segmented panels for previews, code, API notes, and dashboard sections.</Copy>
-            <Button href="/components/tabs" variant="ghost">Open Tabs</Button>
-          </SectionCard>
-          <SectionCard title="Table">
-            <Badge tone="success">V0</Badge>
-            <Copy>Semantic table primitives for content lists, API previews, and package metadata.</Copy>
-            <Button href="/components/table" variant="ghost">Open Table</Button>
-          </SectionCard>
-          <SectionCard title="Dialog">
-            <Badge tone="success">V0</Badge>
-            <Copy>Modal overlay for confirmations, focused tasks, and destructive actions.</Copy>
-            <Button href="/components/dialog" variant="ghost">Open Dialog</Button>
-          </SectionCard>
-          <SectionCard title="AlertDialog">
-            <Badge tone="success">V0</Badge>
-            <Copy>Focused confirmation boundary for consequential and destructive actions.</Copy>
-            <Button href="/components/alert-dialog" variant="ghost">Open AlertDialog</Button>
-          </SectionCard>
-          <SectionCard title="Drawer">
-            <Badge tone="success">V0</Badge>
-            <Copy>Side panel for filters, CMS tools, navigation, and detail inspectors.</Copy>
-            <Button href="/components/drawer" variant="ghost">Open Drawer</Button>
-          </SectionCard>
-          <SectionCard title="DropdownMenu">
-            <Badge tone="success">V0</Badge>
-            <Copy>Compact command menu for headers, dashboards, and registry actions.</Copy>
-            <Button href="/components/dropdown-menu" variant="ghost">Open DropdownMenu</Button>
-          </SectionCard>
-          <SectionCard title="Surface">
-            <Badge tone="success">V0</Badge>
-            <Copy>General section surface for themed panels, docs sections, and feature blocks.</Copy>
-            <Button href="/components/surface" variant="ghost">Open Surface</Button>
-          </SectionCard>
-          <SectionCard title="ScrollArea">
-            <Badge tone="success">V0</Badge>
-            <Copy>Keyboard-focusable overflow region with Foundry scrollbars and optional edge fade.</Copy>
-            <Button href="/components/scroll-area" variant="ghost">Open ScrollArea</Button>
-          </SectionCard>
-          <SectionCard title="StatusLamp">
-            <Badge tone="success">V0</Badge>
-            <Copy>Industrial status indicator for runtime health and worker state.</Copy>
-            <Button href="/components/status-lamp" variant="ghost">Open StatusLamp</Button>
-          </SectionCard>
-          <SectionCard title="Timeline">
-            <Badge tone="success">V0</Badge>
-            <Copy>Chronological activity and stepper primitives for releases, jobs, and guides.</Copy>
-            <Button href="/components/timeline" variant="ghost">Open Timeline</Button>
-          </SectionCard>
-          <SectionCard title="Stepper">
-            <Badge tone="success">V0</Badge>
-            <Copy>Ordered progress for setup flows, deploy pipelines, onboarding, and publishing.</Copy>
-            <Button href="/components/stepper" variant="ghost">Open Stepper</Button>
-          </SectionCard>
-          <SectionCard title="Toolbar">
-            <Badge tone="success">V0</Badge>
-            <Copy>Horizontal action strip for editors, tables, dashboards, and CMS controls.</Copy>
-            <Button href="/components/toolbar" variant="ghost">Open Toolbar</Button>
-          </SectionCard>
-          <SectionCard title="Progress">
-            <Badge tone="success">V0</Badge>
-            <Copy>Progress feedback for uploads, builds, migrations, and jobs.</Copy>
-            <Button href="/components/progress" variant="ghost">Open Progress</Button>
-          </SectionCard>
-          <SectionCard title="Spinner">
-            <Badge tone="success">V0</Badge>
-            <Copy>Accessible loading status for actions, streams, builds, and background work.</Copy>
-            <Button href="/components/spinner" variant="ghost">Open Spinner</Button>
-          </SectionCard>
-          <SectionCard title="Toggle">
-            <Badge tone="success">V0</Badge>
-            <Copy>Single- and multiple-selection groups built on native radio and checkbox semantics.</Copy>
-            <Button href="/components/toggle" variant="ghost">Open Toggle</Button>
-          </SectionCard>
-          <SectionCard title="Skeleton">
-            <Badge tone="success">V0</Badge>
-            <Copy>Loading placeholders for streamed panels and API-backed surfaces.</Copy>
-            <Button href="/components/skeleton" variant="ghost">Open Skeleton</Button>
-          </SectionCard>
-          <SectionCard title="Toast">
-            <Badge tone="success">V0</Badge>
-            <Copy>Dismissible feedback for saves, deploys, imports, and background work.</Copy>
-            <Button href="/components/toast" variant="ghost">Open Toast</Button>
-          </SectionCard>
-          <SectionCard title="Tooltip">
-            <Badge tone="success">V0</Badge>
-            <Copy>Small contextual help for dense controls and dashboard actions.</Copy>
-            <Button href="/components/tooltip" variant="ghost">Open Tooltip</Button>
-          </SectionCard>
-        </ContentGrid>
+      <ContentGrid cols={3} gap="lg">
+        <SectionCard title="DataTable">
+          <Badge tone="warning">Development preview</Badge>
+          <Copy>Search, sort and paginate a bounded set of loaded records. Semantic tables with a readable no-JS fallback.</Copy>
+          <Button href="/components/data-table" variant="ghost">Open DataTable</Button>
+        </SectionCard>
+        <SectionCard title="Button">
+          <Badge tone="success">V0</Badge>
+          <Copy>Primary actions, ghost actions, forged surfaces, and link-like calls to action.</Copy>
+          <Button href="/components/button" variant="ghost">Open Button</Button>
+        </SectionCard>
+        <SectionCard title="ButtonGroup">
+          <Badge tone="success">V0</Badge>
+          <Copy>Inline action grouping for hero CTAs, toolbars, dialogs, and form actions.</Copy>
+          <Button href="/components/button-group" variant="ghost">Open ButtonGroup</Button>
+        </SectionCard>
+        <SectionCard title="Card">
+          <Badge tone="success">V0</Badge>
+          <Copy>Foundry surface primitive for content panels, dashboard widgets, and docs blocks.</Copy>
+          <Button href="/components/card" variant="ghost">Open Card</Button>
+        </SectionCard>
+        <SectionCard title="Field">
+          <Badge tone="success">V0</Badge>
+          <Copy>Label, input, hint, and error shell for native forms and action inputs.</Copy>
+          <Button href="/components/field" variant="ghost">Open Field</Button>
+        </SectionCard>
+        <SectionCard title="Input">
+          <Badge tone="success">V0</Badge>
+          <Copy>Native text input for search, authentication, settings, and CMS fields.</Copy>
+          <Button href="/components/input" variant="ghost">Open Input</Button>
+        </SectionCard>
+        <SectionCard title="InputGroup">
+          <Badge tone="success">V0</Badge>
+          <Copy>Inputs, semantic prefixes, suffixes, and actions inside one control boundary.</Copy>
+          <Button href="/components/input-group" variant="ghost">Open InputGroup</Button>
+        </SectionCard>
+        <SectionCard title="Combobox">
+          <Badge tone="success">V0</Badge>
+          <Copy>Browser-native searchable selection for filters, settings, and content forms.</Copy>
+          <Button href="/components/combobox" variant="ghost">Open Combobox</Button>
+        </SectionCard>
+        <SectionCard title="Checkbox">
+          <Badge tone="success">V0</Badge>
+          <Copy>Native multi-select control for settings, filters, permissions, and consent.</Copy>
+          <Button href="/components/checkbox" variant="ghost">Open Checkbox</Button>
+        </SectionCard>
+        <SectionCard title="LinkButton">
+          <Badge tone="success">V0</Badge>
+          <Copy>Anchor navigation with the visual weight of a Foundry button.</Copy>
+          <Button href="/components/link-button" variant="ghost">Open LinkButton</Button>
+        </SectionCard>
+        <SectionCard title="TextLink">
+          <Badge tone="success">V0</Badge>
+          <Copy>Inline navigation for docs, supporting actions, and content references.</Copy>
+          <Button href="/components/text-link" variant="ghost">Open TextLink</Button>
+        </SectionCard>
+        <SectionCard title="Layout">
+          <Badge tone="success">Foundation</Badge>
+          <Copy>Container, Grid, Stack, Flex, Cluster, Box, Surface, Section, and spacing primitives.</Copy>
+          <Button href="/components/layout" variant="ghost">Open Layout</Button>
+        </SectionCard>
+        <SectionCard title="Container">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Responsive page width, horizontal padding, fluid mode, and reusable layout recipes.</Copy>
+          <Button href="/components/container" variant="ghost">Open Container</Button>
+        </SectionCard>
+        <SectionCard title="Grid">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Fixed columns or intrinsic minimum-width tracks for responsive content composition.</Copy>
+          <Button href="/components/grid" variant="ghost">Open Grid</Button>
+        </SectionCard>
+        <SectionCard title="ContentGrid">
+          <Badge tone="success">Layout</Badge>
+          <Copy>A focused Grid recipe for responsive docs cards, content tiles, and dashboard metrics.</Copy>
+          <Button href="/components/content-grid" variant="ghost">Open ContentGrid</Button>
+        </SectionCard>
+        <SectionCard title="Divider">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Horizontal section lines and vertical toolbar separators that follow palette tokens.</Copy>
+          <Button href="/components/divider" variant="ghost">Open Divider</Button>
+        </SectionCard>
+        <SectionCard title="Spacer">
+          <Badge tone="success">Layout</Badge>
+          <Copy>A deliberate vertical gap with token sizes for ordinary block content.</Copy>
+          <Button href="/components/spacer" variant="ghost">Open Spacer</Button>
+        </SectionCard>
+        <SectionCard title="Stack">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Vertical rhythm with semantic spacing and predictable cross-axis alignment.</Copy>
+          <Button href="/components/stack" variant="ghost">Open Stack</Button>
+        </SectionCard>
+        <SectionCard title="Flex">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Directional rows and columns with wrapping, distribution, and mobile collapse.</Copy>
+          <Button href="/components/flex" variant="ghost">Open Flex</Button>
+        </SectionCard>
+        <SectionCard title="Cluster">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Wrapping inline composition for actions, badges, filters, and compact controls.</Copy>
+          <Button href="/components/cluster" variant="ghost">Open Cluster</Button>
+        </SectionCard>
+        <SectionCard title="Box">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Low-level spacing and material boundary for custom compositions.</Copy>
+          <Button href="/components/box" variant="ghost">Open Box</Button>
+        </SectionCard>
+        <SectionCard title="Section">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Page section with width, rhythm, alignment, and optional heading content.</Copy>
+          <Button href="/components/section" variant="ghost">Open Section</Button>
+        </SectionCard>
+        <SectionCard title="Inset">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Semantic inner spacing wrapper driven by Foundry tokens.</Copy>
+          <Button href="/components/inset" variant="ghost">Open Inset</Button>
+        </SectionCard>
+        <SectionCard title="Bleed">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Safe gutter escape with an explicit viewport mode for edge-to-edge media.</Copy>
+          <Button href="/components/bleed" variant="ghost">Open Bleed</Button>
+        </SectionCard>
+        <SectionCard title="Center">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Two-axis centering for empty states, auth panels, and focused messages.</Copy>
+          <Button href="/components/center" variant="ghost">Open Center</Button>
+        </SectionCard>
+        <SectionCard title="Avatar">
+          <Badge tone="success">V0</Badge>
+          <Copy>Compact identity marker for users, teams, authors, and dashboard entities.</Copy>
+          <Button href="/components/avatar" variant="ghost">Open Avatar</Button>
+        </SectionCard>
+        <SectionCard title="Chip">
+          <Badge tone="success">V0</Badge>
+          <Copy>Small metadata pills for filters, tags, package channels, and state labels.</Copy>
+          <Button href="/components/chip" variant="ghost">Open Chip</Button>
+        </SectionCard>
+        <SectionCard title="CodeBlock">
+          <Badge tone="success">V0</Badge>
+          <Copy>Copy-ready code surfaces for install commands, ASX snippets, and generated HTML.</Copy>
+          <Button href="/components/code-block" variant="ghost">Open CodeBlock</Button>
+        </SectionCard>
+        <SectionCard title="ComponentPage">
+          <Badge tone="success">Docs</Badge>
+          <Copy>Shared page shell for consistent component title, description, navigation, and spacing.</Copy>
+          <Button href="/components/component-page" variant="ghost">Open ComponentPage</Button>
+        </SectionCard>
+        <SectionCard title="ComponentPreview">
+          <Badge tone="success">Docs</Badge>
+          <Copy>Preview stage primitive for component documentation and visual examples.</Copy>
+          <Button href="/components/component-preview" variant="ghost">Open ComponentPreview</Button>
+        </SectionCard>
+        <SectionCard title="Copy">
+          <Badge tone="success">Docs</Badge>
+          <Copy>Readable paragraph primitive for docs, cards, callouts, and product copy.</Copy>
+          <Button href="/components/copy" variant="ghost">Open Copy</Button>
+        </SectionCard>
+        <SectionCard title="DocsCallout">
+          <Badge tone="success">Docs</Badge>
+          <Copy>Documentation callout for notes, warnings, migration hints, and framework guidance.</Copy>
+          <Button href="/components/docs-callout" variant="ghost">Open DocsCallout</Button>
+        </SectionCard>
+        <SectionCard title="Forms">
+          <Badge tone="success">V0</Badge>
+          <Copy>Form, fieldset, textarea, checkbox, radio, switch, and select composition patterns.</Copy>
+          <Button href="/components/forms" variant="ghost">Open Forms</Button>
+        </SectionCard>
+        <SectionCard title="Form">
+          <Badge tone="success">Forms</Badge>
+          <Copy>Native validation, reset, and submission through a complete CMS article editor example.</Copy>
+          <Button href="/components/form" variant="ghost">Open Form</Button>
+        </SectionCard>
+        <SectionCard title="FormGroup">
+          <Badge tone="success">Forms</Badge>
+          <Copy>One, two, or three responsive columns for related form fields.</Copy>
+          <Button href="/components/form-group" variant="ghost">Open FormGroup</Button>
+        </SectionCard>
+        <SectionCard title="Fieldset and Legend">
+          <Badge tone="success">Forms</Badge>
+          <Copy>Semantic groups with named legends and standard or forged surfaces.</Copy>
+          <Button href="/components/fieldset" variant="ghost">Open Fieldset</Button>
+        </SectionCard>
+        <SectionCard title="IconButton">
+          <Badge tone="success">V0</Badge>
+          <Copy>Icon-only action for toolbars, tables, drawers, and compact dashboard controls.</Copy>
+          <Button href="/components/icon-button" variant="ghost">Open IconButton</Button>
+        </SectionCard>
+        <SectionCard title="Accordion">
+          <Badge tone="success">V0</Badge>
+          <Copy>Expandable content sections for docs, FAQs, filters, and settings groups.</Copy>
+          <Button href="/components/accordion" variant="ghost">Open Accordion</Button>
+        </SectionCard>
+        <SectionCard title="AppShell">
+          <Badge tone="success">V0</Badge>
+          <Copy>Application frame for docs, dashboards, admin tools, and CMS layouts.</Copy>
+          <Button href="/components/app-shell" variant="ghost">Open AppShell</Button>
+        </SectionCard>
+        <SectionCard title="Sidebar">
+          <Badge tone="success">V0</Badge>
+          <Copy>Navigation rail used by AppShell, docs pages, dashboards, and admin blocks.</Copy>
+          <Button href="/components/sidebar" variant="ghost">Open Sidebar</Button>
+        </SectionCard>
+        <SectionCard title="Alert">
+          <Badge tone="success">V0</Badge>
+          <Copy>Inline status messaging for validation, deploy state, and system notices.</Copy>
+          <Button href="/components/alert" variant="ghost">Open Alert</Button>
+        </SectionCard>
+        <SectionCard title="Badge">
+          <Badge tone="success">V0</Badge>
+          <Copy>Compact labels for package status, preview state, and metadata.</Copy>
+          <Button href="/components/badge" variant="ghost">Open Badge</Button>
+        </SectionCard>
+        <SectionCard title="Breadcrumbs">
+          <Badge tone="success">V0</Badge>
+          <Copy>Hierarchical page trail for docs, component references, and CMS records.</Copy>
+          <Button href="/components/breadcrumbs" variant="ghost">Open Breadcrumbs</Button>
+        </SectionCard>
+        <SectionCard title="Command">
+          <Badge tone="success">V0</Badge>
+          <Copy>Command surfaces for quick actions, admin tools, and keyboard-driven workflows.</Copy>
+          <Button href="/components/command" variant="ghost">Open Command</Button>
+        </SectionCard>
+        <SectionCard title="EmptyState">
+          <Badge tone="success">V0</Badge>
+          <Copy>Focused empty, error, and first-run states with actions and description slots.</Copy>
+          <Button href="/components/empty-state" variant="ghost">Open EmptyState</Button>
+        </SectionCard>
+        <SectionCard title="List">
+          <Badge tone="success">V0</Badge>
+          <Copy>Stacked content rows for nav panels, inboxes, command results, and CMS records.</Copy>
+          <Button href="/components/list" variant="ghost">Open List</Button>
+        </SectionCard>
+        <SectionCard title="Menu">
+          <Badge tone="success">V0</Badge>
+          <Copy>Vertical navigation list for sidebars, settings sections, and dashboard panels.</Copy>
+          <Button href="/components/menu" variant="ghost">Open Menu</Button>
+        </SectionCard>
+        <SectionCard title="Modal">
+          <Badge tone="success">V0</Badge>
+          <Copy>Centered overlay panel for focused forms, confirmations, and setup flows.</Copy>
+          <Button href="/components/modal" variant="ghost">Open Modal</Button>
+        </SectionCard>
+        <SectionCard title="MachineSwitch">
+          <Badge tone="success">V0</Badge>
+          <Copy>Industrial two-pad switch for runtime, worker, and infrastructure controls.</Copy>
+          <Button href="/components/machine-switch" variant="ghost">Open MachineSwitch</Button>
+        </SectionCard>
+        <SectionCard title="Navbar">
+          <Badge tone="success">V0</Badge>
+          <Copy>Top-level navigation shell for product pages, docs, dashboards, and app headers.</Copy>
+          <Button href="/components/navbar" variant="ghost">Open Navbar</Button>
+        </SectionCard>
+        <SectionCard title="NavigationMenu">
+          <Badge tone="success">V0</Badge>
+          <Copy>Horizontal or vertical navigation composition with active and accent states.</Copy>
+          <Button href="/components/navigation-menu" variant="ghost">Open NavigationMenu</Button>
+        </SectionCard>
+        <SectionCard title="Pagination">
+          <Badge tone="success">V0</Badge>
+          <Copy>Navigation primitive for tables, docs indexes, blog archives, and CMS lists.</Copy>
+          <Button href="/components/pagination" variant="ghost">Open Pagination</Button>
+        </SectionCard>
+        <SectionCard title="PageHeader">
+          <Badge tone="success">Docs</Badge>
+          <Copy>Header surface for docs pages, component pages, dashboards, and section intros.</Copy>
+          <Button href="/components/page-header" variant="ghost">Open PageHeader</Button>
+        </SectionCard>
+        <SectionCard title="Popover">
+          <Badge tone="success">V0</Badge>
+          <Copy>Small anchored panel for compact help, quick controls, and contextual metadata.</Copy>
+          <Button href="/components/popover" variant="ghost">Open Popover</Button>
+        </SectionCard>
+        <SectionCard title="PropsTable">
+          <Badge tone="success">V0</Badge>
+          <Copy>Reference table primitive for component props, slots, and API contracts.</Copy>
+          <Button href="/components/props-table" variant="ghost">Open PropsTable</Button>
+        </SectionCard>
+        <SectionCard title="Radio">
+          <Badge tone="success">V0</Badge>
+          <Copy>Native radio option for plans, settings, templates, and mutually exclusive choices.</Copy>
+          <Button href="/components/radio" variant="ghost">Open Radio</Button>
+        </SectionCard>
+        <SectionCard title="Rating">
+          <Badge tone="success">V0</Badge>
+          <Copy>Compact rating display for reviews, quality signals, and ranking panels.</Copy>
+          <Button href="/components/rating" variant="ghost">Open Rating</Button>
+        </SectionCard>
+        <SectionCard title="Select">
+          <Badge tone="success">V0</Badge>
+          <Copy>Native select styling aligned with Foundry field and theme surfaces.</Copy>
+          <Button href="/components/select" variant="ghost">Open Select</Button>
+        </SectionCard>
+        <SectionCard title="SiteShell">
+          <Badge tone="success">Layout</Badge>
+          <Copy>Outer page shell for site-level width, header/footer rhythm, and app content.</Copy>
+          <Button href="/components/site-shell" variant="ghost">Open SiteShell</Button>
+        </SectionCard>
+        <SectionCard title="Stat">
+          <Badge tone="success">V0</Badge>
+          <Copy>Metric panel for dashboard KPIs, runtime health, and build performance.</Copy>
+          <Button href="/components/stat" variant="ghost">Open Stat</Button>
+        </SectionCard>
+        <SectionCard title="ThemeSwitcher">
+          <Badge tone="success">V0</Badge>
+          <Copy>Foundry theme control for silver, bronze, and gold token presets.</Copy>
+          <Button href="/components/theme-switcher" variant="ghost">Open ThemeSwitcher</Button>
+        </SectionCard>
+        <SectionCard title="Textarea">
+          <Badge tone="success">V0</Badge>
+          <Copy>Native multi-line input for content, comments, notes, and CMS fields.</Copy>
+          <Button href="/components/textarea" variant="ghost">Open Textarea</Button>
+        </SectionCard>
+        <SectionCard title="Slider">
+          <Badge tone="success">V0</Badge>
+          <Copy>Range input for intensity, volume, opacity, limits, and dashboard tuning.</Copy>
+          <Button href="/components/slider" variant="ghost">Open Slider</Button>
+        </SectionCard>
+        <SectionCard title="Switch">
+          <Badge tone="success">V0</Badge>
+          <Copy>Compact boolean control for preferences, flags, and settings forms.</Copy>
+          <Button href="/components/switch" variant="ghost">Open Switch</Button>
+        </SectionCard>
+        <SectionCard title="Tabs">
+          <Badge tone="success">V0</Badge>
+          <Copy>Segmented panels for previews, code, API notes, and dashboard sections.</Copy>
+          <Button href="/components/tabs" variant="ghost">Open Tabs</Button>
+        </SectionCard>
+        <SectionCard title="Table">
+          <Badge tone="success">V0</Badge>
+          <Copy>Semantic table primitives for content lists, API previews, and package metadata.</Copy>
+          <Button href="/components/table" variant="ghost">Open Table</Button>
+        </SectionCard>
+        <SectionCard title="Dialog">
+          <Badge tone="success">V0</Badge>
+          <Copy>Modal overlay for confirmations, focused tasks, and destructive actions.</Copy>
+          <Button href="/components/dialog" variant="ghost">Open Dialog</Button>
+        </SectionCard>
+        <SectionCard title="AlertDialog">
+          <Badge tone="success">V0</Badge>
+          <Copy>Focused confirmation boundary for consequential and destructive actions.</Copy>
+          <Button href="/components/alert-dialog" variant="ghost">Open AlertDialog</Button>
+        </SectionCard>
+        <SectionCard title="Drawer">
+          <Badge tone="success">V0</Badge>
+          <Copy>Side panel for filters, CMS tools, navigation, and detail inspectors.</Copy>
+          <Button href="/components/drawer" variant="ghost">Open Drawer</Button>
+        </SectionCard>
+        <SectionCard title="DropdownMenu">
+          <Badge tone="success">V0</Badge>
+          <Copy>Compact command menu for headers, dashboards, and registry actions.</Copy>
+          <Button href="/components/dropdown-menu" variant="ghost">Open DropdownMenu</Button>
+        </SectionCard>
+        <SectionCard title="Surface">
+          <Badge tone="success">V0</Badge>
+          <Copy>General section surface for themed panels, docs sections, and feature blocks.</Copy>
+          <Button href="/components/surface" variant="ghost">Open Surface</Button>
+        </SectionCard>
+        <SectionCard title="ScrollArea">
+          <Badge tone="success">V0</Badge>
+          <Copy>Keyboard-focusable overflow region with Foundry scrollbars and optional edge fade.</Copy>
+          <Button href="/components/scroll-area" variant="ghost">Open ScrollArea</Button>
+        </SectionCard>
+        <SectionCard title="StatusLamp">
+          <Badge tone="success">V0</Badge>
+          <Copy>Industrial status indicator for runtime health and worker state.</Copy>
+          <Button href="/components/status-lamp" variant="ghost">Open StatusLamp</Button>
+        </SectionCard>
+        <SectionCard title="Timeline">
+          <Badge tone="success">V0</Badge>
+          <Copy>Chronological activity and stepper primitives for releases, jobs, and guides.</Copy>
+          <Button href="/components/timeline" variant="ghost">Open Timeline</Button>
+        </SectionCard>
+        <SectionCard title="Stepper">
+          <Badge tone="success">V0</Badge>
+          <Copy>Ordered progress for setup flows, deploy pipelines, onboarding, and publishing.</Copy>
+          <Button href="/components/stepper" variant="ghost">Open Stepper</Button>
+        </SectionCard>
+        <SectionCard title="Toolbar">
+          <Badge tone="success">V0</Badge>
+          <Copy>Horizontal action strip for editors, tables, dashboards, and CMS controls.</Copy>
+          <Button href="/components/toolbar" variant="ghost">Open Toolbar</Button>
+        </SectionCard>
+        <SectionCard title="Progress">
+          <Badge tone="success">V0</Badge>
+          <Copy>Progress feedback for uploads, builds, migrations, and jobs.</Copy>
+          <Button href="/components/progress" variant="ghost">Open Progress</Button>
+        </SectionCard>
+        <SectionCard title="Spinner">
+          <Badge tone="success">V0</Badge>
+          <Copy>Accessible loading status for actions, streams, builds, and background work.</Copy>
+          <Button href="/components/spinner" variant="ghost">Open Spinner</Button>
+        </SectionCard>
+        <SectionCard title="Toggle">
+          <Badge tone="success">V0</Badge>
+          <Copy>Single- and multiple-selection groups built on native radio and checkbox semantics.</Copy>
+          <Button href="/components/toggle" variant="ghost">Open Toggle</Button>
+        </SectionCard>
+        <SectionCard title="Skeleton">
+          <Badge tone="success">V0</Badge>
+          <Copy>Loading placeholders for streamed panels and API-backed surfaces.</Copy>
+          <Button href="/components/skeleton" variant="ghost">Open Skeleton</Button>
+        </SectionCard>
+        <SectionCard title="Toast">
+          <Badge tone="success">V0</Badge>
+          <Copy>Dismissible feedback for saves, deploys, imports, and background work.</Copy>
+          <Button href="/components/toast" variant="ghost">Open Toast</Button>
+        </SectionCard>
+        <SectionCard title="Tooltip">
+          <Badge tone="success">V0</Badge>
+          <Copy>Small contextual help for dense controls and dashboard actions.</Copy>
+          <Button href="/components/tooltip" variant="ghost">Open Tooltip</Button>
+        </SectionCard>
+      </ContentGrid>
     </ComponentPage>
   }
 }

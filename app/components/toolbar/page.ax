@@ -17,19 +17,19 @@ page ToolbarPage() {
       nextLabel="Next: Progress"
     >
 
-        <Card title="Preview" border="forged">
-          <Toolbar variant="forged">
-            <ButtonGroup>
-              <Button variant="primary">Publish</Button>
-              <Button variant="secondary">Preview</Button>
-              <Button variant="ghost">Archive</Button>
-            </ButtonGroup>
-          </Toolbar>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Toolbar variant="forged">
+          <ButtonGroup>
+            <Button variant="primary">Publish</Button>
+            <Button variant="secondary">Preview</Button>
+            <Button variant="ghost">Archive</Button>
+          </ButtonGroup>
+        </Toolbar>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Toolbar variant=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n    <Button variant=\"ghost\">Archive</Button>\n  </ButtonGroup>\n</Toolbar>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Toolbar variant=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n    <Button variant=\"ghost\">Archive</Button>\n  </ButtonGroup>\n</Toolbar>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

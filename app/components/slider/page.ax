@@ -17,10 +17,14 @@ page SliderPage() {
       nextLabel="Next: Switch"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Runtime intensity"><Slider label="Compiler intensity" name="intensity" min="0" max="100" value="64" /></Card>
-          <Card title="Axonyx"><DocsCodeBlock>{"<Slider label=\"Compiler intensity\" min=\"0\" max=\"100\" value=\"64\" />"}</DocsCodeBlock></Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Runtime intensity">
+          <Slider label="Compiler intensity" name="intensity" min="0" max="100" value="64" />
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Slider label=\"Compiler intensity\" min=\"0\" max=\"100\" value=\"64\" />"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

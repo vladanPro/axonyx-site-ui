@@ -20,18 +20,18 @@ page TextareaPage() {
       nextLabel="Next: Slider"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Field htmlFor="notes">
-              <FieldLabel htmlFor="notes">Release notes</FieldLabel>
-              <Textarea id="notes" name="notes" placeholder="Describe what changed..." />
-              <FieldHint>Used for docs, CMS content, and deploy comments.</FieldHint>
-            </Field>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Textarea id=\"notes\" name=\"notes\" placeholder=\"Describe what changed...\" />"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Field htmlFor="notes">
+            <FieldLabel htmlFor="notes">Release notes</FieldLabel>
+            <Textarea id="notes" name="notes" placeholder="Describe what changed..." />
+            <FieldHint>Used for docs, CMS content, and deploy comments.</FieldHint>
+          </Field>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Textarea id=\"notes\" name=\"notes\" placeholder=\"Describe what changed...\" />"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

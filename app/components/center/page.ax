@@ -8,9 +8,21 @@ import { Surface } from "@axonyx/ui/foundry/Surface.asx"
 
 page CenterPage() {
   return ASX {
-    <ComponentPage title="Center" category="Layout primitive" description="Center provides two-axis centering for empty states, authentication panels, and focused messages." nextHref="/components/layout" nextLabel="Layout overview">
+    <ComponentPage
+      title="Center"
+      category="Layout primitive"
+      description="Center provides two-axis centering for empty states, authentication panels, and focused messages."
+      nextHref="/components/layout"
+      nextLabel="Layout overview"
+    >
       <Surface variant="inset" padding="lg">
-        <Center min="sm"><Stack gap="md" align="center"><strong>No deployments yet</strong><Copy>Create the first release when the project is ready.</Copy><Button variant="primary">Create deployment</Button></Stack></Center>
+        <Center min="sm">
+          <Stack gap="md" align="center">
+            <strong>No deployments yet</strong>
+            <Copy>Create the first release when the project is ready.</Copy>
+            <Button variant="primary">Create deployment</Button>
+          </Stack>
+        </Center>
       </Surface>
       <DocsCodeBlock>{"<Center min=\"sm\">\n  <EmptyState />\n</Center>"}</DocsCodeBlock>
     </ComponentPage>

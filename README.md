@@ -100,3 +100,47 @@ Start with a small complete loop:
 Foundry styles come from the Cargo dependency declared in `Cargo.toml`.
 There is no local foundation snapshot or compatibility patch.
 `scripts/sync-foundry-theme.ps1` now only versions site-owned CSS and JavaScript.
+
+## Source formatting
+
+VS Code formats Axonyx files on save with the Axonyx extension. Run `cargo ax fmt`
+for project sources and `cargo ax fmt --check` for a read-only CI check. The CI
+workflow currently pins the formatter's source commit; switch that pin to the
+published CLI version once the formatting change is released.
+
+Enable the optional staged-source guard with:
+
+```bash
+git config --local core.hooksPath .githooks
+```
+
+It checks the content staged for commit, not unstaged edits, and never changes
+the index or your files. Format and stage intended changes yourself before
+retrying a rejected commit. Disable with `git config --local --unset core.hooksPath`.
+For an isolated local formatter executable, set
+`git config --local axonyx.formatterPath /absolute/path/to/cargo-ax`.
+Do not format generated output or dependency/vendor folders. Keep one-time
+formatting baselines in their own commits, apart from behavioral changes.
+
+## DataTable development preview
+
+The `feature/data-table-catalog-v0` branch pins a reviewed UI Git commit for
+`/components/data-table`. This is a development dependency, not a production
+upgrade. Replace it with the published Cargo version and update the preview's
+installation example before promoting this branch to `main`.
+
+With the existing UI workspace test dependencies installed, run:
+
+```bash
+cargo ax check
+cargo ax build --clean
+cargo ax run dev --host 127.0.0.1 --port 3112
+```
+
+In another terminal, `node scripts/data-table-qa.mjs` checks actual served package
+assets, filtering, pagination, keyboard sorting, sidebar selection, source/example
+parity and no-JS behavior at desktop/mobile sizes. This uses the sibling UI
+workspace's existing Playwright dev dependency, not a deployed Node runtime.
+`AXONYX_UI_BASE_URL` overrides the server address; `AXONYX_UI_QA_PACKAGE` overrides
+the path to that workspace's package.json. Aegis fast coverage remains in
+`aegis.toml` and uses port 3000 through `cargo ax test`.

@@ -1,0 +1,27 @@
+name: Axonyx Source Format
+
+on:
+  pull_request:
+  push:
+    branches: [dev, main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: asx-format-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      # Pin the published formatter so local and CI formatting remain reproducible.
+      - run: cargo install cargo-axonyx --version 0.6.14 --locked --force
+      - run: cargo ax fmt --check
+      - name: Check staged-source hook safety
+        shell: pwsh
+        run: ./scripts/test-format-hook.ps1 -FormatterPath (Get-Command cargo-ax).Source

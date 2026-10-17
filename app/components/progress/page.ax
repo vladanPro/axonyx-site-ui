@@ -18,14 +18,22 @@ page ProgressPage() {
       nextLabel="Next: Skeleton"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Build"><Progress value="72"><span slot="label">Static build</span></Progress></Card>
-          <Card title="Upload"><Progress value="38"><span slot="label">Media upload</span></Progress></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Progress value=\"72\">\n  <span slot=\"label\">Static build</span>\n</Progress>"}</DocsCodeBlock>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Build">
+          <Progress value="72">
+            <span slot="label">Static build</span>
+          </Progress>
         </Card>
+        <Card title="Upload">
+          <Progress value="38">
+            <span slot="label">Media upload</span>
+          </Progress>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Progress value=\"72\">\n  <span slot=\"label\">Static build</span>\n</Progress>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

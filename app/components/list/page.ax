@@ -19,18 +19,18 @@ page ListPage() {
       nextLabel="Next: MachineSwitch"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Build jobs">
-            <List divided="true">
-              <ListItem tone="success"><span slot="leading">01</span>Static build complete<span slot="trailing">413ms</span></ListItem>
-              <ListItem><span slot="leading">02</span>Registry synced<span slot="trailing">ready</span></ListItem>
-              <ListItem tone="warning"><span slot="leading">03</span>Theme review pending<span slot="trailing">manual</span></ListItem>
-            </List>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<List divided=\"true\">\n  <ListItem tone=\"success\">\n    Static build complete\n  </ListItem>\n</List>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Build jobs">
+          <List divided="true">
+            <ListItem tone="success"><span slot="leading">01</span>Static build complete<span slot="trailing">413ms</span></ListItem>
+            <ListItem><span slot="leading">02</span>Registry synced<span slot="trailing">ready</span></ListItem>
+            <ListItem tone="warning"><span slot="leading">03</span>Theme review pending<span slot="trailing">manual</span></ListItem>
+          </List>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<List divided=\"true\">\n  <ListItem tone=\"success\">\n    Static build complete\n  </ListItem>\n</List>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

@@ -17,18 +17,18 @@ page NavbarPage() {
       nextLabel="Next: Pagination"
     >
 
-        <Card title="Preview" border="forged">
-          <Navbar brandHref="/">
-            <strong slot="brand">Axonyx UI</strong>
-            <TextLink href="/components">Components</TextLink>
-            <TextLink href="/blocks">Blocks</TextLink>
-            <TextLink href="/themes">Themes</TextLink>
-          </Navbar>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Navbar brandHref="/">
+          <strong slot="brand">Axonyx UI</strong>
+          <TextLink href="/components">Components</TextLink>
+          <TextLink href="/blocks">Blocks</TextLink>
+          <TextLink href="/themes">Themes</TextLink>
+        </Navbar>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Navbar brandHref=\"/\">\n  <strong slot=\"brand\">Axonyx UI</strong>\n  <TextLink href=\"/components\">Components</TextLink>\n</Navbar>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Navbar brandHref=\"/\">\n  <strong slot=\"brand\">Axonyx UI</strong>\n  <TextLink href=\"/components\">Components</TextLink>\n</Navbar>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

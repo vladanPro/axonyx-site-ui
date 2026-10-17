@@ -23,11 +23,16 @@ page AppShellPage() {
     >
 
       <Stack gap="xl">
-        <ComponentExample title="Application frame" description="The navigation rail and main plane stack on smaller screens. Resize to try the mobile toggle.">
+        <ComponentExample
+          title="Application frame"
+          description="The navigation rail and main plane stack on smaller screens. Resize to try the mobile toggle."
+        >
           <div slot="preview">
             <AppShell mode="embedded" railWidth="sm" gap="md">
               <Sidebar slot="sidebar" label="Navigation" collapsible="true" open="true">
-                <SidebarHeader slot="header"><strong>Foundry</strong></SidebarHeader>
+                <SidebarHeader slot="header">
+                  <strong>Foundry</strong>
+                </SidebarHeader>
                 <SidebarSection title="Workspace">
                   <SidebarItem href="/components/app-shell" active="true">Overview</SidebarItem>
                   <SidebarItem href="/components/sidebar">Sidebar</SidebarItem>

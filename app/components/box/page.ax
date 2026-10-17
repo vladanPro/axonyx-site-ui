@@ -7,11 +7,32 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page BoxPage() {
   return ASX {
-    <ComponentPage title="Box" category="Layout primitive" description="Box is a low-level spacing and material boundary for custom compositions that do not need a semantic Card or Surface." nextHref="/components/surface" nextLabel="Next: Surface">
+    <ComponentPage
+      title="Box"
+      category="Layout primitive"
+      description="Box is a low-level spacing and material boundary for custom compositions that do not need a semantic Card or Surface."
+      nextHref="/components/surface"
+      nextLabel="Next: Surface"
+    >
       <Grid cols="3" gap="lg">
-        <Box padding="lg" surface="brushed"><Stack gap="sm"><strong>Brushed</strong><Copy>Quiet material boundary.</Copy></Stack></Box>
-        <Box padding="lg" surface="inset"><Stack gap="sm"><strong>Inset</strong><Copy>Recessed dense content.</Copy></Stack></Box>
-        <Box padding="lg" surface="forged"><Stack gap="sm"><strong>Forged</strong><Copy>Higher-signal module.</Copy></Stack></Box>
+        <Box padding="lg" surface="brushed">
+          <Stack gap="sm">
+            <strong>Brushed</strong>
+            <Copy>Quiet material boundary.</Copy>
+          </Stack>
+        </Box>
+        <Box padding="lg" surface="inset">
+          <Stack gap="sm">
+            <strong>Inset</strong>
+            <Copy>Recessed dense content.</Copy>
+          </Stack>
+        </Box>
+        <Box padding="lg" surface="forged">
+          <Stack gap="sm">
+            <strong>Forged</strong>
+            <Copy>Higher-signal module.</Copy>
+          </Stack>
+        </Box>
       </Grid>
       <DocsCodeBlock>{"<Box padding=\"lg\" surface=\"forged\">\n  <CustomComposition />\n</Box>"}</DocsCodeBlock>
     </ComponentPage>

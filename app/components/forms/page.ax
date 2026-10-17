@@ -22,16 +22,30 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page FormsPage() {
   return ASX {
-    <ComponentPage title="Forms" category="Forms" description="Native form composition for settings and CMS editors: semantic groups, responsive fields, labels, hints, and validation messages." nextHref="/components/form" nextLabel="Try the CMS editor">
+    <ComponentPage
+      title="Forms"
+      category="Forms"
+      description="Native form composition for settings and CMS editors: semantic groups, responsive fields, labels, hints, and validation messages."
+      nextHref="/components/form"
+      nextLabel="Try the CMS editor"
+    >
       <Stack gap="xl">
         <Box padding="lg" surface="inset">
           <Stack gap="md">
             <Copy>Start with Form for native submission, add Fieldset and Legend for named groups, then use FormGroup to arrange related Field controls.</Copy>
-            <Flex gap="sm" wrap="true"><a href="/components/form">Form and CMS editor</a><a href="/components/form-group">FormGroup</a><a href="/components/fieldset">Fieldset and Legend</a><a href="/components/field">Field</a></Flex>
+            <Flex gap="sm" wrap="true">
+              <a href="/components/form">Form and CMS editor</a>
+              <a href="/components/form-group">FormGroup</a>
+              <a href="/components/fieldset">Fieldset and Legend</a>
+              <a href="/components/field">Field</a>
+            </Flex>
           </Stack>
         </Box>
 
-        <ComponentExample title="Project settings" description="A required text field, select, and checkbox inside a responsive group. This demo previews settings with a GET request and does not persist changes.">
+        <ComponentExample
+          title="Project settings"
+          description="A required text field, select, and checkbox inside a responsive group. This demo previews settings with a GET request and does not persist changes."
+        >
           <div slot="preview" id="project-settings">
             <Form method="get" action="/components/forms#project-settings">
               <Fieldset surface="forged">
@@ -39,16 +53,29 @@ page FormsPage() {
                 <FormGroup cols="2" gap="lg">
                   <Field htmlFor="settings-name">
                     <FieldLabel htmlFor="settings-name">Project name</FieldLabel>
-                    <Input id="settings-name" name="project_name" placeholder="Axonyx Site" required="true" describedBy="settings-name-hint" />
+                    <Input
+                      id="settings-name"
+                      name="project_name"
+                      placeholder="Axonyx Site"
+                      required="true"
+                      describedBy="settings-name-hint"
+                    />
                     <FieldHint id="settings-name-hint">Required for the project.</FieldHint>
                   </Field>
                   <Field htmlFor="settings-template">
                     <FieldLabel htmlFor="settings-template">Template</FieldLabel>
-                    <Select id="settings-template" name="template"><Option value="docs">Docs</Option><Option value="site">Site</Option><Option value="blog">Blog</Option></Select>
+                    <Select id="settings-template" name="template">
+                      <Option value="docs">Docs</Option>
+                      <Option value="site">Site</Option>
+                      <Option value="blog">Blog</Option>
+                    </Select>
                   </Field>
                 </FormGroup>
                 <Checkbox name="public_docs" checked="true">Publish docs publicly</Checkbox>
-                <Flex gap="sm" wrap="true"><Button type="submit" variant="primary">Preview settings</Button><Button type="reset" variant="ghost">Reset</Button></Flex>
+                <Flex gap="sm" wrap="true">
+                  <Button type="submit" variant="primary">Preview settings</Button>
+                  <Button type="reset" variant="ghost">Reset</Button>
+                </Flex>
                 <Copy>Submitted values appear in the URL. This example resets after navigation.</Copy>
               </Fieldset>
             </Form>
@@ -56,10 +83,19 @@ page FormsPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Form method=\"get\" action=\"/components/forms#project-settings\">\n  <Fieldset surface=\"forged\">\n    <Legend>Project settings</Legend>\n    <FormGroup cols=\"2\" gap=\"lg\">\n      <Field htmlFor=\"project-name\">\n        <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n        <Input id=\"project-name\" name=\"project_name\" required=\"true\" describedBy=\"project-name-hint\" />\n        <FieldHint id=\"project-name-hint\">Required for the project.</FieldHint>\n      </Field>\n      <Field htmlFor=\"template\">\n        <FieldLabel htmlFor=\"template\">Template</FieldLabel>\n        <Select id=\"template\" name=\"template\"><Option value=\"docs\">Docs</Option><Option value=\"site\">Site</Option></Select>\n      </Field>\n    </FormGroup>\n    <Checkbox name=\"public_docs\" checked=\"true\">Publish docs publicly</Checkbox>\n    <Button type=\"submit\">Preview settings</Button>\n    <Button type=\"reset\">Reset</Button>\n  </Fieldset>\n</Form>"}</DocsCodeBlock>
         </ComponentExample>
 
-        <ComponentExample title="Server error presentation" description="A static example of an error returned by a save action. The server decides when to show this state; invalid styles and aria-invalid do not perform validation themselves.">
+        <ComponentExample
+          title="Server error presentation"
+          description="A static example of an error returned by a save action. The server decides when to show this state; invalid styles and aria-invalid do not perform validation themselves."
+        >
           <Field slot="preview" state="error" htmlFor="settings-error-slug">
             <FieldLabel htmlFor="settings-error-slug">Slug</FieldLabel>
-            <Input id="settings-error-slug" name="slug_example" value="release-notes" invalid="true" describedBy="settings-slug-error" />
+            <Input
+              id="settings-error-slug"
+              name="slug_example"
+              value="release-notes"
+              invalid="true"
+              describedBy="settings-slug-error"
+            />
             <FieldError id="settings-slug-error">This slug is already used. Choose another one.</FieldError>
           </Field>
           <DocsCodeBlock slot="code" language="asx">{"<Field state=\"error\" htmlFor=\"slug\">\n  <FieldLabel htmlFor=\"slug\">Slug</FieldLabel>\n  <Input id=\"slug\" name=\"slug\" value=\"release-notes\" invalid=\"true\" describedBy=\"slug-error\" />\n  <FieldError id=\"slug-error\">This slug is already used. Choose another one.</FieldError>\n</Field>"}</DocsCodeBlock>
