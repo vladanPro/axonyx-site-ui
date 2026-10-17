@@ -48,11 +48,12 @@ checksum = "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53"
 
 [[package]]
 name = "axonyx-core"
-version = "0.6.2"
+version = "0.6.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e8a2c892f8cbc0eede80603f639d01c5fe059df17416bdf8e6fd44593e9ea36"
+checksum = "1994ca472d337e264e986db6bbdaee52d8726d92f3511b81e9d8d63b6a829595"
 dependencies = [
  "axonyx-macros",
+ "proc-macro2",
  "serde",
  "serde_json",
  "thiserror 2.0.19",
@@ -71,9 +72,9 @@ dependencies = [
 
 [[package]]
 name = "axonyx-runtime"
-version = "0.6.0"
+version = "0.6.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72cf7c9632c62b01d04ed5bc1015302e23f92cae7b7889c72fa34f749515f8c4"
+checksum = "30e871d4a3be1629513b5a1f13a923cb842ef953f8f697f56199ed3f93dea2b1"
 dependencies = [
  "argon2",
  "axonyx-core",
@@ -89,6 +90,7 @@ dependencies = [
  "postgres",
  "postgres-protocol",
  "postgres-types",
+ "quote",
  "r2d2",
  "r2d2_postgres",
  "rusqlite",
@@ -97,10 +99,12 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2",
+ "syn 2.0.119",
  "thiserror 2.0.19",
  "tokio",
  "tokio-postgres",
  "tokio-postgres-rustls",
+ "tokio-util",
  "uuid",
  "webpki-roots",
  "zeroize",
