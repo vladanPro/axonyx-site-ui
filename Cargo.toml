@@ -6,7 +6,7 @@ edition = "2021"
 [workspace]
 
 [dependencies]
-axonyx-runtime = { version = "0.6.0", features = ["axum"] }
+axonyx-runtime = { version = "0.6.10", features = ["axum"] }
 serde_json = "1"
 
 axonyx-ui = "0.0.87"

@@ -25,3 +25,7 @@ jobs:
       - name: Check staged-source hook safety
         shell: pwsh
         run: ./scripts/test-format-hook.ps1 -FormatterPath (Get-Command cargo-ax).Source
+      - name: Check native application sources
+        run: cargo ax check
+      - name: Build production server
+        run: cargo ax build --clean --compiled
