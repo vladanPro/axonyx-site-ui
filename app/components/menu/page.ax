@@ -18,19 +18,19 @@ page MenuPage() {
       nextLabel="Next: MachineSwitch"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Menu ariaLabel="Settings menu">
-              <MenuItem href="/components/menu" active="true">General</MenuItem>
-              <MenuItem href="/components/forms">Forms</MenuItem>
-              <MenuItem href="/components/table">Data</MenuItem>
-              <MenuItem href="/components/tooltip" disabled="true">Advanced</MenuItem>
-            </Menu>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Menu ariaLabel=\"Settings menu\">\n  <MenuItem active=\"true\">General</MenuItem>\n  <MenuItem>Forms</MenuItem>\n</Menu>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Menu ariaLabel="Settings menu">
+            <MenuItem href="/components/menu" active="true">General</MenuItem>
+            <MenuItem href="/components/forms">Forms</MenuItem>
+            <MenuItem href="/components/table">Data</MenuItem>
+            <MenuItem href="/components/tooltip" disabled="true">Advanced</MenuItem>
+          </Menu>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Menu ariaLabel=\"Settings menu\">\n  <MenuItem active=\"true\">General</MenuItem>\n  <MenuItem>Forms</MenuItem>\n</Menu>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

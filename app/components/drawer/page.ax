@@ -18,23 +18,23 @@ page DrawerPage() {
       nextLabel="Next: DropdownMenu"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview">
-            <Button data-ax-drawer-open="component-drawer" variant="primary">Open drawer</Button>
-          </Card>
-          <Card title="Behavior">
-            <Badge tone="info">Route-scoped JS</Badge>
-            <Copy>Close works through the package drawer runtime: button, backdrop, and Escape.</Copy>
-          </Card>
-        </ContentGrid>
-
-        <Drawer id="component-drawer" title="CMS tools" description="Inspect entries and actions.">
-          <Copy>Use this panel for filters, publish state, and editor utilities.</Copy>
-        </Drawer>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<Button data-ax-drawer-open=\"component-drawer\">Open drawer</Button>\n\n<Drawer id=\"component-drawer\" title=\"CMS tools\">\n  <Copy>Use this panel for filters.</Copy>\n</Drawer>"}</DocsCodeBlock>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview">
+          <Button data-ax-drawer-open="component-drawer" variant="primary">Open drawer</Button>
         </Card>
+        <Card title="Behavior">
+          <Badge tone="info">Route-scoped JS</Badge>
+          <Copy>Close works through the package drawer runtime: button, backdrop, and Escape.</Copy>
+        </Card>
+      </ContentGrid>
+
+      <Drawer id="component-drawer" title="CMS tools" description="Inspect entries and actions.">
+        <Copy>Use this panel for filters, publish state, and editor utilities.</Copy>
+      </Drawer>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<Button data-ax-drawer-open=\"component-drawer\">Open drawer</Button>\n\n<Drawer id=\"component-drawer\" title=\"CMS tools\">\n  <Copy>Use this panel for filters.</Copy>\n</Drawer>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

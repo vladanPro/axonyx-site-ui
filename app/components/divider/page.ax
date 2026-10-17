@@ -11,9 +11,18 @@ import { Stack } from "@axonyx/ui/foundry/Stack.asx"
 
 page DividerPage() {
   return ASX {
-    <ComponentPage title="Divider" category="Layout primitive" description="Separate content sections or groups of toolbar actions with a line that follows the active Foundry palette." nextHref="/components/spacer" nextLabel="Next: Spacer">
+    <ComponentPage
+      title="Divider"
+      category="Layout primitive"
+      description="Separate content sections or groups of toolbar actions with a line that follows the active Foundry palette."
+      nextHref="/components/spacer"
+      nextLabel="Next: Spacer"
+    >
       <Stack gap="xl">
-        <ComponentExample title="Content sections" description="The default line uses the border token. Strong increases contrast; signal uses the palette accent.">
+        <ComponentExample
+          title="Content sections"
+          description="The default line uses the border token. Strong increases contrast; signal uses the palette accent."
+        >
           <Box slot="preview" padding="md" surface="inset">
             <Copy>Project details</Copy>
             <Divider />
@@ -26,7 +35,10 @@ page DividerPage() {
           <DocsCodeBlock slot="code" language="asx">{"<Copy>Project details</Copy>\n<Divider />\n<Copy>Publishing settings</Copy>\n<Divider tone=\"strong\" />\n<Copy>Release checklist</Copy>\n<Divider tone=\"signal\" />\n<Copy>Ready to deploy</Copy>"}</DocsCodeBlock>
         </ComponentExample>
 
-        <ComponentExample title="Toolbar groups" description="Use vertical orientation in a Flex row to separate related actions. Keep short toolbars compact enough to fit on a phone.">
+        <ComponentExample
+          title="Toolbar groups"
+          description="Use vertical orientation in a Flex row to separate related actions. Keep short toolbars compact enough to fit on a phone."
+        >
           <Flex slot="preview" gap="sm" align="center">
             <Button variant="ghost">Undo</Button>
             <Button variant="ghost">Redo</Button>

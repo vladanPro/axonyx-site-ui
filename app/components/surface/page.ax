@@ -17,14 +17,19 @@ page SurfacePage() {
       nextLabel="Next: StatusLamp"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Surface eyebrow="Runtime" title="Forged panel" variant="forged" padding="lg"><Copy>Use Surface when the layout needs a clear material boundary.</Copy><Badge tone="success">stable</Badge></Surface>
-          <Surface eyebrow="Docs" title="Inset panel" variant="inset" padding="lg"><Copy>Use inset surfaces for reference notes and dense examples.</Copy></Surface>
-        </ContentGrid>
-
-        <Surface title="Axonyx" padding="lg">
-          <DocsCodeBlock>{"<Surface eyebrow=\"Runtime\" title=\"Forged panel\" variant=\"forged\">\n  <Copy>Use Surface for material boundaries.</Copy>\n</Surface>"}</DocsCodeBlock>
+      <ContentGrid cols={2} gap="lg">
+        <Surface eyebrow="Runtime" title="Forged panel" variant="forged" padding="lg">
+          <Copy>Use Surface when the layout needs a clear material boundary.</Copy>
+          <Badge tone="success">stable</Badge>
         </Surface>
+        <Surface eyebrow="Docs" title="Inset panel" variant="inset" padding="lg">
+          <Copy>Use inset surfaces for reference notes and dense examples.</Copy>
+        </Surface>
+      </ContentGrid>
+
+      <Surface title="Axonyx" padding="lg">
+        <DocsCodeBlock>{"<Surface eyebrow=\"Runtime\" title=\"Forged panel\" variant=\"forged\">\n  <Copy>Use Surface for material boundaries.</Copy>\n</Surface>"}</DocsCodeBlock>
+      </Surface>
     </ComponentPage>
   }
 }

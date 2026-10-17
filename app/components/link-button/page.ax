@@ -16,18 +16,18 @@ page LinkButtonPage() {
       nextLabel="Next: TextLink"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Stack gap="md">
-              <LinkButton href="/create" variant="primary" surface="forged">Get code</LinkButton>
-              <LinkButton href="/themes" variant="secondary">Explore themes</LinkButton>
-              <LinkButton href="/components" variant="ghost">All components</LinkButton>
-            </Stack>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<LinkButton href=\"/create\" variant=\"primary\" surface=\"forged\">\n  Get code\n</LinkButton>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Stack gap="md">
+            <LinkButton href="/create" variant="primary" surface="forged">Get code</LinkButton>
+            <LinkButton href="/themes" variant="secondary">Explore themes</LinkButton>
+            <LinkButton href="/components" variant="ghost">All components</LinkButton>
+          </Stack>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<LinkButton href=\"/create\" variant=\"primary\" surface=\"forged\">\n  Get code\n</LinkButton>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

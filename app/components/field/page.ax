@@ -22,17 +22,32 @@ page FieldPage() {
       nextLabel="Next: AppShell"
     >
       <Stack gap="xl">
-        <ComponentExample title="Input and validation" description="Labels and messages stay connected to their input through native IDs and aria-describedby.">
+        <ComponentExample
+          title="Input and validation"
+          description="Labels and messages stay connected to their input through native IDs and aria-describedby."
+        >
           <div slot="preview">
             <ContentGrid cols={2} gap="lg">
               <Field htmlFor="project-name">
                 <FieldLabel htmlFor="project-name">Project name</FieldLabel>
-                <Input id="project-name" name="project" placeholder="Blockbit CMS" describedBy="project-name-hint" />
+                <Input
+                  id="project-name"
+                  name="project"
+                  placeholder="Blockbit CMS"
+                  describedBy="project-name-hint"
+                />
                 <FieldHint id="project-name-hint">Use a short public name.</FieldHint>
               </Field>
               <Field state="error" htmlFor="email">
                 <FieldLabel htmlFor="email">Email</FieldLabel>
-                <Input id="email" name="email" type="email" placeholder="you@company.dev" invalid="true" describedBy="email-error" />
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@company.dev"
+                  invalid="true"
+                  describedBy="email-error"
+                />
                 <FieldError id="email-error">Email is required before submitting.</FieldError>
               </Field>
             </ContentGrid>

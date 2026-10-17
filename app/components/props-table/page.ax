@@ -17,17 +17,27 @@ page PropsTablePage() {
       nextLabel="Next: Rating"
     >
 
-        <Card title="Preview" border="forged">
-          <PropsTable>
-            <PropRow name="variant" type="String" default="primary" description="Visual intent for the component." />
-            <PropRow name="surface" type="String" default="" description="Optional Foundry material treatment." />
-            <PropRow name="Slot" type="ASX" default="" description="Default child content." />
-          </PropsTable>
-        </Card>
+      <Card title="Preview" border="forged">
+        <PropsTable>
+          <PropRow
+            name="variant"
+            type="String"
+            default="primary"
+            description="Visual intent for the component."
+          />
+          <PropRow
+            name="surface"
+            type="String"
+            default=""
+            description="Optional Foundry material treatment."
+          />
+          <PropRow name="Slot" type="ASX" default="" description="Default child content." />
+        </PropsTable>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<PropsTable>\n  <PropRow name=\"variant\" type=\"String\" default=\"primary\" description=\"Visual intent.\" />\n</PropsTable>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<PropsTable>\n  <PropRow name=\"variant\" type=\"String\" default=\"primary\" description=\"Visual intent.\" />\n</PropsTable>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

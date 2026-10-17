@@ -19,19 +19,19 @@ page ComponentPreviewPage() {
       nextLabel="Next: Copy"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <ComponentPreview title="Action group" surface="forged">
-              <ButtonGroup>
-                <Button variant="primary">Publish</Button>
-                <Button variant="ghost">Cancel</Button>
-              </ButtonGroup>
-            </ComponentPreview>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<ComponentPreview title=\"Action group\" surface=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n  </ButtonGroup>\n</ComponentPreview>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <ComponentPreview title="Action group" surface="forged">
+            <ButtonGroup>
+              <Button variant="primary">Publish</Button>
+              <Button variant="ghost">Cancel</Button>
+            </ButtonGroup>
+          </ComponentPreview>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<ComponentPreview title=\"Action group\" surface=\"forged\">\n  <ButtonGroup>\n    <Button variant=\"primary\">Publish</Button>\n  </ButtonGroup>\n</ComponentPreview>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

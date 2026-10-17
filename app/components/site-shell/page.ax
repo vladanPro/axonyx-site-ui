@@ -19,17 +19,23 @@ page SiteShellPage() {
       nextLabel="Next: Stat"
     >
 
-        <Card title="Preview" border="forged">
-          <SiteShell max="lg">
-            <Header sticky="true"><strong>Axonyx docs</strong></Header>
-            <Main><Copy>Use SiteShell with Header, Main, and Footer for simple site frames.</Copy></Main>
-            <Footer><Copy>Foundry footer content.</Copy></Footer>
-          </SiteShell>
-        </Card>
+      <Card title="Preview" border="forged">
+        <SiteShell max="lg">
+          <Header sticky="true">
+            <strong>Axonyx docs</strong>
+          </Header>
+          <Main>
+            <Copy>Use SiteShell with Header, Main, and Footer for simple site frames.</Copy>
+          </Main>
+          <Footer>
+            <Copy>Foundry footer content.</Copy>
+          </Footer>
+        </SiteShell>
+      </Card>
 
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"<SiteShell max=\"lg\">\n  <Header sticky=\"true\">Axonyx docs</Header>\n  <Main><Copy>Page content</Copy></Main>\n  <Footer><Copy>Footer content</Copy></Footer>\n</SiteShell>"}</DocsCodeBlock>
-        </Card>
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"<SiteShell max=\"lg\">\n  <Header sticky=\"true\">Axonyx docs</Header>\n  <Main><Copy>Page content</Copy></Main>\n  <Footer><Copy>Footer content</Copy></Footer>\n</SiteShell>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

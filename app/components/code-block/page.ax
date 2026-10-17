@@ -18,19 +18,19 @@ page CodeBlockPage() {
       nextLabel="Next: Forms"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Command">
-            <CodeBlock title="Install" language="bash" copy="true">cargo ax add button</CodeBlock>
-          </Card>
-          <Card title="ASX">
-            <CodeBlock title="Button.ax" language="ax" copy="true">{"<Button variant=\"primary\">Deploy</Button>"}</CodeBlock>
-          </Card>
-        </ContentGrid>
-
-        <Card title="API contract">
-          <Badge tone="success">V0</Badge>
-          <Copy>`title`, `language`, and `copy` define the header. Children render inside the code body.</Copy>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Command">
+          <CodeBlock title="Install" language="bash" copy="true">cargo ax add button</CodeBlock>
         </Card>
+        <Card title="ASX">
+          <CodeBlock title="Button.ax" language="ax" copy="true">{"<Button variant=\"primary\">Deploy</Button>"}</CodeBlock>
+        </Card>
+      </ContentGrid>
+
+      <Card title="API contract">
+        <Badge tone="success">V0</Badge>
+        <Copy>`title`, `language`, and `copy` define the header. Children render inside the code body.</Copy>
+      </Card>
     </ComponentPage>
   }
 }

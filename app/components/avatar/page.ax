@@ -18,15 +18,25 @@ page AvatarPage() {
       nextLabel="Next: Chip"
     >
 
-        <ContentGrid cols={3} gap="lg">
-          <Card title="Sizes"><Avatar>AX</Avatar><Avatar size="lg">UI</Avatar></Card>
-          <Card title="Author"><Avatar size="lg">VF</Avatar><Copy>Vladan Firke</Copy></Card>
-          <Card title="Team"><Avatar>RX</Avatar><Avatar>RS</Avatar><Avatar>AI</Avatar></Card>
-        </ContentGrid>
-
-        <Card title="Axonyx">
-          <DocsCodeBlock>{"import { Avatar } from \"@axonyx/ui/foundry/Avatar\"\n\n<Avatar size=\"lg\">AX</Avatar>"}</DocsCodeBlock>
+      <ContentGrid cols={3} gap="lg">
+        <Card title="Sizes">
+          <Avatar>AX</Avatar>
+          <Avatar size="lg">UI</Avatar>
         </Card>
+        <Card title="Author">
+          <Avatar size="lg">VF</Avatar>
+          <Copy>Vladan Firke</Copy>
+        </Card>
+        <Card title="Team">
+          <Avatar>RX</Avatar>
+          <Avatar>RS</Avatar>
+          <Avatar>AI</Avatar>
+        </Card>
+      </ContentGrid>
+
+      <Card title="Axonyx">
+        <DocsCodeBlock>{"import { Avatar } from \"@axonyx/ui/foundry/Avatar\"\n\n<Avatar size=\"lg\">AX</Avatar>"}</DocsCodeBlock>
+      </Card>
     </ComponentPage>
   }
 }

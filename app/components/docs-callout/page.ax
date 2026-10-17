@@ -18,17 +18,17 @@ page DocsCalloutPage() {
       nextLabel="Next: Forms"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <DocsCallout title="Use package behavior">
-              <Badge slot="eyebrow" tone="warning">Important</Badge>
-              <Copy>Interactive Foundry components should ship behavior from `@axonyx/ui`, not one-off site scripts.</Copy>
-            </DocsCallout>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<DocsCallout title=\"Use package behavior\">\n  <Badge slot=\"eyebrow\" tone=\"warning\">Important</Badge>\n  <Copy>Interactive behavior belongs in @axonyx/ui.</Copy>\n</DocsCallout>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <DocsCallout title="Use package behavior">
+            <Badge slot="eyebrow" tone="warning">Important</Badge>
+            <Copy>Interactive Foundry components should ship behavior from `@axonyx/ui`, not one-off site scripts.</Copy>
+          </DocsCallout>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<DocsCallout title=\"Use package behavior\">\n  <Badge slot=\"eyebrow\" tone=\"warning\">Important</Badge>\n  <Copy>Interactive behavior belongs in @axonyx/ui.</Copy>\n</DocsCallout>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

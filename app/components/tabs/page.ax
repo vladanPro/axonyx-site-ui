@@ -19,23 +19,29 @@ page TabsPage() {
       nextLabel="Next: Table"
     >
 
-        <Card title="Preview" border="forged">
-          <Tabs defaultValue="preview">
-            <Tab title="Preview" value="preview"><Copy>Rendered component output.</Copy></Tab>
-            <Tab title="Code" value="code"><Copy>Install and import example.</Copy></Tab>
-            <Tab title="API" value="api"><Copy>Stable props for the primitive.</Copy></Tab>
-          </Tabs>
-        </Card>
+      <Card title="Preview" border="forged">
+        <Tabs defaultValue="preview">
+          <Tab title="Preview" value="preview">
+            <Copy>Rendered component output.</Copy>
+          </Tab>
+          <Tab title="Code" value="code">
+            <Copy>Install and import example.</Copy>
+          </Tab>
+          <Tab title="API" value="api">
+            <Copy>Stable props for the primitive.</Copy>
+          </Tab>
+        </Tabs>
+      </Card>
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"import { Tabs } from \"@axonyx/ui/foundry/Tabs\"\nimport { Tab } from \"@axonyx/ui/foundry/Tab\"\n\n<Tabs defaultValue=\"preview\">\n  <Tab title=\"Preview\" value=\"preview\">...</Tab>\n  <Tab title=\"Code\" value=\"code\">...</Tab>\n</Tabs>"}</DocsCodeBlock>
-          </Card>
-          <Card title="API contract">
-            <Badge tone="success">V0</Badge>
-            <Copy>`defaultValue` selects the first tab. `Tab` owns `title`, `value`, and panel children.</Copy>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"import { Tabs } from \"@axonyx/ui/foundry/Tabs\"\nimport { Tab } from \"@axonyx/ui/foundry/Tab\"\n\n<Tabs defaultValue=\"preview\">\n  <Tab title=\"Preview\" value=\"preview\">...</Tab>\n  <Tab title=\"Code\" value=\"code\">...</Tab>\n</Tabs>"}</DocsCodeBlock>
+        </Card>
+        <Card title="API contract">
+          <Badge tone="success">V0</Badge>
+          <Copy>`defaultValue` selects the first tab. `Tab` owns `title`, `value`, and panel children.</Copy>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }

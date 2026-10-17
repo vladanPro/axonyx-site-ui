@@ -20,28 +20,34 @@ page InputPage() {
       nextLabel="Next: Checkbox"
     >
 
-        <ContentGrid cols={2} gap="lg">
-          <Card title="Preview" border="forged">
-            <Stack gap="lg">
-              <Field htmlFor="project-name">
-                <FieldLabel htmlFor="project-name">Project name</FieldLabel>
-                <Input id="project-name" name="project_name" placeholder="Axonyx Foundry" />
-                <FieldHint>Used in routes, deploys, and generated metadata.</FieldHint>
-              </Field>
-              <Field htmlFor="owner-email">
-                <FieldLabel htmlFor="owner-email">Owner email</FieldLabel>
-                <Input id="owner-email" name="owner_email" type="email" placeholder="team@example.com" size="lg" />
-              </Field>
-              <Field htmlFor="build-id">
-                <FieldLabel htmlFor="build-id">Build ID</FieldLabel>
-                <Input id="build-id" name="build_id" value="Assigned after deploy" disabled="true" />
-              </Field>
-            </Stack>
-          </Card>
-          <Card title="Axonyx">
-            <DocsCodeBlock>{"<Field htmlFor=\"project-name\">\n  <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n  <Input id=\"project-name\" name=\"project_name\" placeholder=\"Axonyx Foundry\" />\n  <FieldHint>Used in generated metadata.</FieldHint>\n</Field>"}</DocsCodeBlock>
-          </Card>
-        </ContentGrid>
+      <ContentGrid cols={2} gap="lg">
+        <Card title="Preview" border="forged">
+          <Stack gap="lg">
+            <Field htmlFor="project-name">
+              <FieldLabel htmlFor="project-name">Project name</FieldLabel>
+              <Input id="project-name" name="project_name" placeholder="Axonyx Foundry" />
+              <FieldHint>Used in routes, deploys, and generated metadata.</FieldHint>
+            </Field>
+            <Field htmlFor="owner-email">
+              <FieldLabel htmlFor="owner-email">Owner email</FieldLabel>
+              <Input
+                id="owner-email"
+                name="owner_email"
+                type="email"
+                placeholder="team@example.com"
+                size="lg"
+              />
+            </Field>
+            <Field htmlFor="build-id">
+              <FieldLabel htmlFor="build-id">Build ID</FieldLabel>
+              <Input id="build-id" name="build_id" value="Assigned after deploy" disabled="true" />
+            </Field>
+          </Stack>
+        </Card>
+        <Card title="Axonyx">
+          <DocsCodeBlock>{"<Field htmlFor=\"project-name\">\n  <FieldLabel htmlFor=\"project-name\">Project name</FieldLabel>\n  <Input id=\"project-name\" name=\"project_name\" placeholder=\"Axonyx Foundry\" />\n  <FieldHint>Used in generated metadata.</FieldHint>\n</Field>"}</DocsCodeBlock>
+        </Card>
+      </ContentGrid>
     </ComponentPage>
   }
 }
