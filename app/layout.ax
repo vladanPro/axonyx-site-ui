@@ -13,7 +13,7 @@ page RootLayout() {
         content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps."
       />
       <Link rel="icon" href="/favicon.svg?v=forged-x-1" type="image/svg+xml" />
-      <Link rel="stylesheet" href="/ui-site.css" /><Link rel="stylesheet" href="/foundry-docs.css?v=884cc12fcf7d" />
+      <Link rel="stylesheet" href="/ui-site.css?v=shared-sidebar-088" /><Link rel="stylesheet" href="/foundry-docs.css?v=0bb5e7b1172a" />
       <Script src="/js/ui-site.js?v=732ff5d73d14" defer="true" />
     </Head>
 
@@ -66,7 +66,11 @@ page RootLayout() {
         >Browse documentation <span aria-hidden="true">↓</span></button>
         <div class="ui-docs-shell">
           <Sidebar label="Component navigation" collapsible="false">
-            <nav class="ui-sidebar-nav" id="ui-docs-navigation" aria-label="Axonyx UI navigation">
+            <nav
+              class="ui-sidebar-nav ax-sidebar-nav"
+              id="ui-docs-navigation"
+              aria-label="Axonyx UI navigation"
+            >
               <div class="ui-sidebar-group">
                 <strong>Getting started</strong>
                 <a href="/docs">Introduction</a><a href="/docs/installation">Installation</a>
