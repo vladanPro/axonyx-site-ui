@@ -1,6 +1,5 @@
 /* Page composition only. Reusable control styling lives in foundry-theme.css. */
 body:has(.foundry-pilot) { margin: 0; padding: 0; background: #121313; }
-body:has(.foundry-pilot) .site-nav,
 body:has(.foundry-pilot) .ui-docs-shell > .ax-layout-sidebar,
 body:has(.foundry-pilot) .ax-site-footer { display: none; }
 body:has(.foundry-pilot) .ax-site-shell,
