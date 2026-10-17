@@ -19,7 +19,7 @@ try {
         assert.equal(response.status(), 200);
         assert.match(await page.title(), /Axonyx UI/);
         const home = path === '/';
-        const nav = page.locator(home ? '.fp-header nav' : '.site-nav__links');
+        const nav = page.locator('.ax-site-header__links');
         if (!home) {
           const sidebar = page.locator('.ui-sidebar-nav.ax-sidebar-nav');
           const selected = sidebar.locator('a[aria-current="page"]');
@@ -42,9 +42,9 @@ try {
           assert.notEqual(style.left, style.top);
           assert.equal(style.top, 'rgba(0, 0, 0, 0)');
         }
-        if (!home && await page.locator('.site-nav__toggle').isVisible()) {
-          await page.locator('.site-nav__toggle').click();
-          assert.equal(await page.locator('.site-nav__toggle').getAttribute('aria-expanded'), 'true');
+        if (await page.locator('.ax-site-header__toggle').isVisible()) {
+          await page.locator('.ax-site-header__toggle').click();
+          assert.equal(await page.locator('.ax-site-header__toggle').getAttribute('aria-expanded'), 'true');
         }
         const link = nav.locator('a[href="https://axonyx.dev"]');
         assert.equal(await link.count(), 1);

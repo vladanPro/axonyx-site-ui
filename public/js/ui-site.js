@@ -8,7 +8,7 @@
   function markActiveNavigation() {
     const current = normalizePath(window.location.pathname);
 
-    document.querySelectorAll(".site-nav__links a, .ui-sidebar-nav a").forEach((link) => {
+    document.querySelectorAll(".ax-site-header__links a, .ui-sidebar-nav a").forEach((link) => {
       const href = link.getAttribute("href");
       if (!href || href.startsWith("http") || href.startsWith("mailto:")) return;
 
@@ -17,6 +17,7 @@
       const isActive = inSidebar
         ? current === target
         : current === target ||
+          (target === "/docs/installation" && (current === "/docs" || current.startsWith("/docs/"))) ||
           (target === "/components" && current.startsWith("/components")) ||
           (target === "/blocks" && current.startsWith("/blocks")) ||
           (target === "/themes" && current.startsWith("/themes")) ||
@@ -28,21 +29,9 @@
     });
   }
 
-  function bootSiteNavigation() {
-    const toggle = document.querySelector(".site-nav__toggle");
-    const nav = document.querySelector(".site-nav__links");
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener("click", () => {
-      const open = nav.dataset.open !== "true";
-      nav.dataset.open = open ? "true" : "false";
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-  }
 
   function boot() {
     markActiveNavigation();
-    bootSiteNavigation();
     const site = document.querySelector('.foundry-site');
     const docsToggle = document.querySelector('.fd-menu-toggle');
     docsToggle?.addEventListener('click', () => {
