@@ -13,7 +13,7 @@ page RootLayout() {
         content="Axonyx UI is the Foundry component registry for Axonyx-native Rust apps."
       />
       <Link rel="icon" href="/favicon.svg?v=forged-x-1" type="image/svg+xml" />
-      <Link rel="stylesheet" href="/ui-site.css" /><Link rel="stylesheet" href="/foundry-docs.css?v=32cd38655324" />
+      <Link rel="stylesheet" href="/ui-site.css" /><Link rel="stylesheet" href="/foundry-docs.css?v=884cc12fcf7d" />
       <Script src="/js/ui-site.js?v=732ff5d73d14" defer="true" />
     </Head>
 

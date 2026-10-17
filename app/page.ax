@@ -8,7 +8,7 @@ page Home() {
   return ASX {
     <Head>
       <Title>Axonyx UI | Interfaces, finely forged</Title>
-      <Link rel="stylesheet" href="/foundry-pilot.css?v=7f5d4faa5e91" />
+      <Link rel="stylesheet" href="/foundry-pilot.css?v=fa6a62a69339" />
       <Script src="/js/foundry-pilot.js?v=fda89b36bd1f" defer="true" />
     </Head>
     <div class="foundry-pilot" data-foundry="bronze" data-foundry-style="classic">
@@ -19,6 +19,7 @@ page Home() {
           <a href="/components">Components</a>
           <a href="/blocks">Blocks</a>
           <a href="/themes">Themes</a>
+          <a href="https://axonyx.dev">Axonyx <span aria-hidden="true">↗</span></a>
         </nav>
         <div class="foundry-appearance ax-appearance" aria-label="Appearance">
           <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>

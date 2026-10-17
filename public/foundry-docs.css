@@ -10,7 +10,7 @@ body:has(.foundry-site) [data-ax-root='page'] { padding: 0; }
 .foundry-site .site-nav__links { justify-content: center; gap: 28px; }
 .foundry-site .site-nav__links a { color: var(--ax-text-soft); text-decoration: none; font-size: 14px; }
 .foundry-site .site-nav__links a.is-active { color: var(--ax-primary); }
-.foundry-site .site-nav__links a[href='https://axonyx.dev'], .foundry-site .site-nav__links a[href='https://react.axonyx.dev'] { display: none; }
+.foundry-site .site-nav__links a[href='https://react.axonyx.dev'] { display: none; }
 .foundry-site .ax-site-shell { max-width: 1440px; padding: 0 28px; margin: auto; }
 .foundry-site > .ax-container { display: block; width: 100%; max-width: 1440px; padding: 0 28px; margin: auto; }
 .foundry-site .ui-docs-shell { margin-top: 0; }
