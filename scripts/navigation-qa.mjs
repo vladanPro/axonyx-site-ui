@@ -20,6 +20,28 @@ try {
         assert.match(await page.title(), /Axonyx UI/);
         const home = path === '/';
         const nav = page.locator(home ? '.fp-header nav' : '.site-nav__links');
+        if (!home) {
+          const sidebar = page.locator('.ui-sidebar-nav.ax-sidebar-nav');
+          const selected = sidebar.locator('a[aria-current="page"]');
+          await selected.waitFor({ state: 'attached' });
+          assert.equal(await selected.count(), 1);
+          assert.equal(await selected.getAttribute('href'), path);
+          await page.waitForFunction(() => {
+            const link = document.querySelector('.ui-sidebar-nav.ax-sidebar-nav a[aria-current="page"]');
+            return link && getComputedStyle(link).borderLeftColor !== 'rgba(0, 0, 0, 0)'
+              && link.getAnimations().every(animation => animation.playState !== 'running');
+          });
+          const style = await selected.evaluate(node => {
+            const css = getComputedStyle(node);
+            return { radius: css.borderRadius, padding: css.padding, shadow: css.boxShadow,
+              left: css.borderLeftColor, top: css.borderTopColor };
+          });
+          assert.equal(style.radius, '5px');
+          assert.equal(style.padding, '6px 10px');
+          assert.equal(style.shadow, 'none');
+          assert.notEqual(style.left, style.top);
+          assert.equal(style.top, 'rgba(0, 0, 0, 0)');
+        }
         if (!home && await page.locator('.site-nav__toggle').isVisible()) {
           await page.locator('.site-nav__toggle').click();
           assert.equal(await page.locator('.site-nav__toggle').getAttribute('aria-expanded'), 'true');
