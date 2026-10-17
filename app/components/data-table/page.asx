@@ -15,7 +15,7 @@ page DataTablePage() {
       nextLabel="See Table primitives"
     >
       <Stack gap="xl">
-        <Copy tone="lead">Development preview. This component is not yet included in a published Cargo or npm release.</Copy>
+        <Copy tone="lead">Available in Axonyx UI 0.0.87. Compose native Table primitives with optional search, sorting and pagination.</Copy>
         <ComponentExample
           title="Content inventory"
           description="Search across title and status, click either heading to sort, then move between pages. No server request is made when these controls change."
@@ -55,9 +55,9 @@ page DataTablePage() {
           <Copy>Hidden records are still in the HTML. Authorization and sensitive-data filtering must happen on the server. Selection, editable cells, column visibility and virtualization are not included in V0.</Copy>
         </section>
         <section>
-          <h2>Development installation</h2>
-          <Copy>This preview uses an immutable source commit. Do not replace a production registry dependency just to try it; use an isolated app. A versioned Cargo install example will replace this after release.</Copy>
-          <DocsCodeBlock title="Cargo.toml - isolated preview only" language="toml">{"[dependencies]\naxonyx-ui = { git = \"https://github.com/vladanPro/axonyx-ui\", rev = \"6cafead\" }"}</DocsCodeBlock>
+          <h2>Installation</h2>
+          <Copy>Add the published Cargo package, then enable its assets in your layout. The npm package is published separately for JavaScript consumers; this example uses native Axonyx components.</Copy>
+          <DocsCodeBlock title="Cargo.toml" language="toml">{"[dependencies]\naxonyx-ui = \"0.0.87\""}</DocsCodeBlock>
           <DocsCodeBlock title="app/layout.asx" language="asx">{"use \"@axonyx/ui\""}</DocsCodeBlock>
         </section>
       </Stack>
