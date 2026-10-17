@@ -2,6 +2,7 @@ use "@axonyx/ui"
 import { Sidebar } from "@axonyx/ui/foundry/Sidebar.asx"
 import { SiteShell } from "@axonyx/ui/foundry/SiteShell.asx"
 import { TextLink } from "@axonyx/ui/foundry/TextLink.asx"
+import { CodeIcon } from "@axonyx/ui/foundry/icons/CodeIcon"
 
 page RootLayout() {
   return ASX {
@@ -14,42 +15,42 @@ page RootLayout() {
       />
       <Link rel="icon" href="/favicon.svg?v=forged-x-1" type="image/svg+xml" />
       <Link rel="stylesheet" href="/ui-site.css?v=shared-sidebar-088" /><Link rel="stylesheet" href="/foundry-docs.css?v=0bb5e7b1172a" />
-      <Script src="/js/ui-site.js?v=732ff5d73d14" defer="true" />
+      <Script src="/js/ui-site.js?v=shared-header-089" defer="true" />
     </Head>
 
-    <div class="foundry-site" data-foundry="bronze" data-foundry-style="classic"><header class="site-nav">
-        <div class="site-header__inner">
-          <a class="site-brand" href="/">
+    <div class="foundry-site" data-foundry="bronze" data-foundry-style="classic"><header class="ax-site-header">
+        <div class="ax-site-header__inner">
+          <a class="ax-site-header__brand" href="/">
             <img
               src="/brand-mark.svg?v=forged-x-1"
-              alt="Axonyx UI"
-              class="site-logo"
-              width={80}
-              height={80}
+              alt=""
+              class="ax-site-header__logo"
+              width={32}
+              height={32}
             />
             <span>Axonyx UI</span>
           </a>
           <button
-            class="site-nav__toggle"
+            class="ax-site-header__toggle"
             type="button"
             aria-expanded="false"
             aria-controls="site-nav-links"
           >
-            <span></span>
-            <span></span>
-            <span></span>
             Menu
           </button>
-          <nav class="site-nav__links" id="site-nav-links">
-            <TextLink href="/docs/installation">Docs</TextLink>
-            <TextLink href="/components">Components</TextLink>
-            <TextLink href="/blocks">Blocks</TextLink>
-            <TextLink href="/create">Get Code</TextLink>
-            <TextLink href="/themes">Themes</TextLink>
+          <nav class="ax-site-header__links" id="site-nav-links" aria-label="Primary navigation">
+            <a href="/docs/installation" aria-current={route.section == "docs"}><CodeIcon size="sm" />Docs</a>
+            <a href="/components" aria-current={route.section == "components"}>Components</a>
+            <a href="/blocks" aria-current={route.section == "blocks"}>Blocks</a>
+            <a href="/create" aria-current={route.section == "create"}>Get Code</a>
+            <a href="/themes" aria-current={route.section == "themes"}>Themes</a>
             <TextLink href="https://axonyx.dev">Axonyx</TextLink>
             <TextLink href="https://react.axonyx.dev">React</TextLink>
           </nav>
-          <div class="foundry-appearance ax-appearance" aria-label="Appearance">
+          <div
+            class="ax-site-header__appearance foundry-appearance ax-appearance"
+            aria-label="Appearance"
+          >
             <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
             <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
           </div>
