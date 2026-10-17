@@ -10,7 +10,7 @@ body:has(.foundry-site) [data-ax-root='page'] { padding: 0; }
 .foundry-site .site-nav__links { justify-content: center; gap: 28px; }
 .foundry-site .site-nav__links a { color: var(--ax-text-soft); text-decoration: none; font-size: 14px; }
 .foundry-site .site-nav__links a.is-active { color: var(--ax-primary); }
-.foundry-site .site-nav__links a[href='https://axonyx.dev'], .foundry-site .site-nav__links a[href='https://react.axonyx.dev'] { display: none; }
+.foundry-site .site-nav__links a[href='https://react.axonyx.dev'] { display: none; }
 .foundry-site .ax-site-shell { max-width: 1440px; padding: 0 28px; margin: auto; }
 .foundry-site > .ax-container { display: block; width: 100%; max-width: 1440px; padding: 0 28px; margin: auto; }
 .foundry-site .ui-docs-shell { margin-top: 0; }
@@ -18,8 +18,6 @@ body:has(.foundry-site) [data-ax-root='page'] { padding: 0; }
 .foundry-site .ui-docs-shell > .ax-layout-sidebar { top: 68px; max-height: calc(100vh - 68px); padding: 26px 16px 32px 0; background: none; border: 0; border-right: 1px solid var(--ax-border); border-radius: 0; box-shadow: none; scrollbar-width: thin; scrollbar-color: var(--ax-border) transparent; }
 .foundry-site .ui-sidebar-group { gap: 3px; margin-bottom: 18px; }
 .foundry-site .ui-sidebar-group strong { font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--ax-text-muted); padding: 6px 10px 10px; }
-.foundry-site .ui-sidebar-group a { font-size: 13px; font-weight: 400; min-height: 33px; padding: 6px 10px; color: var(--ax-text-soft); border-radius: 5px; }
-.foundry-site .ui-sidebar-group a.is-active { color: var(--ax-text); background: color-mix(in srgb,var(--ax-primary) 12%,transparent); border-color: transparent; border-left-color: var(--ax-primary); }
 .foundry-site .ui-docs-main { padding-top: 28px; }
 .foundry-site .ax-site-footer { margin-top: 30px; font-size: 12px; border-top: 1px solid var(--ax-border); }
 .fd-layout { display: grid; grid-template-columns: minmax(0,1fr) 170px; gap: 32px; }
@@ -86,4 +84,3 @@ body:has(.foundry-pilot) .fd-menu-toggle { display: none; }
 .foundry-site .ui-hero h1 { font-size: clamp(32px,4vw,44px); font-weight: 650; line-height: 1.15; letter-spacing: -1.4px; }
 .foundry-site .ui-create-section h2 { font-size: 24px; line-height: 1.3; font-weight: 600; letter-spacing: -.4px; }
 .foundry-site .ui-sidebar-group strong { font-weight: 600; letter-spacing: normal; text-transform: none; }
-.foundry-site .ui-sidebar-group a { font-size: 13px; font-weight: 400; }
