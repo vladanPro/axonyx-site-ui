@@ -93,6 +93,21 @@ impl __AxAdd<i64> for i32 {
     fn ax_add(&self, rhs: &i64) -> i64 { i64::from(*self).checked_add(*rhs).expect("integer addition overflow") }
 }
 
+
+fn __ax_is_null(value: &impl axonyx_runtime::serde::Serialize) -> Result<bool, AxRuntimeError> {
+    serde_json::to_value(value).map(|value| value.is_null())
+        .map_err(|_| AxRuntimeError::message("null predicate value cannot be serialized"))
+}
+fn __ax_length(value: &impl axonyx_runtime::serde::Serialize) -> Result<i64, AxRuntimeError> {
+    let value = serde_json::to_value(value)
+        .map_err(|_| AxRuntimeError::message("length value cannot be serialized"))?;
+    let length = match &value {
+        Value::String(value) => value.encode_utf16().count(),
+        Value::Array(value) => value.len(),
+        _ => return Err(AxRuntimeError::message("length expects String or List")),
+    };
+    i64::try_from(length).map_err(|_| AxRuntimeError::message("length exceeds Int range"))
+}
 fn __ax_finalize_response(mut response: AxHttpResponse, headers: BTreeMap<String, String>, cookies: Vec<AxCookie>) -> AxHttpResponse {
     for (name, value) in headers {
         response = response.with_header(name, value);
@@ -196,11 +211,8 @@ fn __ax_loader_context(pattern: &str, request: &AxHttpRequest) -> AxRuntimeResul
         .ok_or_else(|| AxRuntimeError::message("compiled route did not match request"))?;
     let mut context = AxLoaderContext::new();
     for (name, value) in params { context = context.with_param(name, value); }
-    if let Some((_, query)) = request.target.split_once('?') {
-        for pair in query.split('&').filter(|pair| !pair.is_empty()) {
-            let (name, value) = pair.split_once('=').unwrap_or((pair, ""));
-            context = context.with_query(name.to_string(), value.to_string());
-        }
+    for (name, value) in request.query_fields() {
+        context = context.with_query(name, value);
     }
     Ok(context)
 }
