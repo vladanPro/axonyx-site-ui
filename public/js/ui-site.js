@@ -41,32 +41,47 @@
     });
     if (site) {
       const html = document.documentElement;
-      const styles = ['alloy', 'forge', 'classic'];
+      const styles = ['alloy', 'forge', 'classic', 'legura'];
       const palettes = ['bronze', 'silver', 'gold'];
+      const stylePickers = site.querySelectorAll('[data-foundry-style-picker]');
+      const palettePickers = site.querySelectorAll('[data-foundry-palette-picker]');
       let storedStyle;
       try { storedStyle = localStorage.getItem('axonyx-site-ui-style'); } catch { /* Optional storage. */ }
-      html.dataset.foundryStyle = styles.includes(storedStyle) ? storedStyle : 'classic';
+      let style = styles.includes(storedStyle) ? storedStyle : site.dataset.foundryStyle;
+      let preferredPalette = palettes.includes(html.dataset.theme) ? html.dataset.theme : 'bronze';
       const syncAppearance = () => {
-        const palette = palettes.includes(html.dataset.theme) ? html.dataset.theme : 'bronze';
-        const style = styles.includes(html.dataset.foundryStyle) ? html.dataset.foundryStyle : 'classic';
+        const isLegura = style === 'legura';
+        const palette = isLegura ? 'bronze' : preferredPalette;
+        const mode = isLegura ? 'light' : 'dark';
+        html.dataset.theme = palette;
+        html.dataset.foundryStyle = style;
         site.dataset.foundry = palette;
+        site.dataset.foundryMode = mode;
         // The specimen cards retain their own palettes while previewing the selected style.
         site.querySelectorAll('[data-foundry]').forEach(scope => { scope.dataset.foundryStyle = style; });
         site.dataset.foundryStyle = style;
-        document.querySelectorAll('[data-foundry-style-picker]').forEach(select => { select.value = style; });
-        document.querySelectorAll('[data-foundry-palette-picker]').forEach(select => { select.value = palette; });
-        document.dispatchEvent(new CustomEvent('foundry:appearance', { detail: { style, palette } }));
+        stylePickers.forEach(select => { select.value = style; });
+        palettePickers.forEach(select => {
+          select.value = palette;
+          select.disabled = isLegura;
+        });
+        document.dispatchEvent(new CustomEvent('foundry:appearance', { detail: { style, palette, mode } }));
       };
-      document.querySelectorAll('[data-foundry-style-picker]').forEach(select => select.addEventListener('change', () => {
-        html.dataset.foundryStyle = select.value;
-        try { localStorage.setItem('axonyx-site-ui-style', select.value); } catch { /* Optional storage. */ }
+      stylePickers.forEach(select => select.addEventListener('change', () => {
+        if (styles.includes(select.value)) {
+          style = select.value;
+          try { localStorage.setItem('axonyx-site-ui-style', style); } catch { /* Optional storage. */ }
+        }
+        syncAppearance();
       }));
-      document.querySelectorAll('[data-foundry-palette-picker]').forEach(select => select.addEventListener('change', () => {
-        html.dataset.theme = select.value;
-        try { localStorage.setItem('axonyx-site-ui-theme', select.value); } catch { /* Optional storage. */ }
+      palettePickers.forEach(select => select.addEventListener('change', () => {
+        if (style !== 'legura' && palettes.includes(select.value)) {
+          preferredPalette = select.value;
+          try { localStorage.setItem('axonyx-site-ui-theme', preferredPalette); } catch { /* Optional storage. */ }
+        }
+        syncAppearance();
       }));
       syncAppearance();
-      new MutationObserver(syncAppearance).observe(html, { attributes: true, attributeFilter: ['data-theme', 'data-foundry-style'] });
     }
     document.querySelectorAll('[data-doc-copy]').forEach(button => {
       button.addEventListener('click', async () => {

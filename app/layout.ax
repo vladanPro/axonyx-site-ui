@@ -15,10 +15,15 @@ page RootLayout() {
       />
       <Link rel="icon" href="/favicon.svg?v=forged-x-1" type="image/svg+xml" />
       <Link rel="stylesheet" href="/ui-site.css?v=shared-sidebar-088" /><Link rel="stylesheet" href="/foundry-docs.css?v=0bb5e7b1172a" />
-      <Script src="/js/ui-site.js?v=shared-header-089" defer="true" />
+      <Script src="/js/ui-site.js?v=legura-default-1" defer="true" />
     </Head>
 
-    <div class="foundry-site" data-foundry="bronze" data-foundry-style="classic"><header class="ax-site-header">
+    <div
+      class="foundry-site"
+      data-foundry="bronze"
+      data-foundry-style="legura"
+      data-foundry-mode="light"
+    ><header class="ax-site-header">
         <div class="ax-site-header__inner">
           <a class="ax-site-header__brand" href="/">
             <img
@@ -51,8 +56,8 @@ page RootLayout() {
             class="ax-site-header__appearance foundry-appearance ax-appearance"
             aria-label="Appearance"
           >
-            <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic" selected="true">Classic</option></select></label>
-            <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
+            <label>Style<select data-foundry-style-picker="true" aria-label="Style"><option value="alloy">Alloy</option><option value="forge">Forge</option><option value="classic">Classic</option><option value="legura" selected="true">Legura</option></select></label>
+            <label>Palette<select data-foundry-palette-picker="true" aria-label="Palette" disabled="true"><option value="bronze">Bronze</option><option value="silver">Silver</option><option value="gold">Gold</option></select></label>
           </div>
         </div>
       </header>

@@ -9,9 +9,14 @@ page Home() {
     <Head>
       <Title>Axonyx UI | Interfaces, finely forged</Title>
       <Link rel="stylesheet" href="/foundry-pilot.css?v=shared-header-089" />
-      <Script src="/js/foundry-pilot.js?v=fda89b36bd1f" defer="true" />
+      <Script src="/js/foundry-pilot.js?v=legura-catalog-1" defer="true" />
     </Head>
-    <div class="foundry-pilot" data-foundry="bronze" data-foundry-style="classic">
+    <div
+      class="foundry-pilot"
+      data-foundry="bronze"
+      data-foundry-style="legura"
+      data-foundry-mode="light"
+    >
       <div class="fp-content">
         <section class="fp-intro">
           <div>
