@@ -8,7 +8,52 @@ const require = createRequire(resolve(process.env.AXONYX_UI_QA_PACKAGE || '../ax
 const { chromium } = require('playwright');
 const base = process.env.AXONYX_UI_BASE_URL || 'http://127.0.0.1:3114';
 const browser = await chromium.launch();
+
+async function assertAppearance() {
+  const native = await browser.newPage({ javaScriptEnabled: false });
+  try {
+    await native.goto(base + '/docs/installation');
+    const site = native.locator('.foundry-site');
+    assert.equal(await site.getAttribute('data-foundry-style'), 'legura');
+    assert.equal(await site.getAttribute('data-foundry-mode'), 'light');
+    assert.equal(await native.getByRole('combobox', { name: 'Palette' }).isDisabled(), true);
+  } finally {
+    await native.close();
+  }
+
+  const page = await browser.newPage({ viewport: { width: 390, height: 900 } });
+  try {
+    await page.goto(base);
+    const style = page.getByRole('combobox', { name: 'Style' });
+    const palette = page.getByRole('combobox', { name: 'Palette' });
+    const site = page.locator('.foundry-site');
+    const preview = page.locator('.foundry-pilot');
+    assert.equal(await style.inputValue(), 'legura');
+    assert.equal(await palette.isDisabled(), true);
+    await preview.locator('button[data-finish="gold"]').first().click();
+    assert.equal(await preview.getAttribute('data-foundry'), 'gold');
+    assert.equal(await site.getAttribute('data-foundry'), 'bronze');
+    assert.match(await preview.locator('#theme-css').inputValue(), /data-foundry="gold".*data-foundry-mode="light"/);
+    await style.selectOption('classic');
+    assert.equal(await palette.isEnabled(), true);
+    await palette.selectOption('silver');
+    assert.equal(await site.getAttribute('data-foundry-mode'), 'dark');
+    await style.selectOption('legura');
+    await page.goto(base + '/components/data-table');
+    assert.equal(await style.inputValue(), 'legura');
+    assert.equal(await palette.inputValue(), 'bronze');
+    assert.equal(await palette.isDisabled(), true);
+    await style.selectOption('classic');
+    assert.equal(await palette.inputValue(), 'silver');
+    assert.equal(await palette.isEnabled(), true);
+    console.log('PASS Legura default, isolated customizer and saved palette restore');
+  } finally {
+    await page.close();
+  }
+}
+
 try {
+  await assertAppearance();
   for (const width of [320, 390, 820, 1024, 1440]) {
     const page = await browser.newPage({ viewport: { width, height: 900 } });
     const errors = [];

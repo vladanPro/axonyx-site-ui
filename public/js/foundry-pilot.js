@@ -4,17 +4,23 @@
     if (!root || root.dataset.booted) return;
     root.dataset.booted = 'true';
     const $ = (selector) => root.querySelector(selector);
-    const colors = { bronze: '#cf9974', silver: '#bfc4cd', gold: '#d8b464' };
-    const classicColors = { bronze: '#cf9160', silver: '#b8c2cf', gold: '#e0b94b' };
-    const defaultRadius = name => name === 'classic' ? 18 : name === 'forge' ? 3 : 8;
-    const paletteColor = (palette, name) => (name === 'classic' ? classicColors : colors)[palette];
-    const initialFinish = document.documentElement.dataset.theme;
-    if (Object.hasOwn(colors, initialFinish)) root.dataset.foundry = initialFinish;
-    let accent = colors[root.dataset.foundry];
-    let style = ['alloy', 'forge', 'classic'].includes(document.documentElement.dataset.foundryStyle) ? document.documentElement.dataset.foundryStyle : 'classic';
-    accent = paletteColor(root.dataset.foundry, style);
-    root.dataset.foundryStyle = style;
-    let radius = defaultRadius(style);
+    const site = root.closest('.foundry-site');
+    if (site) {
+      root.dataset.foundry = site.dataset.foundry;
+      root.dataset.foundryStyle = site.dataset.foundryStyle;
+      root.dataset.foundryMode = site.dataset.foundryMode;
+    }
+    const selector = () => `[data-foundry="${root.dataset.foundry}"][data-foundry-style="${root.dataset.foundryStyle}"][data-foundry-mode="${root.dataset.foundryMode}"]`;
+    function defaultAccent() {
+      root.style.removeProperty('--ax-primary');
+      return getComputedStyle(root).getPropertyValue('--ax-primary').trim();
+    }
+    function defaultRadius() {
+      root.style.removeProperty('--ax-radius-md');
+      return Number.parseFloat(getComputedStyle(root).getPropertyValue('--ax-radius-md'));
+    }
+    let accent = defaultAccent();
+    let radius = defaultRadius();
     const picker = $('#accent-picker');
     const hex = $('#accent-hex');
     const code = $('#theme-css');
@@ -31,30 +37,23 @@
       picker.value = accent;
       hex.value = accent.toUpperCase();
       hex.setAttribute('aria-invalid', 'false');
-      code.value = `[data-foundry="${root.dataset.foundry}"][data-foundry-style="${style}"] {\n  --ax-primary: ${accent};\n  --ax-radius-md: ${radius}px;\n  --ax-on-primary: ${foreground(accent)};\n}`;
+      code.value = `${selector()} {\n  --ax-primary: ${accent};\n  --ax-radius-md: ${radius}px;\n  --ax-on-primary: ${foreground(accent)};\n}`;
       root.querySelectorAll('[data-finish]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.finish === root.dataset.foundry)));
       root.querySelectorAll('[data-radius]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.radius) === radius)));
       copyStatus.textContent = '';
     }
     document.addEventListener('foundry:appearance', event => {
       const next = event.detail;
-      if (next.palette !== root.dataset.foundry) {
-        root.dataset.foundry = next.palette;
-        accent = paletteColor(next.palette, next.style);
-      }
-      if (next.style !== style) {
-        style = next.style;
-        radius = defaultRadius(style);
-        accent = paletteColor(next.palette, style);
-        root.dataset.foundryStyle = style;
-      }
+      root.dataset.foundry = next.palette;
+      root.dataset.foundryStyle = next.style;
+      root.dataset.foundryMode = next.mode;
+      radius = defaultRadius();
+      accent = defaultAccent();
       render();
     });
     root.querySelectorAll('[data-finish]').forEach(button => button.addEventListener('click', () => {
       root.dataset.foundry = button.dataset.finish;
-      document.documentElement.dataset.theme = button.dataset.finish;
-      try { localStorage.setItem('axonyx-site-ui-theme', button.dataset.finish); } catch { /* Theme still works without storage. */ }
-      accent = paletteColor(button.dataset.finish, style);
+      accent = defaultAccent();
       render();
     }));
     root.querySelectorAll('[data-radius]').forEach(button => button.addEventListener('click', () => { radius = Number(button.dataset.radius); render(); }));
@@ -70,7 +69,7 @@
         if (!response.ok) throw new Error('Theme foundation unavailable');
         const base = await response.text();
         const overrides = code.value;
-        await navigator.clipboard.writeText(`/* Load after Axonyx UI. Wrap your UI in <div data-foundry="${root.dataset.foundry}" data-foundry-style="${style}">. */\n${base}\n/* Your overrides */\n${overrides}\n`);
+        await navigator.clipboard.writeText(`/* Load after Axonyx UI. Apply this selector to your Foundry wrapper: ${selector()}. */\n${base}\n/* Your overrides */\n${overrides}\n`);
         copyStatus.textContent = 'Copied foundation + your overrides.';
       } catch {
         code.focus(); code.select();
